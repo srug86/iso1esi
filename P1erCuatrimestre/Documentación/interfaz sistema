@@ -46,14 +46,15 @@ Coordinador
     `-- Asignar a adjunto
 
 Adjunto
-|-- Vista de Proyectos
+|-- Proyectos
+|   |-- Vista general
 |   |-- Indicar subárea errónea
-|   |-- Estado de la evaluación
-|   |-- Búsqueda de expertos
-|   |   |-- Parámetros de búsqueda
+|   |-- Búsqueda de expertos (parámetros de búsqueda)
+|   |   |-- Vista resultados
 |   |   |-- Seleccionar
 |   |   `-- Enviar invitación
 |   |-- Lista de expertos asignados
+|   |   |-- Vista
 |   |   |-- Desasignar expertos
 |   |   |-- Aviso de plazos
 |   |   |-- Valorar experto
@@ -65,9 +66,8 @@ Adjunto
 `-- Modificar datos personales 
 
 Expertos
-|-- Peticiones pendientes
-|   `-- Aceptar o Declinar
 |-- Vista de Proyectos
+|   |-- Aceptar o Declinar
 |   |-- Editar informe
 |   `-- Finalizar evaluación
 `-- Modificar datos personales
