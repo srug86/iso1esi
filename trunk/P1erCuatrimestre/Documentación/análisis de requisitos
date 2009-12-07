@@ -1,5 +1,3 @@
-Miguelito mariquita
-
 USUARIOS
 - Acceden al sistema mediante un nombre de usuario, que será la cuenta de correo; y una contraseña, que podrá modificar.
 - Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno con un diferente tipo de funcionalidad y rango.

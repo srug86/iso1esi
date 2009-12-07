@@ -14,7 +14,7 @@ Subáreas:- ID, (ÁREA), nombre, (adjunto).
 
 Expertos:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono, curriculum, palabras_clave.
 
-Proyectos:- ID, (PAQUETE), memoria, (área), (subárea), estado, (modelo_eval), evaluación.
+Proyectos:- ID, (PAQUETE), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (modelo_eval), evaluación.
 
 Expertos-Proyectos:- (ID_Experto), (ID_Proyecto), valoración, fecha_asignación, estado.
 
