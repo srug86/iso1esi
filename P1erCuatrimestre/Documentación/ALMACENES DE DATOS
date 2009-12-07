@@ -6,11 +6,11 @@ Modelos de evaluación:- ID, estructura.
 
 Coordinadores:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono.
 
-Áreas:- ID, nombre, subáreas, (coordinador).
+Áreas:- ID, nombre, subáreas.
 
 Adjuntos:- ID, e-mail, contraseña, nombre, apellidos, (subárea), teléfono.
 
-Subáreas:- ID, (ÁREA), nombre, (adjunto).
+Subáreas:- ID, (ÁREA), nombre.
 
 Expertos:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono, curriculum, palabras_clave.
 
