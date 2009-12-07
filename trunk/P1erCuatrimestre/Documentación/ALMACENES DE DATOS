@@ -2,7 +2,7 @@ Secretario:- ID, e-mail, contraseña, nombre, apellidos, teléfono.
 
 Paquetes de proyectos:- ID, institución_convocante, nº_de_proyectos, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
 
-Modelo de evaluación:- ID, estructura.
+Modelos de evaluación:- ID, estructura.
 
 Coordinadores:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono.
 

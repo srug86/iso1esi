@@ -1,0 +1,59 @@
+DICCIONARIO DE DATOS
+
+--> FLUJO DE DATOS
+
+--> ALMACENES DE DATOS:
+
+SECRETARIO = @id + e-mail + contraseña + nombre + apellidos + teléfono
+
+PAQUETES_DE_PROYECTOS = @id + institución_convocante + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+fecha_entrada = día + mes + año
+fecha_salida = día + mes + año
+fecha_límite = día + mes + año
+
+MODELOS_DE_EVALUACIÓN = @id + estructura
+
+COORDINADORES = @id + e-mail + contraseña + nombre + apellidos + área + teléfono
+área = * hace referencia al id de la tabla ÁREA *
+
+ÁREAS = @id + coordinador + nombre + subáreas
+subárea = * hace referencia al id de la tabla SUBÁREA *
+
+ADJUNTOS = @id + subárea + e-mail + contraseña + nombre + apellidos + teléfono
+subárea = * hace referencia al id de la tabla SUBÁREA *
+
+SUBÁREAS = @área + @id + nombre + adjunto
+área = * hace referencia al id de la tabla ÁREA *
+adjunto = * hace referencia al id de la tabla ADJUNTOS *
+
+EXPERTOS = @id + e-mail + contraseña + nombre + apellidos + área + teléfono + curriculum + {palabras_clave}
+área = * hace referencia al id de la tabla ÁREA *
+
+PROYECTOS = @paquete + @id + memoria, + área + subárea + estado + tpo_inv + tpo_eval + modelo_eval + evaluación
+paquete = * hace referencia al id de la tabla PAQUETES_DE_PROYECTOS *
+área = * hace referencia al id de la tabla ÁREA *
+subárea = * hace referencia al id de la tabla SUBÁREA *
+estado = [sin_evaluar|en_proceso|evaluado]
+tpo_inv = * tiempo que tiene un experto para aceptar o declinar una invitación *
+tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su aceptación *
+modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN *
+evaluación = * informe final realizado por el adjunto *
+
+EXPERTOS_PROYECTOS = @id_experto + @id_proyecto + valoración + fecha_asignación + estado
+id_experto = * hace referencia al id de la tabla EXPERTOS *
+id_proyecto = * hace referencia al id de la tabla PROYECTOS *
+valoración = tpo_realización + calidad_informe
+fecha_asignación = día + mes + año
+estado = [pendiente|aceptado|rechazado]
+
+INFORMES_EVALUACIÓN = @id_proyecto + @id_experto + modelo_eval + estado + datos
+id_proyecto = * hace referencia al id de la tabla PROYECTOS *
+id_experto = * hace referencia al id de la tabla EXPERTOS *
+modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN * 
+estado = [sin_realizar|en_proceso|finalizado]
+datos = * el experto rellenará los campos correspondientes al modelo de evaluación del proyecto *
+
+PLANTILLAS_CORREOS = @id + asunto + texto
+asunto = [invitación|aviso_plazos]
+
+
