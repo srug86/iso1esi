@@ -16,15 +16,14 @@ MODELOS_DE_EVALUACIÓN = @id + estructura
 COORDINADORES = @id + e-mail + contraseña + nombre + apellidos + área + teléfono
 área = * hace referencia al id de la tabla ÁREA *
 
-ÁREAS = @id + coordinador + nombre + subáreas
+ÁREAS = @id + nombre + subáreas
 subárea = * hace referencia al id de la tabla SUBÁREA *
 
 ADJUNTOS = @id + subárea + e-mail + contraseña + nombre + apellidos + teléfono
 subárea = * hace referencia al id de la tabla SUBÁREA *
 
-SUBÁREAS = @área + @id + nombre + adjunto
+SUBÁREAS = @área + @id + nombre
 área = * hace referencia al id de la tabla ÁREA *
-adjunto = * hace referencia al id de la tabla ADJUNTOS *
 
 EXPERTOS = @id + e-mail + contraseña + nombre + apellidos + área + teléfono + curriculum + {palabras_clave}
 área = * hace referencia al id de la tabla ÁREA *
