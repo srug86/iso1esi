@@ -1,0 +1,59 @@
+USUARIOS
+- Acceden al sistema mediante un nombre de usuario, que será la cuenta de correo; y una contraseña, que podrá modificar.
+- Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno con un diferente tipo de funcionalidad y rango.
+- Cada usuario podrá modificar sus datos personales y tendrá una vista restringida sobre la lista de proyectos dependiendo de su rango en el sistema.
+
+PAQUETE DE PROYECTOS
+- Las instituciones solicitantes mandan los proyectos en paquetes al secretario, los cuales contienen:
+  * La convocatoria.
+  * Las bases del proyecto.
+  * Institución convocante.
+  * Los proyectos, que pueden venir, aunque no necesariamente, clasificados por área.
+  * Uno o varios modelos de informe de evaluación que contengan los puntos a evaluar del correspondiente proyecto. 
+  * Cada proyecto tendrá una fecha en la cuál tiene que estar evaluado.
+
+SECRETARIO
+- Usuarios: Es el encargado de añadir, modificar y eliminar a los usuarios del sistema: coordinadores, adjuntos y expertos.
+- Coordinadores: Elegirá el coordinador de cada área.
+- Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos y los introduce al sistema: las bases, la convocatoria, la institución convocante, los proyectos, el cual asignará al área correspondiente; etc. También podrá modificar cualquier información referente a estas solicitudes. 
+- Modelos de evaluación: Dependiendo de la información que contenga el proyecto,  elaborará unos modelos de informe de evaluación.
+- Plazos expertos: Decidirá los plazos que tienen los expertos para aceptar o declinar la invitación para realizar el informe de evaluación, así como una vez aceptado, la fecha para entregar dicho informe. Todo esto se incluirá en el modelo de evaluación.
+
+COORDINADOR
+- Pertenece a una única área.
+- Establece las subáreas de los proyectos que son asignados a su área.
+- Asigna al adjunto de cada subárea.
+- Reasignar proyecto a otra subárea, si el adjunto se lo indica.
+- Valida los informes pendientes que los adjuntos de las subáreas de su área realizan.
+
+ÁREA
+- Está asociada a un único coordinador y tiene, a su vez, varias subáreas. 
+- El número de subáreas podrá ser diferente en cada área.
+
+ADJUNTO
+- Pertenece únicamente a una subárea.
+- Tendrá una cola de proyectos asignados.
+- Buscará a los expertos especificando el área, la institución, palabras clave y valoraciones en las que se prioriza la formalidad de plazos y calidad de las evaluaciones.
+Una vez finalizada la búsqueda, elegirá a uno o más expertos según considere necesario y les enviará un modelo de invitación predeterminada mediante correo electrónico para la  evaluación del proyecto. 
+Avisará de los plazos que tiene el experto para aceptar o declinar una invitación según definió el secretario. Además, una vez aceptada dicha invitación, le avisará de los plazos de entrega del informe de evaluación, también definidos por el secretario.
+- Podrá reasignar las evaluaciones si el experto declina la invitación, no obtiene contestación dentro del plazo o si el experto no cumple con los plazos de entrega del informe de evaluación.
+- El adjunto podrá insistir cuando esté próxima la fecha límite de entrega del informe de evaluación.
+- Una vez realizada las evaluaciones de los expertos, el adjunto realizará un informe final teniendo en cuenta los informes de los distintos expertos que hayan aceptado realizar la evaluación. Este informe final deberá ser validado por el coordinador de su área.
+- Esperará la validación del coordinador y enviará el informe final a la institución solicitante.
+- Evalúa el trabajo del experto basándose en la formalidad de los plazos y la calidad de su informe.
+- Puede recomendar al secretario añadir expertos.
+- Dentro de la lista de proyectos a las que los adjuntos tienen acceso, tendrán una sublista de los expertos que están revisando ese proyecto.
+- Podrá avisar al coordinador cuando el proyecto no corresponda a su subárea.
+
+SUBÁREA
+- Sólo podrá pertenecer a un área y tiene un único adjunto asociado.
+
+EXPERTOS
+- Podrán tener asignados varios proyectos a la vez. 
+- No podrán pertenecer a la misma institución solicitante de la evaluación.
+- Podrá aceptar o declinar las invitaciones de evaluación de proyectos.
+- Cuando acepte la invitación, podrá acceder a la documentación de ese proyecto e ir realizando progresivamente el informe en varias sesiones.
+- Una vez que haya terminado el informe finalizará el proceso de evaluación.
+- Recibirá avisos de finalización de plazos por parte del adjunto para finalizar el informe, vía correo electrónico.
+- Cada uno tendrá una serie de palabras clave asociadas a su temática. Éstas palabras clave se utilizarán como parámetros en las búsquedas.
+- Tendrá una lista de evaluaciones pendientes, que podrá aceptar o rechazar.
