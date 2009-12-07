@@ -1,0 +1,23 @@
+Secretario:- ID, e-mail, contraseña, nombre, apellidos, teléfono.
+
+Paquetes de proyectos:- ID, institución_convocante, nº_de_proyectos, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
+
+Modelo de evaluación:- ID, estructura.
+
+Coordinadores:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono.
+
+Áreas:- ID, nombre, subáreas, (coordinador).
+
+Adjuntos:- ID, e-mail, contraseña, nombre, apellidos, (subárea), teléfono.
+
+Subáreas:- ID, (ÁREA), nombre, (adjunto).
+
+Expertos:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono, curriculum, palabras_clave.
+
+Proyectos:- ID, (PAQUETE), memoria, (área), (subárea), estado, (modelo_eval), evaluación.
+
+Expertos-Proyectos:- (ID_Experto), (ID_Proyecto), valoración, fecha_asignación, estado.
+
+Informes_evaluación:- (ID_Proyecto), (ID_Experto), (modelo_eval), estado, datos. 
+
+Plantillas_correos:- ID, asunto, texto.

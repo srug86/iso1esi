@@ -1,0 +1,74 @@
+Acceso
+|-- Usuario
+`-- Contraseña
+
+Secretario
+|-- Usuarios
+|   |-- Vista general
+|   |-- Añadir
+|   |   |-- Tipo de usuario
+|   |   |-- Datos personales
+|   |   `-- Foto
+|   |-- Modificar
+|   |   |-- Tipo de usuario
+|   |   |-- Datos personales
+|   |   `-- Foto
+|   `-- Eliminar
+|-- Áreas
+|   |-- Vista general
+|   `-- Asignar a coordinador
+|-- Paquetes de proyectos
+|   |-- Vista general
+|   |   |-- Proyectos
+|   |   `-- Modelos de evaluación
+|   |-- Añadir
+|   |   |-- Bases, convocatoria, fechas, institución convocante, ...
+|   |   |-- Proyectos (Plazos expertos (aceptación y realización), área de proyecto).
+|   |   `-- Modelos de evaluación (Objetivos, comentarios, tipos de evaluación).
+|   |-- Modificar
+|   |   |-- Bases, convocatoria, fechas, institución convocante, ...
+|   |   |-- Proyectos.
+|   |   `-- Modelos de evaluación.
+|   `-- Eliminar
+|       |-- Paquete completo
+|       |-- Proyectos.
+|       `-- Modelos de evaluación.
+`-- Modificar datos personales
+
+Coordinador
+|-- Proyectos pendientes
+|   `-- Establecer subárea
+|-- Informes pendientes
+|   `-- Validar informes
+|-- Modificar datos personales
+`-- Subáreas
+    |-- Vista general
+    `-- Asignar a adjunto
+
+Adjunto
+|-- Vista de Proyectos
+|   |-- Indicar subárea errónea
+|   |-- Estado de la evaluación
+|   |-- Búsqueda de expertos
+|   |   |-- Parámetros de búsqueda
+|   |   |-- Seleccionar
+|   |   `-- Enviar invitación
+|   |-- Lista de expertos asignados
+|   |   |-- Desasignar expertos
+|   |   |-- Aviso de plazos
+|   |   |-- Valorar experto
+|   |   `-- Estado del informe
+|   |-- Realizar informe final
+|   |   |-- Guardar
+|   |   `-- Finalizar
+|   `-- Enviar al solicitante
+`-- Modificar datos personales 
+
+Expertos
+|-- Peticiones pendientes
+|   `-- Aceptar o Declinar
+|-- Vista de Proyectos
+|   |-- Editar informe
+|   `-- Finalizar evaluación
+`-- Modificar datos personales
+    `-- Palabras clave
