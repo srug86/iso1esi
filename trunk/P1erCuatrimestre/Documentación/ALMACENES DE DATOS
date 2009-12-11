@@ -1,23 +1,18 @@
-Secretario:- ID, e-mail, contraseña, nombre, apellidos, teléfono.
+﻿Usuarios:- ID, tipo e-mail, contraseña, nombre, apellidos, teléfono, (área) institución, currículum, palabras_clave.
 
-Paquetes de proyectos:- ID, institución_convocante, nº_de_proyectos, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
+Paquetes de proyectos:- ID, institución, nº_de_proyectos, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
 
 Modelos de evaluación:- ID, estructura.
 
-Coordinadores:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono.
+Áreas:- ID, nombre.
 
-Áreas:- ID, nombre, subáreas.
+Subáreas:- ID, (IDÁ), nombre.
 
-Adjuntos:- ID, e-mail, contraseña, nombre, apellidos, (subárea), teléfono.
+Proyectos:- ID, (PAQ), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (modelo_eval), evaluación.
 
-Subáreas:- ID, (ÁREA), nombre.
+Expertos-Proyectos:- (IDE), (IDP), idi, valoración, fecha_asignación, estado.
 
-Expertos:- ID, e-mail, contraseña, nombre, apellidos, (área), teléfono, curriculum, palabras_clave.
+Informes_evaluación:- ID, (modelo_eval), estado, datos. 
 
-Proyectos:- ID, (PAQUETE), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (modelo_eval), evaluación.
+Plantillas_correos:- ID, asunto, cuerpo.
 
-Expertos-Proyectos:- (ID_Experto), (ID_Proyecto), valoración, fecha_asignación, estado.
-
-Informes_evaluación:- (ID_Experto), (ID_Proyecto), (modelo_eval), estado, datos. 
-
-Plantillas_correos:- ID, asunto, texto.
