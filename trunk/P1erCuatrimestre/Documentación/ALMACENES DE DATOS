@@ -18,6 +18,6 @@ Proyectos:- ID, (PAQUETE), memoria, (área), (subárea), estado, tpo_inv, tpo_ev
 
 Expertos-Proyectos:- (ID_Experto), (ID_Proyecto), valoración, fecha_asignación, estado.
 
-Informes_evaluación:- (ID_Proyecto), (ID_Experto), (modelo_eval), estado, datos. 
+Informes_evaluación:- (ID_Experto), (ID_Proyecto), (modelo_eval), estado, datos. 
 
 Plantillas_correos:- ID, asunto, texto.
