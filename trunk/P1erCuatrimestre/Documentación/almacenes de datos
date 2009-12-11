@@ -6,11 +6,11 @@ Modelos de evaluación:- ID, estructura.
 
 Áreas:- ID, nombre.
 
-Subáreas:- ID, (IDÁ), nombre.
+Subáreas:- ID, (IDÁ), (idu), nombre.
 
 Proyectos:- ID, (PAQ), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (modelo_eval), evaluación.
 
-Expertos-Proyectos:- (IDE), (IDP), idi, valoración, fecha_asignación, estado.
+Expertos-Proyectos:- (IDE), (IDP), (idi), valoración, fecha_asignación, estado.
 
 Informes_evaluación:- ID, (modelo_eval), estado, datos. 
 
