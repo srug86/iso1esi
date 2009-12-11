@@ -1,0 +1,16 @@
+Usuarios: ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + (área) + institución + currículum + palabras_clave.
+Usuarios: * Añadir, modificar, eliminar usuarios; modificar área. *
+Consulta Paq. de Proyectos:
+Asignar Área-Proyecots:
+Modelos de Evaluación:
+Paq. Proyecto:
+Asignar Subárea-Adjuntos:
+Asignar Subárea-Proyectos:
+Informes_coordinador:
+Informes_adjunto:
+Informes_expertos:
+Rechazar Proyecto:
+Expertos:
+Invitación:
+Avisos Plazos:
+
