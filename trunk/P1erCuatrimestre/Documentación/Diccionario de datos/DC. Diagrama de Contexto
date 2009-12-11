@@ -24,8 +24,8 @@ Expertos: (Expertos)
 
 --- USUARIO ----------------------------------------------------
 Modificar datos: (Usuarios) ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave.
-Autentificar: (Autentificar) 
-Correo de alta: (Correo de Alta) ID + asunto + cuerpo
+Autentificar: (Autentificar) e_mail + contraseña
+Correo de alta: (Correo de Alta) id_usuario + contraseña + nombre + apellidos + área + cuerpo
 ----------------------------------------------------------------
 
 --- EXPERTO ----------------------------------------------------
