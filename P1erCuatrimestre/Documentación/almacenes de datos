@@ -1,6 +1,6 @@
 ﻿Usuarios:- ID, tipo e-mail, contraseña, nombre, apellidos, teléfono, (área) institución, currículum, palabras_clave.
 
-Paquetes de proyectos:- ID, institución, nº_de_proyectos, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
+Paquetes de proyectos:- ID, institución, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
 
 Modelos de evaluación:- ID, estructura.
 
