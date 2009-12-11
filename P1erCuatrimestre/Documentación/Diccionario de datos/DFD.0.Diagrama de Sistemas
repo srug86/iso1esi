@@ -1,0 +1,54 @@
+------ GESTIÓN DE USUARIOS -------------------------------------------------------------------
+
+Datos Usuarios: Consulta Datos Usuarios + Escribir Datos Usuarios + Introducir Datos Usuarios
+Datos Usuarios: * Añadir, modificar, eliminar y consultar usuarios. *
+
+Datos Áreas: ID + nombre
+Datos Áreas: * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
+
+Datos Subáreas: ID + IDÁ + idu + nombre.
+Datos Subáreas: * Los usuarios añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS. *
+
+Consulta Plantillas: ID + asunto + cuerpo.
+----------------------------------------------------------------------------------------------
+
+------ GESTIÓN DE PAQUETES DE PROYECTOS ------------------------------------------------------
+Consulta Área: ID_área + nombre
+
+Consulta Subárea: ID_subárea + IDÁ + idu
+
+Asignar Área: ID_Área
+
+Asignar Subárea: ID_Subárea 
+
+Datos Proy: ID, (PAQ), memoria, estado, tpo_inv, tpo_eval, (modelo_eval), evaluación.
+
+Datos Paq.Proy.: ID_paqproy + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite.
+
+Consulta Modelo: id_modelo_eval
+Consulta Modelo: * Se consulta el id del modelo de evaluación. *
+----------------------------------------------------------------------------------------------
+
+------ GESTIÓN DE EVALUACIONES -------------------------------------------------------------------
+Introducir/Modificar Informe Final: ID_modelo_eval + estructura
+
+Consulta Proyecto: ID + memoria + id_modelo_eval
+
+Consulta Convocatoria: convocatoria
+
+Datos Mod. Eval: ID_modelo_eval + estructura
+
+Datos Inf Eval: ID_inf_eval + id_modelo_eval + estado + datos.
+Datos Inf Eval: * Se inicializa informe y devuelve el id del informe. *
+----------------------------------------------------------------------------------------------
+
+------ GESTIÓN DE EXPERTOS -------------------------------------------------------------------
+
+Consulta Exp: * búsqueda y selección de expertos. *
+Consulta Plantilla:
+Consulta Proyecto:
+Consulta Institución:
+Datos Informe Evaluación:
+Datos Expertos/Proyectos: id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado.
+Datos Expertos/Proyectos: * Se asignará un proyecto a un experto y se guardará la fecha de asignación y el estado. Al finalizar la evaluación, el experto será valorado (valoración de expertos). *
+----------------------------------------------------------------------------------------------
