@@ -1,6 +1,10 @@
+Datos Usuarios: ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + (área) + institución + currículum + palabras_clave.
 Datos Usuarios: * Añadir, modificar, eliminar y consultar usuarios. *
+Datos Áreas: ID + nombre
 Datos Áreas: * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
+Datos Subáreas: ID + (IDÁ) + nombre.
 Datos Subáreas: * Los usuarios añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS. *
+Expertos: 
 Expertos: * búsqueda, selección y valoración de expertos. *
 Datos Modelo Evaluación: * Consultar y realizar modelos de evaluación. *
 Datos Informe Evaluación: * Modificar informe evaluación. *
