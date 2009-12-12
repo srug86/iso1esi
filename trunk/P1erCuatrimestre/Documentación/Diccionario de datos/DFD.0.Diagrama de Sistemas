@@ -3,10 +3,11 @@
 Datos Usuarios: Consulta Datos Usuarios + Escribir Datos Usuarios + Introducir Datos Usuarios
 Datos Usuarios: * Añadir, modificar, eliminar y consultar usuarios. *
 
-Datos Áreas: ID + nombre
-Datos Áreas: * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
+Consulta Área: ID + nombre
+Consulta Área: * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
 
-Datos Subáreas: ID + IDÁ + idu + nombre.
+Datos Subáreas: Consultar Subárea + Asignar Subárea + Id Subárea
+##Datos Subáreas: ID + IDÁ + idu + nombre.
 Datos Subáreas: * Los usuarios añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS. *
 
 Consulta Plantillas: ID + asunto + cuerpo.
@@ -15,13 +16,13 @@ Consulta Plantillas: ID + asunto + cuerpo.
 ------ GESTIÓN DE PAQUETES DE PROYECTOS ------------------------------------------------------
 Consulta Área: ID_área + nombre
 
-Consulta Subárea: ID_subárea + IDÁ + idu
+Consulta Subárea: ID_subárea + ID_área + id_usuario + nombre
 
 Asignar Área: ID_Área
 
 Asignar Subárea: ID_Subárea 
 
-Datos Proy: ID, (PAQ), memoria, estado, tpo_inv, tpo_eval, (modelo_eval), evaluación.
+Datos Proy: ID_proyecto + id_paquete + memoria + estado + tiempo_inv + tpo_eval + id_modelo_eval + evaluación.
 
 Datos Paq.Proy.: ID_paqproy + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite.
 

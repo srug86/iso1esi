@@ -1,0 +1,24 @@
+------ Vista de usuarios ---------------------
+Consulta Datos Usuarios: ID_usuario + tipo_usuario + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave.
+----------------------------------------------
+
+------ Añadir Usuarios -----------------------
+Introducir Datos Usuarios: ID_usuario + tipo_usuario + e-mail + contraseña
+Consultar Área: ID_área + nombre
+----------------------------------------------
+
+------ Modificar Usuarios --------------------
+Consultar/Escribir Datos Usuarios: ID_usuario + tipo_usuario + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave.
+
+Consultar Subárea: ID_subárea + ID_área + nombre_subárea.
+
+Asignar Subárea: ID_subárea + ID_área + id_usuario + nombre_subárea.
+
+Id Subárea: ID_subárea.
+----------------------------------------------
+
+------ Autentificación -----------------------
+Datos Autentificación: ID_usuario + contraseña.
+Verificar Autentificar: * Mostrar que la autentificación es correcta.*
+----------------------------------------------
+
