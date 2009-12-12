@@ -1,0 +1,9 @@
+Datos Usuarios: * Añadir, modificar, eliminar y consultar usuarios. *
+Datos Áreas: * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
+Datos Subáreas: * Los usuarios añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS. *
+Expertos: * búsqueda, selección y valoración de expertos. *
+Datos Modelo Evaluación: * Consultar y realizar modelos de evaluación. *
+Datos Informe Evaluación: * Modificar informe evaluación. *
+Datos Expertos/Proyectos: * Se añaden el experto, el proyecto asignado y la valoración del experto. *
+Init. Inf: * Inicializa informe y devuelve el id del informe. *
+

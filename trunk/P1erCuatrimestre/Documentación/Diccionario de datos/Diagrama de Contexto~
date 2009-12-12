@@ -1,0 +1,48 @@
+--- SECRETARIO -------------------------------------------------
+Modelos Evaluación: (Modelos Evaluación) ID + estructura
+Asignar Área Proyectos: (Asignar Área Proyecto) id_área + id_proyecto
+Paquete de Proyectos: (Paquete Proyectos) ID + institución + nº_de_proyectos, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
+Usuarios: (Usuarios) ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + (área) + institución + currículum + palabras_clave.
+Usuarios: * Añadir, modificar, eliminar usuarios; modificar coordinador asociado al área; autentificación. *
+----------------------------------------------------------------
+
+--- INSTITUCIÓN CONVOCANTE -------------------------------------
+Paquetes Proyectos: --->
+Paquetes Proyectos: 
+----------------------------------------------------------------
+
+--- COORDINADOR ------------------------------------------------
+Asignar Subárea Adjuntos: (Asignar Subárea Adjuntos)
+Asignar Subárea Proyecto: (Asignar Subárea Proyecto)
+Informes Coordinador: (Informes)
+----------------------------------------------------------------
+
+--- ADJUNTO ----------------------------------------------------
+Informes Adjuntos: (Informes)
+Rechazar Proyecto: (Rechazar Proyecto)
+Expertos: (Expertos)
+----------------------------------------------------------------
+
+--- USUARIO ----------------------------------------------------
+Modificar datos: ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave.
+Autentificar: (Autentificar)
+Correo de alta: Correo de Alta
+----------------------------------------------------------------
+
+--- EXPERTO ----------------------------------------------------
+Invitación: (Invitación)
+Informes Expertos: (Informes)
+Avisos Plazos: (Aviso Plazos)
+----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
