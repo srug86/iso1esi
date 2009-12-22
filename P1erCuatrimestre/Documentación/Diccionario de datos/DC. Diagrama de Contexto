@@ -1,21 +1,28 @@
 --- SECRETARIO -------------------------------------------------
 Modelos Evaluación: (Modelos Evaluación) ID + estructura
 Modelos Evaluación: * registro y consulta de los modelos de evaluación a utilizar para realizar los informes *
-Asignar Área Proyectos: (Asignar Área Proyecto) id_área + id_proyecto
+Área Proyectos: (Asignar Área Proyecto) id_área + id_proyecto
+Área Proyectos: * asignación de un área a un proyecto *
 Paquetes Proyectos: (Paquetes Proyectos) ID + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
 Paquetes Proyectos: * gestión, por parte del secretario, de la información contenida en los paquetes enviados por una institución *
-Usuarios: (Usuarios) ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
-Usuarios: * Añadir, modificar, eliminar usuarios y modificar coordinador asociado a un área *
+Alta Usuario: id_usuario + tipo + e-mail + contraseña
+Alta Usuario: * datos con los que registramos inicialmente a un usuario *
+Usuarios: (Usuarios) id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
+Usuarios: * consulta o eliminar usuarios y modificar coordinador asociado a un área *
 ----------------------------------------------------------------
 
 --- INSTITUCIÓN CONVOCANTE -------------------------------------
-Paquetes Proyectos: (Paquetes Proyectos) ID + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
-Paquetes Proyectos: * paquetes de proyectos enviados por la institución convocante para su evaluación y paquetes de proyectos enviados a la institución convocante una vez evaluados *
+Paquetes Proyectos: id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+Paquetes Proyectos: * paquetes de proyectos enviados por la institución convocante para su evaluación *
+Evaluaciones: id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+Evaluaciones: * paquetes de proyectos enviados a la institución convocante una vez evaluados *
 ----------------------------------------------------------------
 
 --- COORDINADOR ------------------------------------------------
-Asignar Subárea Adjuntos: (Asignar Subárea Adjuntos) id_subárea + id_usuario
-Asignar Subárea Proyecto: (Asignar Subárea Proyecto) id_subárea + id_proyecto
+Subárea Adjuntos: (Asignar Subárea Adjuntos) id_subárea + id_usuario
+Subárea Adjuntos: * asignación de un adjunto a una subárea *
+Subárea Proyecto: (Asignar Subárea Proyecto) id_subárea + id_proyecto
+Subárea Proyecto: * asignación de un proyecto a una subárea *
 Informes Coordinador: (Informes) ID + id_modelo_eval + estado + datos
 Informes Coordinador: * Validar o modificar informe final del adjunto *
 ----------------------------------------------------------------
