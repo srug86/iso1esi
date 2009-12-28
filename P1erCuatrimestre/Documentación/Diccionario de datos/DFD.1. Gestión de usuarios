@@ -1,24 +1,25 @@
------- Vista de usuarios ---------------------
-Consulta Datos Usuarios: ID_usuario + tipo_usuario + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave.
+------ Listado de usuarios ---------------------
+Parámetros = (ID) + (tipo) + (e-mail) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
+Parámetros = * Son los parámetros de búsqueda de usuarios. Todos los campos con opcionales ya que se pueden realizar búsquedas de usuarios 
+de varias formas. *
+
+Consulta Subárea = id_subárea + id_área + (id_usuario) + nombre.
+Consulta Subárea = * Consulta de las subáreas donde trabaja el usuario, el id_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id_usuario, sino que lee para asignarle un área. *
 ----------------------------------------------
 
------- Añadir Usuarios -----------------------
-Introducir Datos Usuarios: ID_usuario + tipo_usuario + e-mail + contraseña
-Consultar Área: ID_área + nombre
+
+------ Modificar Usuario --------------------
+
+Consultar Subárea = ID_subárea + ID_área + (id_usuario) + nombre_subárea.
+Consultar Subárea = * Consulta las subáreas para después poder asignarsela al usuario, o consultará subárea si el proceso 'lista de usuarios' quiere conocer los id de los usuarios de determinada subárea. *
+
+Asignar Subárea = ID_subárea + ID_área + id_usuario + nombre_subárea.
+Asignar Subárea = * Se introduce una fila nueva en la tabla SUBÁREAS. *
 ----------------------------------------------
 
------- Modificar Usuarios --------------------
-Consultar/Escribir Datos Usuarios: ID_usuario + tipo_usuario + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave.
+------ Autentificar usuarios -----------------------
+Datos Autentificación = ID_usuario + contraseña.
 
-Consultar Subárea: ID_subárea + ID_área + nombre_subárea.
-
-Asignar Subárea: ID_subárea + ID_área + id_usuario + nombre_subárea.
-
-Id Subárea: ID_subárea.
-----------------------------------------------
-
------- Autentificación -----------------------
-Datos Autentificación: ID_usuario + contraseña.
-Verificar Autentificar: * Mostrar que la autentificación es correcta.*
+Verificar Autentificar = * Mostrar que la autentificación es correcta. Si introduce incorréctamente el id o la contraseña o ambas, se mostrará una plantalla en la que se indicará: 'Usuario o contraseña son incorrectas.' *
 ----------------------------------------------
 
