@@ -1,4 +1,4 @@
-﻿Usuarios:- id(auto_increment), tipo, E-MAIL, contraseña, nombre, apellidos, teléfono, (área) institución, currículum, palabras_clave.
+﻿Usuarios:- ID, tipo, e-mail, contraseña, nombre, apellidos, teléfono, (área) institución, currículum, palabras_clave.
 
 Paquetes de proyectos:- ID, institución, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
 
