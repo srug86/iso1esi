@@ -1,19 +1,21 @@
---- Vista de Informes de Evaluación ------------------------------------
-Datos Informes de Evaluación: id_informe + estado + datos
-Datos Informes de evaluación: * muestra los datos referidos a los informes de evaluación *
+--- Consulta de Informes -----------------------------------------------
+Informe Evaluación: id_informe + estado + datos
+Informe Evaluación: * muestra los datos referidos a los informes de evaluación *
+Informe Final: id_informe + estado + datos
+Informe Final: * muestra los datos referidos a los informes finales de los proyectos *
 ------------------------------------------------------------------------
 
---- Realizar Informes de Evaluación ------------------------------------
-Introducir/Modificar Informe Final: id_proyecto + id_paquete + estado + evaluación
-Introducir/Modificar Informe Final: * el adjunto y el coordinador realizarán y modificarán el informe final de evaluación del proyecto *
-Consultar Proyectos: id_proyecto + memoria + estado
-Consultar Proyectos: * consulta acerca del estado en que se encuentra la evaluación del proyecto además de la documentación o memoria de dicho proyecto *
-Datos Informes de Evaluación: id_proyecto + id_experto + estado + datos
-Datos Informes de evaluación: * Introducir, modificar o eliminar los datos referidos a un informe de evaluación *
-Consultar Estructura Modelos de Evaluación: estructura
+--- Realizar Informe ---------------------------------------------------
+Informe Evaluación: id_proyecto + id_experto + estado + datos
+Informe Evaluación: * Introducir, modificar o eliminar los datos referidos a un informe de evaluación *
+Informe Final: id_proyecto + id_paquete + estado + evaluación
+Informe Final: * el adjunto y el coordinador realizarán y modificarán el informe final de evaluación del proyecto *
+Memoria Proyecto: id_proyecto + memoria + estado
+Memoria Proyecto: * consulta acerca del estado en que se encuentra la evaluación del proyecto además de la documentación o memoria de dicho proyecto *
+Modelos Evaluación: estructura
 ------------------------------------------------------------------------
 
---- Validar Informes de Evaluación -------------------------------------
-Validar Informes de Evaluación: id_proyecto + id_paquete + estado
-Validar Informes de Evaluación: * cuando validemos el informe final de evaluación del proyecto cambiaremos su estado a "evaluado" *
+--- Devolver Evaluaciones ----------------------------------------------
+Informe Final: id_informe + estado + datos
+Informe Final: * devolución del informe validado *
 ------------------------------------------------------------------------
