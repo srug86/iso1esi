@@ -1,18 +1,18 @@
-﻿Usuarios:- ID, tipo, e-mail, contraseña, nombre, apellidos, teléfono, (área) institución, currículum, palabras_clave.
+﻿USUARIOS = @id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
 
-Paquetes de proyectos:- ID, institución, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
+PAQUETES_DE_PROYECTOS = @id_paquete + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
 
-Modelos de evaluación:- ID, estructura.
+MODELOS_DE_EVALUACIÓN = @id_modelo + estructura
 
-Áreas:- ID, nombre.
+ÁREAS = @id_área + nombre.
 
-Subáreas:- ID, (IDÁ), (idu), nombre.
+SUBÁREAS = @id_subárea + @id_área + id_usuario + nombre
 
-Proyectos:- ID, (PAQ), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (id_modelo_eval), evaluación.
+PROYECTOS = @id_proyecto + @id_paquete + memoria + área + subárea + estado + tpo_inv + tpo_eval + id_modelo_eval + evaluación
 
-Expertos-Proyectos:- (IDE), (IDP), (idi), valoración, fecha_asignación, estado.
+EXPERTOS-PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado
 
-Informes_evaluación:- ID, (id_modelo_eval), estado, datos. 
+INFORMES-EVALUACIÓN = @id_informe + id_modelo_eval + estado + datos
 
-Plantillas_correos:- ID, asunto, cuerpo.
+PLANTILLAS_CORREOS = @id_plantilla + asunto + cuerpo
 
