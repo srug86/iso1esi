@@ -1,55 +1,74 @@
 ------ GESTIÓN DE USUARIOS -------------------------------------------------------------------
 
-Datos Usuarios: Consulta Datos Usuarios + Escribir Datos Usuarios + Introducir Datos Usuarios
-Datos Usuarios: * Añadir, modificar, eliminar y consultar usuarios. *
+Área = id_área + nombre
+Área = * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
 
-Consulta Área: ID + nombre
-Consulta Área: * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
+Adjuntos = [Consulta Subárea | Asignar Subárea]
+Adjuntos = [id_subárea + id_área + nombre_subárea | id_subárea + id_área + id_usuario + nombre_subárea]
+Adjuntos = * Los usuarios adjuntos añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS. *
 
-Datos Subáreas: Consultar Subárea + Asignar Subárea + Id Subárea
-##Datos Subáreas: ID + IDÁ + idu + nombre.
-Datos Subáreas: * Los usuarios añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS. *
+Datos personales = nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
+Datos personales = * Cada usuario introduce sus datos personales = nombre, apellidos, teléfono, área, institución, currículum, palabras_clave. *
 
-Consulta Plantillas: ID + asunto + cuerpo.
+Datos Usuarios = id_usuario
+Datos Usuarios = * Se le pasa el id del usuario para eliminarlo de la base de datos *
+
+Alta usuario = id_usuario + tipo + e-mail + contraseña
+Alta usuario = * El secretario da de alta a los usuario introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña
+
+Consulta Usuario = id_usuario + tipo + e-mail + contraseña + nombre + apellidos, teléfono + id_área + institución + currículum + palabras_clave
+
+Consulta Autentificación = e-mail + contraseña
+
+Plantillas = ID + asunto + cuerpo.
 ----------------------------------------------------------------------------------------------
 
 ------ GESTIÓN DE PAQUETES DE PROYECTOS ------------------------------------------------------
-Consulta Área: ID_área + nombre
+Consulta Áreas = id_área + nombre_subárea
 
-Consulta Subárea: ID_subárea + ID_área + id_usuario + nombre
+Consulta Subárea = id_subárea + nombre_subárea
 
-Asignar Área: ID_Área
+Datos Proyectos = (id_proyecto) + (id_paq) + (memoria) + (id_área) + (id_subárea) + (estado) + (tpo_inv) + (tpo_eval) + (id_modelo_eval) + (evaluación)
+Datos Proyectos = * Se añaden, se modifican y se consultan los datos de los proyectos. Son todos opcionales por el flujo de datos en la modificación. *
 
-Asignar Subárea: ID_Subárea 
+Subárea Asignada =id_subárea
+Subáreas = * Se le añade un subárea a cada proyecto *
 
-Datos Proy: ID_proyecto + id_paquete + memoria + estado + tiempo_inv + tpo_eval + id_modelo_eval + evaluación.
+Área Asignada = id_área
+Área asignada = * Se le añade un área a cada proyecto *
 
-Datos Paq.Proy.: ID_paqproy + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite.
+Datos Paquetes Proyectos = (id_paqproy) + (institución) + (bases) + (convocatoria) + (fecha_entrada) + (fecha_salida) + (fecha_límite)
+Datos Paquetes Proyectos = * Se añaden, se modifican y se consultan los datos de los paquetes de proyectos. *
 
-Consulta Modelo: id_modelo_eval
-Consulta Modelo: * Se consulta el id del modelo de evaluación. *
+Modelo = id_modelo_eval
+Modelo = * Se consulta el id del modelo de evaluación para poder asignárselo a los proyectos. Son todos opcionales por el flujo de datos en la modificación. *
+
 ----------------------------------------------------------------------------------------------
 
 ------ GESTIÓN DE EVALUACIONES -------------------------------------------------------------------
-Introducir/Modificar Informe Final: ID_modelo_eval + estructura
+Informe Final = id_modelo_eval + estructura
 
-Consulta Proyecto: ID + memoria + id_modelo_eval
+Memoria Proyecto = id_proyecto + memoria + id_modelo_eval
+Memoria Proyecto = * Se lee para poder realizar el informe. *
 
-Consulta Convocatoria: convocatoria
+Convocatoria = convocatoria
+Convocatoria = * Se lee la convocatoria para poder realizar el modelo de evaluación. *
 
-Datos Mod. Eval: ID_modelo_eval + estructura
+Modelo Evaluación = ID_modelo_eval + estructura
 
-Datos Inf Eval: ID_inf_eval + id_modelo_eval + estado + datos.
-Datos Inf Eval: * Se inicializa informe y devuelve el id del informe. *
 ----------------------------------------------------------------------------------------------
 
 ------ GESTIÓN DE EXPERTOS -------------------------------------------------------------------
+Plantilla =
 
-Consulta Exp: * búsqueda y selección de expertos. *
-Consulta Plantilla:
-Consulta Proyecto:
-Consulta Institución:
-Datos Informe Evaluación:
-Datos Expertos/Proyectos: id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado.
-Datos Expertos/Proyectos: * Se asignará un proyecto a un experto y se guardará la fecha de asignación y el estado. Al finalizar la evaluación, el experto será valorado (valoración de expertos). *
+Datos Expertos =[Expertos Seleccionados | Expertos Búsqueda | email]
+
+Proyecto =[Área Proyecto | Tipos | Tiempos]
+
+Info Paquetes Proyectos =[Institución Convocante | Fecha límite]
+
+Nuevo Informe Evaluación =
+
+Informe Rechazado =
+
 ----------------------------------------------------------------------------------------------

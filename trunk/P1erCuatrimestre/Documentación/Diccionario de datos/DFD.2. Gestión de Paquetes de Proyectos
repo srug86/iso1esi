@@ -1,8 +1,8 @@
 ------ Gestión Proyecto ----------------------------------------------------
-ID Paq. Proy: ID_paqueteproyecto
+ID Paq. Proy = ID_paqueteproyecto
 
-Asigna Área Proy: ID_proyecto + ID_área
+Asigna Área Proy = ID_proyecto + ID_área
 
-Asig. Subárea Proyecto: ID_proyecto + ID_subárea
+Asig. Subárea Proyecto = ID_proyecto + ID_subárea
 
-*****Consulta Convocatoria:
+*****Consulta Convocatoria =
