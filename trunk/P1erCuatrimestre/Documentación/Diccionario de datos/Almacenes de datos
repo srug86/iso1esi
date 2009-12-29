@@ -17,25 +17,25 @@ MODELOS_DE_EVALUACIÓN = @id_modelo + estructura
 
 SUBÁREAS = @id_subárea + @id_área + id_usuario + nombre
 
-PROYECTOS = @id_proyecto + @id_paquete + memoria + área + subárea + estado + tpo_inv + tpo_eval + id_modelo_eval + evaluación
+PROYECTOS = @id_proyecto + @id_paquete + memoria + área + subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
 área = * hace referencia al id de la tabla ÁREA. *
 subárea = * hace referencia al id de la tabla SUBÁREA. *
-estado = [sin_evaluar|en_proceso|evaluado]
+estado_proyecto = [sin_evaluar|en_proceso|evaluado]
 tpo_inv = * tiempo que tiene un experto para aceptar o declinar una invitación. *
 tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su aceptación. *
 id_modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN. *
 evaluación = * informe final realizado. *
 
-EXPERTOS/PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado
+EXPERTOS/PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
 valoración = tpo_realización + calidad_informe
 fecha_asignación = día + mes + año
-estado = [pendiente|aceptado|rechazado]
+estado_invitación = [pendiente|aceptado|rechazado]
 tpo_realización = dígito
 calidad_informe = dígito
 dígito = [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10]
 
-INFORMES DE EVALUACIÓN = @id_informe + id_modelo_eval + estado + datos
-estado = [sin_realizar|en_proceso|finalizado]
+INFORMES DE EVALUACIÓN = @id_informe + id_modelo_eval + estado_informe + datos
+estado_informe = [sin_realizar|en_proceso|finalizado]
 datos = * el experto rellenará los campos correspondientes al modelo de evaluación del proyecto *
 
 PLANTILLA CORREO = @id_plantilla + asunto + cuerpo

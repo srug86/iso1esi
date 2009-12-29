@@ -33,6 +33,10 @@ Fecha Asignación = * Se utiliza para el aviso de plazos. *
 
 Fin Relación = id_experto + id_proyecto
 Fin Relación = * Se elimina una tupla de la tabla EXPERTOS/PROYECTOS *
+
+Valoración trabajo = {tpo_realización + calidad_informe}
+Valoración expertos = id_experto + id_proyecto + tpo_realización + calidad_informe
+Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
 --------------------------
 
 **Expertos = [Resultado búsqueda | Parámetros Búsqueda | Resultado Consulta | Parámetros Consulta | ID Experto]
