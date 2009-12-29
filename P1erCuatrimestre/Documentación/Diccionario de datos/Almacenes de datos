@@ -26,7 +26,7 @@ tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su 
 id_modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN. *
 evaluación = * informe final realizado. *
 
-EXPERTOS/PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
+EXPERTOS-PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
 valoración = tpo_realización + calidad_informe
 fecha_asignación = día + mes + año
 estado_invitación = [aceptado|rechazado]
@@ -38,7 +38,7 @@ INFORMES DE EVALUACIÓN = @id_informe + id_modelo_eval + estado_informe + datos
 estado_informe = [en_proceso|finalizado]
 datos = * el experto rellenará los campos correspondientes al modelo de evaluación del proyecto *
 
-PLANTILLA CORREO = @id_plantilla + asunto + cuerpo
+PLANTILLAS CORREO = @id_plantilla + asunto + cuerpo
 asunto = [invitación|aviso_plazos]
 
 

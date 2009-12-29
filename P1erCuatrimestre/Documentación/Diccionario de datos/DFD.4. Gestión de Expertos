@@ -41,13 +41,13 @@ Valoración Expertos = id_experto + id_proyecto + tpo_realización + calidad_inf
 Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
 
 Fin Relación = id_experto + id_proyecto
-Fin Relación = * Se elimina una tupla de la tabla EXPERTOS/PROYECTOS *
+Fin Relación = * Se elimina una tupla de la tabla EXPERTOS-PROYECTOS *
 
 Fecha Asignación = fecha_asignación
 Fecha Asignación = * Se utiliza para el aviso de plazos. *
 
 Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
-Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS/PROYECTOS
+Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS-PROYECTOS
 
 Valoración trabajo = {tpo_realización + calidad_informe}
 Valoración trabajo = * Se utiliza en búsqueda de expertos. *
