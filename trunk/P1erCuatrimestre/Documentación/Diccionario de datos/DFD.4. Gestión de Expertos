@@ -45,6 +45,10 @@ ID Experto = id_experto
 
 **Tiempo excedido = [Experto Desasignado | Informe Rechazado]
 Tiempo excedido = * Cuando se ha pasado el plazo para entregar el informe *
+
 Experto Desasignado = id_experto + id_proyecto
+
+Informe Rechazado = id_informe
+Informe Rechazado = * se elimina la tupla correspondiente en la tabla INFORMES DE EVALUACIÓN. *
 
 
