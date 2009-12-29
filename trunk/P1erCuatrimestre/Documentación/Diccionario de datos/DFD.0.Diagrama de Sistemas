@@ -16,7 +16,7 @@ Datos Usuarios = * Se le pasa el id del usuario para eliminarlo de la base de da
 Alta usuario = id_usuario + tipo + e-mail + contraseña
 Alta usuario = * El secretario da de alta a los usuario introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña
 
-Consulta Usuario = id_usuario + tipo + e-mail + contraseña + nombre + apellidos, teléfono + id_área + institución + currículum + palabras_clave
+Consulta Usuarios = id_usuario + tipo + e-mail + contraseña + nombre + apellidos, teléfono + id_área + institución + currículum + palabras_clave
 
 Consulta Autentificación = e-mail + contraseña
 
@@ -24,7 +24,7 @@ Plantillas = ID + asunto + cuerpo.
 ----------------------------------------------------------------------------------------------
 
 ------ GESTIÓN DE PAQUETES DE PROYECTOS ------------------------------------------------------
-Consulta Áreas = id_área + nombre_subárea
+Consulta Área = id_área + nombre_subárea
 
 Consulta Subárea = id_subárea + nombre_subárea
 
@@ -55,6 +55,10 @@ Convocatoria = convocatoria
 Convocatoria = * Se lee la convocatoria para poder realizar el modelo de evaluación. *
 
 Modelo Evaluación = ID_modelo_eval + estructura
+
+Informe Evaluación = 
+
+Actualización Estado =
 
 ----------------------------------------------------------------------------------------------
 
