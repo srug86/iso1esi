@@ -10,7 +10,7 @@ Subáreas:- ID, (IDÁ), (idu), nombre.
 
 Proyectos:- ID, (PAQ), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (id_modelo_eval), evaluación.
 
-Expertos-Proyectos:- (IDE), (IDP), (idi), valoración, fecha_asignación, estado.
+Expertos-Proyectos:- (IDE), (IDP), (idi), valoración, fecha_asignación.
 
 Informes_evaluación:- ID, (id_modelo_eval), estado, datos. 
 
