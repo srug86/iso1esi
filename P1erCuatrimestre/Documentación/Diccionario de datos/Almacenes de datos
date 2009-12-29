@@ -3,55 +3,39 @@ DICCIONARIO DE DATOS
 --> ALMACENES DE DATOS:
 --> DATOS ELEMENTALES:
 
-SECRETARIO = @id + e-mail + contraseña + nombre + apellidos + teléfono
+﻿USUARIOS = @id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
+área = * hace referencia al id de la tabla ÁREA *
 
-PAQUETES_DE_PROYECTOS = @id + institución_convocante + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+PAQUETES_DE_PROYECTOS = @id_paquete + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
 fecha_entrada = día + mes + año
 fecha_salida = día + mes + año
 fecha_límite = día + mes + año
 
-MODELOS_DE_EVALUACIÓN = @id + estructura
+MODELOS_DE_EVALUACIÓN = @id_modelo + estructura
 
-COORDINADORES = @id + e-mail + contraseña + nombre + apellidos + área + teléfono
-área = * hace referencia al id de la tabla ÁREA *
+ÁREAS = @id_área + nombre.
 
-ÁREAS = @id + nombre + subáreas
-subárea = * hace referencia al id de la tabla SUBÁREA *
+SUBÁREAS = @id_subárea + @id_área + id_usuario + nombre
 
-ADJUNTOS = @id + subárea + e-mail + contraseña + nombre + apellidos + teléfono
-subárea = * hace referencia al id de la tabla SUBÁREA *
-
-SUBÁREAS = @área + @id + nombre
-área = * hace referencia al id de la tabla ÁREA *
-
-EXPERTOS = @id + e-mail + contraseña + nombre + apellidos + área + teléfono + curriculum + {palabras_clave}
-área = * hace referencia al id de la tabla ÁREA *
-
-PROYECTOS = @paquete + @id + memoria, + área + subárea + estado + tpo_inv + tpo_eval + modelo_eval + evaluación
-paquete = * hace referencia al id de la tabla PAQUETES_DE_PROYECTOS *
-área = * hace referencia al id de la tabla ÁREA *
-subárea = * hace referencia al id de la tabla SUBÁREA *
+PROYECTOS = @id_proyecto + @id_paquete + memoria + área + subárea + estado + tpo_inv + tpo_eval + id_modelo_eval + evaluación
+área = * hace referencia al id de la tabla ÁREA. *
+subárea = * hace referencia al id de la tabla SUBÁREA. *
 estado = [sin_evaluar|en_proceso|evaluado]
-tpo_inv = * tiempo que tiene un experto para aceptar o declinar una invitación *
-tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su aceptación *
-modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN *
-evaluación = * informe final realizado por el adjunto *
+tpo_inv = * tiempo que tiene un experto para aceptar o declinar una invitación. *
+tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su aceptación. *
+id_modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN. *
+evaluación = * informe final realizado. *
 
-EXPERTOS_PROYECTOS = @id_experto + @id_proyecto + valoración + fecha_asignación + estado
-id_experto = * hace referencia al id de la tabla EXPERTOS *
-id_proyecto = * hace referencia al id de la tabla PROYECTOS *
+EXPERTOS/PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado
 valoración = tpo_realización + calidad_informe
 fecha_asignación = día + mes + año
 estado = [pendiente|aceptado|rechazado]
 
-INFORMES_EVALUACIÓN = @id_proyecto + @id_experto + modelo_eval + estado + datos
-id_proyecto = * hace referencia al id de la tabla PROYECTOS *
-id_experto = * hace referencia al id de la tabla EXPERTOS *
-modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN * 
+INFORMES DE EVALUACIÓN = @id_informe + id_modelo_eval + estado + datos
 estado = [sin_realizar|en_proceso|finalizado]
 datos = * el experto rellenará los campos correspondientes al modelo de evaluación del proyecto *
 
-PLANTILLAS_CORREOS = @id + asunto + texto
+PLANTILLA CORREO = @id_plantilla + asunto + cuerpo
 asunto = [invitación|aviso_plazos]
 
 

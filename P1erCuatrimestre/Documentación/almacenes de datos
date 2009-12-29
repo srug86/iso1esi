@@ -10,9 +10,9 @@ SUBÁREAS = @id_subárea + @id_área + id_usuario + nombre
 
 PROYECTOS = @id_proyecto + @id_paquete + memoria + área + subárea + estado + tpo_inv + tpo_eval + id_modelo_eval + evaluación
 
-EXPERTOS-PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado
+EXPERTOS/PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado
 
-INFORMES-EVALUACIÓN = @id_informe + id_modelo_eval + estado + datos
+INFORMES DE EVALUACIÓN = @id_informe + id_modelo_eval + estado + datos
 
-PLANTILLAS_CORREOS = @id_plantilla + asunto + cuerpo
+PLANTILLA CORREO = @id_plantilla + asunto + cuerpo
 
