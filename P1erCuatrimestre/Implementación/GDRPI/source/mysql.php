@@ -4,7 +4,7 @@ if (!defined('GDRPI')) die(header("Location: noencontrado"));
 class MySQL {
    private $link;
 
-   private function __construct() {
+   public function __construct() {
      global $_config;
      $bd = $_config['bd'];
      $this->link = mysql_connect($bd['host'], $bd['user'], $bd['pass']);
@@ -23,10 +23,10 @@ class MySQL {
    }
    
    private function errors($str_error) {
-
+     null;
    }
        
-   private function __destruct() {
+   public function __destruct() {
       mysql_close($this->link);
    }
 }
