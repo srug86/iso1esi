@@ -1,7 +1,7 @@
 <?php
 /* ---------------------------------------------------------------- *
  * Gestión Distribuída de la Revisión de Proyectos de Investigación *
- * ---------------------------------------------------------------- */
+ * ---------------------------------------------------------------- */         
 
 /* Define +  Errors + Locals */
 define('GDRPI', 1);
@@ -13,10 +13,11 @@ $time_start = microtime();
 /* Includes */
 include 'settings.php';
 include 'source/mysql.php';
-include 'source/login.php';
+include 'source/loginout.php';
+include 'theme/main.php';
 
 session_start();
-$_mysql = MySQL();
+$_mysql = new MySQL();
 
 /* Global variables */
 $_uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : null;
@@ -26,17 +27,19 @@ $_uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : null;
 $_act = isset($_GET['act']) ? $_GET['act'] : null;
 $_rng = isset($_GET['rng']) ? $_GET['rng'] : null;
 
-loadUser();
+/* User datas */
+$_name = null;
+$_last_names = null;
+load_user();
 
-/* Action array of functions */
+/* Functions action array */
 $actionArray = array(
-                     'login' => array('login.php', 'login'),
-                     'logout' => array('login.php', 'logout'),
-                     null => array('', '')
+                     'login' => array('loginout.php', 'login'),
+                     'l ogout' => array('loginout.php', 'logout'),
+                     null => array('evaluations.php', 'evaluations')
                      );
 
-
-require_once $actionArray[$_act][0];
+require_once 'source/'.$actionArray[$_act][0];
 call_user_func($actionArray[$_act][1]);
 ?>
 

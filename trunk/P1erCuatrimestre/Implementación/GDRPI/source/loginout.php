@@ -1,9 +1,8 @@
 <?php
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
-function loadUser() {
-  global $_uid, $_mysql;
-  $res = true;
+function load_user() {
+  global $_uid, $_mysql, $_name, $_last_names;
 
   /* If user id doesn't exists */
   if (!$_uid) {
@@ -13,8 +12,21 @@ function loadUser() {
       $r = $_mysql->assoc($sql);
       $dbpass = sha1($r['passwd'].$r['pwsalt']);
       
-      if ($cookie['pass'] == $dbpass) $_SESSION['uid'] = $_uid = $cookie['uid'];
-      else die(login());
+      if ($cookie['pass'] == $dbpass) {
+        $_SESSION['uid'] = $_uid = $cookie['uid'];
+        $r = $_mysql->assoc("SELECT name, last_names"
+                            ."FROM users WHERE id=$_uid");
+        $_SESSION['name'] = $_name = $r['name'];
+        $_SESSION['last_names'] = $_last_names = $r['last_names'];
+      }
+      else {
+        logout();
+        theme_view('login');
+      }
+    }
+    else {
+      logout();
+      theme_view('login');
     }
   }
 }
@@ -37,7 +49,7 @@ function login() {
   }
   else {
     logout();
-    loginpage(true);
+    theme_view('login');
   }
 }
 

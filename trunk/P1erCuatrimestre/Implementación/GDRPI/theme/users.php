@@ -3,14 +3,13 @@ if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
 function users_header() {
   echo '
-    <div id="header">
-      <div id="title"></div>
-      <div id="user">
-        <div id="type"></div>
-        <div id="data"</div>
-      </div>
-    </div>
-  ';
+        <div id="user">
+          <div id="type">
+            
+          </div>
+          <div id="data"></div>
+        </div>
+     ';
 }
 
 function users_body() {
