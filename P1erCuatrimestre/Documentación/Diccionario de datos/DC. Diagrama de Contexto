@@ -1,62 +1,62 @@
 --- SECRETARIO -------------------------------------------------
-Criterios de Evaluación: ID + estructura
-Criterios de Evaluación: * registro y consulta de los modelos de evaluación a utilizar para realizar los informes *
-Área Proyectos: id_área + id_proyecto
-Área Proyectos: * asignación de un área a un proyecto *
-Convocatoria: convocatoria
-Usuarios: [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | parámetros]
-Usuarios: * da el alta a los usuarios y consulta y modifica sus datos. Modificar el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
-Lista Usuarios: 
+Criterios de Evaluación = id_modelo + estructura
+Criterios de Evaluación = * registro y consulta de los modelos de evaluación a utilizar para realizar los informes *
+Área Proyectos = id_área + id_proyecto
+Área Proyectos = * asignación de un área a un proyecto *
+Convocatoria = convocatoria
+Usuarios = [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | parámetros]
+Usuarios = * da el alta a los usuarios y consulta y modifica sus datos. Modificar el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
+Lista Usuarios = {id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
 ----------------------------------------------------------------
 
 --- INSTITUCIÓN CONVOCANTE -------------------------------------
-Paquetes Proyectos: id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
-Paquetes Proyectos: * paquetes de proyectos enviados por la institución convocante para su evaluación *
-Evaluaciones: id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
-Evaluaciones: * paquetes de proyectos enviados a la institución convocante una vez evaluados *
+Evaluaciones = id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+Evaluaciones = * paquetes de proyectos enviados a la institución convocante una vez evaluados *
+Paquetes Proyectos = id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+Paquetes Proyectos = * paquetes de proyectos enviados por la institución convocante para su evaluación *
 ----------------------------------------------------------------
 
 --- COORDINADOR ------------------------------------------------
-Subárea Adjuntos: id_subárea + id_usuario
-Subárea Adjuntos: * asignación de un adjunto a una subárea *
-Subárea Proyecto: id_subárea + id_proyecto
-Subárea Proyecto: * asignación de un proyecto a una subárea *
-Informes Adjuntos: 
-Informes Adjuntos: * ve y/o modifica el informe final de evaluación de un adjunto *
-Informes Coordinador: ID + id_modelo_eval + estado + datos
-Informes Coordinador: * Validar o modificar informe final del adjunto *
+Subárea Adjuntos = id_subárea + id_usuario
+Subárea Adjuntos = * asignación de un adjunto a una subárea *
+Subárea Proyecto = id_subárea + id_proyecto
+Subárea Proyecto = * asignación de un proyecto a una subárea *
+Informes Adjuntos = 
+Informes Adjuntos = * ve y/o modifica el informe final de evaluación de un adjunto *
+Informes Coordinadores = id_ + id_modelo_eval + estado + datos
+Informes Coordinadores = * Validar o modificar informe final del adjunto *
 ----------------------------------------------------------------
 
 --- ADJUNTO ----------------------------------------------------
-Informes Adjuntos: ID + id_modelo_eval + estado + datos
-Informes Adjuntos: * realizar informe final de evaluación de un proyecto *
-Informes Expertos: ID + modelo_eval + estado + datos 
-Informes Expertos: * Ver informes de proyectos de expertos *
-Rechazar Proyecto: id_proyecto + id_área + id_subárea *
-Rechazar Proyecto: * aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta *
-Expertos: (Expertos)
-Expertos: * tráfico relacionado con la búsqueda y asignación de expertos para las evaluaciones de proyectos *
-Tiempo Excedido:
-Tiempo Excedido: * 
+Informes Adjuntos = ID + id_modelo_eval + estado + datos
+Informes Adjuntos = * realizar informe final de evaluación de un proyecto *
+Tiempo Excedido =
+Tiempo Excedido = * 
+Expertos = 
+Expertos = * tráfico relacionado con la búsqueda y asignación de expertos para las evaluaciones de proyectos *
+Informes Expertos = ID + modelo_eval + estado + datos 
+Informes Expertos = * Ver informes de proyectos de expertos *
+Proyecto Rechazado = id_proyecto + id_área + id_subárea *
+Proyecto Rechazado = * aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta *
 ----------------------------------------------------------------
 
 --- USUARIO ----------------------------------------------------
-Datos Personales: ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}.
-Autentificación: (e_mail + contraseña
-Autentificación: * acceder al sistema con una cuenta de usuario *
-Proyectos:
-Proyectos: * consulta la memoria del proyecto para realizar el informe de evaluación *
-Correo de Alta: id_usuario + contraseña + nombre + apellidos + área + cuerpo
-Correo de Alta: * correo de confirmación de registro de un nuevo usuario en el sistema *
+Datos Personales = ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}.
+Autentificación = [Datos Autentificación | Verificar Autentificar]
+Autentificación = * acceso al sistema con una cuenta de usuario y verificación de la autentificación *
+Proyectos =
+Proyectos = * consulta la memoria del proyecto para realizar el informe de evaluación *
+Correo de Alta = id_usuario + contraseña + nombre + apellidos + área + cuerpo
+Correo de Alta = * correo de confirmación de registro de un nuevo usuario en el sistema *
 ----------------------------------------------------------------
 
 --- EXPERTO ----------------------------------------------------
-Invitación: nombre + apellidos + tpo_inv + id_proyecto + cuerpo
-Invitación: * correo de invitación a un experto para que evalúe un proyecto y respuesta de éste *
-Informes Expertos: ID + modelo_eval + estado + datos 
-Informes Expertos: * Añadir, modificar o eliminar informes de proyectos *
-Avisos Plazos: nombre + apellidos + tpo_eval + id_proyecto + cuerpo
-Avisos Plazos: * correo de advertencia de fecha límite de evaluación de un proyecto *
+Invitación = nombre + apellidos + tpo_inv + id_proyecto + cuerpo
+Invitación = * correo de invitación a un experto para que evalúe un proyecto y respuesta de éste *
+Informes Expertos = ID + modelo_eval + estado + datos 
+Informes Expertos = * Añadir, modificar o eliminar informes de proyectos *
+Avisos Plazos = nombre + apellidos + tpo_eval + id_proyecto + cuerpo
+Avisos Plazos = * correo de advertencia de fecha límite de evaluación de un proyecto *
 ----------------------------------------------------------------
 
 
