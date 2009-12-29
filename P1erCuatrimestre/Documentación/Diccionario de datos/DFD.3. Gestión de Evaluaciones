@@ -8,7 +8,7 @@ Modelos Evaluación: * insertamos y consultamos escribimos las estructura que de
 --- Gestión de Informes de Evaluación ----------------------------------
 Informe Final: id_proyecto + id_paquete + estado + evaluación
 Informe Final: * el adjunto y el coordinador realizarán y modificarán el informe final de evaluación del proyecto *
-Memoria Proyecto: id_proyecto + memoria + estado
+Memoria Proyecto: id_proyecto id_paquete + memoria + estado
 Memoria Proyecto: * consulta acerca del estado en que se encuentra la evaluación del proyecto además de la documentación o memoria de dicho proyecto *
 Modelos Evaluación: id + estructura
 Modelos Evaluación: * informan de la estructura que deben seguir los informes de evaluación de cada proyecto * 

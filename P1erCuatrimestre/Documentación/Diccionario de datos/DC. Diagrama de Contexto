@@ -1,29 +1,37 @@
 --- SECRETARIO -------------------------------------------------
-Criterios de Evaluación = id_modelo + estructura
-Criterios de Evaluación = * añadir y modificar los modelos de evaluación a utilizar para realizar los informes *
+Criterios Evaluación = id_modelo + estructura
+Criterios Evaluación = * añadir y modificar los modelos de evaluación a utilizar para realizar los informes *
+
 Área Proyectos = id_área + id_proyecto
 Área Proyectos = * asignación de un área a un proyecto *
+
 Convocatoria = convocatoria
+
 Usuarios = [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | Parámetros]
-Usuarios = * da el alta a los usuarios, los consulta o modifica sus datos. Modificar el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
+Usuarios = * da el alta a los usuarios, los consulta o modifica sus datos. Modifica el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
+
 Lista Usuarios = {id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
 Lista Usuarios = * lista devuelta por una búsqueda o consulta de usuarios *
 ----------------------------------------------------------------
 
 --- INSTITUCIÓN CONVOCANTE -------------------------------------
-Evaluaciones = id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+Evaluaciones = id_paquete + {evaluación}
 Evaluaciones = * paquetes de proyectos enviados a la institución convocante una vez evaluados *
-Paquetes Proyectos = id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+
+Paquetes Proyectos = [id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite | Proyectos]
 Paquetes Proyectos = * paquetes de proyectos enviados por la institución convocante para su evaluación *
 ----------------------------------------------------------------
 
 --- COORDINADOR ------------------------------------------------
 Subárea Adjuntos = id_subárea + id_usuario
 Subárea Adjuntos = * asignación de un adjunto a una subárea *
-Subárea Proyecto = id_subárea + id_proyecto
+
+Subárea Proyecto = id_subárea + id_proyecto + id_paquete
 Subárea Proyecto = * asignación de un proyecto a una subárea *
-Informes Adjuntos = 
+
+Informes Adjuntos = id_informe + id_modelo_eval + estado_informe + datos
 Informes Adjuntos = * ve y/o modifica el informe final de evaluación de un adjunto *
+
 Informes Coordinadores = id_ + id_modelo_eval + estado + datos
 Informes Coordinadores = * Validar o modificar informe final del adjunto *
 ----------------------------------------------------------------
@@ -31,44 +39,40 @@ Informes Coordinadores = * Validar o modificar informe final del adjunto *
 --- ADJUNTO ----------------------------------------------------
 Informes Adjuntos = ID + id_modelo_eval + estado + datos
 Informes Adjuntos = * realizar informe final de evaluación de un proyecto *
-Tiempo Excedido = [Informe Rechazado | Experto Desasignado]
-Tiempo Excedido = * 
-Expertos = [Parámetros Consulta | Resultado Consulta | Parámetros Búsqueda | Resultado Búsqueda | ID Experto]
-Expertos = * tráfico relacionado con la búsqueda, consulta y asignación de expertos para las evaluaciones de proyectos *
-Informes Expertos = id_experto + modelo_eval + estado + datos 
-Informes Expertos = * Ver informes de proyectos de expertos *
-Proyecto Rechazado = id_proyecto + id_área + id_subárea *
+
+Expertos = [Parámetros Consulta | Resultado Consulta | Parámetros Búsqueda | Resultado Búsqueda | ID Experto | Experto Desasignado]
+Expertos = * tráfico relacionado con la búsqueda, consulta, asignación y desasignación de expertos para las evaluaciones de proyectos *
+
+Consulta Informes Expertos = id_informe + id_modelo_eval + estado_informe + datos
+Informes Expertos = * ver informes de proyectos de expertos *
+
+Proyecto Rechazado = id_proyecto + id_paquete + subárea
 Proyecto Rechazado = * aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta *
-Valoración Expertos = id_experto + id_proyecto + 
+
+Valoración Expertos = id_experto + id_proyecto + id_paquete + valoración
 ----------------------------------------------------------------
 
 --- USUARIO ----------------------------------------------------
 Datos Personales = ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}
+
 Autentificación = [Datos Autentificación | Verificar Autentificar]
 Autentificación = * acceso al sistema con una cuenta de usuario y verificación de la autentificación *
+
 Proyectos =
 Proyectos = * consulta la memoria del proyecto para realizar el informe de evaluación *
-Correo de Alta = id_usuario + contraseña + nombre + apellidos + área + cuerpo
-Correo de Alta = * correo de confirmación de registro de un nuevo usuario en el sistema *
+
+Correo Alta = id_usuario + contraseña + nombre + apellidos + área + cuerpo
+Correo Alta = * correo de confirmación de registro de un nuevo usuario en el sistema *
 ----------------------------------------------------------------
 
 --- EXPERTO ----------------------------------------------------
 Invitación = [Petición | Aceptación]
 Invitación = * correo de invitación a un experto para que evalúe un proyecto y respuesta de éste *
-Informes Expertos = ID + modelo_eval + estado + datos 
+
+Informes Expertos = id_informe + id_modelo_eval + estado_informe + datos
 Informes Expertos = * Añadir, modificar o eliminar informes de proyectos *
-Avisos Plazos = nombre + apellidos + tpo_eval + id_proyecto + cuerpo
+
+Avisos Plazos = nombre + apellidos + tpo_eval + id_proyecto + id_paquete + cuerpo
 Avisos Plazos = * correo de advertencia de fecha límite de evaluación de un proyecto *
 ----------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
 
