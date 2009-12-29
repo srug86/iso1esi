@@ -1,0 +1,50 @@
+**Datos Expertos = [Expertos Seleccionados | Expertos Búsqueda | email]
+Expertos Seleccionados = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+Expertos Seleccionados = * Lista de expertos resultado de la consulta. *
+
+Expertos Búsqueda = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+Expertos Búsqueda = * Lista de expertos resultado de la consulta. *
+
+email = email
+email = * Se extrae el email de los expertos para mandarles la invitación. *
+
+**Proyecto = [Área Proyecto | Tiempos]
+Área Proyecto = área
+Área Proyecto = * Se extrae el área del proyecto para buscar expertos relacionados con ese área. *
+
+Tiempos = tpo_eval
+Tiempos = * Se consulta el tiempo de evaluación para saber cuanto le queda al experto para realizar el informe. *
+
+**Info. Paquetes Proyectos = [Institución Convocante | Fecha límite]
+Institución Convocante = institución
+Institución Convocante = * Se consulta la institución convocante para que no coincida en la búsqueda de expertos. *
+
+Fecha límite = fecha_límite
+Fecha límite = * Se utiliza para indicar el plazo de realización del informe al experto. *
+
+(Flujos de dentro)
+Relación Expertos-Proyecto = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado}
+
+Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado
+Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS/PROYECTOS
+
+Fecha Asignación = fecha_asignación
+Fecha Asignación = * Se utiliza para el aviso de plazos. *
+
+Fin Relación = id_experto + id_proyecto
+Fin Relación = * Se elimina una tupla de la tabla EXPERTOS/PROYECTOS *
+--------------------------
+
+**Expertos = [Resultado búsqueda | Parámetros Búsqueda | Resultado Consulta | Parámetros Consulta | ID Experto]
+Resultado búsqueda = Resultado Consulta = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+
+Parámetros Búsqueda = Parámetros Consulta = (@id_usuario) + (tipo) + (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) 
+
+ID Experto = id_experto
+
+
+**Tiempo excedido = [Experto Desasignado | Informe Rechazado]
+Tiempo excedido = * Cuando se ha pasado el plazo para entregar el informe *
+Experto Desasignado = id_experto + id_proyecto
+
+
