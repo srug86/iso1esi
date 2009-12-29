@@ -6,12 +6,17 @@ Informe Final: * muestra los datos referidos a los informes finales de los proye
 ------------------------------------------------------------------------
 
 --- Realizar Informe ---------------------------------------------------
-Informe Evaluación: id_proyecto + id_experto + estado + datos
-Informe Evaluación: * Introducir, modificar o eliminar los datos referidos a un informe de evaluación *
+Informe Evaluación: id_informe + estado + datos
+Informe Evaluación: * Introducir, modificar o eliminar los datos referidos a un informe de evaluación.*
+
 Informe Final: id_proyecto + id_paquete + estado + evaluación
 Informe Final: * el adjunto y el coordinador realizarán y modificarán el informe final de evaluación del proyecto *
-Memoria Proyecto: id_proyecto + memoria + estado
+
+Informe Finalizado: id_informe + estado
+
+Memoria Proyecto: id_proyecto + id_paquete + memoria + estado
 Memoria Proyecto: * consulta acerca del estado en que se encuentra la evaluación del proyecto además de la documentación o memoria de dicho proyecto *
+
 Modelos Evaluación: estructura
 ------------------------------------------------------------------------
 
