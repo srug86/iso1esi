@@ -1,12 +1,13 @@
 --- SECRETARIO -------------------------------------------------
 Criterios de Evaluación = id_modelo + estructura
-Criterios de Evaluación = * registro y consulta de los modelos de evaluación a utilizar para realizar los informes *
+Criterios de Evaluación = * añadir y modificar los modelos de evaluación a utilizar para realizar los informes *
 Área Proyectos = id_área + id_proyecto
 Área Proyectos = * asignación de un área a un proyecto *
 Convocatoria = convocatoria
-Usuarios = [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | parámetros]
-Usuarios = * da el alta a los usuarios y consulta y modifica sus datos. Modificar el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
+Usuarios = [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | Parámetros]
+Usuarios = * da el alta a los usuarios, los consulta o modifica sus datos. Modificar el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
 Lista Usuarios = {id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+Lista Usuarios = * lista devuelta por una búsqueda o consulta de usuarios *
 ----------------------------------------------------------------
 
 --- INSTITUCIÓN CONVOCANTE -------------------------------------
@@ -30,18 +31,19 @@ Informes Coordinadores = * Validar o modificar informe final del adjunto *
 --- ADJUNTO ----------------------------------------------------
 Informes Adjuntos = ID + id_modelo_eval + estado + datos
 Informes Adjuntos = * realizar informe final de evaluación de un proyecto *
-Tiempo Excedido =
+Tiempo Excedido = [Informe Rechazado | Experto Desasignado]
 Tiempo Excedido = * 
-Expertos = 
-Expertos = * tráfico relacionado con la búsqueda y asignación de expertos para las evaluaciones de proyectos *
-Informes Expertos = ID + modelo_eval + estado + datos 
+Expertos = [Parámetros Consulta | Resultado Consulta | Parámetros Búsqueda | Resultado Búsqueda | ID Experto]
+Expertos = * tráfico relacionado con la búsqueda, consulta y asignación de expertos para las evaluaciones de proyectos *
+Informes Expertos = id_experto + modelo_eval + estado + datos 
 Informes Expertos = * Ver informes de proyectos de expertos *
 Proyecto Rechazado = id_proyecto + id_área + id_subárea *
 Proyecto Rechazado = * aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta *
+Valoración Expertos = id_experto + id_proyecto + 
 ----------------------------------------------------------------
 
 --- USUARIO ----------------------------------------------------
-Datos Personales = ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}.
+Datos Personales = ID + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}
 Autentificación = [Datos Autentificación | Verificar Autentificar]
 Autentificación = * acceso al sistema con una cuenta de usuario y verificación de la autentificación *
 Proyectos =
@@ -51,7 +53,7 @@ Correo de Alta = * correo de confirmación de registro de un nuevo usuario en el
 ----------------------------------------------------------------
 
 --- EXPERTO ----------------------------------------------------
-Invitación = nombre + apellidos + tpo_inv + id_proyecto + cuerpo
+Invitación = [Petición | Aceptación]
 Invitación = * correo de invitación a un experto para que evalúe un proyecto y respuesta de éste *
 Informes Expertos = ID + modelo_eval + estado + datos 
 Informes Expertos = * Añadir, modificar o eliminar informes de proyectos *
