@@ -27,15 +27,15 @@ Fecha límite = * Se utiliza para indicar el plazo de realización del informe a
 
 **Informe Evaluación = [Informe Rechazado | Nuevo Informe]
 Informe Rechazado = id_informe
-Informe Rechazado = * se elimina la tupla correspondiente en la tabla INFORMES DE EVALUACIÓN. *
+Informe Rechazado = * se elimina la tupla correspondiente en la tabla INFORMES EVALUACIÓN. *
 
 Nuevo Informe = id_informe + id_modelo_eval + estado_informe + datos
-Nuevo Informe = * Se inserta una tupla en la tabla INFORMES DE EVALUACIÓN. *
+Nuevo Informe = * Se inserta una tupla en la tabla INFORMES EVALUACIÓN. El estado_informe será 'en_proceso'. *
 
 **Expertos-Proyectos = [Relación Expertos-Proyectos | Valoración Expertos | Fin Relación | Fecha Asignación | Nueva Relación | Valoración Trabajo]
 
-Relación Expertos-Proyectos = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado}
-Relación Expertos-Proyectos = * Lista de la relación entre Expertos y Proyectos. *
+Relación Expertos-Proyectos = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación}
+Relación Expertos-Proyectos = * Lista de la relación entre Expertos y Proyectos. Se devolverá una lista según los parámetros de consulta. *
 
 Valoración Expertos = id_experto + id_proyecto + tpo_realización + calidad_informe
 Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
@@ -46,7 +46,7 @@ Fin Relación = * Se elimina una tupla de la tabla EXPERTOS-PROYECTOS *
 Fecha Asignación = fecha_asignación
 Fecha Asignación = * Se utiliza para el aviso de plazos. *
 
-Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
+Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación
 Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS-PROYECTOS
 
 Valoración trabajo = {tpo_realización + calidad_informe}
@@ -54,16 +54,12 @@ Valoración trabajo = * Se utiliza en búsqueda de expertos. *
 
 --------------------------
 
-**Expertos = [Resultado búsqueda | Parámetros Búsqueda | Resultado Consulta | Parámetros Consulta | ID Experto]
+**Expertos = [Resultado búsqueda | Parámetros Búsqueda | Resultado Consulta | Parámetros Consulta | ID Experto | Experto Desasignado]
 Resultado búsqueda = Resultado Consulta = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
 
 Parámetros Búsqueda = Parámetros Consulta = (@id_usuario) + (tipo) + (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) 
 
 ID Experto = id_experto
-
-
-**Tiempo excedido = [Experto Desasignado | Informe Rechazado]
-Tiempo excedido = * Cuando se ha pasado el plazo para entregar el informe *
 
 Experto Desasignado = id_experto + id_proyecto
 

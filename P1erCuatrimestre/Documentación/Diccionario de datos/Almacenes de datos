@@ -6,12 +6,12 @@ DICCIONARIO DE DATOS
 ﻿USUARIOS = @id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
 área = * hace referencia al id de la tabla ÁREA *
 
-PAQUETES_DE_PROYECTOS = @id_paquete + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+PAQUETES PROYECTOS = @id_paquete + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
 fecha_entrada = día + mes + año
 fecha_salida = día + mes + año
 fecha_límite = día + mes + año
 
-MODELOS_DE_EVALUACIÓN = @id_modelo + estructura
+MODELOS EVALUACIÓN = @id_modelo + estructura
 
 ÁREAS = @id_área + nombre.
 
@@ -26,19 +26,16 @@ tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su 
 id_modelo_eval = * hace referencia al id de la tabla MODELOS_DE_EVALUACIÓN. *
 evaluación = * informe final realizado. *
 
-EXPERTOS-PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
+EXPERTOS-PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación
 valoración = tpo_realización + calidad_informe
 fecha_asignación = día + mes + año
-estado_invitación = [aceptado|rechazado]
 tpo_realización = dígito
 calidad_informe = dígito
 dígito = [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10]
 
-INFORMES DE EVALUACIÓN = @id_informe + id_modelo_eval + estado_informe + datos
+INFORMES EVALUACIÓN = @id_informe + id_modelo_eval + estado_informe + datos
 estado_informe = [en_proceso|finalizado]
-datos = * el experto rellenará los campos correspondientes al modelo de evaluación del proyecto *
+datos = * el experto, el adjunto y el coordinador rellenarán los campos correspondientes al modelo de evaluación del proyecto *
 
-PLANTILLAS CORREO = @id_plantilla + asunto + cuerpo
-asunto = [invitación|aviso_plazos]
-
-
+PLANTILLAS CORREOS = @id_plantilla + asunto + cuerpo
+asunto = [alta_usuario|invitación|aviso_plazos]
