@@ -8,12 +8,15 @@ Expertos Búsqueda = * Lista de expertos resultado de la consulta. *
 email = email
 email = * Se extrae el email de los expertos para mandarles la invitación. *
 
-**Proyecto = [Área Proyecto | Tiempos]
+**Proyecto = [Tiempos | Área Proyecto | Cambio Estado]
+Tiempos = tpo_eval
+Tiempos = * Se consulta el tiempo de evaluación para saber cuanto le queda al experto para realizar el informe. *
+
 Área Proyecto = área
 Área Proyecto = * Se extrae el área del proyecto para buscar expertos relacionados con ese área. *
 
-Tiempos = tpo_eval
-Tiempos = * Se consulta el tiempo de evaluación para saber cuanto le queda al experto para realizar el informe. *
+Cambio Estado = estado_proyecto
+Cambio Estado = * El estado del proyecto cambia de 'sin_evaluar' a 'en_proceso'. *
 
 **Info. Paquetes Proyectos = [Institución Convocante | Fecha límite]
 Institución Convocante = institución
@@ -22,24 +25,33 @@ Institución Convocante = * Se consulta la institución convocante para que no c
 Fecha límite = fecha_límite
 Fecha límite = * Se utiliza para indicar el plazo de realización del informe al experto. *
 
-(Flujos de dentro)
-Relación Expertos-Proyecto = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado}
+**Informe Evaluación = [Informe Rechazado | Nuevo Informe]
+Informe Rechazado = id_informe
+Informe Rechazado = * se elimina la tupla correspondiente en la tabla INFORMES DE EVALUACIÓN. *
 
-Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
-Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS/PROYECTOS
+Nuevo Informe = id_informe + id_modelo_eval + estado_informe + datos
+Nuevo Informe = * Se inserta una tupla en la tabla INFORMES DE EVALUACIÓN. *
 
-Fecha Asignación = fecha_asignación
-Fecha Asignación = * Se utiliza para el aviso de plazos. *
+**Expertos-Proyectos = [Relación Expertos-Proyectos | Valoración Expertos | Fin Relación | Fecha Asignación | Nueva Relación | Valoración Trabajo]
+
+Relación Expertos-Proyectos = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado}
+Relación Expertos-Proyectos = * Lista de la relación entre Expertos y Proyectos. *
+
+Valoración Expertos = id_experto + id_proyecto + tpo_realización + calidad_informe
+Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
 
 Fin Relación = id_experto + id_proyecto
 Fin Relación = * Se elimina una tupla de la tabla EXPERTOS/PROYECTOS *
 
-Valoración trabajo = {tpo_realización + calidad_informe}
-Valoración expertos = id_experto + id_proyecto + tpo_realización + calidad_informe
-Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
+Fecha Asignación = fecha_asignación
+Fecha Asignación = * Se utiliza para el aviso de plazos. *
 
-Nuevo Informe = id_informe + id_modelo_eval + estado_informe + datos
-Nuevo Informe = * Se inserta una tupla en la tabla INFORMES DE EVALUACIÓN. *
+Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
+Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS/PROYECTOS
+
+Valoración trabajo = {tpo_realización + calidad_informe}
+Valoración trabajo = * Se utiliza en búsqueda de expertos. *
+
 --------------------------
 
 **Expertos = [Resultado búsqueda | Parámetros Búsqueda | Resultado Consulta | Parámetros Consulta | ID Experto]
@@ -55,7 +67,5 @@ Tiempo excedido = * Cuando se ha pasado el plazo para entregar el informe *
 
 Experto Desasignado = id_experto + id_proyecto
 
-Informe Rechazado = id_informe
-Informe Rechazado = * se elimina la tupla correspondiente en la tabla INFORMES DE EVALUACIÓN. *
 
 
