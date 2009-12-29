@@ -59,16 +59,16 @@ Modelo Evaluación = ID_modelo_eval + estructura
 ----------------------------------------------------------------------------------------------
 
 ------ GESTIÓN DE EXPERTOS -------------------------------------------------------------------
-Plantilla =
+Plantilla = id_plantilla + asunto + cuerpo
+Plantilla = * Para mandar los correos pertinentes. *
 
-Datos Expertos =[Expertos Seleccionados | Expertos Búsqueda | email]
+Datos Expertos = [Expertos Seleccionados | Expertos Búsqueda | email]
 
-Proyecto =[Área Proyecto | Tipos | Tiempos]
+Proyecto = [Área Proyecto | Tipos | Tiempos]
 
-Info Paquetes Proyectos =[Institución Convocante | Fecha límite]
+Info Paquetes Proyectos = [Institución Convocante | Fecha límite]
 
-Nuevo Informe Evaluación =
-
-Informe Rechazado =
+Nuevo Informe Evaluación = id_informe + id_modelo_eval + estado + datos
+Nuevo Informe Evaluación = * Se inserta una nueva tupla en la tabla INFORMES DE EVALUACIÓN. *
 
 ----------------------------------------------------------------------------------------------
