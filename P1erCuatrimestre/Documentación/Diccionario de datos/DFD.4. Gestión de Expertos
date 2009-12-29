@@ -25,7 +25,7 @@ Fecha límite = * Se utiliza para indicar el plazo de realización del informe a
 (Flujos de dentro)
 Relación Expertos-Proyecto = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado}
 
-Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado
+Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación + estado_invitación
 Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS/PROYECTOS
 
 Fecha Asignación = fecha_asignación
@@ -37,6 +37,9 @@ Fin Relación = * Se elimina una tupla de la tabla EXPERTOS/PROYECTOS *
 Valoración trabajo = {tpo_realización + calidad_informe}
 Valoración expertos = id_experto + id_proyecto + tpo_realización + calidad_informe
 Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
+
+Nuevo Informe = id_informe + id_modelo_eval + estado_informe + datos
+Nuevo Informe = * Se inserta una tupla en la tabla INFORMES DE EVALUACIÓN. *
 --------------------------
 
 **Expertos = [Resultado búsqueda | Parámetros Búsqueda | Resultado Consulta | Parámetros Consulta | ID Experto]
