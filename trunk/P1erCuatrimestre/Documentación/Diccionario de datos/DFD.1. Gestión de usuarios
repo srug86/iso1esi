@@ -7,7 +7,6 @@ Consulta Subárea = id_subárea + id_área + (id_usuario) + nombre.
 Consulta Subárea = * Consulta de las subáreas donde trabaja el usuario, el id_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id_usuario, sino que lee para asignarle un área. *
 ----------------------------------------------
 
-
 ------ Modificar Usuario --------------------
 
 Consultar Subárea = ID_subárea + ID_área + (id_usuario) + nombre_subárea.
