@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-12-2009 a las 18:48:06
+-- Tiempo de generación: 29-12-2009 a las 19:43:39
 -- Versión del servidor: 5.0.75
 -- Versión de PHP: 5.2.6-3ubuntu4.4
 
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `templates` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) NOT NULL auto_increment,
-  `type` tinytext collate utf8_spanish_ci NOT NULL,
+  `type` enum('secretary','coordinator','attached','expert') collate utf8_spanish_ci NOT NULL,
   `email` tinytext collate utf8_spanish_ci NOT NULL,
   `password` tinytext collate utf8_spanish_ci NOT NULL,
   `name` tinytext collate utf8_spanish_ci NOT NULL,
