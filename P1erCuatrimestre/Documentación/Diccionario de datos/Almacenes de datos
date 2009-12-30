@@ -1,8 +1,9 @@
 DICCIONARIO DE DATOS
 
---> ALMACENES DE DATOS:
---> DATOS ELEMENTALES:
+--> FLUJO DE DATOS:
 
+
+--> ALMACENES DE DATOS:
 ﻿USUARIOS = @id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
 área = * hace referencia al id de la tabla ÁREA *
 
@@ -39,3 +40,6 @@ datos = * el experto, el adjunto y el coordinador rellenarán los campos corresp
 
 PLANTILLAS CORREOS = @id_plantilla + asunto + cuerpo
 asunto = [alta_usuario|invitación|aviso_plazos]
+
+--> DATOS ELEMENTALES:
+
