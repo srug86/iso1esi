@@ -28,7 +28,7 @@ Consulta Área = id_área + nombre_subárea
 
 Consulta Subárea = id_subárea + nombre_subárea
 
-Datos Proyectos = (id_proyecto) + (id_paq) + (memoria) + (id_área) + (id_subárea) + (estado) + (tpo_inv) + (tpo_eval) + (id_modelo_eval) + (evaluación)
+Datos Proyectos = (id_proyecto) + (id_paquete) + (memoria) + (área) + (subárea) + (estado_proyecto) + (tpo_inv) + (tpo_eval) + (id_modelo_eval) + (evaluación)
 Datos Proyectos = * Se añaden, se modifican y se consultan los datos de los proyectos. Son todos opcionales por el flujo de datos en la modificación. *
 
 Subárea Asignada =id_subárea
@@ -37,7 +37,7 @@ Subáreas = * Se le añade un subárea a cada proyecto *
 Área Asignada = id_área
 Área asignada = * Se le añade un área a cada proyecto *
 
-Datos Paquetes Proyectos = (id_paqproy) + (institución) + (bases) + (convocatoria) + (fecha_entrada) + (fecha_salida) + (fecha_límite)
+Datos Paquetes Proyectos = (id_paquete) + (institución) + (bases) + (convocatoria) + (fecha_entrada) + (fecha_salida) + (fecha_límite)
 Datos Paquetes Proyectos = * Se añaden, se modifican y se consultan los datos de los paquetes de proyectos. *
 
 Modelo = id_modelo_eval
@@ -48,17 +48,15 @@ Modelo = * Se consulta el id del modelo de evaluación para poder asignárselo a
 ------ GESTIÓN DE EVALUACIONES -------------------------------------------------------------------
 Informe Final = id_modelo_eval + estructura
 
-Memoria Proyecto = id_proyecto + memoria + id_modelo_eval
+Memoria Proyecto = id_proyecto + id_paquete + memoria + id_modelo_eval
 Memoria Proyecto = * Se lee para poder realizar el informe. *
 
 Convocatoria = convocatoria
 Convocatoria = * Se lee la convocatoria para poder realizar el modelo de evaluación. *
 
-Modelo Evaluación = ID_modelo_eval + estructura
+Modelos Evaluación = [id_modelo + estructura | Nuevo Modelo Evaluación | Consulta Modelos Evaluación]
 
-Informe Evaluación = 
-
-Actualización Estado =
+Informes Evaluación = id_informe + id_modelo_eval + estado_informe + datos
 
 ----------------------------------------------------------------------------------------------
 
@@ -72,7 +70,7 @@ Proyecto = [Tiempos | Área Proyecto | Cambio Estado]
 
 Info Paquetes Proyectos = [Institución Convocante | Fecha límite]
 
-Informe Evaluación = [Informe Rechazado | Nuevo Informe]
+Info Informe Evaluación = [Informe Rechazado | Nuevo Informe]
 
 Expertos-Proyectos = [Relación Expertos-Proyectos | Valoración Expertos | Fin Relación | Fecha Asignación | Nueva Relación | Valoración Trabajo]
 

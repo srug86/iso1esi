@@ -34,19 +34,19 @@ Nuevo Informe = * Se inserta una tupla en la tabla INFORMES EVALUACIÓN. El esta
 
 **Expertos-Proyectos = [Relación Expertos-Proyectos | Valoración Expertos | Fin Relación | Fecha Asignación | Nueva Relación | Valoración Trabajo]
 
-Relación Expertos-Proyectos = {id_experto + id_proyecto + id_informe + valoración + fecha_asignación}
+Relación Expertos-Proyectos = {id_experto + id_proyecto + id_paquete + id_informe + valoración + fecha_asignación}
 Relación Expertos-Proyectos = * Lista de la relación entre Expertos y Proyectos. Se devolverá una lista según los parámetros de consulta. *
 
 Valoración Expertos = id_experto + id_proyecto + tpo_realización + calidad_informe
 Valoración expertos = * Se inserta la valoración de los expertos según el informe realizado. *
 
-Fin Relación = id_experto + id_proyecto
+Fin Relación = id_experto + id_proyecto + id_paquete
 Fin Relación = * Se elimina una tupla de la tabla EXPERTOS-PROYECTOS *
 
 Fecha Asignación = fecha_asignación
 Fecha Asignación = * Se utiliza para el aviso de plazos. *
 
-Nueva Relación = id_experto + id_proyecto + id_informe + valoración + fecha_asignación
+Nueva Relación = id_experto + id_proyecto + id_paquete + id_informe + valoración + fecha_asignación
 Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS-PROYECTOS
 
 Valoración trabajo = {tpo_realización + calidad_informe}
@@ -61,7 +61,7 @@ Parámetros Búsqueda = Parámetros Consulta = (@id_usuario) + (tipo) + (e-mail)
 
 ID Experto = id_experto
 
-Experto Desasignado = id_experto + id_proyecto
+Experto Desasignado = id_experto + id_proyecto + id_paquete
 
 
 
