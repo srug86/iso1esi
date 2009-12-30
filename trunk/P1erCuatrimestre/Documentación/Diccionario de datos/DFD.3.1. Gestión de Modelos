@@ -1,11 +1,15 @@
 --- Añadir Modelo Evaluación ---------------------------------------
-Modelos Evaluación: estructura
-Modelos Evaluación: * añade un nuevo Modelo de Evaluación *
+Nuevo Modelo Evaluación: estructura
+Nuevo Modelo Evaluación: * añade un nuevo Modelo de Evaluación *
+
 Convocatoria: convocatoria
+Convocatoria: * en la convocatoria del paquete de proyectos encontramos todo lo necerario para realizar los Modelos de Evaluación *
 ------------------------------------------------------------------------
 
 --- Modificar Modelo Evaluación ------------------------------------
 Modelos Evaluación: id_modelo + estructura
 Modelos Evaluación: * consulta y modifica los datos referidos a los Modelos de Evaluación *
+
 Convocatoria: convocatoria
+Convocatoria: * en  la convocatoria del paquete de proyectos encontramos todo lo necerario para realizar los Modelos de Evaluación *
 ------------------------------------------------------------------------
