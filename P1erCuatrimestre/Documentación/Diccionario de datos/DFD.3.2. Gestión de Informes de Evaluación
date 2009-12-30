@@ -1,26 +1,27 @@
 --- Consulta de Informes -----------------------------------------------
-Informe Evaluación: id_informe + estado + datos
+Informe Evaluación: id_informe + id_modelo_eval + estado_informe + datos
 Informe Evaluación: * muestra los datos referidos a los informes de evaluación *
-Informe Final: id_informe + estado + datos
-Informe Final: * muestra los datos referidos a los informes finales de los proyectos *
+
+Consulta Informe Final: id_proyecto + id_paquete + estado_proyecto + evaluación
+Consulta Informe Final: * muestra los datos referidos a los informes finales de los proyectos *
 ------------------------------------------------------------------------
 
 --- Realizar Informe ---------------------------------------------------
-Informe Evaluación: id_informe + estado + datos
+Informe Evaluación: id_informe + id_modelo_eval + estado_informe + datos
 Informe Evaluación: * Introducir, modificar o eliminar los datos referidos a un informe de evaluación.*
 
-Informe Final: id_proyecto + id_paquete + estado + evaluación
-Informe Final: * el adjunto y el coordinador realizarán y modificarán el informe final de evaluación del proyecto *
+Informe Final: id_proyecto + id_paquete + estado_proyecto + evaluación
+Informe Final: * el coordinador introduce el informe final de evaluación del proyecto una vez finalizado este para ser devuelto a la institución convocante *
 
-Informe Finalizado: id_informe + estado
-
-Memoria Proyecto: id_proyecto + id_paquete + memoria + estado
+Memoria Proyecto: id_proyecto + id_paquete + memoria + área + subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
 Memoria Proyecto: * consulta acerca del estado en que se encuentra la evaluación del proyecto además de la documentación o memoria de dicho proyecto *
 
-Modelos Evaluación: estructura
+Consulta Modelos Evaluación: id_modelo + estructura
+Consulta Modelos Evaluación: * informan de la estructura que deben seguir los informes de evaluación de cada proyecto * 
+
 ------------------------------------------------------------------------
 
 --- Devolver Evaluaciones ----------------------------------------------
-Informe Final: id_informe + estado + datos
-Informe Final: * devolución del informe validado *
+Informe Final: id_proyecto + id_paquete + estado_proyecto + evaluación
+Informe Final: * el coordinador introduce el informe final de evaluación del proyecto una vez finalizado este para ser devuelto a la institución convocante *
 ------------------------------------------------------------------------
