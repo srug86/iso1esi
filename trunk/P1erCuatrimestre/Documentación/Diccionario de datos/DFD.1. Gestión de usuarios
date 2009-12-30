@@ -1,23 +1,23 @@
 ------ Listado de usuarios ---------------------
-Parámetros = (ID) + (tipo) + (e-mail) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
+Parámetros = (id_usuario) + (tipo) + (e-mail) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
 Parámetros = * Son los parámetros de búsqueda de usuarios. Todos los campos con opcionales ya que se pueden realizar búsquedas de usuarios 
 de varias formas. *
 
 Consulta Subárea = id_subárea + id_área + (id_usuario) + nombre.
-Consulta Subárea = * Consulta de las subáreas donde trabaja el usuario, el id_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id_usuario, sino que lee para asignarle un área. *
+Consulta Subárea = * Consulta de las subáreas donde trabaja el usuario, el id_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id_usuario, sino que lee para asignarle un subárea. *
 ----------------------------------------------
 
 ------ Modificar Usuario --------------------
 
-Consultar Subárea = ID_subárea + ID_área + (id_usuario) + nombre_subárea.
+Consultar Subárea = id_subárea + id_área + (id_usuario) + nombre_subárea.
 Consultar Subárea = * Consulta las subáreas para después poder asignarsela al usuario, o consultará subárea si el proceso 'lista de usuarios' quiere conocer los id de los usuarios de determinada subárea. *
 
-Asignar Subárea = ID_subárea + ID_área + id_usuario + nombre_subárea.
+Asignar Subárea = id_subárea + id_área + id_usuario + nombre_subárea.
 Asignar Subárea = * Se introduce una fila nueva en la tabla SUBÁREAS. *
 ----------------------------------------------
 
 ------ Autentificar usuarios -----------------------
-Datos Autentificación = ID_usuario + contraseña.
+Datos Autentificación = id_usuario + contraseña.
 
 Verificar Autentificar = * Mostrar que la autentificación es correcta. Si introduce incorréctamente el id o la contraseña o ambas, se mostrará una plantalla en la que se indicará: 'Usuario o contraseña son incorrectas.' *
 ----------------------------------------------
