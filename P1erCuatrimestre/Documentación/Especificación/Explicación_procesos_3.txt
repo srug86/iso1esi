@@ -1,0 +1,4 @@
+3.1.1 Añadir Modelo de Evaluación --> este proceso es exclusivo del secretario, ya que es el encargado de leyendo los datos de la convocatoria del paquete de proyectos generar un Modelo de Evaluación a seguir para cada informe me evaluación que se escriba de cada proyecto. 
+3.1.2 Modificar Modelo Evaluación --> este proceso es complementario con el de Añadir Modelo de Evaluación ya que si se encuentra algún error en el modelo o cambian los prerrequisitos sobre algún proyecto cambiará consecuentemente el modelo de evaluación de dicho proyecto.
+
+3.2.1
