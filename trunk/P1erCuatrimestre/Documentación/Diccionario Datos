@@ -181,7 +181,7 @@ Memoria Proyecto = id_proyecto + id_paquete + memoria + id_modelo_eval + estado_
 Memoria Proyecto = * Se lee para poder realizar el informe. El adjunto también leerá el estado en que se encuentra la evaluación del proyecto *
 
 Modelo = id_modelo_eval
-Modelo = * Se consulta el id del modelo de evaluación para poder asignárselo a los proyectos *
+Modelo = * Se consulta el id del modelo de evaluación para poder asignárselo a los proyectos y también se consulta por si se quiere hacer un cambio en paquetes de proyectos *
 
 Modelos Evaluación = [id_modelo + estructura | Nuevo Modelo Evaluación]
 Modelos Evaluación: * insertar o modificar las estructuras que deben seguir los informes de evaluación de cada proyecto *
