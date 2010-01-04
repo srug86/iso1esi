@@ -1,0 +1,141 @@
+% Español
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+
+% Imágenes
+\usepackage[pdftex]{graphicx}
+\usepackage{latexsym}
+\usepackage{fancybox}
+
+% Ruta para las imágenes
+\graphicspath{{Diagramas/}}
+
+% Colores
+\usepackage{color}
+\usepackage{colortbl}
+
+% Margenes
+\usepackage[margin=2.5cm,top=3cm]{geometry}
+
+% Párrafos
+\setlength{\parskip}{6pt}
+
+% Entorno Listings para código fuente
+\usepackage{listings}
+
+\lstset{
+  frame=Ltb, %forma del cuadro
+  framerule=0pt, %ancho del borde
+  aboveskip=0.5cm, %separación de los números de línea
+  framexleftmargin=0.4cm, %margen externo izquierdo
+  framesep=0pt,
+  rulesep=.4pt,
+  rulesepcolor=\color{black},
+  % 
+  stringstyle=\ttfamily,
+  showstringspaces = false,
+  basicstyle=\footnotesize,
+  keywordstyle=\bfseries,
+  % 
+  numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+  numberfirstline= false,
+  %
+  texcl=true
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]{
+  \lstset{#1}\pagebreak[0]}{\pagebreak[0]
+}
+
+%
+% \ifx\documentclass\undefinedcs
+%      \def\bf{\fam\bffam\tenbf}\def\rm{\fam0\tenrm}\fi
+%                          % f**k-amstex!
+%
+
+% Fancyhdr - Encabezados y pies de página
+\usepackage{fancyhdr}
+% Márgenes
+\headsep=8mm
+\footskip=14mm
+
+% Fancy Header Style Options
+\pagestyle{fancy}               % Sets fancy header and footer
+\fancyfoot{}                    % Delete current footer settings
+
+% Capítulo
+% \renewcommand{\chaptermark}[1]{ % Lower Case Chapter marker style
+%   \markboth{\chaptername\ \thechapter.\ #1}{}} 
+
+% Sección
+\renewcommand{\sectionmark}[1]{ % Lower case Section marker style
+  \markright{\thesection.\ #1}} 
+
+% Página
+\fancyhead[LE,RO]{\bfseries\thepage} % Page number (boldface) in left on even
+                                     % pages and right on odd pages
+
+% ------------------ Macro para encabezados y pies de página-------------------
+%    Uso: \encabezado{pares(pag izquierda)}
+% -----------------------------------------------------------------------------
+\def\encabezado#1{
+  \fancyhead[RE]{\bfseries#1}     % In the right on even pages
+  \fancyhead[LO]{\bfseries\rightmark}  % In the left on odd pages
+  \renewcommand{\headrulewidth}{0.5pt} % Width of head rule
+}
+% -----------------------------------------------------------------------------
+
+
+% ------------------ Macro para insertar una imagen ---------------------------
+%    Uso: \imagen{nombreFichero}{Ancho}{Etiqueta}{Identificador}
+% -----------------------------------------------------------------------------
+\usepackage{ifthen}
+\def\imagen#1#2#3#4{
+  \begin{figure}[!h]
+    \begin{center}
+      \ifthenelse{\equal{#2}{}}
+      {\includegraphics{#1}}{\resizebox{#2}{!}{\includegraphics{#1}}}
+      \ifthenelse{\equal{#3}{}}{}{\caption{#3}}
+      \label{#4}
+    \end{center}
+  \end{figure}
+}
+% -----------------------------------------------------------------------------
+
+
+% ------------------ Macro para la portada ------------------------------------
+%    Uso: \portada{asignatura}{titulo}{subtítulo}{autor}{fecha}
+% -----------------------------------------------------------------------------
+\def\portada#1#2#3#4#5{
+  \thispagestyle{empty}
+  \vspace*{-2cm}
+
+  \begin{center}
+    \includegraphics[scale=0.25]{logoesi}
+  
+    \vspace*{1.5cm}
+    {\Large \textbf{Universidad de Castilla-La Mancha\\ 
+        Escuela Superior de Informática}}
+    
+    \vspace*{1.2cm}
+    {\Large \textbf{#1}}
+    
+    \vspace*{1.5cm}
+    {\huge #2}\\{\Large #3}
+    
+    \vspace*{1.5cm}
+    {\large #4}
+    \vfill
+    \large{#5}
+  \end{center}
+
+  \newpage
+  \vspace*{1cm}
+  \thispagestyle{empty} 
+  \newpage
+}
+% -----------------------------------------------------------------------------
