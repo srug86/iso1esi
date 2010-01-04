@@ -11,6 +11,7 @@ MODELOS EVALUACIÓN = @id_modelo + estructura
 ÁREAS = @id_área + nombre
 
 SUBÁREAS = @id_subárea + @id_área + id_usuario + nombre
+SUBÁREAS = * El id_usuario es sólo para los adjuntos. El resto de usuarios no tiene área asignada. *
 
 PROYECTOS = @id_proyecto + @id_paquete + memoria + id_área + id_subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
 tpo_inv = * tiempo que tiene un experto para aceptar o declinar una invitación *
@@ -176,7 +177,8 @@ Invitación = [Petición | Aceptación]
 Invitación = * correo de invitación a un experto para que evalúe un proyecto y respuesta de éste *
 
 Lista Usuarios = {id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
-Lista Usuarios = * lista devuelta por una búsqueda o consulta de usuarios *
+Lista Usuarios = * lista devuelta por una búsqueda o consulta de usuarios. *
+
 Memoria Proyecto = id_proyecto + id_paquete + memoria + id_modelo_eval + estado_proyecto
 Memoria Proyecto = * Se lee para poder realizar el informe. El adjunto también leerá el estado en que se encuentra la evaluación del proyecto *
 
