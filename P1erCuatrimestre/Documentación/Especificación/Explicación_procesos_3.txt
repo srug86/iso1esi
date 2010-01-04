@@ -2,7 +2,6 @@
 3.1.2 Modificar Modelo Evaluación --> este proceso es complementario con el de Añadir Modelo de Evaluación ya que si se encuentra algún error en el modelo o cambian los prerrequisitos sobre algún proyecto cambiará consecuentemente el modelo de evaluación de dicho proyecto.
 
 3.2.1 Consulta de Informes –-> este proceso devuelve una serie de informes de evaluación restringidos por quién los pide, todo usuarios que haga una petición sobre la lectura de los informes tendrá acceso a los suyos y los que hayan sido escritos por los usuarios que estén debajo en la jerarquía de la empresa. Es decir sobre un proyecto si un experto quiere consultar los informes, sólo tendrá acceso al suyo propio, si lo hace un adjunto podrá consultar el suyo propio y el de todos los expertos, y si finalmente es el coordinador el que hace la consulta podrá leer el suyo propio, el de los adjuntos y el de los expertos.
-*********************¿xq salen dos flechas informes expertos?*********
 
 3.2.2 Realizar Informe --> este es el proceso en el que todos pueden escribir y editar sus propios informes, leyendo a la vez de almacén proyectos y del de modelos de evaluación para saber qué evaluar y cómo evaluarlos, casi todos las llamadas a este proceso son de lectura y escritura ya que al editar primero se tiene que leer lo que se va a editar. En cuanto al acceso de datos, por lo general cada usuario sólo podrá editar sus propios informes pero, en el caso de adjuntos y coordinadores se pueden basar en informes de evaluación escritos con anterioridad para realizar el suyo propio.
 
