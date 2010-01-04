@@ -1,0 +1,16 @@
+INTRODUCCIÓN 
+El objetivo primordial de esta práctica es conocer y realizar el ciclo de vida del desarrollo de software. Para ello vamos 
+a realizar un supuesto práctico, con su análisis de requisitos, diseños e implementación y que nos permita adquirir 
+conocimientos y habilidades necesarias para enfrentarnos a problemas de la vida real.
+
+Debido a la brevedad del enunciado del supuesto práctico, hemos tenido que realizar una serie de entrevistas con el cliente
+para así poder fijar los requisitos finales de dicha aplicación llamada Gestión Distribuida de la Revisión de Proyectos de 
+Investigación(GDRPI). Estas reuniones son necesarias y fundamentales para poder conseguir un buen análisis y por tanto, un 
+buen diseño e implementación. Todas estas etapas son necesarias para obtener un software de calidad, está referida a cumplir
+los requisitos indicado por el cliente, además nos proporcionará habilidades en nuestra formación como ingenieros, además 
+tendremos que enfrentarnos a un aspecto importante en la vida real: el trabajo en grupo. Este aspecto tiene sus ventajas 
+como inconvenientes, ya que al ser tantos miembros se han de poner en común distintos puntos de vista, pero también facilita 
+el trabajo porque se puede repartir más equitativamente la carga de trabajo.
+
+Por tanto, la realización de este supuesto práctico es beneficioso porque aplicamos algunas de las metodologías de ingeniería
+del software y nos permite, como hemos mencionado anteriormente, adquirir habilidades necesarias en nuestra formación.
