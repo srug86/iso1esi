@@ -46,11 +46,11 @@ asunto = [alta_usuario | invitación | aviso_plazos]
 Adjuntos = [Consulta Subárea | Asignar Subárea]
 Adjuntos = * Los usuarios adjuntos añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS *
  
-Alta usuario = id_usuario + tipo + e-mail + contraseña
-Alta usuario = * El secretario da de alta a los usuario introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña *
+Alta Usuario = id_usuario + tipo + e-mail + contraseña
+Alta Usuario = * El secretario da de alta a los usuarios introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña *
 
 Área = id_área + nombre
-Área = * Los usuarios añadidos se asignan a una área. Se escribe en la tabla ÁREAS. *
+Área = * Los usuarios añadidos se asignan a una área *
 
 Área Asignada = id_área
 Área Asignada = * Se le añade un área a cada proyecto *
