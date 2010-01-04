@@ -1,0 +1,107 @@
+1.1
+PROCESO Listado_de_usuarios (Lista Parámetros)
+	Lista_Usuarios = Vacía
+	índice = 0
+	SI Usuario_activo == Adjunto ENTONCES
+		REPETIR
+			SI USUARIOS[índice].tipo == Experto
+			Y USUARIOS[índice] == Lista_parámetros ENTONCES
+				AÑADIR USUARIOS[índice] a Lista_Usuarios
+			índice++
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+	SI Usuario_activo == Coordinador ENTONCES
+		REPETIR
+			SI USUARIOS[índice].tipo == Experto
+			O USUARIOS[índice].tipo == Adjunto
+			Y USUARIOS[índice] == Lista_parámetros ENTONCES
+				AÑADIR USUARIOS[índice] a Lista_Usuarios
+				índice++
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+	SI Usuario_activo == Secretario ENTONCES
+		REPETIR
+			SI USUARIOS[índice] == Lista_parámetros ENTONCES
+				AÑADIR USUARIOS[índice] a Lista_Usuarios
+				índice++
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+	RETORNA Lista_Usuarios
+
+
+1.2
+PROCESO Añadir_Usuarios (Usuarios)
+	SI Usuario_activo == Secretario ENTONCES
+		AÑADIR Usuarios a USUARIOS
+		Correo_Alta = 	(LEER PLANTILLAS_CORREOS.asunto == Alta)
+						+ (Usuarios.id_nombre) + (Usuarios.correo)
+						+ (Usuarios.contraseña)
+		RETORNA Correo_Alta
+	FIN SI
+
+
+1.3
+PROCESO Modificar_Usuario (Usuarios)
+	índice = 0
+	SI Usuario_activo == Secretario ENTONCES
+		REPETIR
+			SI Usuarios.id_usuario == USUARIOS[índice].id_usuario ENTONCES
+				USUARIOS[índice] = Usuarios
+				SALIR
+			SINO
+				índice++
+			FIN SI
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+
+PROCESO Modificar_Usuario (Usuarios, Subárea Adjunto)
+	índice = 0
+	
+
+1.4
+PROCESO Eliminar_Usuarios (Usuarios)
+	índice = 0
+	SI Usuario_activo == Secretario ENTONCES
+		REPETIR
+			SI Usuarios.id_usuario == USUARIOS[índice].id_usuario ENTONCES
+				ELIMINAR USUARIOS[índice]
+				SALIR
+			SINO
+				índice++
+			FIN SI
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+
+1.5
+PROCESO Autentificar_Usuarios (Datos_Autentificación)
+	índice = 0
+	REPETIR
+		SI Datos_Autentificación.id_usuario == USUARIOS[índice].id_usuario
+		Y Datos_Autentificación.contraseña == USUARIOS[índice].contraseña ENTONCES
+			Verificar_Autentificar = true
+			SALIR
+		SINO
+			Verificar_Autentificar = false
+		FIN SI
+	HASTA índice > USUARIOS.Número_Tuplas
+	RETORNA Verificar_Autentificar
+
+1.6
+PROCESO Modificar_Datos_Personales (Datos_Personales)
+	índice = 0
+	REPETIR
+		SI Usuario_activo.id_usuario == USUARIOS[índice].id_usuario ENTONCES
+			USUARIOS[índice] = Datos_Personales
+			SALIR
+		SINO
+			índice++
+		FIN SI
+	HASTA índice > USUARIOS.Número_Tuplas
+	
+	
+
+	
+
+
+
+
