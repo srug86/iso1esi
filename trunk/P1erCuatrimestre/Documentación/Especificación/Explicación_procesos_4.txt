@@ -1,0 +1,13 @@
+4.1 Consulta Expertos --> como su nombre indica es una consulta sobre los expertos del sistema, se introducen una serie de parámetros y en función de ellos el proceso devuelve una serie de expertos, con los proyectos en los que están involucrados en ese momento, y algunas características de dichos proyectos, cómo las fechas de entrega y de finalización.
+
+4.2 Búsqueda Expertos --> es una búsqueda detallada a petición del adjunto de los usuarios que concuerdan con un proyecto determinado. Se introducen los parámetros de búsqueda y el programa devuelve una lista, que puede ser vacía, de expertos que concuerden con los prerrequisitos, ordenados por la valoración que tengan, que no pertenezcan a la asociación convocante, y que sea de su área.
+
+4.3 Invitación Expertos --> una vez listados los expertos, el adjunto en cuestión selecciona a uno o varios y el proceso les manda un correo para preguntar si quieren o pueden participar en el proyecto, ese correo se escoge de una serie de plantillas y se rellena con los datos del proyecto (no todos, ya que el experto no tiene acceso a la mayoría del proyecto hasta que no acepta la petición) y contiene una fecha límite, en la que si no contesta se tomará como que el experto rechaza la invitación.
+
+4.4 Aceptar invitación Experto --> en este punto es donde la respuesta del experto es procesada, cuando un experto acepta la invitación se genera automáticamente una relación entre el proyecto y el experto, de esta forma el experto tiene acceso a todos los datos del proyecto, también se actualiza el estado del proyecto.
+
+4.5 Desasignar Experto / Rechazar Informe --> cuando algún experto está consumiendo más tiempo del fijado a priori y el adjunto decide desasignar al experto del proyecto usa este proceso que se encarga de eliminar la relación expertos-proyectos, y de eliminar su informe de evaluación 
+
+4.6 Aviso de Plazos --> este proceso recibe del adjunto el experto al que avisar y este se encarga de mandarle un aviso al experto con la fecha límite, la fecha en la que se lo asignaron y los tiempos predefinidos en el proyecto.
+
+4.7 Valorar Expertos --> una vez finalizado el informe de evaluación el adjunto lo lee y examina y finalmente valora el trabajo realizado por el experto, el adjunto manda al sistema una valoración y este lo incluye en la instancia correspondiente del experto y el proyecto.
