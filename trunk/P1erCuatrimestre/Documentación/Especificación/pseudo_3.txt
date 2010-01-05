@@ -1,16 +1,12 @@
 3.1.1
 PROCESO Añadir_Modelo_Evaluación ()
-	MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].Convocatoria
-	SI  VACIO(MODELOS_EVALUACIÓN[Eleccion_2] ) = FALSO ENTONCES
-		MOSTRAR MODELOS_EVALUACIÓN[Eleccion_2]
-	FIN SI
-	Criterios_Evaluación <=  LEER_DATOS_ENTRADA()
+	MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].Convocatoria	Criterios_Evaluación <=  LEER_DATOS_ENTRADA()
 	MODELOS_EVALUACIÓN [Elección_2] <= Criterios_Evaluación
 
 3.1.2	
 PROCESO Modificar_Modelo_Evaluación ()
 	MOSTRAR PAQUETES_PROYECTOS[Elección_1].Convocatoria
-	MOSTRAR MODELOS EVALUACIÓN[Elección_2]
+	MOSTRAR MODELOS_EVALUACIÓN[Elección_2]
 	Criterios_Evaluación <= LEER_DATOS_ENTRADA()
 	SI VACIO(Criterios_Evaluación) = FALSO ENTONCES
 		MODELOS_EVALUACIÓN[Elección_2] = Criterios_Evaluación
