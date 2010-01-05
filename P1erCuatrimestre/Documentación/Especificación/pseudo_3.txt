@@ -1,7 +1,7 @@
 3.1.1
 PROCESO Añadir_Modelo_Evaluación ()
 	MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].Convocatoria
-	Si  VACIO(MODELOS_EVALUACIÓN[Eleccion_2] ) = FALSO ENTONCES
+	SI  VACIO(MODELOS_EVALUACIÓN[Eleccion_2] ) = FALSO ENTONCES
 		MOSTRAR MODELOS_EVALUACIÓN[Eleccion_2]
 	FIN SI
 	Criterios_Evaluación <=  LEER_DATOS_ENTRADA()
