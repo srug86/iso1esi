@@ -1,4 +1,5 @@
 3.1.1 Añadir Modelo de Evaluación --> este proceso es exclusivo del secretario, ya que es el encargado de leyendo los datos de la convocatoria del paquete de proyectos generar un Modelo de Evaluación a seguir para cada informe me evaluación que se escriba de cada proyecto. 
+
 3.1.2 Modificar Modelo Evaluación --> este proceso es complementario con el de Añadir Modelo de Evaluación ya que si se encuentra algún error en el modelo o cambian los prerrequisitos sobre algún proyecto cambiará consecuentemente el modelo de evaluación de dicho proyecto.
 
 3.2.1 Consulta de Informes –-> este proceso devuelve una serie de informes de evaluación restringidos por quién los pide, todo usuarios que haga una petición sobre la lectura de los informes tendrá acceso a los suyos y los que hayan sido escritos por los usuarios que estén debajo en la jerarquía de la empresa. Es decir sobre un proyecto si un experto quiere consultar los informes, sólo tendrá acceso al suyo propio, si lo hace un adjunto podrá consultar el suyo propio y el de todos los expertos, y si finalmente es el coordinador el que hace la consulta podrá leer el suyo propio, el de los adjuntos y el de los expertos.
