@@ -79,10 +79,6 @@
 \textbf{Consulta Informes Expertos} = id\_informe + id\_modelo\_eval + estado\_informe + datos
 \textbf{Consulta Informes Expertos} = * \emph{Ver informes de proyectos de expertos} *
 
-\textbf{Consulta Nombre Área} = id\_área + nombre\_subárea
-
-\textbf{Consulta Nombre Subárea} = id\_subárea + nombre\_subárea
-
 \textbf{Consulta Subárea} = id\_subárea + id\_área + (id\_usuario) + nombre
 \textbf{Consulta Subárea} = * \emph{Consulta de las subáreas donde trabaja el usuario, el id\_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id\_usuario, sino que lee para asignarle un subárea} *
 
@@ -96,8 +92,8 @@ Convocatoria: * \emph{En la convocatoria del paquete de proyectos encontramos to
 
 \textbf{Correo\_invitación} = asunto + cuerpo
 
-\textbf{Criterios Evaluación} = id\_modelo + estructura
-\textbf{Criterios Evaluación} = * \emph{Añadir y modificar los modelos de evaluación a utilizar para realizar los informes} *
+\textbf{Criterios Evaluación} = [id\_modelo + estructura | ID Modelo]
+\textbf{Criterios Evaluación} = * \emph{Añadir, modificar o eliminar los modelos de evaluación a utilizar para realizar los informes} *
 
 \textbf{Datos Autentificación} = id\_usuario + contraseña
 
@@ -144,6 +140,8 @@ Convocatoria: * \emph{En la convocatoria del paquete de proyectos encontramos to
 
 \textbf{ID Experto} = id\_experto
 
+\textbf{ID Modelo} = id\_modelo
+
 \textbf{Info Informe Evaluación} = [Informe Rechazado | Nuevo Informe]
 
 \textbf{Info Paquetes Proyectos} = [Institución Convocante | Fecha límite | Plazo invitación]
@@ -183,8 +181,8 @@ Convocatoria: * \emph{En la convocatoria del paquete de proyectos encontramos to
 \textbf{Modelo} = id\_modelo\_eval
 \textbf{Modelo} = * \emph{Se consulta el id del modelo de evaluación para poder asignárselo a los proyectos y también se consulta por si se quiere hacer un cambio en paquetes de proyectos} *
 
-\textbf{Modelos Evaluación} = [id\_modelo + estructura | Nuevo Modelo Evaluación]
-\textbf{Modelos Evaluación} = * \emph{Insertar o modificar las estructuras que deben seguir los informes de evaluación de cada proyecto} *
+\textbf{Modelos Evaluación} = [id\_modelo + estructura | Nuevo Modelo Evaluación | id\_modelo]
+\textbf{Modelos Evaluación} = * \emph{Insertar, modificar o eliminar las estructuras que deben seguir los informes de evaluación de cada proyecto} *
 
 \textbf{Nombre Proyecto} = id\_proyecto + nombre
 
@@ -212,7 +210,7 @@ Convocatoria: * \emph{En la convocatoria del paquete de proyectos encontramos to
 
 \textbf{Plazo Invitación} = tmp\_invitación
 
-\textbf{Proyecto Rechazado} = id\_proyecto + id\_paquete + subárea
+\textbf{Proyecto Rechazado} = id\_proyecto + id\_paquete + id\_subárea
 \textbf{Proyecto Rechazado} = * \emph{Aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta} *
 
 \textbf{Proyectos} = id\_proyecto + id\_paquete + memoria + área + subárea + estado\_proyecto + tpo\_inv + tpo\_eval + id\_modelo\_eval + evaluación
