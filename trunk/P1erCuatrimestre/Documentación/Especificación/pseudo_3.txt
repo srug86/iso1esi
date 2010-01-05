@@ -1,0 +1,23 @@
+3.1.1
+PROCESO Añadir_Modelo_Evaluación ()
+	MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].Convocatoria
+	Si  VACIO(MODELOS_EVALUACIÓN[Eleccion_2] )=FALSO
+		MOSTRAR MODELOS_EVALUACIÓN[Eleccion_2]
+	FIN SI
+	Criterios_Evaluación =  LEER_DATOS_ENTRADA()
+	MODELOS_EVALUACIÓN [Elección_2] = Criterios_Evaluación
+
+3.1.2	
+PROCESO Modificar_Modelo_Evaluación ()
+	MOSTRAR PAQUETES_PROYECTOS[Elección_1].Convocatoria
+	MOSTRAR MODELOS EVALUACIÓN.[Elección_2]
+	Criterios_Evaluación = LEER_DATOS_ENTRADA()
+	SI VACIO(Criterios_Evaluación) = FALSO
+		MODELOS_EVALUACIÓN[Elección_2]=Criterios_Evaluación
+	FIN SI
+
+3.2.1
+PROCESO Cconsulta_de_Informes()
+	SI Usuario_activo.tipo ==COORDINADOR
+		MOSTRAR
+	
