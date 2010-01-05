@@ -1,4 +1,8 @@
 <?php
+/* PROBLEMAS
+ - Las consultas sql se cargan en iso8859 en vez de itf8
+ */
+
 /* ---------------------------------------------------------------- *
  * Gestión Distribuída de la Revisión de Proyectos de Investigación *
  * ---------------------------------------------------------------- */         
@@ -6,7 +10,7 @@
 /* Define +  Errors + Locals */
 define('GDRPI', 1);
 error_reporting(E_ALL);
-setlocale(LC_ALL, "esp", "es_ES", "es_ES@euro");
+//setlocale(LC_ALL, "esp", "es_ES", "es_ES@euro");
 
 $time_start = microtime();
 
@@ -19,23 +23,24 @@ include 'theme/main.php';
 session_start();
 $_mysql = new MySQL();
 
+//unset($_SESSION);
+
 /* Global variables */
 $_uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : null;
+$_user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
 
 /* Global request */
-//$_mod = isset($_GET['mod']) ? $_GET['mod'] : null;
 $_act = isset($_GET['act']) ? $_GET['act'] : null;
 $_rng = isset($_GET['rng']) ? $_GET['rng'] : null;
 
 /* User datas */
-$_name = null;
-$_last_names = null;
+is_cookied();
 load_user();
 
 /* Functions action array */
 $actionArray = array(
                      'login' => array('loginout.php', 'login'),
-                     'l ogout' => array('loginout.php', 'logout'),
+                     'logout' => array('loginout.php', 'logout'),
                      null => array('evaluations.php', 'evaluations')
                      );
 

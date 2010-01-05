@@ -1,0 +1,46 @@
+#error {
+    width: 300px;
+    height: 20px;
+    text-align: left;
+    margin: 40px auto 0 auto;
+    font-weight: bold;
+    font-size: 10pt;
+    color: red;
+}
+
+#loginform {
+    border: 1px solid gray;
+    width: 300px;
+    height: 150px;
+    margin: auto;
+}
+
+#forgot {
+    height: 20px;
+    width: 300px;
+    text-align: right;
+    margin: 5px auto;
+    padding-bottom: 15px;
+}
+
+#loginform input[type="text"], #loginform input[type="password"] {
+    width: 150px;
+}
+
+#loginform table {
+    border: 0;
+    padding: 7px;
+}
+
+#loginform td {
+    width: 50%;
+    padding: 10px;
+}
+
+#loginform td.tright {
+    text-align: right;
+}
+
+#loginform td.tleft {
+    text-align: left;
+}

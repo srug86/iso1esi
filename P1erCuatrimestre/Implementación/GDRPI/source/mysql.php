@@ -11,15 +11,16 @@ class MySQL {
      mysql_select_db($bd['name'], $this->link);
    }
 
-   private function assoc($query) {
+   public function assoc($query) {
+     $rows = null;
      $res = mysql_query($query, $this->link);
      while ($row = mysql_fetch_assoc($res)) $rows[] = $row;
      return $rows;
    }
 
-   private function row($query) {
-     list($row) = mysql_fetch_row(mysql_query($query, $this->link));
-     return $row;
+   public function field($query) {
+     list($field) = mysql_fetch_row(mysql_query($query, $this->link));
+     return $field;
    }
    
    private function errors($str_error) {
