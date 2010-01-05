@@ -1,16 +1,6 @@
-INTRODUCCIÓN 
-El objetivo primordial de esta práctica es conocer y realizar el ciclo de vida del desarrollo de software. Para ello vamos 
-a realizar un supuesto práctico, con su análisis de requisitos, diseños e implementación y que nos permita adquirir 
-conocimientos y habilidades necesarias para enfrentarnos a problemas de la vida real.
+INTRODUCCIÓN
+       El objetivo de la práctica es conocer y simular el ciclo de vida seguido durante el desarrollo de software. Para ello se va a realizar un supuesto práctico. Este incluye análisis de requisitos, de diseño y la implementación del mismo.
 
-Debido a la brevedad del enunciado del supuesto práctico, hemos tenido que realizar una serie de entrevistas con el cliente
-para así poder fijar los requisitos finales de dicha aplicación llamada Gestión Distribuida de la Revisión de Proyectos de 
-Investigación(GDRPI). Estas reuniones son necesarias y fundamentales para poder conseguir un buen análisis y por tanto, un 
-buen diseño e implementación. Todas estas etapas son necesarias para obtener un software de calidad, está referida a cumplir
-los requisitos indicado por el cliente, además nos proporcionará habilidades en nuestra formación como ingenieros, además 
-tendremos que enfrentarnos a un aspecto importante en la vida real: el trabajo en grupo. Este aspecto tiene sus ventajas 
-como inconvenientes, ya que al ser tantos miembros se han de poner en común distintos puntos de vista, pero también facilita 
-el trabajo porque se puede repartir más equitativamente la carga de trabajo.
+       Dado el que enunciado fijado para la práctica era sumamente escueto, se han tenido que realizar sucesivas entrevistas con el cliente para poder afinar los requisitos finales de la aplicación. Estas reuniones son fundamentales para poder conseguir un buen análisis e ir limando diferencias entre las ideas del cliente y las del equipo de síntesis y desarrollo del software. Por tanto es un paso imprescindible para un buen diseño y una buena implementación. Aparte, al tratarse de un proyecto en grupo, nos proporcionará habilidades en nuestra formación como ingenieros, al tener que enfrentarnos a un aspecto importante en la vida real: el trabajo en equipo. Esto tiene partes positivas y negativas, ya que al ser varios miembros se han de poner en común distintos puntos de vista y llegar a consenso para poder proseguir con el desarrollo, pero también agiliza las etapas, ya que se puede repartir el trabajo.
 
-Por tanto, la realización de este supuesto práctico es beneficioso porque aplicamos algunas de las metodologías de ingeniería
-del software y nos permite, como hemos mencionado anteriormente, adquirir habilidades necesarias en nuestra formación.
+       Por tanto, la realización de este supuesto práctico es beneficiosa para el desarrollo de nuestras habilidades de cara a un futuro laboral.
