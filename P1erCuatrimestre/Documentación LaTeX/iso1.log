@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  4 JAN 2010 20:21
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  4 JAN 2010 21:27
 entering extended mode
  %&-line parsing enabled.
 **iso1.tex
@@ -425,195 +425,29 @@ Package: listings 2004/10/17 1.3b (Carsten Heinz)
 )
 (/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)) (./iso1.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-)
-\openout1 = `iso1.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 10.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-(/usr/share/texmf/tex/context/base/supp-pdf.tex
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count102
-\scratchdimen=\dimen117
-\scratchbox=\box30
-\nofMPsegments=\count103
-\nofMParguments=\count104
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count105
-\MPscratchDim=\dimen118
-\MPnumerator=\count106
-\everyMPtoPDFconversion=\toks27
-)
--------------------- Geometry parameters
-paper: a4paper
-landscape: --
-twocolumn: --
-twoside: true
-asymmetric: --
-h-parts: 71.13188pt, 455.24411pt, 71.13188pt
-v-parts: 85.35826pt, 688.5567pt, 71.13188pt
-hmarginratio: --
-vmarginratio: --
-lines: --
-heightrounded: --
-bindingoffset: 0.0pt
-truedimen: --
-includehead: --
-includefoot: --
-includemp: --
-driver: pdftex
--------------------- Page layout dimensions and switches
-\paperwidth  597.50787pt
-\paperheight 845.04684pt
-\textwidth  455.24411pt
-\textheight 688.5567pt
-\oddsidemargin  -1.1381pt
-\evensidemargin -1.1381pt
-\topmargin  -23.91173pt
-\headheight 12.0pt
-\headsep    22.76219pt
-\footskip   39.83385pt
-\marginparwidth 85.0pt
-\marginparsep   10.0pt
-\columnsep  10.0pt
-\skip\footins  10.8pt plus 4.0pt minus 2.0pt
-\hoffset 0.0pt
-\voffset 0.0pt
-\mag 1000
-\@twosidetrue \@mparswitchtrue 
-(1in=72.27pt, 1cm=28.45pt)
------------------------
- (./iso1.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
- (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
-
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
-
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 4.
-
-(/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ))
-\tf@toc=\write4
-\openout4 = `iso1.toc'.
 
+! LaTeX Error: File `/home/alicia/iso1esi/P1erCuatrimestre/Documentación.tex' n
+ot found.
 
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.35403pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.7 ...ia/iso1esi/P1erCuatrimestre/DocumentaciÃ³n}
+                                                  ^^M
+*** (cannot \read from terminal in nonstop modes)
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 45.
-
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 45.
- [2] [3]
-<Diagramas/DC.pdf, id=16, 597.23125pt x 845.1575pt>
-File: Diagramas/DC.pdf Graphic file (type pdf)
- <use Diagramas/DC.pdf>
-Overfull \hbox (28.45587pt too wide) in paragraph at lines 130--130
- [] 
- []
-
-
-LaTeX Warning: Float too large for page by 36.77307pt on input line 130.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-! LaTeX Error: Unknown graphics extension: .0.pdf.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 ...{DFD.0.pdf}{17cm}{Diagrama de Sistemas}{}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 ...{DFD.0.pdf}{17cm}{Diagrama de Sistemas}{}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4] [5 <./Diagramas/DC.pdf>] [6] (./iso1.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 4158 strings out of 94074
- 53533 string characters out of 1165152
- 114557 words of memory out of 1500000
- 7374 multiletter control sequences out of 10000+50000
- 40540 words of font info for 37 fonts, out of 1200000 for 2000
+ 3461 strings out of 94074
+ 44258 string characters out of 1165152
+ 102437 words of memory out of 1500000
+ 6730 multiletter control sequences out of 10000+50000
+ 4702 words of font info for 16 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 36i,11n,43p,245b,504s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on iso1.pdf (6 pages, 129639 bytes).
-PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 131072)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 36i,0n,43p,203b,218s stack positions out of 5000i,500n,6000p,200000b,5000s
+!  ==> Fatal error occurred, no output PDF file produced!

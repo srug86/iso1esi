@@ -1,249 +1,246 @@
-DICCIONARIO DE DATOS
+\subsubsection{Almacenes de datos}
+﻿\textbf{USUARIOS} = @id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + id_área + institución + currículum + palabras_clave
 
---> ALMACENES DE DATOS:
-﻿USUARIOS = @id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + id_área + institución + currículum + palabras_clave
+\textbf{PAQUETES PROYECTOS} = @id_paquete + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
+\textbf{fecha_entrada} = fecha_salida = fecha_límite = día + mes + año
 
-PAQUETES PROYECTOS = @id_paquete + institución + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite
-fecha_entrada = fecha_salida = fecha_límite = día + mes + año
+\textbf{MODELOS EVALUACIÓN} = @id_modelo + estructura
 
-MODELOS EVALUACIÓN = @id_modelo + estructura
+\textbf{ÁREAS} = @id_área + nombre
 
-ÁREAS = @id_área + nombre
+\textbf{SUBÁREAS} = @id_subárea + @id_área + id_usuario + nombre
+\textbf{SUBÁREAS} = * \emph{El id_usuario es sólo para los adjuntos. El resto de usuarios no tiene área asignada} *
 
-SUBÁREAS = @id_subárea + @id_área + id_usuario + nombre
-SUBÁREAS = * El id_usuario es sólo para los adjuntos. El resto de usuarios no tiene área asignada. *
+\textbf{PROYECTOS} = @id_proyecto + @id_paquete + memoria + id_área + id_subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
+\textbf{tpo_inv} = * \emph{Tiempo que tiene un experto para aceptar o declinar una invitación} *
+\textbf{tpo_eval} = * \emph{Tiempo que tiene un experto para realizar una evaluación desde su aceptación} *
+\textbf{evaluación} = * \emph{Informe final realizado} *
 
-PROYECTOS = @id_proyecto + @id_paquete + memoria + id_área + id_subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
-tpo_inv = * tiempo que tiene un experto para aceptar o declinar una invitación *
-tpo_eval = * tiempo que tiene un experto para realizar una evaluación desde su aceptación *
-evaluación = * informe final realizado *
+\textbf{EXPERTOS-PROYECTOS} = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación
+\textbf{valoración} = tpo_realización + calidad_informe
+\textbf{fecha_asignación} = día + mes + año
+\textbf{tpo_realización} = nota
+\textbf{calidad_informe} = nota
 
-EXPERTOS-PROYECTOS = @id_experto + @id_proyecto + id_informe + valoración + fecha_asignación
-valoración = tpo_realización + calidad_informe
-fecha_asignación = día + mes + año
-tpo_realización = nota
-calidad_informe = nota
+\textbf{INFORMES EVALUACIÓN} = @id_informe + id_modelo_eval + estado_informe + datos
+\textbf{datos} = * \emph{El experto, el adjunto y el coordinador rellenarán los campos correspondientes al modelo de evaluación del proyecto} *
 
-INFORMES EVALUACIÓN = @id_informe + id_modelo_eval + estado_informe + datos
-datos = * el experto, el adjunto y el coordinador rellenarán los campos correspondientes al modelo de evaluación del proyecto *
+\textbf{PLANTILLAS CORREOS} = @id_plantilla + asunto + cuerpo
 
-PLANTILLAS CORREOS = @id_plantilla + asunto + cuerpo
+\subsubsection{Datos Elementales}
+\textbf{tipo} = [secretario | coordinador | adjunto | experto]
+\textbf{dígito} = [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9]
+\textbf{día} = [1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31]
+\textbf{mes} = [Enero | Febrero | Marzo | Abril | Mayo | Junio | Julio | Agosto | Septiembre | Octubre | Noviembre | Diciembre]
+\textbf{nota} = [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10]
+\textbf{año} = 2 + dígito + dígito + dígito
+\textbf{estado_proyecto} = [sin_evaluar | en_proceso | evaluado]
+\textbf{estado_informe} = [en_proceso | finalizado]
+\textbf{asunto} = [alta_usuario | invitación | aviso_plazos]
 
---> DATOS ELEMENTALES:
-tipo = [secretario | coordinador | adjunto | experto]
-dígito = [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9]
-día = [1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31]
-mes = [Enero | Febrero | Marzo | Abril | Mayo | Junio | Julio | Agosto | Septiembre | Octubre | Noviembre | Diciembre]
-nota = [0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10]
-año = 2 + dígito + dígito + dígito
-estado_proyecto = [sin_evaluar | en_proceso | evaluado]
-estado_informe = [en_proceso | finalizado]
-asunto = [alta_usuario | invitación | aviso_plazos]
+\subsubsection{Flujos de datos}
+\textbf{Aceptación} = * \emph{En el perfil del adjunto aparecerá la lista de expertos seleccionados y se indica si han aceptado o declinado} *
 
---> FLUJOS DE DATOS:
-Aceptación = * En el perfil del adjunto aparecerá la lista de expertos seleccionados y se indica si han aceptado o declinado *
-
-Adjuntos = [Consulta Subárea | Asignar Subárea]
-Adjuntos = * Los usuarios adjuntos añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS *
+\textbf{Adjuntos} = [Consulta Subárea | Asignar Subárea]
+\textbf{Adjuntos} = * \emph{Los usuarios adjuntos añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS} *
  
-Alta Usuario = id_usuario + tipo + e-mail + contraseña
-Alta Usuario = * El secretario da de alta a los usuarios introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña *
+\textbf{Alta Usuario} = id_usuario + tipo + e-mail + contraseña
+\textbf{Alta Usuario} = * \emph{El secretario da de alta a los usuarios introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña} *
 
-Área = id_área + nombre
-Área = * Los usuarios añadidos se asignan a una área *
+\textbf{Área} = id_área + nombre
+\textbf{Área} = * \emph{Los usuarios añadidos se asignan a una área} *
 
-Área Asignada = id_área
-Área Asignada = * Se le añade un área a cada proyecto *
+\textbf{Área Asignada} = id_área
+\textbf{Área Asignada} = * \emph{Se le añade un área a cada proyecto} *
 
-Área Proyectos = id_área + id_proyecto
-Área Proyectos = * asignación de un área a un proyecto *
+\textbf{Área Proyectos} = id_área + id_proyecto
+\textbf{Área Proyectos} = * \emph{Asignación de un área a un proyecto} *
 
-Asignar Subárea = id_subárea + id_área + id_usuario + nombre_subárea.
-Asignar Subárea = * Se introduce una fila nueva en la tabla SUBÁREAS *
+\textbf{Asignar Subárea} = id_subárea + id_área + id_usuario + nombre_subárea.
+\textbf{Asignar Subárea} = * \emph{Se introduce una fila nueva en la tabla SUBÁREAS} *
 
-Autentificación = [Datos Autentificación | Verificar Autentificar]
-Autentificación = * acceso al sistema con una cuenta de usuario y verificación de la autentificación *
+\textbf{Autentificación} = [Datos Autentificación | Verificar Autentificar]
+\textbf{Autentificación} = * \emph{Acceso al sistema con una cuenta de usuario y verificación de la autentificación} *
 
-Avisos Plazos = nombre + apellidos + [tpo_inv | tpo_eval] + id_proyecto + id_paquete + cuerpo
-Avisos Plazos = * correo de advertencia de fecha límite de evaluación de un proyecto *
+\textbf{Avisos Plazos} = nombre + apellidos + [tpo_inv | tpo_eval] + id_proyecto + id_paquete + cuerpo
+\textbf{Avisos Plazos} = * \emph{Correo de advertencia de fecha límite de evaluación de un proyecto} *
 
-Cambio Estado = estado_proyecto
-Cambio Estado = * El estado del proyecto cambia de 'sin_evaluar' a 'en_proceso' *
+\textbf{Cambio Estado} = estado_proyecto
+\textbf{Cambio Estado} = * \emph{El estado del proyecto cambia de 'sin_evaluar' a 'en_proceso'} *
 
-Consulta Área Proyecto = área
-Consulta Área Proyecto = * Se extrae el área del proyecto para buscar expertos relacionados con ese área *
+\textbf{Consulta Área Proyecto} = área
+\textbf{Consulta Área Proyecto} = * \emph{Se extrae el área del proyecto para buscar expertos relacionados con ese área} *
 
-Consulta Autentificación = e-mail + contraseña
+\textbf{Consulta Autentificación} = e-mail + contraseña
 
-Consulta Expertos = [Expertos Seleccionados | Expertos Búsqueda | email]
+\textbf{Consulta Expertos} = [Expertos Seleccionados | Expertos Búsqueda | email]
 
-Consulta Informes Expertos = id_informe + id_modelo_eval + estado_informe + datos
-Consulta Informes Expertos = * ver informes de proyectos de expertos *
+\textbf{Consulta Informes Expertos} = id_informe + id_modelo_eval + estado_informe + datos
+\textbf{Consulta Informes Expertos} = * \emph{Ver informes de proyectos de expertos} *
 
-Consulta Nombre Área = id_área + nombre_subárea
+\textbf{Consulta Nombre Área} = id_área + nombre_subárea
 
-Consulta Nombre Subárea = id_subárea + nombre_subárea
+\textbf{Consulta Nombre Subárea} = id_subárea + nombre_subárea
 
-Consulta Subárea = id_subárea + id_área + (id_usuario) + nombre
-Consulta Subárea = * Consulta de las subáreas donde trabaja el usuario, el id_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id_usuario, sino que lee para asignarle un subárea *
+\textbf{Consulta Subárea} = id_subárea + id_área + (id_usuario) + nombre
+\textbf{Consulta Subárea} = * \emph{Consulta de las subáreas donde trabaja el usuario, el id_usuario es opcional ya que el flujo consultar usuario que va desde modificar datos personales a Subáreas no utiliza el id_usuario, sino que lee para asignarle un subárea} *
 
-Consulta Usuarios = id_usuario + tipo + e-mail + contraseña + nombre + apellidos, teléfono + id_área + institución + currículum + palabras_clave
+\textbf{Consulta Usuarios} = id_usuario + tipo + e-mail + contraseña + nombre + apellidos, teléfono + id_área + institución + currículum + palabras_clave
 
-Convocatoria = convocatoria
-Convocatoria: * en la convocatoria del paquete de proyectos encontramos todo lo necerario para realizar los Modelos de Evaluación *
+\textbf{Convocatoria} = convocatoria
+Convocatoria: * \emph{En la convocatoria del paquete de proyectos encontramos todo lo necerario para realizar los Modelos de Evaluación} *
 
-Correo Alta = id_usuario + contraseña + nombre + apellidos + área + cuerpo
-Correo Alta = * correo de confirmación de registro de un nuevo usuario en el sistema *
+\textbf{Correo Alta} = id_usuario + contraseña + nombre + apellidos + área + cuerpo
+\textbf{Correo Alta} = * \emph{Correo de confirmación de registro de un nuevo usuario en el sistema} *
 
-Correo_invitación = asunto + cuerpo
+\textbf{Correo_invitación} = asunto + cuerpo
 
-Criterios Evaluación = id_modelo + estructura
-Criterios Evaluación = * añadir y modificar los modelos de evaluación a utilizar para realizar los informes *
+\textbf{Criterios Evaluación} = id_modelo + estructura
+\textbf{Criterios Evaluación} = * \emph{Añadir y modificar los modelos de evaluación a utilizar para realizar los informes} *
 
-Datos Autentificación = id_usuario + contraseña
+\textbf{Datos Autentificación} = id_usuario + contraseña
 
-Datos Paquetes Proyectos = (id_paquete) + (institución) + (bases) + (convocatoria) + (fecha_entrada) + (fecha_salida) + (fecha_límite)
-Datos Paquetes Proyectos = * Se añaden, se modifican y se consultan los datos de los paquetes de proyectos *
+\textbf{Datos Paquetes Proyectos} = (id_paquete) + (institución) + (bases) + (convocatoria) + (fecha_entrada) + (fecha_salida) + (fecha_límite)
+\textbf{Datos Paquetes Proyectos} = * \emph{Se añaden, se modifican y se consultan los datos de los paquetes de proyectos} *
 
-Datos Personales = id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
-Datos Personales = * modificación de los datos personales de un usuario *
+\textbf{Datos Personales} = id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + palabras_clave
+\textbf{Datos Personales} = * \emph{Modificación de los datos personales de un usuario} *
 
-Datos Proyectos = (id_proyecto) + (id_paquete) + (memoria) + (área) + (subárea) + (estado_proyecto) + (tpo_inv) + (tpo_eval) + (id_modelo_eval) + (evaluación)
-Datos Proyectos = * Se añaden, se modifican y se consultan los datos de los proyectos. Son todos opcionales por el flujo de datos en la modificación *
+\textbf{Datos Proyectos} = (id_proyecto) + (id_paquete) + (memoria) + (área) + (subárea) + (estado_proyecto) + (tpo_inv) + (tpo_eval) + (id_modelo_eval) + (evaluación)
+\textbf{Datos Proyectos} = * \emph{Se añaden, se modifican y se consultan los datos de los proyectos. Son todos opcionales por el flujo de datos en la modificación} *
 
-Datos Usuarios = id_usuario
-Datos Usuarios = * Se le pasa el id del usuario para eliminarlo de la base de datos *
+\textbf{Datos Usuarios} = id_usuario
+\textbf{Datos Usuarios} = * \emph{Se le pasa el id del usuario para eliminarlo de la base de datos} *
 
-email = email
-email = * Se extrae el email de los expertos para mandarles la invitación *
+\textbf{email} = email
+\textbf{email} = * \emph{Se extrae el email de los expertos para mandarles la invitación} *
 
-Evaluaciones = id_paquete + {evaluación}
-Evaluaciones = * paquetes de proyectos enviados a la institución convocante una vez evaluados *
+\textbf{Evaluaciones} = id_paquete + {evaluación}
+\textbf{Evaluaciones} = * \emph{Paquetes de proyectos enviados a la institución convocante una vez evaluados} *
 
-Experto Desasignado = id_experto + id_proyecto + id_paquete
+\textbf{Experto Desasignado} = id_experto + id_proyecto + id_paquete
 
-Expertos = [Parámetros Consulta | Resultado Consulta | Parámetros Búsqueda | Resultado Búsqueda | ID Experto | Experto Desasignado]
+\textbf{Expertos} = [Parámetros Consulta | Resultado Consulta | Parámetros Búsqueda | Resultado Búsqueda | ID Experto | Experto Desasignado]
+\textbf{Expertos} = * \emph{Tráfico relacionado con la búsqueda, consulta, asignación y desasignación de expertos para las evaluaciones de proyectos} *
 
-Expertos = * tráfico relacionado con la búsqueda, consulta, asignación y desasignación de expertos para las evaluaciones de proyectos *
+\textbf{Expertos Búsqueda} = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
 
-Expertos Búsqueda = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+\textbf{Expertos Búsqueda} = * \emph{Lista de expertos resultado de la consulta} *
 
-Expertos Búsqueda = * Lista de expertos resultado de la consulta *
+\textbf{Expertos Seleccionados} = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+\textbf{Expertos Seleccionados} = * \emph{Lista de expertos resultado de la consulta} *
 
-Expertos Seleccionados = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
-Expertos Seleccionados = * Lista de expertos resultado de la consulta *
+\textbf{Expertos-Proyectos} = [Relación Expertos-Proyectos | Valoración Expertos | Fin Relación | Fecha Asignación | Nueva Relación | Valoración Trabajo]
 
-Expertos-Proyectos = [Relación Expertos-Proyectos | Valoración Expertos | Fin Relación | Fecha Asignación | Nueva Relación | Valoración Trabajo]
+\textbf{Fecha Asignación} = fecha_asignación
+\textbf{Fecha Asignación} = * \emph{Se utiliza para el aviso de plazos} *
 
-Fecha Asignación = fecha_asignación
-Fecha Asignación = * Se utiliza para el aviso de plazos *
+\textbf{Fecha límite} = fecha_límite
+\textbf{Fecha límite} = * \emph{Se utiliza para indicar el plazo de realización del informe al experto} *
 
-Fecha límite = fecha_límite
-Fecha límite = * Se utiliza para indicar el plazo de realización del informe al experto *
+\textbf{Fin Relación} = id_experto + id_proyecto + id_paquete
+\textbf{Fin Relación} = * \emph{Se elimina una tupla de la tabla EXPERTOS-PROYECTOS} *
 
-Fin Relación = id_experto + id_proyecto + id_paquete
-Fin Relación = * Se elimina una tupla de la tabla EXPERTOS-PROYECTOS *
+\textbf{ID Experto} = id_experto
 
-ID Experto = id_experto
+\textbf{Info Informe Evaluación} = [Informe Rechazado | Nuevo Informe]
 
-Info Informe Evaluación = [Informe Rechazado | Nuevo Informe]
+\textbf{Info Paquetes Proyectos} = [Institución Convocante | Fecha límite | Plazo invitación]
 
-Info Paquetes Proyectos = [Institución Convocante | Fecha límite | Plazo invitación]
+\textbf{Información Proyecto} = [Tiempos | Consulta Área Proyecto | Cambio Estado | Nombre Proyecto]
 
-Información Proyecto = [Tiempos | Consulta Área Proyecto | Cambio Estado | Nombre Proyecto]
+\textbf{Informe Final} = id_proyecto + id_paquete + estado_proyecto + evaluación
+\textbf{Informe Final} = * \emph{Se muestran los datos referidos a los informes finales de los proyectos y también el coordinador introduce el informe final de evaluación del proyecto una vez finalizado este para ser devuelto a la institución convocante} *
 
-Informe Final: id_proyecto + id_paquete + estado_proyecto + evaluación
-Informe Final: * Se muestran los datos referidos a los informes finales de los proyectos y también el coordinador introduce el informe final de evaluación del proyecto una vez finalizado este para ser devuelto a la institución convocante *
+\textbf{Informe Rechazado} = id_informe
+\textbf{Informe Rechazado} = * \emph{Se elimina la tupla correspondiente en la tabla INFORMES EVALUACIÓN} *
 
-Informe Rechazado = id_informe
-Informe Rechazado = * se elimina la tupla correspondiente en la tabla INFORMES EVALUACIÓN *
+\textbf{Informes Adjuntos} = id_informe + id_modelo_eval + estado_informe + datos
+\textbf{Informes Adjuntos} = * \emph{Ve y/o modifica el informe final de evaluación de un adjunto} *
 
-Informes Adjuntos = id_informe + id_modelo_eval + estado_informe + datos
-Informes Adjuntos = * ve y/o modifica el informe final de evaluación de un adjunto *
+\textbf{Informes Coordinadores} = id_informe + id_modelo_eval + estado_informe + datos
+\textbf{Informes Coordinadores} = * \emph{Validar o modificar informe final del adjunto} *
 
-Informes Coordinadores = id_informe + id_modelo_eval + estado_informe + datos
-Informes Coordinadores = * Validar o modificar informe final del adjunto *
+\textbf{Informes Evaluación} = id_informe + id_modelo_eval + estado_informe + datos
+\textbf{Informes Evaluación} = * \emph{Introducir, mostrar, modificar o eliminar los datos referidos a un informe de evaluación. Además modifica, cuando es oportuno, el estado en el que se encuentra dicho informe} *
 
-Informes Evaluación = id_informe + id_modelo_eval + estado_informe + datos
-Informes Evaluación: * Introducir, mostrar, modificar o eliminar los datos referidos a un informe de evaluación. Además modifica, cuando es oportuno, el estado en el que se encuentra dicho informe *
+\textbf{Informes Expertos} = id_informe + id_modelo_eval + estado_informe + datos
+\textbf{Informes Expertos} = * \emph{Añadir o modificar informes de proyectos por parte de los expertos} *
 
-Informes Expertos = id_informe + id_modelo_eval + estado_informe + datos
-Informes Expertos = * Añadir o modificar informes de proyectos por parte de los expertos *
+\textbf{Institución Convocante} = institución
+\textbf{Institución Convocante} = * \emph{Se consulta la institución convocante para que no coincida en la búsqueda de expertos} *
 
-Institución Convocante = institución
-Institución Convocante = * Se consulta la institución convocante para que no coincida en la búsqueda de expertos *
+\textbf{Invitación} = [Petición | Aceptación]
+\textbf{Invitación} = * \emph{Correo de invitación a un experto para que evalúe un proyecto y respuesta de éste} *
 
-Invitación = [Petición | Aceptación]
-Invitación = * correo de invitación a un experto para que evalúe un proyecto y respuesta de éste *
+\textbf{Lista Usuarios} = {id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+\textbf{Lista Usuarios} = * \emph{Lista devuelta por una búsqueda o consulta de usuarios} *
 
-Lista Usuarios = {id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
-Lista Usuarios = * lista devuelta por una búsqueda o consulta de usuarios. *
+\textbf{Memoria Proyecto} = id_proyecto + id_paquete + memoria + id_modelo_eval + estado_proyecto
+\textbf{Memoria Proyecto} = * \emph{Se lee para poder realizar el informe. El adjunto también leerá el estado en que se encuentra la evaluación del proyecto} *
 
-Memoria Proyecto = id_proyecto + id_paquete + memoria + id_modelo_eval + estado_proyecto
-Memoria Proyecto = * Se lee para poder realizar el informe. El adjunto también leerá el estado en que se encuentra la evaluación del proyecto *
+\textbf{Modelo} = id_modelo_eval
+\textbf{Modelo} = * \emph{Se consulta el id del modelo de evaluación para poder asignárselo a los proyectos y también se consulta por si se quiere hacer un cambio en paquetes de proyectos} *
 
-Modelo = id_modelo_eval
-Modelo = * Se consulta el id del modelo de evaluación para poder asignárselo a los proyectos y también se consulta por si se quiere hacer un cambio en paquetes de proyectos *
+\textbf{Modelos Evaluación} = [id_modelo + estructura | Nuevo Modelo Evaluación]
+\textbf{Modelos Evaluación} = * \emph{Insertar o modificar las estructuras que deben seguir los informes de evaluación de cada proyecto} *
 
-Modelos Evaluación = [id_modelo + estructura | Nuevo Modelo Evaluación]
-Modelos Evaluación: * insertar o modificar las estructuras que deben seguir los informes de evaluación de cada proyecto *
+\textbf{Nombre Proyecto} = id_proyecto + nombre
 
-Nombre Proyecto = id_proyecto + nombre
+\textbf{Nueva Relación} = id_experto + id_proyecto + id_paquete + id_informe + valoración + fecha_asignación
+\textbf{Nueva Relación} = * \emph{Se inserta una tupla en la tabla EXPERTOS-PROYECTOS} *
 
-Nueva Relación = id_experto + id_proyecto + id_paquete + id_informe + valoración + fecha_asignación
-Nueva Relación = * Se inserta una tupla en la tabla EXPERTOS-PROYECTOS
+\textbf{Nuevo Informe} = id_informe + id_modelo_eval + estado_informe + datos
+\textbf{Nuevo Informe} = * \emph{Se inserta una tupla en la tabla INFORMES EVALUACIÓN. El estado_informe será 'en_proceso'} *
 
-Nuevo Informe = id_informe + id_modelo_eval + estado_informe + datos
-Nuevo Informe = * Se inserta una tupla en la tabla INFORMES EVALUACIÓN. El estado_informe será 'en_proceso' *
+\textbf{Nuevo Modelo Evaluación} = id_modelo + estructura
+\textbf{Nuevo Modelo Evaluación} = * \emph{Añade un nuevo Modelo de Evaluación} *
 
-Nuevo Modelo Evaluación: id_modelo + estructura
-Nuevo Modelo Evaluación: * añade un nuevo Modelo de Evaluación *
+\textbf{Paquetes Proyectos} = [id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite | Proyectos]
+\textbf{Paquetes Proyectos} = * \emph{Paquetes de proyectos enviados por la institución convocante para su evaluación} *
 
-Paquetes Proyectos = [id_paquete + institución + nº_de_proyectos + bases + convocatoria + fecha_entrada + fecha_salida + fecha_límite | Proyectos]
-Paquetes Proyectos = * paquetes de proyectos enviados por la institución convocante para su evaluación *
+\textbf{Parámetros} = (id_usuario) + (tipo) + (e-mail) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
+\textbf{Parámetros} = * \emph{Son los parámetros de búsqueda de usuarios. Todos los campos con opcionales ya que se pueden realizar búsquedas de usuarios de varias maneras} *
 
-Parámetros = (id_usuario) + (tipo) + (e-mail) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
-Parámetros = * Son los parámetros de búsqueda de usuarios. Todos los campos con opcionales ya que se pueden realizar búsquedas de usuarios de varias maneras *
+\textbf{Parámetros Consulta} = Parámetros Búsqueda = (@id_usuario) + (tipo) + (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
 
-Parámetros Consulta = Parámetros Búsqueda = (@id_usuario) + (tipo) + (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave)
+\textbf{Petición} = id_usuario + nombre + apellidos + id_proyecto + nombre_proyecto + tmp_invitación + Correo_invitación
 
-Petición = id_usuario + nombre + apellidos + id_proyecto + nombre_proyecto + tmp_invitación + Correo_invitación
+\textbf{Plantilla} = id_plantilla + asunto + cuerpo.
+\textbf{Plantilla} = * \emph{Para mandar los correos pertinentes} *
 
-Plantilla = id_plantilla + asunto + cuerpo.
-Plantilla = * Para mandar los correos pertinentes *
+\textbf{Plazo Invitación} = tmp_invitación
 
-Plazo Invitación = tmp_invitación
+\textbf{Proyecto Rechazado} = id_proyecto + id_paquete + subárea
+\textbf{Proyecto Rechazado} = * \emph{Aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta} *
 
-Proyecto Rechazado = id_proyecto + id_paquete + subárea
-Proyecto Rechazado = * aviso del adjunto al coordinador de su área para informar de que el proyecto no corresponde a su subárea y debe, por tanto, asignarse a otro subárea distinta *
+\textbf{Proyectos} = id_proyecto + id_paquete + memoria + área + subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
+\textbf{Proyectos} = * \emph{Consulta la memoria del proyecto para realizar el informe de evaluación} *
 
-Proyectos = id_proyecto + id_paquete + memoria + área + subárea + estado_proyecto + tpo_inv + tpo_eval + id_modelo_eval + evaluación
-Proyectos = * consulta la memoria del proyecto para realizar el informe de evaluación *
+\textbf{Relación Expertos-Proyectos} = {id_experto + id_proyecto + id_paquete + id_informe + valoración + fecha_asignación}
+\textbf{Relación Expertos-Proyectos} = * \emph{Lista de la relación entre Expertos y Proyectos. Se devolverá una lista según los parámetros de consulta} *
 
-Relación Expertos-Proyectos = {id_experto + id_proyecto + id_paquete + id_informe + valoración + fecha_asignación}
-Relación Expertos-Proyectos = * Lista de la relación entre Expertos y Proyectos. Se devolverá una lista según los parámetros de consulta *
+\textbf{Resultado Consulta} = Resultado Búsqueda = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
 
-Resultado Consulta = Resultado Búsqueda = {@id_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + área + institución + currículum + {palabras_clave}}
+\textbf{Subárea Adjuntos} = id_subárea + id_usuario
+\textbf{Subárea Adjuntos} = * \emph{Asignación de un adjunto a una subárea} *
 
-Subárea Adjuntos = id_subárea + id_usuario
-Subárea Adjuntos = * asignación de un adjunto a una subárea *
+\textbf{Subárea Asignada} =id_subárea
+\textbf{Subárea Asignada} = * \emph{Se le añade un subárea a cada proyecto} *
 
-Subárea Asignada =id_subárea
-Subárea Asignada = * Se le añade un subárea a cada proyecto *
+\textbf{Subárea Proyectos} = id_subárea + id_proyecto + id_paquete
+\textbf{Subárea Proyectos} = * \emph{Asignación de un proyecto a una subárea *
 
-Subárea Proyectos = id_subárea + id_proyecto + id_paquete
-Subárea Proyectos = * asignación de un proyecto a una subárea *
+\textbf{Tiempos} = tpo_eval
+\textbf{Tiempos} = * \emph{Se consulta el tiempo de evaluación para saber cuanto le queda al experto para realizar el informe} *
 
-Tiempos = tpo_eval
-Tiempos = * Se consulta el tiempo de evaluación para saber cuanto le queda al experto para realizar el informe *
+\textbf{Usuarios} = [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | Parámetros]
+\textbf{Usuarios} = * \emph{Da el alta a los usuarios, los consulta o modifica sus datos. Modifica el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios} *
 
-Usuarios = [id_usuario + tipo + e-mail + contraseña + (nombre) + (apellidos) + (teléfono) + (área) + (institución) + (currículum) + (palabras_clave) | Parámetros]
-Usuarios = * da el alta a los usuarios, los consulta o modifica sus datos. Modifica el coordinador asociado a un área. Incluye los parámetros de búsqueda introducidos para realizar dicha búsqueda de usuarios *
+\textbf{Valoración Expertos} = id_experto + id_proyecto + id_paquete + tpo_realización + calidad_informe
+\textbf{Valoración Expertos} = * \emph{Cada informe elaborado por un experto para un proyecto, recibirá una valoración según el tiempo de realización y la calidad del informe} *
 
-Valoración Expertos = id_experto + id_proyecto + id_paquete + tpo_realización + calidad_informe
-Valoración Expertos = * cada informe elaborado por un experto para un proyecto, recibirá una valoración según el tiempo de realización y la calidad del informe *
+\textbf{Valoración trabajo} = {tpo_realización + calidad_informe}
+\textbf{Valoración trabajo} = * \emph{Se utiliza en búsqueda de expertos} *
 
-Valoración trabajo = {tpo_realización + calidad_informe}
-Valoración trabajo = * Se utiliza en búsqueda de expertos *
-
-Verificar Autentificar = * Mostrar que la autentificación es correcta. Si introduce incorréctamente el id o la contraseña o ambas, se mostrará una plantalla en la que se indicará: 'Usuario o contraseña son incorrectas' *
+\textbf{Verificar Autentificar} = * \emph{Mostrar que la autentificación es correcta. Si introduce incorréctamente el id o la contraseña o ambas, se mostrará una plantalla en la que se indicará: 'Usuario o contraseña son incorrectas'} *
