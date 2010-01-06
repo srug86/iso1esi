@@ -3,7 +3,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 \usepackage[pdftex]{graphicx}
+\usepackage{listings}
 \input{latex-func.tex}
+
 
 % Margenes
 \usepackage[margin=2.5cm,top=3cm]{geometry}
@@ -151,11 +153,31 @@ validado por el coordinador de su área.
 %\image{MRE.pdf}{}{Diagrama Relacional}{}
 
 \section{Manual de usuario}
+\subsection{Introducción}
+\subsection{Perfiles de usuario}
+\subsection{Interfaz de usuario}
+%aquí se explica la interfaz donde todos los usuarios tiene que loguearse
+\subsubsection{Secretario}
+\subsubsection{Coordinador}
+\subsubsection{Adjunto}
+\subsubsection{Experto}
 
 \section{Implementación}
 \subsection{Introducción}
 \subsection{Código fuente}
+\lstinputlisting{index.php}
+\lstinputlisting{settings.php}
+\lstinputlisting{css/login.css}
+\lstinputlisting{css/main.css}
+\lstinputlisting{css/users.php}
+\lstinputlisting{js/main.js}
+\lstinputlisting{source/eval_infs.php}
+\lstinputlisting{source/eval_mods.php}
+\lstinputlisting{source/evaluations.php}
+\lstinputlisting{source/loginout.php}
+\lstinputlisting{source/mysql.php}
 
+\section{Bibliografía}
 
 \end{document}
 
