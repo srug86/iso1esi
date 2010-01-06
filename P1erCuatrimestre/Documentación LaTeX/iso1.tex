@@ -1,9 +1,7 @@
-\documentclass[a4paper,12pt,spanish,twoside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
-\usepackage[pdftex]{graphicx}
+\documentclass[12pt,a4paper,spanish,twoside]{article}
+
 \input{latex-func.tex}
+
 
 % Margenes
 \usepackage[margin=2.5cm,top=3cm]{geometry}
@@ -40,38 +38,46 @@ investigadores, texto de la convocatoria, etc.).
 \subsection{Análisis de requisitos del sistema}
 Tras una serie de reuniones, los requisitos finales para nuestro sistema son los siguientes:
 \begin{itemize}
+
 \item \textbf{Usuarios}
 \begin{itemize}
-\item Acceden al sistema mediante un nombre de usuario, que será la cuenta de correo; y una contraseña, que podrá modificar.
-\item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno con un diferente tipo de funcionalidad y rango.
-\item Cada usuario podrá modificar sus datos personales y tendrá una vista restringida sobre la lista de proyectos dependiendo 
-de su rango en el sistema.
+\item Acceden al sistema mediante un nombre de usuario, que será la cuenta de correo; y una 
+contraseña, que podrá modificar.
+\item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno con un diferente 
+tipo de funcionalidad y rango.
+\item Cada usuario podrá modificar sus datos personales y tendrá una vista restringida sobre la 
+lista de proyectos dependiendo de su rango en el sistema.
 \end{itemize}
 
 \item \textbf{Paquete de Proyectos}
-\\Las instituciones solicitantes mandan los proyectos en paquetes al secretario, los cuales contienen:
+\\Las instituciones solicitantes mandan los proyectos en paquetes al secretario, los cuales 
+contienen:
 \begin{itemize}
 \item La convocatoria.
 \item Las bases del proyecto.
 \item Institución convocante.
 \item Los proyectos, que pueden venir, aunque no necesariamente, clasificados por área.
-\item Uno o varios modelos de informe de evaluación que contengan los puntos a evaluar del correspondiente proyecto. 
+\item Uno o varios modelos de informe de evaluación que contengan los puntos a evaluar del 
+correspondiente proyecto. 
 \item Cada proyecto tendrá una fecha en la cuál tiene que estar evaluado.
 \end{itemize}
+
 \item \textbf{Secretario}
 \begin{itemize}
-\item Usuarios: Es el encargado de añadir, modificar y eliminar a los usuarios del sistema: coordinadores, adjuntos 
+\item Usuarios: Es el encargado de añadir, modificar y eliminar a los usuarios del sistema: 
+coordinadores, adjuntos 
 y expertos.
 \item Coordinadores: Elegirá el coordinador de cada área.
-\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos y los introduce al sistema: las bases, 
-la convocatoria, la institución convocante, los proyectos, el cual asignará al área correspondiente; etc. También 
-podrá modificar cualquier información referente a estas solicitudes. 
-\item Modelos de evaluación: Dependiendo de la información que contenga el proyecto, elaborará unos modelos de informe 
-de evaluación.
-\item Plazos expertos: Decidirá los plazos que tienen los expertos para aceptar o declinar la invitación para realizar 
-el informe de evaluación, así como una vez aceptado, la fecha para entregar dicho informe. Todo esto se incluirá en el modelo de evaluación.
-
+\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos y los introduce 
+al sistema: las bases, la convocatoria, la institución convocante, los proyectos, el cual asignará 
+al área correspondiente; etc. También podrá modificar cualquier información referente a estas solicitudes. 
+\item Modelos de evaluación: Dependiendo de la información que contenga el proyecto, elaborará unos 
+modelos de informe de evaluación.
+\item Plazos expertos: Decidirá los plazos que tienen los expertos para aceptar o declinar la invitación 
+para realizar el informe de evaluación, así como una vez aceptado, la fecha para entregar dicho informe. 
+Todo esto se incluirá en el modelo de evaluación.
 \end{itemize}
+
 \item \textbf{Coordinador}
 \begin{itemize}
 \item Pertenece a una única área.
@@ -80,11 +86,13 @@ el informe de evaluación, así como una vez aceptado, la fecha para entregar di
 \item Reasignar proyecto a otra subárea, si el adjunto se lo indica.
 \item Valida los informes pendientes que los adjuntos de las subáreas de su área realizan.
 \end{itemize}
+
 \item \textbf{Área}
 \begin{itemize}
 \item Está asociada a un único coordinador y tiene, a su vez, varias subáreas. 
 \item El número de subáreas podrá ser diferente en cada área.
 \end{itemize}
+
 \item \textbf{Adjunto}
 \begin{itemize}
 \item Pertenece únicamente a una subárea.
@@ -104,25 +112,31 @@ los informes de los distintos expertos que hayan aceptado realizar la evaluació
 validado por el coordinador de su área.
 \item Evalúa el trabajo del experto basándose en la formalidad de los plazos y la calidad de su informe.
 \item Puede recomendar al secretario añadir expertos.
-\item Dentro de la lista de proyectos a las que los adjuntos tienen acceso, tendrán una sublista de los expertos que están revisando ese proyecto.
+\item Dentro de la lista de proyectos a las que los adjuntos tienen acceso, tendrán una sublista de los expertos 
+que están revisando ese proyecto.
 \item Podrá avisar al coordinador cuando el proyecto no corresponda a su subárea.
 \end{itemize}
+
 \item \textbf{Subárea}
 \begin{itemize}
 \item Sólo podrá pertenecer a un área y tiene un único adjunto asociado.
 \end{itemize}
+
 \item \textbf{Expertos}
 \begin{itemize}
 \item Podrán tener asignados varios proyectos a la vez. 
 \item No podrán pertenecer a la misma institución solicitante de la evaluación.
 \item Podrá aceptar o declinar las invitaciones de evaluación de proyectos.
-\item Cuando acepte la invitación, podrá acceder a la documentación de ese proyecto e ir realizando progresivamente el informe en varias sesiones.
+\item Cuando acepte la invitación, podrá acceder a la documentación de ese proyecto e ir realizando 
+progresivamente el informe en varias sesiones.
 \item Una vez que haya terminado el informe finalizará el proceso de evaluación.
-\item Recibirá avisos de finalización de plazos por parte del adjunto para finalizar el informe, vía correo electrónico.
-\item Cada uno tendrá una serie de palabras clave asociadas a su temática. Éstas palabras clave se utilizarán como parámetros en las búsquedas.
+\item Recibirá avisos de finalización de plazos por parte del adjunto para finalizar el informe, 
+vía correo electrónico.
+\item Cada uno tendrá una serie de palabras clave asociadas a su temática. Éstas palabras clave se 
+utilizarán como parámetros en las búsquedas.
 \item Tendrá una lista de evaluaciones pendientes, que podrá aceptar o rechazar.
-
 \end{itemize}
+
 \end{itemize}
 
 \section{Análisis de sistema}
@@ -163,6 +177,34 @@ validado por el coordinador de su área.
 \section{Implementación}
 \subsection{Introducción}
 \subsection{Código fuente}
+\subsubsection{index.php}
+\lstinputlisting{index.php}
+\subsubsection{settings.php}
+\lstinputlisting{settings.php}
+\subsubsection{login.css}
+\lstinputlisting{css/login.css}
+\subsubsection{main.css}
+\lstinputlisting{css/main.css}
+\subsubsection{users.php}
+\lstinputlisting{css/users.php}
+\subsubsection{main.js}
+\lstinputlisting{js/main.js}
+\subsubsection{eval\_infs.php}
+\lstinputlisting{source/eval_infs.php}
+\subsubsection{eval\_mods.php}
+\lstinputlisting{source/eval_mods.php}
+\subsubsection{evaluations.php}
+\lstinputlisting{source/evaluations.php}
+\subsubsection{loginout.php}
+\lstinputlisting{source/loginout.php}
+\subsubsection{mysql.php}
+\lstinputlisting{source/mysql.php}
+\subsubsection{login.php}
+\lstinputlisting{theme/login.php}
+\subsubsection{main.php}
+\lstinputlisting{theme/main.php}
+\subsubsection{users.php}
+\lstinputlisting{theme/users.php}
 
 \section{Bibliografía}
 
