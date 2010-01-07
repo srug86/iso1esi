@@ -58,7 +58,7 @@ $color = $_SESSION['user']['color'];
     position: relative;
     z-index: 1001;
     padding: 0;
-    margin: 41px 0 0 10px;
+    margin: 34px 0 0 10px;
     list-style-type: none;
 }
 
@@ -96,44 +96,8 @@ $color = $_SESSION['user']['color'];
 
 #body #right a#logout {
     float: right;
-    margin-top: 17px;
+    margin: 5px 0 10px;
     color: <? echo $color; ?>;
-}
-
-#body #right ul {
-    position: relative;
-    z-index: 1001;
-    float: left;
-    height: 12px;
-    padding: 0px;
-    margin-left: 1px;
-    list-style-type: none;
-}
-
-#body #right ul li {
-    float: left;
-    height: 25px;
-    padding: 0 10px;
-    line-height: 22px;
-}
-
-#body #right ul li#ron {
-    border: 1px solid <? echo $color; ?>;
-    border-bottom-color: white;
-    background-color: white;
-    color: <? echo $color; ?>;
-    font-weight: bold;
-}
-
-#body #right ul li#roff {
-    padding-top: 1px;
-    color: <? echo $color; ?>;
-}
-
-#body #right ul li#roff:hover {
-    color: white;
-    background-color: <? echo $color; ?>;
-    border-bottom: 1px solid <? echo $color; ?>;
 }
 
 #body #right #content {
@@ -141,13 +105,7 @@ $color = $_SESSION['user']['color'];
     z-index: 1000;
     margin-left: 1px;
     border: 1px solid <? echo $color; ?>;
-    height: 300px;
     clear: both;
     background-color: white;
-    padding: 10px 20px;
-}
-
-#body #right #content #buttons {
-    text-align: left;
-    border: 1px solid 
+    padding: 11px 10px;
 }

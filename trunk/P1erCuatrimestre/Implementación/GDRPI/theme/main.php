@@ -2,6 +2,8 @@
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
 function theme_view($view = null, $args = null) {
+  global $_mysql, $_user;
+  
   switch ($view) {
   case "login":
     $csss = array("users.php", "login.css");
@@ -11,14 +13,24 @@ function theme_view($view = null, $args = null) {
     login_body($args);
     break;
 
-  case "user":
-    $csss = array("users.php");
-    theme_above($csss);
+
+
+
+  default:
+    $csss = array("users.php", "evalmodels.css");
+    $jss = array("evalmodels.js");
+    theme_above($csss, $jss);
     include 'theme/users.php';
     users_header();
-    users_body();
-    break;
-                 
+    user_nav();
+    if ($_user['type'] == "secretary") {
+      include 'theme/evaluation_models.php';
+      evaluation_models();
+    }
+    else {
+      include 'theme/projects.php';
+      projects();
+    }                 
   }
   theme_footer();
 }
@@ -32,11 +44,11 @@ function theme_above($csss, $jss = array(), $onload = "") {
                 ." | ".$title;
 
   /* Styles */
-  $styles = "\n".'<link rel="stylesheet" type="text/css" href="css/main.css">
-';
+  $styles = "\n".'<link rel="stylesheet" type="text/css" '
+    .'href="theme/css/main.css">';
   foreach ($csss as $style) {
     $styles .= '<link rel="stylesheet" type="text/css" '
-      .'href="css/'.$style.'">'."\n";
+      .'href="theme/css/'.$style.'">'."\n";
   }
 
   /* JavaScripts */
@@ -45,7 +57,7 @@ function theme_above($csss, $jss = array(), $onload = "") {
     .'<script type="text/javascript" src="js/main.js"></script>'."\n";
   foreach ($jss as $js) {
     $javascripts .= '<script type="text/javascript" src="js/'
-      .$js.'.js"></script>';
+      .$js.'"></script>';
   }
 
   $date = time();
