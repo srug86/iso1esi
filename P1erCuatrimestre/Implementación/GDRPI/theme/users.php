@@ -87,34 +87,49 @@ function users_header() {
      ';
 }
 
-function users_body() {
+function user_nav() {
+  global $_user;
+  
   echo '
 <div id="body">
   <div id="left">
-    <ul>
+    <ul>';
+  switch($_user['type']) {
+  case "secretary":
+    echo '
       <li class="loff">Paquetes de proyectos</li>
       <li id="lon">Modelos de evaluación</li>
       <li class="loff">Usuarios</li>
       <li class="loff">Áreas</li>
-      <li class="loff">Datos personales</li>
+      <li class="loff">Datos personales</li>';
+    break;
+
+  case "coordinator":
+    echo '
+      <li id="lon">Proyectos</li>
+      <li class="loff">Subáreas</li>
+      <li class="loff">Datos personales</li>';
+    break;
+
+  case "attached":
+    echo '
+      <li id="lon">Proyectos</li>
+      <li class="loff">Datos personales</li>';
+    break;
+
+  case "expert":
+    echo '
+      <li id="lon">Proyectos</li>
+      <li class="loff">Datos personales</li>';
+    break;
+  }
+
+  echo '
     </ul>
   </div>
   <div id="right">
-    <ul>
-      <li id="ron">Vista general</li>
-    </ul>
     <a id="logout" href="index.php?act=logout" alt="Salir">
       <strong>[ Salir ]</strong></a>
-    <div id="content">
-      <div id="buttons">
-        <a href="#" alt="Añadir nuevo modelo">Añadir</a> |
-        <a href="#" alt="Modificar modelo">Modificar</a> |
-        <a href="#" alt="Eliminar modelo">Eliminar</a>
-      </div>
-    </div>
-  </div>
-  <div style="clear: both"></div>
-</div>
-  ';
+';
 }
 ?>

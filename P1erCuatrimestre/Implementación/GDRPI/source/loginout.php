@@ -10,7 +10,7 @@ function is_cookied() {
       $cookie = unserialize(stripslashes($_COOKIE['GDRPI']));
       $sql = "SELECT password, pwsalt FROM users WHERE id={$cookie['uid']}";
       $r = $_mysql->assoc($sql);
-      $dbpass = sha1($r['passwd'].$r['pwsalt']);
+      $dbpass = sha1($r[0]['password'].$r[0]['pwsalt']);
       
       if ($cookie['pass'] == $dbpass) $_SESSION['uid'] = $_uid = $cookie['uid'];
       else {

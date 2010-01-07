@@ -1,6 +1,18 @@
 <?php
-/* PROBLEMAS
- - Las consultas sql se cargan en iso8859 en vez de itf8
+/*
+
+  PROBLEMAS
+   - Las consultas sql se cargan en iso8859 en vez de utf8
+
+   DUDAS
+   - ¿Los paquetes de proyectos y los proyectos no deberían tener un nombre?
+   - ¿No que relacionar los modelos con los proyectos? 
+     Creo que habría que hacer la siguiente relación:
+     Proyecto --> Modelo --> Paquete
+
+   HACER
+   - Foto de los usuarios de colores u otra foto mejor
+   - Colores de la vista de las evaluaciones
  */
 
 /* ---------------------------------------------------------------- *
@@ -38,13 +50,25 @@ is_cookied();
 load_user();
 
 /* Functions action array */
-$actionArray = array(
-                     'login' => array('loginout.php', 'login'),
-                     'logout' => array('loginout.php', 'logout'),
-                     null => array('evaluations.php', 'evaluations')
-                     );
+$actionArray =
+  array(
+        'login' => array('s', 'loginout.php', 'login'),
+        'logout' => array('s', 'loginout.php', 'logout'),
+        'newmod' => array('t', 'evaluation_models.php', 'new_model'),
+        'modmod' => array('t', 'evaluation_models.php', 'modify_model'),
+        'savemod' => array('s', 'evaluation_models.php', 'save_model'),
+        'endmod' => array('s', 'evaluation_models.php', 'end_model'),
+        'viewconv' => array('t', 'evaluation_models.php', 'view_convocatory'),
+        'newrep' => array('t', 'evaluation_reports.php', 'new_report'),
+        'modrep' => array('t', 'evaluation_reports.php', 'modify_report'),
+        'saverep' => array('s', 'evaluation_reports.php', 'save_report'),
+        'endrep' => array('s', 'evaluation_reports.php', 'end_report'),
+        'viewrep' => array('s', 'evaluation_reports.php', 'view_report'),
+        null => array('t', 'main.php', 'theme_view')
+        );
 
-require_once 'source/'.$actionArray[$_act][0];
-call_user_func($actionArray[$_act][1]);
+$dir = array('s' => 'source/', 't' => 'theme/');
+require_once $dir[$actionArray[$_act][0]].$actionArray[$_act][1];
+call_user_func($actionArray[$_act][2]);
 ?>
 
