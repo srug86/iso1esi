@@ -9,6 +9,7 @@ class MySQL {
      $bd = $_config['bd'];
      $this->link = mysql_connect($bd['host'], $bd['user'], $bd['pass']);
      mysql_select_db($bd['name'], $this->link);
+     mysql_query("SET NAMES utf8", $this->link);
    }
 
    public function assoc($query) {
@@ -22,6 +23,10 @@ class MySQL {
      list($field) = mysql_fetch_row(mysql_query($query, $this->link));
      return $field;
    }
+
+   public function sql($query) {
+     mysql_query($query, $this->link);
+   }     
    
    private function errors($str_error) {
      null;

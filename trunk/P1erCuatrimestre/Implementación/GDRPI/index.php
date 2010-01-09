@@ -2,7 +2,8 @@
 /*
 
   PROBLEMAS
-   - Las consultas sql se cargan en iso8859 en vez de utf8
+   - Al eleminar de un formulario de un modelo una sección, no siendo esta la
+     última la numeración, no aparece correctamente
 
    DUDAS
    - ¿Los paquetes de proyectos y los proyectos no deberían tener un nombre?
@@ -13,6 +14,7 @@
    HACER
    - Foto de los usuarios de colores u otra foto mejor
    - Colores de la vista de las evaluaciones
+   - Color X de las capas del formulario de los modelos
  */
 
 /* ---------------------------------------------------------------- *
@@ -22,7 +24,7 @@
 /* Define +  Errors + Locals */
 define('GDRPI', 1);
 error_reporting(E_ALL);
-//setlocale(LC_ALL, "esp", "es_ES", "es_ES@euro");
+setlocale(LC_ALL, "es_ES.utf-8");
 
 $time_start = microtime();
 
@@ -52,23 +54,30 @@ load_user();
 /* Functions action array */
 $actionArray =
   array(
+        /* Login */
         'login' => array('s', 'loginout.php', 'login'),
         'logout' => array('s', 'loginout.php', 'logout'),
+
+        /* Models */
         'newmod' => array('t', 'evaluation_models.php', 'new_model'),
         'modmod' => array('t', 'evaluation_models.php', 'modify_model'),
         'savemod' => array('s', 'evaluation_models.php', 'save_model'),
-        'endmod' => array('s', 'evaluation_models.php', 'end_model'),
+        'delmod' => array('s', 'evaluation_models.php', 'delete_model'),
         'viewconv' => array('t', 'evaluation_models.php', 'view_convocatory'),
+
+        /* Reports */
         'newrep' => array('t', 'evaluation_reports.php', 'new_report'),
         'modrep' => array('t', 'evaluation_reports.php', 'modify_report'),
         'saverep' => array('s', 'evaluation_reports.php', 'save_report'),
         'endrep' => array('s', 'evaluation_reports.php', 'end_report'),
         'viewrep' => array('s', 'evaluation_reports.php', 'view_report'),
+
+        /* Default */
         null => array('t', 'main.php', 'theme_view')
         );
 
-$dir = array('s' => 'source/', 't' => 'theme/');
-require_once $dir[$actionArray[$_act][0]].$actionArray[$_act][1];
+$path = array('s' => 'source/', 't' => 'theme/');
+require_once $path[$actionArray[$_act][0]].$actionArray[$_act][1];
 call_user_func($actionArray[$_act][2]);
 ?>
 

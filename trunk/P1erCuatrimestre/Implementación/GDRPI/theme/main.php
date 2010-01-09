@@ -17,10 +17,10 @@ function theme_view($view = null, $args = null) {
 
 
   default:
-    $csss = array("users.php", "evalmodels.css");
-    $jss = array("evalmodels.js");
-    theme_above($csss, $jss);
+    $csss = array("users.php", "evalmodels.css", "dialog.css");
+    $jss = array("evalmodels.js", "dialog.js");
     include 'theme/users.php';
+    theme_above($csss, $jss);
     users_header();
     user_nav();
     if ($_user['type'] == "secretary") {
@@ -36,12 +36,12 @@ function theme_view($view = null, $args = null) {
 }
 
 function theme_above($csss, $jss = array(), $onload = "") {
-  global $_name, $_last_names, $_type;
+  global $_user;
   
   $title = "GDPRI - Gestión Distribuída de la Revisión de "
     ."Proyectos de Investigación";
-  if ($_name) $title = $_name." ".$_last_names." | ".user_type($_type)
-                ." | ".$title;
+  if ($_user) $title = $_user['name']." ".$_user['surnames']." | "
+                .user_type($_user['type'])." | ".$title;
 
   /* Styles */
   $styles = "\n".'<link rel="stylesheet" type="text/css" '
@@ -57,7 +57,7 @@ function theme_above($csss, $jss = array(), $onload = "") {
     .'<script type="text/javascript" src="js/main.js"></script>'."\n";
   foreach ($jss as $js) {
     $javascripts .= '<script type="text/javascript" src="js/'
-      .$js.'"></script>';
+      .$js.'"></script>'."\n";
   }
 
   $date = time();
@@ -74,18 +74,18 @@ function theme_above($csss, $jss = array(), $onload = "") {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<title>'.$title.'</title>
 '.$styles.'
 '.$javascripts.'
-<title>'.$title.'</title>
 </head>
 
 <body'.$onload.'>
-  <div id="container">
-    <div id="top">
-      <div id="title">Gestión Distribuída de la
-        Revisión de Proyectos de Investigación</div>
-      <div id="date">'.$date.'</div>
-    </div>';
+<div id="container">
+  <div id="top">
+    <div id="title">Gestión Distribuída de la
+      Revisión de Proyectos de Investigación</div>
+    <div id="date">'.$date.'</div>
+  </div>';
 }
 
 function theme_footer() {
