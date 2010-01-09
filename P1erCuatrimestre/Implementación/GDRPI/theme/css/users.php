@@ -94,6 +94,14 @@ $color = $_SESSION['user']['color'];
     width: 784px;
 }
 
+#body #right #msg {
+    font-weight: bold;
+    color: red;
+    margin: 5px 0 0;
+    text-align: left;
+    float: left;
+}
+
 #body #right a#logout {
     float: right;
     margin: 5px 0 10px;

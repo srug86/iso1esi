@@ -124,10 +124,16 @@ function user_nav() {
     break;
   }
 
+  $msg = "";
+  if (isset($_SESSION['msg'])) {
+    $msg = $_SESSION['msg'];
+    unset($_SESSION['msg']);
+  }
   echo '
     </ul>
   </div>
   <div id="right">
+    <p id="msg">'.$msg.'</p>
     <a id="logout" href="index.php?act=logout" alt="Salir">
       <strong>[ Salir ]</strong></a>
 ';
