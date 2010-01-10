@@ -96,9 +96,9 @@ function modify_model() {
       case "are":
         $str .= '<div id="sec'.$nsec.'el'.$nel.'" class="form"><a href="'
           .'javascript:del_form(\'sec'.$nsec.'el'.$nel.'\')"><img src="'
-          .'theme/images/x-red.png" alt=""></a><br /><textarea name="'
-          .'sec['.$nsec.'][els]['.$nel.']['.$type.']">'
-          .$el.'</textarea></div>';
+          .'theme/images/x-red.png" alt=""></a><br /><input type="hidden"'
+          .' name="sec['.$nsec.'][els]['.$nel.']['.$type.']" /><textarea '
+          .'disabled="disabled"></textarea></div>';
         break;
 
       case "fie":
@@ -121,12 +121,13 @@ function modify_model() {
         }
 
         foreach ($el as $i => $txt) {
-          $str .= 'Opción '.($i+1).': <input type="text" name="sec['.$sec
+          $str .= 'Opción '.($i+1).': <input type="text" name="sec['.$nsec
             .'][els]['.$nel.']['.$type.']['.$i.']" value="'.$txt.'" /><br />';
         }
-        $nel++;
         $str .= '</div>';
+        break;
       }
+      $nel++;
     }
     $nsec++;
     $str .= '</div>';

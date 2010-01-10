@@ -41,8 +41,9 @@ function add_form(type) {
             els++;
             str += '<div id="sec'+sec+'el'+els+'" class="form"><a href="'
                 +'javascript:del_form(\'sec'+sec+'el'+els+'\')"><img src="'
-                +'theme/images/x-red.png" alt=""></a><br /><textarea name="'
-                +'sec['+sec+'][els]['+els+']['+type+']"></textarea></div>';
+                +'theme/images/x-red.png" alt=""></a><br /><input type="hidden"'
+                +' name="sec['+sec+'][els]['+els+']['+type+']" /><textarea '
+                +'disabled="disabled"></textarea></div>';
         }
         else if (type == "fie") {
             els++;
@@ -89,8 +90,11 @@ function mod_model() {
     else {
         if (!down) {
             Ajax("modmod", "#new", "id="+check.attr("name"));
+            
+            /* Restore the js variables */
             sec = $("#new #modst input#sec").attr("value");
             els = $("#new #modst input#els").attr("value");
+
             $("#new").slideDown("normal");
             down = true;
         }        
