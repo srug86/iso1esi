@@ -31,6 +31,23 @@ function Ajax(act, layer, values) {
            });
 }
 
+/* Forms fields values */
+function values(f) {
+    var values = "";
+    for (i=0; i<f.length-1; i++) {
+        if ((f.elements[i].type == "checkbox" && f.elements[i].checked) ||
+            (f.elements[i].type == "radio" && f.elements[i].checked) ||
+            (f.elements[i].type != "checkbox" && f.elements[i].type != "radio"))
+            values += f.elements[i].name+"="+f.elements[i].value+"&";
+    }
+    return values.substring(0, values.length-1);
+}
+
+/* FadeOut system messages */
+$(document).ready(function () {
+        setTimeout(function () {$("#body #right #msg").fadeOut()}, 4000);
+    });
+
 /* Validates */
 function val_select(id) {
     if (document.getElementById(id).value == "default") {
@@ -51,7 +68,7 @@ function val_savemod() {
         result = false;
     }
     else {
-        $("#modform #modst input").each(function () {
+        $("#modform #modst input[type=text]").each(function () {
                 if ($(this).attr("value") == "") {
                     alert("Debe rellenar todos los campos añadidos");
                     result = false;
@@ -61,20 +78,3 @@ function val_savemod() {
     }
     return result;
 }
-
-/* Forms fields values */
-function values(f) {
-    var values = "";
-    for (i=0; i<f.length-1; i++) {
-        if ((f.elements[i].type == "checkbox" && f.elements[i].checked) ||
-            (f.elements[i].type == "radio" && f.elements[i].checked) ||
-            (f.elements[i].type != "checkbox" && f.elements[i].type != "radio"))
-            values += f.elements[i].name+"="+f.elements[i].value+"&";
-    }
-    return values.substring(0, values.length-1);
-}
-
-/* FadeOut system messages */
-$(document).ready(function () {
-        setTimeout(function () {$("#body #right #msg").fadeOut()}, 4000);
-    });

@@ -10,6 +10,8 @@
    - ¿No que relacionar los modelos con los proyectos? 
      Creo que habría que hacer la siguiente relación:
      Proyecto --> Modelo --> Paquete
+   - Experto-proyecto debe tener una clave ajena al paquete de proyectos
+     porque sólo con el proyecto no es suficiente
 
    HACER
    - Foto de los usuarios de colores u otra foto mejor
@@ -66,8 +68,7 @@ $actionArray =
         'viewconv' => array('t', 'evaluation_models.php', 'view_convocatory'),
 
         /* Reports */
-        'newrep' => array('t', 'evaluation_reports.php', 'new_report'),
-        'modrep' => array('t', 'evaluation_reports.php', 'modify_report'),
+        'makerep' => array('t', 'evaluation_reports.php', 'make_report'),
         'saverep' => array('s', 'evaluation_reports.php', 'save_report'),
         'endrep' => array('s', 'evaluation_reports.php', 'end_report'),
         'viewrep' => array('s', 'evaluation_reports.php', 'view_report'),

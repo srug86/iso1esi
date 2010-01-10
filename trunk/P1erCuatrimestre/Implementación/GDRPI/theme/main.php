@@ -4,32 +4,36 @@ if (!defined('GDRPI')) die(header("Location: noencontrado"));
 function theme_view($view = null, $args = null) {
   global $_mysql, $_user;
   
-  switch ($view) {
-  case "login":
+  if ($view) {
     $csss = array("users.php", "login.css");
     theme_above($csss);
     include 'theme/login.php';
     login_header();
     login_body($args);
-    break;
-
-
-
-
-  default:
-    $csss = array("users.php", "evalmodels.css", "dialog.css");
-    $jss = array("evalmodels.js", "dialog.js");
+  }
+  else {
     include 'theme/users.php';
-    theme_above($csss, $jss);
-    users_header();
-    user_nav();
-    if ($_user['type'] == "secretary") {
+
+    switch ($_user['type']) {
+    case "secretary":
+      $csss = array("users.php", "evalmodels.css", "dialog.css");
+      $jss = array("evalmodels.js", "dialog.js");
+      theme_above($csss, $jss);
+      users_header();
+      user_nav();
       include 'theme/evaluation_models.php';
       evaluation_models();
-    }
-    else {
+      break;
+
+    case "expert":
+      $csss = array("users.php", "evalreports", "dialog.css");
+      $jss = array("evalreports.js", "dialog.js");
+      theme_above($csss, $jss);
+      users_header();
+      user_nav();
       include 'theme/projects.php';
       projects();
+      break;
     }                 
   }
   theme_footer();
@@ -61,7 +65,7 @@ function theme_above($csss, $jss = array(), $onload = "") {
   }
 
   $date = time();
-  $date = strftime("%d de ", $date).ucfirst(strftime("%B", $date)).
+  $date = strftime("%e de ", $date).ucfirst(strftime("%B", $date)).
     strftime(" de %Y", $date);
 
   header('Content-Type: text/html; charset=UTF-8');

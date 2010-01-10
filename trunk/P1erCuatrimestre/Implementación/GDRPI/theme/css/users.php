@@ -117,3 +117,44 @@ $color = $_SESSION['user']['color'];
     background-color: white;
     padding: 11px 10px;
 }
+
+#content .title{
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    clear: both;
+}
+
+#content #buttons {
+    text-align: left;
+    height: 30px;
+}
+
+#content #buttons a {
+    display: block;
+    float: left;
+    border: 1px solid #c0c0c0;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 2px 4px 3px;
+    margin-right: 3px;
+}
+
+#content table {
+    width: 759px;
+    border-collapse: collapse;
+    margin-left: 2px;
+}
+
+#content tr#trtop {
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+#content td {
+    border: 1px solid;
+    padding: 2px 5px;
+    margin: 0;
+}
