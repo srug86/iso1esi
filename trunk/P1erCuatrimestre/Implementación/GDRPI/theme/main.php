@@ -25,14 +25,27 @@ function theme_view($view = null, $args = null) {
       evaluation_models();
       break;
 
+    case "coordinator":
+      break;
+
+    case "attached":
+      $csss = array("users.php", "evalreports.css", "dialog.css");
+      $jss = array("projects.js", "evalreports.js", "dialog.js");
+      theme_above($csss, $jss);
+      users_header();
+      user_nav();
+      include 'theme/projects.php';
+      attached_projects();
+      break;
+
     case "expert":
-      $csss = array("users.php", "evalreports", "dialog.css");
+      $csss = array("users.php", "evalreports.css", "dialog.css");
       $jss = array("evalreports.js", "dialog.js");
       theme_above($csss, $jss);
       users_header();
       user_nav();
       include 'theme/projects.php';
-      projects();
+      expert_projects();
       break;
     }                 
   }

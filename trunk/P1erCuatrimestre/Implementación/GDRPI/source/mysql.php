@@ -13,9 +13,9 @@ class MySQL {
    }
 
    public function assoc($query) {
-     $rows = null;
+     $rows = array();
      $res = mysql_query($query, $this->link);
-     while ($row = mysql_fetch_assoc($res)) $rows[] = $row;
+     if ($res) while ($row = mysql_fetch_assoc($res)) $rows[] = $row;
      return $rows;
    }
 

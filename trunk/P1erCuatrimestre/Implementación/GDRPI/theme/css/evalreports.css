@@ -41,3 +41,11 @@
 #projects td {
     border-color: green;
 }
+
+#projects .exps {
+    padding: 5px;
+}
+
+#projects table table {
+    width: 713px;
+}

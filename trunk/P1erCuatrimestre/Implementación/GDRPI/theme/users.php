@@ -24,17 +24,16 @@ function user_refers() {
 
   if (!isset($_user['refers'])) {
     $position = "";
-    switch($_user['type']) {
-    case "coordinator": case "attached": case "expert":
+    if ($_user['type'] != "secretary") {
       $area = $_mysql->
         field("SELECT name FROM areas WHERE id={$_user['area']}");
       $position = "<strong>Área</strong> $area<br />";
-      break;
-    case "attached":
-      $subarea = $_mysql->field("SELECT name FROM subareas "
-                                ."WHERE aid={$_user['area']} AND uid=$_uid");
-      $position .= "<strong>Subárea</strong> $subarea<br />";
-      break;
+
+      if ($_user['type'] == "attached") {
+        $subarea = $_mysql->field("SELECT name FROM subareas "
+                                  ."WHERE aid={$_user['area']} AND uid=$_uid");
+        $position .= "<strong>Subárea</strong> $subarea<br />";
+      }
     }
 
     $refers = "{$_user['name']} {$_user['surnames']} "

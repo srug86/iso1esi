@@ -1,17 +1,106 @@
 <?php
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
-function projects() {
-  global $_mysql, $_user;
+function attached_projects() {
+  global $_mysql, $_uid, $_user;
+
+  $r = $_mysql->assoc("SELECT p.id, p.pid, p.name, s.name AS sub, p.state "
+                      ."FROM projects p, subareas s "
+                      ."WHERE s.uid=5701903 AND p.said = s.id "
+                      ."AND s.aid = p.aid ORDER BY p.id, p.pid DESC");
+  echo '
+    <div id="content">
+      <div id="projects">
+        <div id="buttons">
+          <a href="javascript:make_report();" alt="">Realizar evaluación</a>
+          <a href="javascript:end_report();" alt="">Finalizar evaluación</a>
+          <a href="javascript:woimp();" alt="">Asignar expertos</a>
+          <a href="javascript:woimp();" alt="">Valorar experto</a>
+          <a href="javascript:woimp();" alt="">Subárea errónea</a>
+        </div>
+        <div class="title">Proyectos asignados</div>
+        <table>
+          <tr id="trtop">
+            <td></td><td>Exps.</td><td>Nombre</td><td>Subárea</td>
+            <td>Estado de la evaluación</td>
+          </tr>';
+
+  foreach ($r as $row) {
+    switch ($row['state']) {
+    case "without_eval": $state = "Sin evaluación"; break;
+    case "experts_evaluating": $state = "Expertos evaluando"; break;
+    case "evaluated_experts": $state = "Evaluado por los expertos"; break;
+    case "evaluated_attached": $state = "Evaluado por el adjunto"; break;
+    case "validated_coordinator": $state = "Validado por el coordinador"; break;
+    }
+    $id = 'pp'.$row['pid'].'p'.$row['id'];
+    echo '
+          <tr>
+            <td>
+              <input type="checkbox" name="'.$id.'" />
+            </td>
+            <td><a id="'.$id.'"
+                  href="javascript:expand(\''.$id.'\')"
+                  alt=""><img src="theme/images/expand.png" /></a></td>
+            <td>'.$row['name'].'</td><td>'.$row['sub'].'</td><td>'.$state.'</td>
+          </tr>';
+  }
+  echo '
+        </table>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both"></div>
+</div>
+        ';
+}
+
+/* Table of the experts assigned to a project */
+function projects_experts() {
+  global $_mysql, $_uid;
+
+  $id = explode("p", substr($_POST['pro'], 2)); 
+
+  $r = $_mysql->assoc("SELECT er.id, u2.name, u2.surnames, er.state, "
+                      ."u2.keywords "
+                      ."FROM users u1, users u2, `experts-projects` ep, "
+                      ."eval_reports er, subareas s, projects p "
+                      ."WHERE u1.id=$_uid AND u1.id=s.uid AND s.id=p.said "
+                      ."AND s.aid=p.aid AND p.id=ep.pid AND p.pid=ep.ppid "
+                      ."AND ep.uid=u2.id AND p.pid=$id[0] AND p.id=$id[1] "
+                      ."AND ep.rid=er.id ORDER BY ep.assign_date DESC");
+  echo '
+        <table>
+          <tr id="trtop">
+            <td></td><td>Nombre</td><td>Estado de la evaluación</td>
+            <td>Palabras clave</td>
+          </tr>';
+
+  foreach ($r as $row) {
+    $state = $row['state'] == "in_process" ? "En proceso" : "Terminada";
+    
+    echo '
+          <tr>
+            <td><input type="checkbox" name="'.$row['id'].'" /></td>
+            <td>'.$row['name'].' '.$row['surnames'].'</td><td>'.$state.'</td>
+            <td>'.$row['keywords'].'</td>
+          </tr>';
+  }
+  echo '
+        </table>';
+}
+
+/* Table of projects assigned to an expert */
+function expert_projects() {
+  global $_mysql, $_uid, $_user;
 
   $r = $_mysql->assoc("SELECT er.id, p.name, s.name AS sub, er.state, "
-                      ."ep.assign_date, "
-                      ."(ep.assign_date+p.eval_time*24*60*60) AS eval_time "
-                      ."FROM `experts-projects` ep, projects p, eval_reports er"
-                      .", subareas s WHERE p.said = s.id AND s.aid = p.aid "
+                      ."ep.assign_date, (ep.assign_date+p.eval_time*24*60*60) "
+                      ."AS eval_time FROM `experts-projects` ep, projects p, "
+                      ."eval_reports er, subareas s WHERE ep.uid=$_uid AND "
+                      ."p.said = s.id AND s.aid = p.aid "
                       ."AND p.pid = ep.ppid AND p.id = ep.pid "
                       ."AND er.id = ep.rid ORDER BY ep.assign_date DESC");
-
   echo '
     <div id="content">
       <div id="projects">
@@ -19,7 +108,6 @@ function projects() {
           <a href="javascript:make_report();" alt="">Realizar evaluación</a>
           <a href="javascript:end_report();" alt="">Finalizar evaluación</a>
         </div>
-        <div id="new"></div>
         <div class="title">Proyectos asignados</div>
         <table>
           <tr id="trtop">
@@ -40,7 +128,7 @@ function projects() {
             <td>'.$atime.'</td><td>'.$etime.'</td>
           </tr>';
   }
-    echo '
+  echo '
         </table>
       </div>
     </div>
