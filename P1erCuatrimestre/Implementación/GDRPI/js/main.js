@@ -78,3 +78,8 @@ function val_savemod() {
     }
     return result;
 }
+
+/* Functions without implementation */
+function woimp() {
+    alert("Esta funcionalidad no está implementada");
+}

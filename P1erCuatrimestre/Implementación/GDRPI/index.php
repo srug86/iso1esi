@@ -12,6 +12,8 @@
      Proyecto --> Modelo --> Paquete
    - Experto-proyecto debe tener una clave ajena al paquete de proyectos
      porque sólo con el proyecto no es suficiente
+   - Cambiado eid por uid en expertos-proyectos
+   - Cambiado state en proyectos
 
    HACER
    - Foto de los usuarios de colores u otra foto mejor
@@ -72,6 +74,9 @@ $actionArray =
         'saverep' => array('s', 'evaluation_reports.php', 'save_report'),
         'endrep' => array('s', 'evaluation_reports.php', 'end_report'),
         'viewrep' => array('s', 'evaluation_reports.php', 'view_report'),
+
+        /* Projects */
+        'proexp' => array('t', 'projects.php', 'projects_experts'),
 
         /* Default */
         null => array('t', 'main.php', 'theme_view')

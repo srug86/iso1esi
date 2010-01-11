@@ -2,14 +2,14 @@
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
 function make_report() {
-  global $_mysql;
+  global $_mysql, $_uid;
   
   $rep = $_POST['rep'];
 
   $r = $_mysql->assoc("SELECT em.structure, er.data, p.memory "
                       ."FROM eval_models em, eval_reports er, projects p, "
-                      ."`experts-projects` ep WHERE er.id=$rep "
-                      ."AND em.id=er.emid AND er.id=ep.rid AND ep.pid = p.id "
+                      ."`experts-projects` ep WHERE er.id=$rep AND ep.uid=$_uid"
+                      ." AND em.id=er.emid AND er.id=ep.rid AND ep.pid = p.id "
                       ."AND ep.ppid = p.pid");
 
   $st = unserialize($r[0]['structure']);

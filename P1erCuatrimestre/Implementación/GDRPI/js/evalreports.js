@@ -13,7 +13,7 @@ function make_report() {
             Ajax("makerep", "#tdreport", "rep="+id);
             $("#mem").dialog({title: "Memoria", 
                               width: 300, height: 400,
-                              position: [80, 350]});
+                              position: [70, 350]});
             $("#tdreport").slideDown("normal");
             down = true;
         }
