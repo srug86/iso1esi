@@ -1,31 +1,31 @@
 \subsubsection{Almacenes de datos}
-﻿\textbf{USUARIOS} = @id\\_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + id\\_área + institución + currículum + palabras\\_clave
+﻿\textbf{USUARIOS} = @id\_usuario + tipo + e-mail + contraseña + nombre + apellidos + teléfono + id\_área + institución + currículum + palabras\_clave
 
-\textbf{PAQUETES PROYECTOS} = @id\\_paquete + institución + bases + convocatoria + fecha\\_entrada + fecha\\_salida + fecha\\_límite
-\textbf{fecha\\_entrada} = fecha\\_salida = fecha\\_límite = día + mes + año
+\textbf{PAQUETES PROYECTOS} = @id\_paquete + institución + bases + convocatoria + fecha\_entrada + fecha\_salida + fecha\_límite
+\textbf{fecha\_entrada} = fecha\_salida = fecha\_límite = día + mes + año
 
-\textbf{MODELOS EVALUACIÓN} = @id\\_modelo + estructura
+\textbf{MODELOS EVALUACIÓN} = @id\_modelo + estructura
 
-\textbf{ÁREAS} = @id\\_área + nombre
+\textbf{ÁREAS} = @id\_área + nombre
 
-\textbf{SUBÁREAS} = @id\\_subárea + @id\\_área + id\\_usuario + nombre
-\textbf{SUBÁREAS} = * \emph{El id\\_usuario es sólo para los adjuntos. El resto de usuarios no tiene área asignada} *
+\textbf{SUBÁREAS} = @id\_subárea + @id\_área + id\_usuario + nombre
+\textbf{SUBÁREAS} = * \emph{El id\_usuario es sólo para los adjuntos. El resto de usuarios no tiene área asignada} *
 
-\textbf{PROYECTOS} = @id\\_proyecto + @id\\_paquete + memoria + id\\_área + id\\_subárea + estado\\_proyecto + tpo\\_inv + tpo\\_eval + id\\_modelo\_eval + evaluación
+\textbf{PROYECTOS} = @id\_proyecto + @id\_paquete + memoria + id\_área + id\_subárea + estado\_proyecto + tpo\_inv + tpo\_eval + id\_modelo\_eval + evaluación
 \textbf{tpo\_inv} = * \emph{Tiempo que tiene un experto para aceptar o declinar una invitación} *
 \textbf{tpo\_eval} = * \emph{Tiempo que tiene un experto para realizar una evaluación desde su aceptación} *
 \textbf{evaluación} = * \emph{Informe final realizado} *
 
-\textbf{EXPERTOS-PROYECTOS} = @id\\_experto + @id\\_proyecto + id\\_informe + valoración + fecha\\_asignación
-\textbf{valoración} = tpo\\_realización + calidad\\_informe
+\textbf{EXPERTOS-PROYECTOS} = @id\_experto + @id\_proyecto + id\_informe + valoración + fecha\_asignación
+\textbf{valoración} = tpo\_realización + calidad\_informe
 \textbf{fecha\_asignación} = día + mes + año
 \textbf{tpo\_realización} = nota
 \textbf{calidad\_informe} = nota
 
-\textbf{INFORMES EVALUACIÓN} = @id\\_informe + id\\_modelo\\_eval + estado\\_informe + datos
+\textbf{INFORMES EVALUACIÓN} = @id\_informe + id\_modelo\_eval + estado\_informe + datos
 \textbf{datos} = * \emph{El experto, el adjunto y el coordinador rellenarán los campos correspondientes al modelo de evaluación del proyecto} *
 
-\textbf{PLANTILLAS CORREOS} = @id\\_plantilla + asunto + cuerpo
+\textbf{PLANTILLAS CORREOS} = @id\_plantilla + asunto + cuerpo
 
 \subsubsection{Datos Elementales}
 \textbf{tipo} = [secretario | coordinador | adjunto | experto]
@@ -45,19 +45,19 @@
 \textbf{Adjuntos} = [Consulta Subárea | Asignar Subárea]
 \textbf{Adjuntos} = * \emph{Los usuarios adjuntos añadidos se asignan a una subárea. Se escribe en la tabla SUBÁREAS} *
  
-\textbf{Alta Usuario} = id\\_usuario + tipo + e-mail + contraseña
+\textbf{Alta Usuario} = id\_usuario + tipo + e-mail + contraseña
 \textbf{Alta Usuario} = * \emph{El secretario da de alta a los usuarios introduciendo su identificador, el tipo de usuario, el e-mail y la contraseña} *
 
-\textbf{Área} = id\\_área + nombre
+\textbf{Área} = id\_área + nombre
 \textbf{Área} = * \emph{Los usuarios añadidos se asignan a una área} *
 
-\textbf{Área Asignada} = id\\_área
+\textbf{Área Asignada} = id\_área
 \textbf{Área Asignada} = * \emph{Se le añade un área a cada proyecto} *
 
-\textbf{Área Proyectos} = id\\_área + id\\_proyecto
+\textbf{Área Proyectos} = id\_área + id\_proyecto
 \textbf{Área Proyectos} = * \emph{Asignación de un área a un proyecto} *
 
-\textbf{Asignar Subárea} = id\\_subárea + id\\_área + id\\_usuario + nombre\\_subárea.
+\textbf{Asignar Subárea} = id\_subárea + id\_área + id\_usuario + nombre\_subárea.
 \textbf{Asignar Subárea} = * \emph{Se introduce una fila nueva en la tabla SUBÁREAS} *
 
 \textbf{Autentificación} = [Datos Autentificación | Verificar Autentificar]
