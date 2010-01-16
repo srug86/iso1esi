@@ -1,11 +1,21 @@
-1.1 Listado de usuarios --> dados unos parámetros de consulta, implícitamente por el usuario o por el propio sistema, ya que dependiendo de quién realice la consulta el sistema le dará acceso a unos datos u otros. Al realizar esta consulta el proceso consulta los almacenes de datos SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea en que trabajen dichos usuarios del sistema. La relación jerárquica del sistema decide a qué usuarios se tiene acceso, es decir, si es el Secretario el que pide el listado este podrá ver todos los datos, si es el Coordinador podrá ver todos los adjuntos de su Área y todos los expertos y si es el adjunto sólo podrá acceder a los expertos, mientras que los expertos no tienen esta opción.
+1.1 Listado de usuarios --> 
+En este proceso se introducen unos parámetros de consulta, que son dados implícitamente por el usuario o por el propio sistema. Dependiendo de quién realice la consulta, el sistema proporciona el acceso a unos datos u otros. Al realizar esta consulta, el proceso consulta los almacenes de datos SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea en que trabajen dichos usuarios del sistema. La relación jerárquica del sistema a qué información tiene acceso cada usuario.
+- Secretario: puede ver todos los datos.
+- Coordinador: puede ver todos los adjuntos de su Área y todos los expertos
+- Adjunto: puede acceder a los expertos.
+- Expertos no tienen esta opción.
 
-1.2 Añadir Usuarios --> este proceso es exclusivo para el secretario, ya que es el único con privilegios para introducir nuevos usuarios en el sistema. El sistema recibe una nueva instancia de usuario y devuelve un correo de alta siguiendo un modelo predefinido.
+1.2 Añadir Usuarios --> 
+este proceso es exclusivo para el secretario, ya que es el único con privilegios para introducir nuevos usuarios en el sistema. El sistema recibe una nueva instancia de usuario y devuelve un correo de alta siguiendo un modelo predefinido.
 
-1.3 Modificar Usuario --> este proceso es el encargado de alterar todos los datos profesionales de los usuarios, es exclusivo del secretario y del coordinador, ya que el coordinador tiene la opción de elegir a sus adjuntos de entre los expertos ya existentes y el secretario se encarga de asignar expertos nuevos a subáreas y de elegir a los coordinadores de entre los adjuntos y expertos existentes. Al invocar este proceso se introduce el usuario que se quiere modificar y de entre todas subáreas posibles se selecciona una en función de las aptitudes del usuario.
+1.3 Modificar Usuario --> 
+Es el encargado de alterar todos los datos profesionales de los usuarios, es exclusivo del secretario y del coordinador. El coordinador tiene la opción de elegir a sus adjuntos de entre los expertos ya existentes y el secretario se encarga de asignar expertos nuevos a subáreas y de elegir a los coordinadores de entre los adjuntos y expertos existentes. Al invocar este proceso se introduce el usuario que se quiere modificar y de entre todas las subáreas posibles se selecciona una en función de las aptitudes del usuario.
 
-1.4 Eliminar Usuarios --> se encarga de eliminar instancias de usuarios del sistema en el almacén de Usuarios. Solo el secretario tiene privilegios para ejecutar este proceso.
+1.4 Eliminar Usuarios --> 
+Se encarga de eliminar instancias de usuarios del sistema en el almacén de Usuarios. Sólo el secretario tiene privilegios para ejecutar este proceso.
 
-1.5 Autentificar Usuarios --> es el proceso que se ejecuta al inicio de cada sesión de usuario. Se encarga de verificar que el nombre de usuario y su contraseña son correctos.
+1.5 Autentificar Usuarios --> 
+Es el proceso que se ejecuta al inicio de cada sesión de usuario. Se encarga de verificar que el nombre de usuario y su contraseña son correctos.
 
-1.6 Modificar Datos Personales --> una vez que el usuario reciba el correo de alta el siguiente paso es utilizar este proceso para introducir sus datos personales, para que el sistema tenga una ficha de cada empleado. Este proceso es accesible en todo momento para poder modificar cualquier cambio o error.
+1.6 Modificar Datos Personales --> 
+Una vez que el usuario reciba el correo de alta, el siguiente paso es utilizar este proceso para introducir sus datos personales para que el sistema tenga una ficha de cada empleado. Este proceso es accesible en todo momento para poder modificar cualquier cambio o error.

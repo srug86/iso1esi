@@ -1,6 +1,9 @@
-2.1 Consulta Paquetes de Proyecto/Proyectos --> este proceso sirve tanto para listar los proyectos y para consultar la convocatoria de los paquetes de proyectos. 
+2.1 Consulta Paquetes de Proyecto/Proyectos -->
+Este proceso se utiliza tanto para listar los proyectos como para consultar la convocatoria de los paquetes de proyectos. 
 
-2.2 Añadir Paquete de Proyecto / Proyectos --> se encarga de introducir los paquetes de proyectos en el sistema, de estos paquetes y leyendo el modelo de evaluación, el proceso se encarga de introducir todos los proyectos en el sistema.
+2.2 Añadir Paquete de Proyecto / Proyectos --> 
+Se encarga de introducir los paquetes de proyectos en el sistema. A partir de estos paquetes y leyendo el modelo de evaluación, el proceso se encarga de introducir todos los proyectos en el sistema.
 
-2.3 Modificar paquete de proyecto / Proyectos --> se encarga de cualquier variación sobre los paquetes de proyecto y sobre los proyectos, ya sea cambiar algún error descubierto, como cambiar un proyecto de subárea a petición de algún adjunto, dependiendo de qué usuario invoque dicho proceso tendrá unas opciones u otras, ya que el secretario asigna el área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo alegando que ese proyecto no pertenece realmente a su subárea.
+2.3 Modificar paquete de proyecto / Proyectos --> 
+Es el encargado de cualquier variación sobre los paquetes de proyecto y sobre los proyectos, ya sea cambiar algún error descubierto, cambiar un proyecto de subárea a petición de algún adjunto. Se tienen diferentes opciones dependiendo de qué usuario invoque dicho proceso ya que el secretario asigna el área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo alegando que ese proyecto no pertenece realmente a su subárea.
 
