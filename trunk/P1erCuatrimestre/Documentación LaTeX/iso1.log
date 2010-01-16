@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  6 JAN 2010 18:35
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  16 JAN 2010 12:34
 entering extended mode
  %&-line parsing enabled.
 **iso1.tex
@@ -528,18 +528,80 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@toc=\write4
 \openout4 = `iso1.toc'.
 
- [2]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 44.
-
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
+ [2] (./Introduccion)
+[3]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 46.
+ (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 44.
- [3] [4]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 46.
+ [4] [5] (./DiccionarioISO
+
+! Package inputenc Error: Unicode char \u8:﻿ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ﻿
+       \textbf{USUARIOS} = @id\_usuario + tipo + e-mail + contraseña + nomb...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[6]
+Overfull \hbox (7.45398pt too wide) in paragraph at lines 19--24
+\OT1/lmr/m/n/12 ci^^Son + fe-cha[]asignaci^^Son \OT1/lmr/bx/n/12 va-lo-ra-ci^^S
+on \OT1/lmr/m/n/12 = tpo[]realizaci^^Son + ca-li-dad[]informe \OT1/lmr/bx/n/12 
+fe-cha[]asignaci^^Son
+ []
+
+[7]
+Overfull \hbox (8.4667pt too wide) in paragraph at lines 66--68
+[]\OT1/lmr/bx/n/12 Avisos Pla-zos \OT1/lmr/m/n/12 = nom-bre + ape-lli-dos + [tp
+o[]inv | tpo[]eval] + id[]proyecto + id[]paquete
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Overfull \hbox (2.99814pt too wide) in paragraph at lines 216--218
+[]\OT1/lmr/bx/n/12 Proyectos \OT1/lmr/m/n/12 = id[]proyecto + id[]paquete + me-
+mo-ria + ^^Sarea + sub^^Sarea + es-ta-do[]proyecto
+ []
+
+
+Overfull \hbox (5.07043pt too wide) in paragraph at lines 219--221
+[]\OT1/lmr/bx/n/12 Relaci^^Son Expertos-Proyectos \OT1/lmr/m/n/12 = id[]experto
+ + id[]proyecto + id[]paquete + id[]informe
+ []
+
+)
+Runaway argument?
+{Asignación de un proyecto a una subárea * \par \textbf {Tiempos} =\ETC.
+! File ended while scanning use of \emph .
+<inserted text> 
+                \par 
+l.157 \input{DiccionarioISO}
+                            
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
 (./index.php
 LaTeX Font Info:    Try loading font information for OML+lmr on input line 1.
  (/usr/share/texmf/tex/latex/lm/omllmr.fd
@@ -550,12 +612,12 @@ LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
+(Font)              <10> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
- [6]
+(Font)              <5> on input line 5.
+
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -564,8 +626,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7  * Gestión 
-                Distribuída de la Revisión de Proyectos de Investigación *
+l.5 ...de un formulario de un modelo una sección,
+                                                   no siendo esta la
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -578,21 +640,26 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7  * Gestión 
-                Distribuída de la Revisión de Proyectos de Investigación *
+l.5 ...de un formulario de un modelo una sección,
+                                                   no siendo esta la
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7  * Gestión Distribuída 
-                             de la Revisión de Proyectos de Investigación *
+l.6      última 
+                 la numeración, no aparece correctamente
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -605,8 +672,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7  * Gestión Distribuída 
-                             de la Revisión de Proyectos de Investigación *
+l.6      última 
+                 la numeración, no aparece correctamente
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -618,8 +685,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7  * Gestión Distribuída de la Revisión 
-                                             de Proyectos de Investigación *
+l.6      última la numeración,
+                                 no aparece correctamente
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -632,8 +699,37 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7  * Gestión Distribuída de la Revisión 
-                                             de Proyectos de Investigación *
+l.6      última la numeración,
+                                 no aparece correctamente
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9    - ¿Los 
+               paquetes de proyectos y los proyectos no deberían tener un n...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9    - ¿Los 
+               paquetes de proyectos y los proyectos no deberían tener un n...
+
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -645,7 +741,229 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 ...a Revisión de Proyectos de Investigación 
+l.9 ... de proyectos y los proyectos no deberían 
+                                                  tener un nombre?
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ... de proyectos y los proyectos no deberían 
+                                                  tener un nombre?
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 9--10
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10    - ¿No 
+               que relacionar los modelos con los proyectos?
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10    - ¿No 
+               que relacionar los modelos con los proyectos?
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11      Creo que habría 
+                           que hacer la siguiente relación:
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11      Creo que habría 
+                           que hacer la siguiente relación:
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ... habría que hacer la siguiente relación:
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ... habría que hacer la siguiente relación:
+                                                  
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[12]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14      porque sólo 
+                       con el proyecto no es suficiente
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14      porque sólo 
+                       con el proyecto no es suficiente
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25  * Gestión 
+                 Distribuída de la Revisión de Proyectos de Investigación *
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25  * Gestión 
+                 Distribuída de la Revisión de Proyectos de Investigación *
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25  * Gestión Distribuída 
+                              de la Revisión de Proyectos de Investigación *
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25  * Gestión Distribuída 
+                              de la Revisión de Proyectos de Investigación *
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25  * Gestión Distribuída de la Revisión 
+                                              de Proyectos de Investigación *
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25  * Gestión Distribuída de la Revisión 
+                                              de Proyectos de Investigación *
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ... Revisión de Proyectos de Investigación 
                                                   *
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -659,24 +977,164 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 ...a Revisión de Proyectos de Investigación 
+l.25 ... Revisión de Proyectos de Investigación 
                                                   *
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./settings.php [7]) (./css/login.css) [8] (./css/main.css [9])
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-(./css/users.php
+ [13]
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 70--72
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./settings.php) (./js/main.js [14]
+Overfull \hbox (24.76077pt too wide) in paragraph at lines 40--41
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 ...   alert("Debe seleccionar alguna opción"
+                                                  );
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 ...   alert("Debe seleccionar alguna opción"
+                                                  );
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [15]
 
- [12])
-(./js/main.js [13]) (./source/eval_infs.php) (./source/eval_mods.php)
-(./source/evaluations.php) (./source/loginout.php
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67         alert("Debe añadir 
+                                 algún campo al modelo");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67         alert("Debe añadir 
+                                 algún campo al modelo");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67         alert("Debe añadir algún 
+                                        campo al modelo");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67         alert("Debe añadir algún 
+                                        campo al modelo");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 ..."Debe rellenar todos los campos añadidos"
+                                                  );
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 ..."Debe rellenar todos los campos añadidos"
+                                                  );
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84     alert("Esta funcionalidad no está 
+                                            implementada");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84     alert("Esta funcionalidad no está 
+                                            implementada");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) (./source/loginout.php
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -686,7 +1144,7 @@ Overfull \hbox (24.76077pt too wide) in paragraph at lines 15--16
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[14]
+[16]
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -701,11 +1159,11 @@ Overfull \hbox (6.76059pt too wide) in paragraph at lines 58--59
 [][][][][][][][][][][][][][][][] 
  []
 
-
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15])
-(./source/mysql.php) (./theme/login.php [16]
+ [17]
+(./source/mysql.php) (./theme/login.php [18]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -824,7 +1282,7 @@ l.39 ...ef="" alt="">¿Ha olvidado su contraseña?
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/main.php [17]
+) (./theme/main.php [19]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -833,7 +1291,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29   $title = "GDPRI - Gestión 
+l.58   $title = "GDPRI - Gestión 
                                   Distribuída de la Revisión de "
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -847,7 +1305,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29   $title = "GDPRI - Gestión 
+l.58   $title = "GDPRI - Gestión 
                                   Distribuída de la Revisión de "
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -860,7 +1318,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29   $title = "GDPRI - Gestión Distribuída 
+l.58   $title = "GDPRI - Gestión Distribuída 
                                                de la Revisión de "
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -874,7 +1332,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29   $title = "GDPRI - Gestión Distribuída 
+l.58   $title = "GDPRI - Gestión Distribuída 
                                                de la Revisión de "
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -887,7 +1345,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 ...I - Gestión Distribuída de la Revisión 
+l.58 ...I - Gestión Distribuída de la Revisión 
                                                   de "
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -901,7 +1359,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 ...I - Gestión Distribuída de la Revisión 
+l.58 ...I - Gestión Distribuída de la Revisión 
                                                   de "
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -914,7 +1372,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30     ."Proyectos de Investigación"
+l.59     ."Proyectos de Investigación"
                                        ;
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -928,128 +1386,15 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30     ."Proyectos de Investigación"
+l.59     ."Proyectos de Investigación"
                                        ;
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-Overfull \hbox (6.76059pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73       <div id="title">Gestión 
-                                    Distribuída de la
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73       <div id="title">Gestión 
-                                    Distribuída de la
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73       <div id="title">Gestión Distribuída 
-                                                 de la
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73       <div id="title">Gestión Distribuída 
-                                                 de la
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74         Revisión 
-                       de Proyectos de Investigación</div>
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74         Revisión 
-                       de Proyectos de Investigación</div>
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 ... Revisión de Proyectos de Investigación<
-                                                  /div>
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 ... Revisión de Proyectos de Investigación<
-                                                  /div>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+ [20]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1058,7 +1403,115 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 ...  title="Escuela Superior de Informática"
+l.102     <div id="title">Gestión 
+                                   Distribuída de la
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión 
+                                   Distribuída de la
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión Distribuída 
+                                                de la
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión Distribuída 
+                                                de la
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103       Revisión 
+                      de Proyectos de Investigación</div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103       Revisión 
+                      de Proyectos de Investigación</div>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...Revisión de Proyectos de Investigación<
+                                                  /div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...Revisión de Proyectos de Investigación<
+                                                  /div>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ... title="Escuela Superior de Informática"
                                                    /></a>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1072,7 +1525,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 ...  title="Escuela Superior de Informática"
+l.115 ... title="Escuela Superior de Informática"
                                                    /></a>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1085,7 +1538,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 ...id="txt">Escuela Superior de Informática<
+l.122 ...d="txt">Escuela Superior de Informática<
                                                   br />
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1099,13 +1552,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 ...id="txt">Escuela Superior de Informática<
+l.122 ...d="txt">Escuela Superior de Informática<
                                                   br />
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (6.76059pt too wide) in paragraph at lines 100--101
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 129--130
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1117,7 +1570,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.101 ...         alt="XHTML 1.0 Estricto Válido"
+l.130 ...         alt="XHTML 1.0 Estricto Válido"
                                                   >
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1131,13 +1584,16 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.101 ...         alt="XHTML 1.0 Estricto Válido"
+l.130 ...         alt="XHTML 1.0 Estricto Válido"
                                                   >
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (12.76065pt too wide) in paragraph at lines 102--103
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 131--132
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1149,7 +1605,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 ...       title="XHTML 1.0 Estricto Válido"
+l.132 ...       title="XHTML 1.0 Estricto Válido"
                                                    /></a>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1163,7 +1619,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 ...       title="XHTML 1.0 Estricto Válido"
+l.132 ...       title="XHTML 1.0 Estricto Válido"
                                                    /></a>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1176,7 +1632,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ...     <a target="_blank" alt="CSS Válido"
+l.133 ...     <a target="_blank" alt="CSS Válido"
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1190,7 +1646,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ...     <a target="_blank" alt="CSS Válido"
+l.133 ...     <a target="_blank" alt="CSS Válido"
                                                   
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1203,7 +1659,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107                  title="CSS Válido"
+l.136                  title="CSS Válido"
                                            /></a>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1217,13 +1673,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107                  title="CSS Válido"
+l.136                  title="CSS Válido"
                                            /></a>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (6.76059pt too wide) in paragraph at lines 126--127
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 155--156
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1235,7 +1691,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128           Sergio de la Rubia García-
+l.157           Sergio de la Rubia García-
                                            Carpintero</a> |
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1249,20 +1705,16 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.128           Sergio de la Rubia García-
+l.157           Sergio de la Rubia García-
                                            Carpintero</a> |
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (12.76065pt too wide) in paragraph at lines 130--131
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1271,7 +1723,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132           Miguel Millán 
+l.161           Miguel Millán 
                                Sánchez-Grande</a> |
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1285,7 +1737,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132           Miguel Millán 
+l.161           Miguel Millán 
                                Sánchez-Grande</a> |
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1298,7 +1750,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132           Miguel Millán Sánchez-
+l.161           Miguel Millán Sánchez-
                                         Grande</a> |
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1312,13 +1764,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132           Miguel Millán Sánchez-
+l.161           Miguel Millán Sánchez-
                                         Grande</a> |
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (6.76059pt too wide) in paragraph at lines 134--135
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 163--164
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1330,7 +1782,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136           Luis Muñoz 
+l.165           Luis Muñoz 
                             Villarreal</a> |
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1344,13 +1796,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136           Luis Muñoz 
+l.165           Luis Muñoz 
                             Villarreal</a> |
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (12.76065pt too wide) in paragraph at lines 138--139
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 167--168
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1362,7 +1814,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.140           Alicia Serrano Sánchez<
+l.169           Alicia Serrano Sánchez<
                                         /a> |
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1376,13 +1828,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.140           Alicia Serrano Sánchez<
+l.169           Alicia Serrano Sánchez<
                                         /a> |
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (12.76065pt too wide) in paragraph at lines 142--143
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 171--172
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1394,7 +1846,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.144           Juan Miguel Torres Triviño<
+l.173           Juan Miguel Torres Triviño<
                                             /a>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1408,12 +1860,12 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.144           Juan Miguel Torres Triviño<
+l.173           Juan Miguel Torres Triviño<
                                             /a>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/users.php
+) (./theme/users.php [22]
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
 with LaTeX.
@@ -1422,7 +1874,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31       $position = "<strong>Área<
+l.30       $position = "<strong>Área<
                                       /strong> $area<br />";
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1436,13 +1888,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31       $position = "<strong>Área<
+l.30       $position = "<strong>Área<
                                       /strong> $area<br />";
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[20]
-Overfull \hbox (6.76059pt too wide) in paragraph at lines 35--36
+
+Overfull \hbox (18.76071pt too wide) in paragraph at lines 34--35
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1454,8 +1906,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36       $position .= "<strong>Subárea<
-                                          /strong> $subarea<br />";
+l.35         $position .= "<strong>Subárea<
+                                            /strong> $subarea<br />";
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1468,15 +1920,15 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36       $position .= "<strong>Subárea<
-                                          /strong> $subarea<br />";
+l.35         $position .= "<strong>Subárea<
+                                            /strong> $subarea<br />";
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [23]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1485,8 +1937,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96       <li id="lon">Modelos de evaluación<
-                                               /li>
+l.100       <li id="lon">Modelos de evaluación<
+                                                /li>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1499,8 +1951,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96       <li id="lon">Modelos de evaluación<
-                                               /li>
+l.100       <li id="lon">Modelos de evaluación<
+                                                /li>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -1512,8 +1964,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98       <li class="loff">Áreas<
-                                   /li>
+l.102       <li class="loff">Áreas<
+                                    /li>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1526,8 +1978,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98       <li class="loff">Áreas<
-                                   /li>
+l.102       <li class="loff">Áreas<
+                                    /li>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -1539,8 +1991,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.110         <a href="#" alt="Añadir 
-                                       nuevo modelo">Añadir</a> |
+l.109       <li class="loff">Subáreas<
+                                       /li>
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1553,58 +2005,35 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.110         <a href="#" alt="Añadir 
-                                       nuevo modelo">Añadir</a> |
+l.109       <li class="loff">Subáreas<
+                                       /li>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...f="#" alt="Añadir nuevo modelo">Añadir<
-                                                  /a> |
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...f="#" alt="Añadir nuevo modelo">Añadir<
-                                                  /a> |
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-) [22] (./iso1.aux) ) 
+ [24])
+[25] (./iso1.aux) ) 
 Here is how much of TeX's memory you used:
- 4274 strings out of 94074
- 54395 string characters out of 1165152
- 144446 words of memory out of 1500000
- 7447 multiletter control sequences out of 10000+50000
- 44552 words of font info for 46 fonts, out of 1200000 for 2000
+ 4267 strings out of 94074
+ 54284 string characters out of 1165152
+ 141438 words of memory out of 1500000
+ 7450 multiletter control sequences out of 10000+50000
+ 48766 words of font info for 47 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 38i,13n,43p,245b,1829s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmsy10.pfb>
-Output written on iso1.pdf (22 pages, 231732 bytes).
+ 39i,13n,43p,1063b,1831s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
+athsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on iso1.pdf (25 pages, 275071 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
