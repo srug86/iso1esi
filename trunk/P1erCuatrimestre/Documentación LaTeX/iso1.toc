@@ -3,40 +3,37 @@
 \contentsline {section}{\numberline {2}Especificaci\IeC {\'o}n de Requisitos}{3}
 \contentsline {subsection}{\numberline {2.1}Requisitos iniciales de Sistema}{3}
 \contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis de requisitos del sistema}{4}
-\contentsline {section}{\numberline {3}An\IeC {\'a}lisis de sistema}{6}
-\contentsline {subsection}{\numberline {3.1}Diagrama de flujo de datos}{6}
-\contentsline {subsection}{\numberline {3.2}Definici\IeC {\'o}n de Flujo de Datos}{6}
-\contentsline {subsubsection}{\numberline {3.2.1}Almacenes de datos}{6}
-\contentsline {subsubsection}{\numberline {3.2.2}Datos Elementales}{7}
-\contentsline {subsubsection}{\numberline {3.2.3}Flujos de datos}{7}
-\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del Sistema}{12}
-\contentsline {subsection}{\numberline {4.1}Diagrama de Dise\IeC {\~n}o Estructurado}{12}
-\contentsline {section}{\numberline {5}Base de Datos}{12}
-\contentsline {subsection}{\numberline {5.1}Diagrama Entidad/Interrelaci\IeC {\'o}n}{12}
-\contentsline {subsection}{\numberline {5.2}Diagrama Relacional}{12}
-\contentsline {section}{\numberline {6}Manual de usuario}{12}
-\contentsline {subsection}{\numberline {6.1}Introducci\IeC {\'o}n}{12}
-\contentsline {subsection}{\numberline {6.2}Perfiles de usuario}{12}
-\contentsline {subsection}{\numberline {6.3}Interfaz de usuario}{12}
-\contentsline {subsubsection}{\numberline {6.3.1}Secretario}{12}
-\contentsline {subsubsection}{\numberline {6.3.2}Coordinador}{12}
-\contentsline {subsubsection}{\numberline {6.3.3}Adjunto}{12}
-\contentsline {subsubsection}{\numberline {6.3.4}Experto}{12}
-\contentsline {section}{\numberline {7}Implementaci\IeC {\'o}n}{12}
-\contentsline {subsection}{\numberline {7.1}Introducci\IeC {\'o}n}{12}
-\contentsline {subsection}{\numberline {7.2}C\IeC {\'o}digo fuente}{12}
-\contentsline {subsubsection}{\numberline {7.2.1}index.php}{12}
-\contentsline {subsubsection}{\numberline {7.2.2}settings.php}{14}
-\contentsline {subsubsection}{\numberline {7.2.3}login.css}{14}
-\contentsline {subsubsection}{\numberline {7.2.4}main.css}{14}
-\contentsline {subsubsection}{\numberline {7.2.5}users.php}{14}
-\contentsline {subsubsection}{\numberline {7.2.6}main.js}{14}
-\contentsline {subsubsection}{\numberline {7.2.7}eval\_infs.php}{16}
-\contentsline {subsubsection}{\numberline {7.2.8}eval\_mods.php}{16}
-\contentsline {subsubsection}{\numberline {7.2.9}evaluations.php}{16}
-\contentsline {subsubsection}{\numberline {7.2.10}loginout.php}{16}
-\contentsline {subsubsection}{\numberline {7.2.11}mysql.php}{18}
-\contentsline {subsubsection}{\numberline {7.2.12}login.php}{18}
-\contentsline {subsubsection}{\numberline {7.2.13}main.php}{19}
-\contentsline {subsubsection}{\numberline {7.2.14}users.php}{22}
-\contentsline {section}{\numberline {8}Bibliograf\IeC {\'\i }a}{25}
+\contentsline {section}{\numberline {3}An\IeC {\'a}lisis de sistema}{7}
+\contentsline {subsection}{\numberline {3.1}Diagrama de flujo de datos}{7}
+\contentsline {subsection}{\numberline {3.2}Definici\IeC {\'o}n de Flujo de Datos}{7}
+\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del Sistema}{7}
+\contentsline {subsection}{\numberline {4.1}Diagrama de Dise\IeC {\~n}o Estructurado}{7}
+\contentsline {section}{\numberline {5}Base de Datos}{7}
+\contentsline {subsection}{\numberline {5.1}Diagrama Entidad/Interrelaci\IeC {\'o}n}{7}
+\contentsline {subsection}{\numberline {5.2}Diagrama Relacional}{7}
+\contentsline {section}{\numberline {6}Manual de usuario}{7}
+\contentsline {subsection}{\numberline {6.1}Introducci\IeC {\'o}n}{7}
+\contentsline {subsection}{\numberline {6.2}Perfiles de usuario}{7}
+\contentsline {subsection}{\numberline {6.3}Interfaz de usuario}{7}
+\contentsline {subsubsection}{\numberline {6.3.1}Secretario}{7}
+\contentsline {subsubsection}{\numberline {6.3.2}Coordinador}{7}
+\contentsline {subsubsection}{\numberline {6.3.3}Adjunto}{7}
+\contentsline {subsubsection}{\numberline {6.3.4}Experto}{7}
+\contentsline {section}{\numberline {7}Implementaci\IeC {\'o}n}{7}
+\contentsline {subsection}{\numberline {7.1}Introducci\IeC {\'o}n}{7}
+\contentsline {subsection}{\numberline {7.2}C\IeC {\'o}digo fuente}{7}
+\contentsline {subsubsection}{\numberline {7.2.1}index.php}{7}
+\contentsline {subsubsection}{\numberline {7.2.2}settings.php}{9}
+\contentsline {subsubsection}{\numberline {7.2.3}login.css}{10}
+\contentsline {subsubsection}{\numberline {7.2.4}main.css}{10}
+\contentsline {subsubsection}{\numberline {7.2.5}users.php}{10}
+\contentsline {subsubsection}{\numberline {7.2.6}main.js}{10}
+\contentsline {subsubsection}{\numberline {7.2.7}eval\_infs.php}{11}
+\contentsline {subsubsection}{\numberline {7.2.8}eval\_mods.php}{11}
+\contentsline {subsubsection}{\numberline {7.2.9}evaluations.php}{11}
+\contentsline {subsubsection}{\numberline {7.2.10}loginout.php}{11}
+\contentsline {subsubsection}{\numberline {7.2.11}mysql.php}{13}
+\contentsline {subsubsection}{\numberline {7.2.12}login.php}{14}
+\contentsline {subsubsection}{\numberline {7.2.13}main.php}{15}
+\contentsline {subsubsection}{\numberline {7.2.14}users.php}{18}
+\contentsline {section}{\numberline {8}Bibliograf\IeC {\'\i }a}{20}

@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  16 JAN 2010 12:34
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  16 JAN 2010 13:08
 entering extended mode
  %&-line parsing enabled.
 **iso1.tex
@@ -536,72 +536,10 @@ File: omslmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 46.
- [4] [5] (./DiccionarioISO
-
-! Package inputenc Error: Unicode char \u8:﻿ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 ﻿
-       \textbf{USUARIOS} = @id\_usuario + tipo + e-mail + contraseña + nomb...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[6]
-Overfull \hbox (7.45398pt too wide) in paragraph at lines 19--24
-\OT1/lmr/m/n/12 ci^^Son + fe-cha[]asignaci^^Son \OT1/lmr/bx/n/12 va-lo-ra-ci^^S
-on \OT1/lmr/m/n/12 = tpo[]realizaci^^Son + ca-li-dad[]informe \OT1/lmr/bx/n/12 
-fe-cha[]asignaci^^Son
- []
-
-[7]
-Overfull \hbox (8.4667pt too wide) in paragraph at lines 66--68
-[]\OT1/lmr/bx/n/12 Avisos Pla-zos \OT1/lmr/m/n/12 = nom-bre + ape-lli-dos + [tp
-o[]inv | tpo[]eval] + id[]proyecto + id[]paquete
- []
-
-
+ [4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Overfull \hbox (2.99814pt too wide) in paragraph at lines 216--218
-[]\OT1/lmr/bx/n/12 Proyectos \OT1/lmr/m/n/12 = id[]proyecto + id[]paquete + me-
-mo-ria + ^^Sarea + sub^^Sarea + es-ta-do[]proyecto
- []
-
-
-Overfull \hbox (5.07043pt too wide) in paragraph at lines 219--221
-[]\OT1/lmr/bx/n/12 Relaci^^Son Expertos-Proyectos \OT1/lmr/m/n/12 = id[]experto
- + id[]proyecto + id[]paquete + id[]informe
- []
-
-)
-Runaway argument?
-{Asignación de un proyecto a una subárea * \par \textbf {Tiempos} =\ETC.
-! File ended while scanning use of \emph .
-<inserted text> 
-                \par 
-l.157 \input{DiccionarioISO}
-                            
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
+ [6]
 (./index.php
 LaTeX Font Info:    Try loading font information for OML+lmr on input line 1.
  (/usr/share/texmf/tex/latex/lm/omllmr.fd
@@ -611,6 +549,7 @@ LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
 (Font)              Font shape `OML/lmm/m/it' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 2.
+ [7]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -846,7 +785,6 @@ l.11 ... habría que hacer la siguiente relación:
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[12]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -985,16 +923,21 @@ or \DeclareInputMath before using this key.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [8]
 Overfull \hbox (12.76065pt too wide) in paragraph at lines 70--72
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./settings.php) (./js/main.js [14]
+) (./settings.php)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+(./js/main.js
 Overfull \hbox (24.76077pt too wide) in paragraph at lines 40--41
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+[10]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1022,10 +965,6 @@ l.54 ...   alert("Debe seleccionar alguna opción"
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1134,7 +1073,7 @@ l.84     alert("Esta funcionalidad no está
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./source/loginout.php
+) (./source/loginout.php [11]
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1144,7 +1083,7 @@ Overfull \hbox (24.76077pt too wide) in paragraph at lines 15--16
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[16]
+
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1159,11 +1098,11 @@ Overfull \hbox (6.76059pt too wide) in paragraph at lines 58--59
 [][][][][][][][][][][][][][][][] 
  []
 
-)
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-(./source/mysql.php) (./theme/login.php [18]
+ [12])
+(./source/mysql.php [13]) (./theme/login.php
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1282,7 +1221,14 @@ l.39 ...ef="" alt="">¿Ha olvidado su contraseña?
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/main.php [19]
+)
+Underfull \vbox (badness 4647) has occurred while \output is active []
+
+ [14]
+(./theme/main.php
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1388,121 +1334,121 @@ Type  H <return>  for immediate help.
                                                   
 l.59     ."Proyectos de Investigación"
                                        ;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión 
+                                   Distribuída de la
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión 
+                                   Distribuída de la
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión Distribuída 
+                                                de la
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <div id="title">Gestión Distribuída 
+                                                de la
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103       Revisión 
+                      de Proyectos de Investigación</div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103       Revisión 
+                      de Proyectos de Investigación</div>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...Revisión de Proyectos de Investigación<
+                                                  /div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...Revisión de Proyectos de Investigación<
+                                                  /div>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102     <div id="title">Gestión 
-                                   Distribuída de la
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102     <div id="title">Gestión 
-                                   Distribuída de la
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102     <div id="title">Gestión Distribuída 
-                                                de la
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102     <div id="title">Gestión Distribuída 
-                                                de la
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103       Revisión 
-                      de Proyectos de Investigación</div>
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103       Revisión 
-                      de Proyectos de Investigación</div>
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...Revisión de Proyectos de Investigación<
-                                                  /div>
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...Revisión de Proyectos de Investigación<
-                                                  /div>
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
+ [16]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1590,9 +1536,6 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
 Overfull \hbox (12.76065pt too wide) in paragraph at lines 131--132
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1834,6 +1777,9 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
 Overfull \hbox (12.76065pt too wide) in paragraph at lines 171--172
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1865,7 +1811,7 @@ l.173           Juan Miguel Torres Triviño<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/users.php [22]
+) (./theme/users.php
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
 with LaTeX.
@@ -1925,10 +1871,10 @@ l.35         $position .= "<strong>Subárea<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
+ [19]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2010,30 +1956,26 @@ l.109       <li class="loff">Subáreas<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24])
-[25] (./iso1.aux) ) 
+) [20] (./iso1.aux) ) 
 Here is how much of TeX's memory you used:
- 4267 strings out of 94074
- 54284 string characters out of 1165152
- 141438 words of memory out of 1500000
- 7450 multiletter control sequences out of 10000+50000
- 48766 words of font info for 47 fonts, out of 1200000 for 2000
+ 4259 strings out of 94074
+ 54182 string characters out of 1165152
+ 145438 words of memory out of 1500000
+ 7446 multiletter control sequences out of 10000+50000
+ 44552 words of font info for 46 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 39i,13n,43p,1063b,1831s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
-athsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on iso1.pdf (25 pages, 275071 bytes).
+ 38i,13n,43p,1063b,1829s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmsy10.pfb>
+Output written on iso1.pdf (20 pages, 229530 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
