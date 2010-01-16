@@ -1,9 +1,19 @@
-3.1.1 Añadir Modelo de Evaluación --> este proceso es exclusivo del secretario, ya que es el encargado de leyendo los datos de la convocatoria del paquete de proyectos generar un Modelo de Evaluación a seguir para cada informe me evaluación que se escriba de cada proyecto. 
+3.1.1 Añadir Modelo de Evaluación --> 
+Este proceso es exclusivo del secretario. Éste lee los datos de la convocatoria 
+del paquete de proyectos para poder generar un Modelo de Evaluación a seguir 
+para cada informe de evaluación que se escriba de cada proyecto. 
 
-3.1.2 Modificar Modelo Evaluación --> este proceso es complementario con el de Añadir Modelo de Evaluación ya que si se encuentra algún error en el modelo o cambian los prerrequisitos sobre algún proyecto cambiará consecuentemente el modelo de evaluación de dicho proyecto.
+3.1.2 Modificar Modelo Evaluación --> 
+Se complementa con el proceso Añadir Modelo de Evaluación. Si se encuentra algún error en el modelo o cambian los prerrequisitos sobre algún proyecto, se cambiará consecuentemente el modelo de evaluación de dicho proyecto.
 
-3.2.1 Consulta de Informes –-> este proceso devuelve una serie de informes de evaluación restringidos por quién los pide, todo usuarios que haga una petición sobre la lectura de los informes tendrá acceso a los suyos y los que hayan sido escritos por los usuarios que estén debajo en la jerarquía de la empresa. Es decir sobre un proyecto si un experto quiere consultar los informes, sólo tendrá acceso al suyo propio, si lo hace un adjunto podrá consultar el suyo propio y el de todos los expertos, y si finalmente es el coordinador el que hace la consulta podrá leer el suyo propio, el de los adjuntos y el de los expertos.
+3.2.1 Consulta de Informes -> 
+Se devuelve una serie de informes de evaluación restringidos por quién los pide. Todo usuario que haga una petición sobre la lectura de los informes tendrá acceso a los suyos y a los que hayan sido escritos por los usuarios que estén debajo en la jerarquía de la empresa.
+- Experto: sólo puede tener acceso a su propio informe.
+- Adjunto: puede consultar su propio informe y el de todos los expertos que tengan asignado un proyecto de su subárea.
+- Coordinador: puede su propio informe, el de los adjuntos y el de los expertos.
 
-3.2.2 Realizar Informe --> este es el proceso en el que todos pueden escribir y editar sus propios informes, leyendo a la vez de almacén proyectos y del de modelos de evaluación para saber qué evaluar y cómo evaluarlos, casi todos las llamadas a este proceso son de lectura y escritura ya que al editar primero se tiene que leer lo que se va a editar. En cuanto al acceso de datos, por lo general cada usuario sólo podrá editar sus propios informes pero, en el caso de adjuntos y coordinadores se pueden basar en informes de evaluación escritos con anterioridad para realizar el suyo propio.
+3.2.2 Realizar Informe --> 
+Proceso mediante el cual todos los usuarios pueden escribir y editar sus propios informes. Se leen datos de los almacenes Proyectos y Modelos de Evaluación para saber qué evaluar y cómo evaluarlos. Casi todos las llamadas a este proceso son de lectura y escritura. En cuanto al acceso de datos, por lo general, cada usuario sólo podrá editar sus propios informes. Los informes de adjuntos y coordinadores se pueden basar en informes de evaluación escritos con anterioridad para realizar el suyo propio.
 
-3.2.3 Devolver Evaluaciones --> este proceso se encarga de recopilar todas las evaluaciones pertenecientes a un mismo paquete de proyectos y entregárselas al la institución convocante.
+3.2.3 Devolver Evaluaciones --> 
+Este proceso se encarga de recopilar todas las evaluaciones pertenecientes a un mismo paquete de proyectos y entregárselas al la institución convocante.
