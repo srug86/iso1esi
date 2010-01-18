@@ -52,7 +52,8 @@ ver la lista desplegable y la convocatoria)
 
 - FORMULARIOS: aquí es donde se eligen el número de secciones que tiene que 
 llevar el modelo y el elemento que se utiliza en cada sección. El elemento puede
-ser un área de texto, un campo de texto, una lista desplegable, opciones que se marcan en círculos u opciones que se marcan en cuadrados.
+ser un área de texto, un campo de texto, una lista desplegable, opciones que se 
+marcan en círculos u opciones que se marcan en cuadrados.(##Figura##)
 
 Un vez finalizado el modelo de evaluación se guarda en el sistema.
 
@@ -77,5 +78,5 @@ manera, el experto podrá consultar el proyecto mientras realiza la evaluación.
 El informe realizado se puede guardar y después continuarlo en posteriores 
 sesiones. Un vez finalizado el informe, se elegirá la opción "Finalizar" para 
 que conste en el campo correspondiente en la tabla de proyectos asignados, donde 
-"Estado de la evaluación" pasará a ser "Terminada".
+"Estado de la evaluación" pasará a ser "Terminada". (##Figura##)
 

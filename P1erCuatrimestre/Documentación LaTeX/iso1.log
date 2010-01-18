@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  16 JAN 2010 13:08
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  17 JAN 2010 23:35
 entering extended mode
  %&-line parsing enabled.
 **iso1.tex
@@ -421,19 +421,19 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )) (./iso1.aux)
 \openout1 = `iso1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
@@ -530,12 +530,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  [2] (./Introduccion)
 [3]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 45.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 46.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 45.
  [4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1960,7 +1960,7 @@ or \DeclareInputMath before using this key.
 Here is how much of TeX's memory you used:
  4259 strings out of 94074
  54182 string characters out of 1165152
- 145438 words of memory out of 1500000
+ 146438 words of memory out of 1500000
  7446 multiletter control sequences out of 10000+50000
  44552 words of font info for 46 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
@@ -1973,7 +1973,7 @@ f/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
 /type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmsy10.pfb>
-Output written on iso1.pdf (20 pages, 229530 bytes).
+Output written on iso1.pdf (20 pages, 229475 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
