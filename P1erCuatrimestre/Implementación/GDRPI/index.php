@@ -1,12 +1,7 @@
 <?php
 /*
   HECHO EN ESTA SESIÓN
-  - En Exprtos el botón Finalizar evaluación se me había pasado
-    implementarlo. Hecho
-  - Adjuntos ya pueden ver las evaluaciones de los expertos asignados a los
-    proyectos
-  - Cambiada la función assoc por rows y añadida la función row en mysql.php
-  - Los adjuntos ya pueden realizar evaluaciones, guardarlas y finalizarlas
+
   
   PROBLEMAS
    - Al eleminar de un formulario de un modelo una sección, no siendo esta la
@@ -21,11 +16,13 @@
      porque sólo con el proyecto no es suficiente
    - Cambiado eid por uid en expertos-proyectos
    - Cambiado state en proyectos
+   - Cambiado area por aid en usuarios
 
    HACER
    - Foto de los usuarios de colores u otra foto mejor
    - Colores de la vista de las evaluaciones
    - Color X de las capas del formulario de los modelos
+   - Mensajes de advertencia para modificaciones
  */
 
 /* ---------------------------------------------------------------- *

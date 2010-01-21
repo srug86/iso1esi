@@ -5,7 +5,7 @@ function make_report() {
   global $_user;
 
   if ($_user['type'] == "expert") make_expert_report();
-  else if ($_user['type'] == "attached") make_attached_report();
+  else make_attached_report();
 }
 
 function make_expert_report() {
