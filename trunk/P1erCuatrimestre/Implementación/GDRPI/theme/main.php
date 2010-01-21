@@ -26,6 +26,13 @@ function theme_view($view = null, $args = null) {
       break;
 
     case "coordinator":
+      $csss = array("users.php", "evalreports.css");
+      $jss = array("evalreports.js");
+      theme_above($csss, $jss);
+      users_header();
+      user_nav();
+      include 'theme/projects.php';
+      coordinator_projects();
       break;
 
     case "attached":

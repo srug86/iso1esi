@@ -1,12 +1,68 @@
 <?php
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
+function coordinator_projects() {
+  global $_mysql, $_uid, $_user;
+
+  $r = $_mysql->rows("SELECT p.id, p.pid, p.name, p.state, p.aid, p.said "
+                     ."FROM projects p, users u WHERE p.aid=u.aid "
+                     ."AND u.id=$_uid ORDER BY p.id, p.pid DESC");
+  echo '
+    <div id="content">
+      <div id="projects">
+        <div id="buttons">
+          <a href="javascript:make_report(\'coordinator\');"
+             alt="">Ver / Modificar evaluación</a>
+          <a href="javascript:end_report(\'coordinator\');"
+             alt="">Validar evaluación</a>
+          <a href="javascript:woimp();" alt="">Asignar subárea</a>
+        </div>
+        <div class="title">Proyectos asignados</div>
+        <table>
+          <tr id="trtop">
+            <td></td><td>Nombre</td><td>Subárea</td>
+            <td>Estado de la evaluación</td>
+          </tr>';
+
+  foreach ($r as $row) {
+    switch ($row['state']) {
+    case "without_eval": $state = "Sin evaluación"; break;
+    case "experts_evaluating": $state = "Expertos evaluando"; break;
+    case "evaluated_experts": $state = "Evaluado por los expertos"; break;
+    case "evaluated_attached": $state = "Evaluado por el adjunto"; break;
+    case "validated_coordinator": $state = "Validado por el coordinador"; break;
+    }
+
+    if ($row['said']) 
+      $subarea = $_mysql->field("SELECT name FROM subareas WHERE "
+                                ."id={$row['said']} AND aid={$row['aid']}");
+    else $subarea = "Sin asignar";
+    
+    $id = 'pp'.$row['pid'].'p'.$row['id'];
+    echo '
+          <tr>
+            <td>
+              <input type="checkbox" name="'.$id.'" />
+            </td>
+            <td>'.$row['name'].'</td><td>'.$subarea.'</td><td>'.$state.'</td>
+          </tr>';
+  }
+  echo '
+        </table>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both"></div>
+</div>
+        ';
+}
+
 function attached_projects() {
   global $_mysql, $_uid, $_user;
 
   $r = $_mysql->rows("SELECT p.id, p.pid, p.name, s.name AS sub, p.state "
                      ."FROM projects p, subareas s "
-                     ."WHERE s.uid=5701903 AND p.said = s.id "
+                     ."WHERE s.uid=$_uid AND p.said = s.id "
                      ."AND s.aid = p.aid ORDER BY p.id, p.pid DESC");
   echo '
     <div id="content">
