@@ -12,11 +12,18 @@ class MySQL {
      mysql_query("SET NAMES utf8", $this->link);
    }
 
-   public function assoc($query) {
+   public function rows($query) {
      $rows = array();
      $res = mysql_query($query, $this->link);
      if ($res) while ($row = mysql_fetch_assoc($res)) $rows[] = $row;
      return $rows;
+   }
+
+   public function row($query) {
+     $row = array();
+     $res = mysql_query($query, $this->link);
+     if ($res) $row = mysql_fetch_assoc($res);
+     return $row;
    }
 
    public function field($query) {

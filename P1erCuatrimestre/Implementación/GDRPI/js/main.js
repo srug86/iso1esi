@@ -79,6 +79,16 @@ function val_savemod() {
     return result;
 }
 
+function val_projects(str) {
+    res = false;
+    check = $("#projects table input:checkbox:checked");    
+    if (check.length == 0) alert("Debe seleccionar un proyecto primero");
+    else if (check.length > 1) 
+        alert("Sólo se puede "+str+" una evaluación a la vez");
+    else res = true;
+    return res;
+}
+
 /* Functions without implementation */
 function woimp() {
     alert("Esta funcionalidad no está implementada");

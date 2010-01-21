@@ -1,6 +1,13 @@
 <?php
 /*
-
+  HECHO EN ESTA SESIÓN
+  - En Exprtos el botón Finalizar evaluación se me había pasado
+    implementarlo. Hecho
+  - Adjuntos ya pueden ver las evaluaciones de los expertos asignados a los
+    proyectos
+  - Cambiada la función assoc por rows y añadida la función row en mysql.php
+  - Los adjuntos ya pueden realizar evaluaciones, guardarlas y finalizarlas
+  
   PROBLEMAS
    - Al eleminar de un formulario de un modelo una sección, no siendo esta la
      última la numeración, no aparece correctamente
@@ -73,7 +80,7 @@ $actionArray =
         'makerep' => array('t', 'evaluation_reports.php', 'make_report'),
         'saverep' => array('s', 'evaluation_reports.php', 'save_report'),
         'endrep' => array('s', 'evaluation_reports.php', 'end_report'),
-        'viewrep' => array('s', 'evaluation_reports.php', 'view_report'),
+        'viewrep' => array('t', 'evaluation_reports.php', 'view_report'),
 
         /* Projects */
         'proexp' => array('t', 'projects.php', 'projects_experts'),

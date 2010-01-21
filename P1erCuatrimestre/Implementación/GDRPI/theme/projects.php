@@ -4,16 +4,19 @@ if (!defined('GDRPI')) die(header("Location: noencontrado"));
 function attached_projects() {
   global $_mysql, $_uid, $_user;
 
-  $r = $_mysql->assoc("SELECT p.id, p.pid, p.name, s.name AS sub, p.state "
-                      ."FROM projects p, subareas s "
-                      ."WHERE s.uid=5701903 AND p.said = s.id "
-                      ."AND s.aid = p.aid ORDER BY p.id, p.pid DESC");
+  $r = $_mysql->rows("SELECT p.id, p.pid, p.name, s.name AS sub, p.state "
+                     ."FROM projects p, subareas s "
+                     ."WHERE s.uid=5701903 AND p.said = s.id "
+                     ."AND s.aid = p.aid ORDER BY p.id, p.pid DESC");
   echo '
     <div id="content">
+      <div id="reports"></div>
       <div id="projects">
         <div id="buttons">
-          <a href="javascript:make_report();" alt="">Realizar evaluación</a>
-          <a href="javascript:end_report();" alt="">Finalizar evaluación</a>
+          <a href="javascript:make_report(\'attached\');"
+             alt="">Realizar evaluación</a>
+          <a href="javascript:end_report(\'attached\');"
+             alt="">Finalizar evaluación</a>
           <a href="javascript:woimp();" alt="">Asignar expertos</a>
           <a href="javascript:woimp();" alt="">Valorar experto</a>
           <a href="javascript:woimp();" alt="">Subárea errónea</a>
@@ -61,14 +64,14 @@ function projects_experts() {
 
   $id = explode("p", substr($_POST['pro'], 2)); 
 
-  $r = $_mysql->assoc("SELECT er.id, u2.name, u2.surnames, er.state, "
-                      ."u2.keywords "
-                      ."FROM users u1, users u2, `experts-projects` ep, "
-                      ."eval_reports er, subareas s, projects p "
-                      ."WHERE u1.id=$_uid AND u1.id=s.uid AND s.id=p.said "
-                      ."AND s.aid=p.aid AND p.id=ep.pid AND p.pid=ep.ppid "
-                      ."AND ep.uid=u2.id AND p.pid=$id[0] AND p.id=$id[1] "
-                      ."AND ep.rid=er.id ORDER BY ep.assign_date DESC");
+  $r = $_mysql->rows("SELECT er.id, u2.name, u2.surnames, er.state, "
+                     ."u2.keywords "
+                     ."FROM users u1, users u2, `experts-projects` ep, "
+                     ."eval_reports er, subareas s, projects p "
+                     ."WHERE u1.id=$_uid AND u1.id=s.uid AND s.id=p.said "
+                     ."AND s.aid=p.aid AND p.id=ep.pid AND p.pid=ep.ppid "
+                     ."AND ep.uid=u2.id AND p.pid=$id[0] AND p.id=$id[1] "
+                     ."AND ep.rid=er.id ORDER BY ep.assign_date DESC");
   echo '
         <table>
           <tr id="trtop">
@@ -81,7 +84,9 @@ function projects_experts() {
     
     echo '
           <tr>
-            <td><input type="checkbox" name="'.$row['id'].'" /></td>
+            <td><a href="javascript:view_report('.$row['id'].')"
+                   alt="Ver informe de evaluación">
+                <img src="theme/images/view.png" alt="" /></a></td>
             <td>'.$row['name'].' '.$row['surnames'].'</td><td>'.$state.'</td>
             <td>'.$row['keywords'].'</td>
           </tr>';
@@ -94,19 +99,21 @@ function projects_experts() {
 function expert_projects() {
   global $_mysql, $_uid, $_user;
 
-  $r = $_mysql->assoc("SELECT er.id, p.name, s.name AS sub, er.state, "
-                      ."ep.assign_date, (ep.assign_date+p.eval_time*24*60*60) "
-                      ."AS eval_time FROM `experts-projects` ep, projects p, "
-                      ."eval_reports er, subareas s WHERE ep.uid=$_uid AND "
-                      ."p.said = s.id AND s.aid = p.aid "
-                      ."AND p.pid = ep.ppid AND p.id = ep.pid "
-                      ."AND er.id = ep.rid ORDER BY ep.assign_date DESC");
+  $r = $_mysql->rows("SELECT er.id, p.name, s.name AS sub, er.state, "
+                     ."ep.assign_date, (ep.assign_date+p.eval_time*24*60*60) "
+                     ."AS eval_time FROM `experts-projects` ep, projects p, "
+                     ."eval_reports er, subareas s WHERE ep.uid=$_uid AND "
+                     ."p.said = s.id AND s.aid = p.aid "
+                     ."AND p.pid = ep.ppid AND p.id = ep.pid "
+                     ."AND er.id = ep.rid ORDER BY ep.assign_date DESC");
   echo '
     <div id="content">
       <div id="projects">
         <div id="buttons">
-          <a href="javascript:make_report();" alt="">Realizar evaluación</a>
-          <a href="javascript:end_report();" alt="">Finalizar evaluación</a>
+          <a href="javascript:make_report(\'expert\');"
+             alt="">Realizar evaluación</a>
+          <a href="javascript:end_report(\'expert\');"
+             alt="">Finalizar evaluación</a>
         </div>
         <div class="title">Proyectos asignados</div>
         <table>
