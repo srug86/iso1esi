@@ -9,8 +9,8 @@ function is_cookied() {
     if (isset($_COOKIE['GDRPI'])) {
       $cookie = unserialize(stripslashes($_COOKIE['GDRPI']));
       $sql = "SELECT password, pwsalt FROM users WHERE id={$cookie['uid']}";
-      $r = $_mysql->assoc($sql);
-      $dbpass = sha1($r[0]['password'].$r[0]['pwsalt']);
+      $r = $_mysql->row($sql);
+      $dbpass = sha1($r['password'].$r['pwsalt']);
       
       if ($cookie['pass'] == $dbpass) $_SESSION['uid'] = $_uid = $cookie['uid'];
       else {
@@ -29,15 +29,15 @@ function load_user() {
   global $_uid, $_act, $_mysql, $_user;
 
   if (!$_user && $_act != "login") {
-    $r = $_mysql->assoc("SELECT type, name, surnames, area, phone, email, "
+    $r = $_mysql->row("SELECT type, name, surnames, area, phone, email, "
                       ."institution FROM users WHERE id=$_uid");
-    $_SESSION['user']['type'] = $r[0]['type'];
-    $_SESSION['user']['name'] = $r[0]['name'];
-    $_SESSION['user']['surnames'] = $r[0]['surnames'];
-    $_SESSION['user']['area'] = $r[0]['area'];
-    $_SESSION['user']['phone'] = $r[0]['phone'];
-    $_SESSION['user']['email'] = $r[0]['email'];
-    $_SESSION['user']['institution'] = $r[0]['institution'];
+    $_SESSION['user']['type'] = $r['type'];
+    $_SESSION['user']['name'] = $r['name'];
+    $_SESSION['user']['surnames'] = $r['surnames'];
+    $_SESSION['user']['area'] = $r['area'];
+    $_SESSION['user']['phone'] = $r['phone'];
+    $_SESSION['user']['email'] = $r['email'];
+    $_SESSION['user']['institution'] = $r['institution'];
     $_user = $_SESSION['user'];
   }
 }

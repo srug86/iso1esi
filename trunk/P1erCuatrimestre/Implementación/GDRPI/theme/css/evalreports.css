@@ -33,6 +33,18 @@
     text-align: left;
 }
 
+#reports {
+    display: none;
+}
+
+.reports {
+    text-align: left;
+}
+
+.reports p.sec {
+    font-weight: bold;
+}
+
 /* Projects */
 #projects {
 

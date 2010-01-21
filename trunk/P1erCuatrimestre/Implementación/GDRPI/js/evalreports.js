@@ -1,25 +1,43 @@
 var down = false;
-function make_report() {
-    check = $("#projects table input:checkbox:checked");    
-    if (check.length == 0) alert("Debe seleccionar un proyecto primero");
-    else if (check.length > 1) 
-        alert("Sólo se puede modificar una evaluación a la vez");
-    else {
+function make_report(type) {
+    if (val_projects("realizar")) {
         if (!down) {
             tr = check.parent().parent();
             tr.after('<tr><td style="border: 0;"></td>'
                      +'<td colspan="5"><div id="tdreport"></div></td></tr>');
             var id = check.attr("name");
             Ajax("makerep", "#tdreport", "rep="+id);
-            $("#mem").dialog({title: "Memoria", 
-                              width: 300, height: 400,
-                              position: [70, 350]});
+
+            if (type == "expert")
+                $("#mem").dialog({title: "Memoria", 
+                                  width: 300, height: 400,
+                                  position: [70, 350]});
+
             $("#tdreport").slideDown("normal");
             down = true;
         }
     }
 }
 
-function end_report() {
+function set_end_report() {
     $("input[name=end]").attr("value", 1);
+}
+
+function end_report() {
+    if (val_projects("finalizar")) {
+        check = $("#projects table input:checkbox:checked");    
+        var id = check.attr("name");
+        Ajax("endrep", "", "id="+id);
+        history.go(0);
+    }
+}
+
+var reps = 0;
+function view_report(id) {
+    Ajax("viewrep", "#reports", "id="+id);
+    $("#reports").after($("#reports").html());
+    $("#reports").html("");
+    $("#report"+id).dialog({width: 400, height: 400,
+                            position: [370+reps*20, 100+reps*20]});
+    reps++;
 }

@@ -20,9 +20,9 @@ function evaluation_models() {
             <td>Nº Proyectos</td><td>Nº Secciones</td><td>Nº Elementos</td>
           </tr>';
 
-  $rows = $_mysql->assoc("SELECT e.id, p.name, e.sections, e.elements "
-                         ."FROM eval_models e, projects_packages p "
-                         ."WHERE p.id=e.cppid ORDER by e.id DESC");
+  $rows = $_mysql->rows("SELECT e.id, p.name, e.sections, e.elements "
+                        ."FROM eval_models e, projects_packages p "
+                        ."WHERE p.id=e.cppid ORDER by e.id DESC");
   foreach ($rows as $r) {
     $num = $_mysql->
       field("SELECT count(id) FROM projects WHERE emid={$r['id']}");
@@ -69,17 +69,17 @@ function modify_model() {
   global $_mysql;
 
   $id = $_POST['id'];
-  $mod = $_mysql->assoc("SELECT cppid, structure, sections, elements "
-                        ."FROM eval_models WHERE id=$id");
-  $conv = $mod[0]['cppid'];
-  $secs = unserialize($mod[0]['structure']);
+  $mod = $_mysql->row("SELECT cppid, structure, sections, elements "
+                      ."FROM eval_models WHERE id=$id");
+  $conv = $mod['cppid'];
+  $secs = unserialize($mod['structure']);
 
   $nsec = 0;
   $str = '<input type="hidden" name="id" value="'.$id.'" />'
     .'<input id="sec" type="hidden" name="sec" value="'
-    .($mod[0]['sections']-1).'" />'
+    .($mod['sections']-1).'" />'
     .'<input id="els" type="hidden" name="els" value="'
-    .($mod[0]['elements']-1).'" />';
+    .($mod['elements']-1).'" />';
   foreach ($secs as $sec) {
     $str .= '<div id="sec'.$nsec.'" class="form"><a href="'
       .'javascript:del_form(\'sec'.$nsec.'\')"><img src="'
@@ -145,7 +145,7 @@ function convocatories($conv = null) {
           <option value="default">Convocatorias</option>
           <option value="default">-----------------------------------</option>
         ';
-  $rows = $_mysql->assoc("SELECT id, name FROM projects_packages");
+  $rows = $_mysql->rows("SELECT id, name FROM projects_packages");
   foreach ($rows as $r) {
     $selected = $r['id'] == $conv ? ' selected="selected"' : '';
     $str .= '<option value="'.$r['id'].'"'.$selected
