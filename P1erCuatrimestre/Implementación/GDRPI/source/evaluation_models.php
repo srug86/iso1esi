@@ -19,7 +19,7 @@ function save_model() {
   
   $_mysql->sql($sql);
   $_SESSION['msg'] = "Modelo guardado con éxito";
-  header("Location: index.php");
+  header("Location: ./");
 }
 
 function delete_model() {

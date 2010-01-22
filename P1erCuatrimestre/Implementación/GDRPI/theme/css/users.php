@@ -121,7 +121,7 @@ $color = $_SESSION['user']['color'];
 #content .title{
     font-weight: bold;
     text-align: left;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #aaa;
     margin-bottom: 10px;
     padding: 5px 0;
     clear: both;
@@ -154,7 +154,7 @@ $color = $_SESSION['user']['color'];
 }
 
 #content td {
-    border: 1px solid;
+    border: 1px solid <? echo $color; ?>;
     padding: 2px 5px;
     margin: 0;
 }

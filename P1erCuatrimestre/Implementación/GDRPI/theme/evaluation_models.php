@@ -26,7 +26,8 @@ function evaluation_models() {
   foreach ($rows as $r) {
     $num = $_mysql->
       field("SELECT count(id) FROM projects WHERE emid={$r['id']}");
-    echo '<tr><td><input type="checkbox" name="'.$r['id'].'" /></td>'
+    echo '<tr><td><input type="checkbox" name="'.$r['id'].'" value="'.$num
+      .'" /></td>'
       .'<td>'.$r['id'].'</td><td>'.$r['name'].'</td>'
       .'<td>'.$num.'</td><td>'.$r['sections'].'</td><td>'
       .$r['elements'].'</td></tr>';

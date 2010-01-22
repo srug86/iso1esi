@@ -25,12 +25,14 @@ function coordinator_projects() {
           </tr>';
 
   foreach ($r as $row) {
+    $eval = 0;
     switch ($row['state']) {
     case "without_eval": $state = "Sin evaluación"; break;
     case "experts_evaluating": $state = "Expertos evaluando"; break;
     case "evaluated_experts": $state = "Evaluado por los expertos"; break;
     case "evaluated_attached": $state = "Evaluado por el adjunto"; break;
-    case "validated_coordinator": $state = "Validado por el coordinador"; break;
+    case "validated_coordinator":
+      $eval = 1; $state = "Validado por el coordinador"; break;
     }
 
     if ($row['said']) 
@@ -42,7 +44,7 @@ function coordinator_projects() {
     echo '
           <tr>
             <td>
-              <input type="checkbox" name="'.$id.'" />
+              <input type="checkbox" name="'.$id.'" value="'.$eval.'" />
             </td>
             <td>'.$row['name'].'</td><td>'.$subarea.'</td><td>'.$state.'</td>
           </tr>';
@@ -85,18 +87,21 @@ function attached_projects() {
           </tr>';
 
   foreach ($r as $row) {
+    $eval = 0;
     switch ($row['state']) {
     case "without_eval": $state = "Sin evaluación"; break;
     case "experts_evaluating": $state = "Expertos evaluando"; break;
     case "evaluated_experts": $state = "Evaluado por los expertos"; break;
-    case "evaluated_attached": $state = "Evaluado por el adjunto"; break;
-    case "validated_coordinator": $state = "Validado por el coordinador"; break;
+    case "evaluated_attached":
+      $eval = 1; $state = "Evaluado por el adjunto"; break;
+    case "validated_coordinator":
+      $eval = 1; $state = "Validado por el coordinador"; break;
     }
     $id = 'pp'.$row['pid'].'p'.$row['id'];
     echo '
           <tr>
             <td>
-              <input type="checkbox" name="'.$id.'" />
+              <input type="checkbox" name="'.$id.'" value="'.$eval.'" />
             </td>
             <td><a id="'.$id.'"
                   href="javascript:expand(\''.$id.'\')"
@@ -183,10 +188,12 @@ function expert_projects() {
     $atime = strftime("%e/%I/%Y", $row['assign_date']);
     $etime = strftime("%e/%I/%Y", $row['eval_time']);
     $state = $row['state'] == "in_process" ? "En proceso" : "Terminada";
+    $eval = $state == "Terminada" ? 1 : 0;
     
     echo '
           <tr>
-            <td><input type="checkbox" name="'.$row['id'].'" /></td>
+            <td><input type="checkbox" name="'.$row['id'].'" value="'.$eval
+         .'" /></td>
             <td>'.$row['name'].'</td><td>'.$row['sub'].'</td><td>'.$state.'</td>
             <td>'.$atime.'</td><td>'.$etime.'</td>
           </tr>';

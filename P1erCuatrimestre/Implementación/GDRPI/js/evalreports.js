@@ -1,7 +1,7 @@
 var down = false;
 function make_report(type) {
     if (val_projects("realizar")) {
-        if (!down) {
+        if (!down && confirm_rep(check)) {
             tr = check.parent().parent();
             tr.after('<tr><td style="border: 0;"></td>'
                      +'<td colspan="5"><div id="tdreport"></div></td></tr>');
@@ -26,9 +26,11 @@ function set_end_report() {
 function end_report() {
     if (val_projects("finalizar")) {
         check = $("#projects table input:checkbox:checked");    
-        var id = check.attr("name");
-        Ajax("endrep", "", "id="+id);
-        history.go(0);
+        if (confirm_rep(check)) {
+            var id = check.attr("name");
+            Ajax("endrep", "", "id="+id);
+            history.go(0);
+        }
     }
 }
 
@@ -40,4 +42,12 @@ function view_report(id) {
     $("#report"+id).dialog({width: 400, height: 400,
                             position: [370+reps*20, 100+reps*20]});
     reps++;
+}
+
+function confirm_rep(check) {
+    var res = true;
+    if (check.attr("value") == 1) 
+        res = confirm("¡Advertencia! Este informe de evaluación ha sido ya "
+                     +"finalizado por usted. ¿Desea continuar de todos modos?");
+    return res;
 }

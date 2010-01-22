@@ -27,7 +27,7 @@ function save_cooratta_report() {
   $_mysql->sql("UPDATE projects SET final_report='$data'$end "
                ."WHERE id=$pid AND pid=$ppid");
   $_SESSION['msg'] = "Informe guardado con éxito";
-  header("Location: index.php");
+  header("Location: ./");
 }
 
 function save_expert_report() {
@@ -38,7 +38,7 @@ function save_expert_report() {
   $_mysql->
     sql("UPDATE eval_reports SET data='$data'$end WHERE id={$_POST['id']}");
   $_SESSION['msg'] = "Evaluación guardada con éxito";
-  header("Location: index.php");
+  header("Location: ./");
 }
 
 function end_report() {
