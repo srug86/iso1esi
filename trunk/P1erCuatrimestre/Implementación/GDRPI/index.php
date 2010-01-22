@@ -1,7 +1,9 @@
 <?php
 /*
   HECHO EN ESTA SESIÓN
-
+   - Foto de los usuarios de colores u otra foto mejor
+   - Colores de la vista de las evaluaciones
+   - Color X de las capas del formulario de los modelos
   
   PROBLEMAS
    - Al eleminar de un formulario de un modelo una sección, no siendo esta la
@@ -19,9 +21,6 @@
    - Cambiado area por aid en usuarios
 
    HACER
-   - Foto de los usuarios de colores u otra foto mejor
-   - Colores de la vista de las evaluaciones
-   - Color X de las capas del formulario de los modelos
    - Mensajes de advertencia para modificaciones
  */
 

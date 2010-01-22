@@ -3,7 +3,7 @@ if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
 function user_type() {
   global $_user;
-  
+
   if (!isset($_user['typetxt'])) {
     $txt = "";
     switch ($_user['type']) {
@@ -26,12 +26,12 @@ function user_refers() {
     $position = "";
     if ($_user['type'] != "secretary") {
       $area = $_mysql->
-        field("SELECT name FROM areas WHERE id={$_user['area']}");
+        field("SELECT name FROM areas WHERE id={$_user['aid']}");
       $position = "<strong>Área</strong> $area<br />";
 
       if ($_user['type'] == "attached") {
         $subarea = $_mysql->field("SELECT name FROM subareas "
-                                  ."WHERE aid={$_user['area']} AND uid=$_uid");
+                                  ."WHERE aid={$_user['aid']} AND uid=$_uid");
         $position .= "<strong>Subárea</strong> $subarea<br />";
       }
     }
@@ -88,7 +88,7 @@ function users_header() {
 
 function user_nav() {
   global $_user;
-  
+
   echo '
 <div id="body">
   <div id="left">

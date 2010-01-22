@@ -88,7 +88,7 @@ function mod_model() {
     else if (check.length > 1) 
         alert("Sólo se puede modificar un modelo a la vez");
     else {
-        if (!down) {
+        if (!down && confirm_mod(check, "modifica")) {
             Ajax("modmod", "#new", "id="+check.attr("name"));
             
             /* Restore the js variables */
@@ -109,12 +109,22 @@ function save_model() {
 function del_model() {
     check = $("#evmods table input:checkbox:checked");
     if (check.length == 0) alert("Debe seleccionar un modelo primero");
-    else {
+    else if (confirm_mod(check, "elimina")) {
         var ids = "";
         check.each(function () {
                 ids += $(this).attr("name")+",";
             });
         Ajax("delmod", "", "ids="+ids);
-        document.location = "index.php";
+        history.go(0);
     }
+}
+
+function confirm_mod(check, str) {
+    var res = true;
+    if (check.attr("value") > 0) 
+        res = confirm("Si "+str+" un modelo de evaluación que ya se ha "
+                      +"empleado en algún "
+                      +"proyecto afectará a la consistencia de la información "
+                      +"en el sistema. ¿Desea continuar de todos modos?");
+    return res;
 }

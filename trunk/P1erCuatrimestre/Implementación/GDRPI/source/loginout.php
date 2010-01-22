@@ -29,12 +29,12 @@ function load_user() {
   global $_uid, $_act, $_mysql, $_user;
 
   if (!$_user && $_act != "login") {
-    $r = $_mysql->row("SELECT type, name, surnames, area, phone, email, "
+    $r = $_mysql->row("SELECT type, name, surnames, aid, phone, email, "
                       ."institution FROM users WHERE id=$_uid");
     $_SESSION['user']['type'] = $r['type'];
     $_SESSION['user']['name'] = $r['name'];
     $_SESSION['user']['surnames'] = $r['surnames'];
-    $_SESSION['user']['area'] = $r['area'];
+    $_SESSION['user']['aid'] = $r['aid'];
     $_SESSION['user']['phone'] = $r['phone'];
     $_SESSION['user']['email'] = $r['email'];
     $_SESSION['user']['institution'] = $r['institution'];
@@ -58,7 +58,7 @@ function login() {
                                            'pass' => sha1($dbpass.$pwsalt))),
                   time()+3600*24*365, '/');
       }
-      header("Location: index.php");
+      header("Location: ./");
     }
     else {
       logout();
@@ -77,6 +77,6 @@ function logout() {
   setcookie("GDRPI", $_uid, time()-3600*24*365, '/');
   session_unset();
   session_write_close();
-  if ($_act == "logout") header("Location: index.php");
+  if ($_act == "logout") header("Location: ./");
 }
 ?>

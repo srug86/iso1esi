@@ -16,7 +16,7 @@ function theme_view($view = null, $args = null) {
 
     switch ($_user['type']) {
     case "secretary":
-      $csss = array("users.php", "evalmodels.css", "dialog.css");
+      $csss = array("users.php", "evalmodels.css", "dialog.php");
       $jss = array("evalmodels.js", "dialog.js");
       theme_above($csss, $jss);
       users_header();
@@ -36,7 +36,7 @@ function theme_view($view = null, $args = null) {
       break;
 
     case "attached":
-      $csss = array("users.php", "evalreports.css", "dialog.css");
+      $csss = array("users.php", "evalreports.css", "dialog.php");
       $jss = array("projects.js", "evalreports.js", "dialog.js");
       theme_above($csss, $jss);
       users_header();
@@ -46,7 +46,7 @@ function theme_view($view = null, $args = null) {
       break;
 
     case "expert":
-      $csss = array("users.php", "evalreports.css", "dialog.css");
+      $csss = array("users.php", "evalreports.css", "dialog.php");
       $jss = array("evalreports.js", "dialog.js");
       theme_above($csss, $jss);
       users_header();
@@ -69,7 +69,7 @@ function theme_above($csss, $jss = array(), $onload = "") {
 
   /* Styles */
   $styles = "\n".'<link rel="stylesheet" type="text/css" '
-    .'href="theme/css/main.css">';
+    .'href="theme/css/main.css">'."\n";
   foreach ($csss as $style) {
     $styles .= '<link rel="stylesheet" type="text/css" '
       .'href="theme/css/'.$style.'">'."\n";
