@@ -1,110 +1,102 @@
-Introducción
-------------
-La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
-aplicación web que incluye los elementos necesarios para una comunicación activa 
-entre el usuario y la información que puede manejar. Cada tipo de usuario podrá 
-manejar diferentes acciones según el rango que tenga en la empresa (secretario,
+\subsection{IntroducciÃ³n}
+
+La GestiÃ³n DistribuÃ­da de la RevisiÃ³n de Proyectos de InvestigaciÃ³n es una
+aplicaciÃ³n web que incluye los elementos necesarios para una comunicaciÃ³n activa 
+entre el usuario y la informaciÃ³n que puede manejar. Cada tipo de usuario podrÃ¡ 
+manejar diferentes acciones segÃºn el rango que tenga en la empresa (secretario,
 coordinador, adjunto o experto).
 
-La implementación de la práctica incluye todo lo relacionado con la gestión de
-las evaluaciones. Entre las diferentes taréas a realizar se encuentra la
-realización de modelos de evaluación, realización de informes de evaluación, 
-modificación de informes de evaluación, eliminación de informes de evaluación, 
-consulta de informes de evaluación y envío de informes de evaluación a la 
-institución convocante.
+La implementaciÃ³n de la prÃ¡ctica incluye todo lo relacionado con la gestiÃ³n de
+las evaluaciones. Entre las diferentes tarÃ©as a realizar se encuentra la
+realizaciÃ³n de modelos de evaluaciÃ³n, realizaciÃ³n de informes de evaluaciÃ³n, 
+modificaciÃ³n de informes de evaluaciÃ³n, eliminaciÃ³n de informes de evaluaciÃ³n, 
+consulta de informes de evaluaciÃ³n y envÃ­o de informes de evaluaciÃ³n a la 
+instituciÃ³n convocante.
 
-Interfaz de usuario
--------------------
-El inicio de la página muestra una pantalla (##Figura##) en la que se solicita 
-el nombre de usuario y la contraseña. Si los datos son correctos, el usuario 
-ingresa en el sistema con el perfil que tenga asociado en la base de datos del 
-mismo. Si por el contrario, los datos son incorrectos, se muestra un mensaje
-indicando que los datos introducidos son incorrectos. El perfil puede ser 
-secretario, coordinador, adjunto o experto. 
-
-Debido a que la implementación se trata de la gestión de evaluaciones, la página 
-inicial que se muestra al entrar al sistema será la correspondiente a las 
-funciones que puede realizar cada tipo de usuario con respecto a las 
+La pÃ¡gina inicial para cada tipo de usuario muestra la informaciÃ³n 
+correspondiente a las funciones que puede realizar con respecto a las 
 evaluaciones de informes.
 
-Secretario
-----------
-En la pantalla principal del secretario se mostrarán los Modelos de evaluación 
-registrados. La información se muestra en forma de tabla cuyos campos son el 
-identificador del modelo, el paquete de proyectos al que corresponde, número de 
-proyectos que contiene ese paquete, número de secciones del modelo de evaluación 
-y número de elementos utilizados en el modelo de evaluación. Además de mostrarse 
-la información, el secretario puede elegir entre añadir, modificar o eliminar 
-los modelos de evaluación. (##Figura##)
+\subsection{Inicio de sesiÃ³n}
+\imagen{acceso.pdf}{}{}{}
+\begin{itemize}
+\item Se introduce el usuario y la contraseÃ±a proporcionados en el correo de 
+Alta.
+\imagen{introducirdatos.pdf}{}{}{}
+\item Si los datos son incorrectos, no se puede acceder a la aplicaciÃ³n y se
+muestra un mensaje de error.
+\end{itemize}
 
-Al añadir o modificar un proyecto, el secretario puede ver tres secciones, que 
-son Convocatorias, Formularios y zona donde se muestra el modelo a realizar.
+\subsection{Secretario}
+\subsubsection{Crear un modelo de evaluaciÃ³n}
+\begin{enumerate}
+\item Pulsar ``AÃ±adir'' para agregar un nuevo modelo de evaluaciÃ³n. Se despliega
+los datos que se pueden introducir en un modelo de evaluaciÃ³n.
+\imagen{aÃ±adirmod.pdf}{}{}{}
+\item Ver convocatoria de un paquete de proyectos.
+\begin{itemize}
+\item En la secciÃ³n CONVOCATORIAS se despliega una lista donde se puede elegir
+el paquete de proyectos del que se desea ver la convocatoria.
+\imagen{convmod.pdf}{}{}{}
+\item Se elige un paquete de proyectos y se pulsa ``Ver''. A la derecha de la 
+pÃ¡gina se muestra la informaciÃ³n de la convocatoria.
+\imagen{convmostrada.pdf}{}{}{} 
+\end{itemize}
+\item Agregar los tipos de elementos de la secciÃ³n FORMULARIOS pulsando 
+''AÃ±adirÂ´Â´.
+\image{formularios.pdf}{}{}{}
+En la secciÃ³n \emph{Estructura} se muestra el resultado del modelo de evaluaciÃ³n 
+que se estÃ¡ creando.
+\item Guardar el modelo de evaluaciÃ³n realizado. Para ello se pulsa el botÃ³n 
+''GuardarÂ´Â´ que estÃ¡ situado bajo la secciÃ³n FORMULARIOS.
+\end{enumerate}
 
-- CONVOCATORIAS: debe elegir el paquete de proyectos del que desea realizar o 
-modificar el modelo de evaluación. Para ello, se dispone de una lista 
-desplegable donde aparecen todos los paquetes registrados hasta el momento. El 
-secretario puede ver la convocatoria de cada paquete de proyectos, que le sirve 
-de guía para poder realizar de forma eficiente el modelo de evaluación. Los 
-datos de la correspondiente convocatoria aparecen en la parte izquierda de la 
-pantalla mediante una ventana (capa superpuesta). Esta ventana se puede 
-redimensionar, mover a otro lugar de la pantalla y cerrar. (##Figura##. se deben 
-ver la lista desplegable y la convocatoria)
+\subsubsection{Modificar o eliminar un modelo de evaluaciÃ³n}
+Se marca el paquete de la convocatoria que se desea modificar y se pulsa 
+``Modificar'' o ``Eliminar'' segÃºn se desee.
+\image{modifmod.pdf}{}{}{}
 
-- FORMULARIOS: aquí es donde se eligen el número de secciones que tiene que 
-llevar el modelo y el elemento que se utiliza en cada sección. El elemento puede
-ser un área de texto, un campo de texto, una lista desplegable, opciones que se 
-marcan en círculos u opciones que se marcan en cuadrados.(##Figura##)
+\subsection{Coordinador}
 
-Un vez finalizado el modelo de evaluación se guarda en el sistema.
-
-Coordinador
------------
-Una vez introducidos los datos de un coordinador, le aparecerá la siguiente ventana 
+Una vez introducidos los datos de un coordinador, le aparecerÃ¡ la siguiente ventana 
 con las acciones que puede realizar. (##Figura##).
 
-La información disponible para este tipo de usuario se mostrará en forma de tabla, 
-que contiene los campos: nombre de proyecto, área y subárea asignada. El coordinador 
-podrá marcar el cuadro correspondiente al proyecto que desea revisar, para lo cual tendrá 
-una opción llamada “Leer Informe Final”. Tras esta acción, podrá realizar una lectura, 
-pero nunca ninguna modificación. Por último, le aparecerá una opción en esta ventana 
-llamada “Validar”. Esta acción le permitirá la validación automática del proyecto y 
-su correspondiente envío a la institución convocante. (##Figura##).
+La informaciÃ³n disponible para este tipo de usuario se mostrarÃ¡ en forma de tabla, 
+que contiene los campos: nombre de proyecto, Ã¡rea y subÃ¡rea asignada. El coordinador 
+podrÃ¡ marcar el cuadro correspondiente al proyecto que desea revisar, para lo cual tendrÃ¡ 
+una opciÃ³n llamada Â“Leer Informe FinalÂ”. Tras esta acciÃ³n, podrÃ¡ realizar una lectura, 
+pero nunca ninguna modificaciÃ³n. Por Ãºltimo, le aparecerÃ¡ una opciÃ³n en esta ventana 
+llamada Â“ValidarÂ”. Esta acciÃ³n le permitirÃ¡ la validaciÃ³n automÃ¡tica del proyecto y 
+su correspondiente envÃ­o a la instituciÃ³n convocante. (##Figura##).
 
-Adjunto
--------
-Tras la correcta autentificación por parte de un usuario adjunto, se le mostrará una 
+\subsection{Adjunto}
+
+Tras la correcta autentificaciÃ³n por parte de un usuario adjunto, se le mostrarÃ¡ una 
 pantalla de la siguiente forma con las correspondientes acciones que puede llevar a cabo. (##Figura##).
 
-La pantalla para este tipo de usuario contendrá una tabla formada con los campos: 
-nombre de proyecto, subárea asignada y la fecha de devolución del paquete de proyectos 
-(informes). El adjunto podrá marcar el cuadro correspondiente al proyecto y así ver sus 
-evaluaciones, realizadas por diversos expertos. Tendrá la opción de “Realizar Informe Final”, 
-donde escribirá las conclusiones que saqué a partir de la lectura de las evaluaciones. El 
-informe final se podrá guardar y editar en posteriores sesiones, por último, tendrá la opción 
-de “Finalizar Informe Final” con la que ya dará por terminado su redacción y no podrá modificar más. (##Figura##).
+La pantalla para este tipo de usuario contendrÃ¡ una tabla formada con los campos: 
+nombre de proyecto, subÃ¡rea asignada y la fecha de devoluciÃ³n del paquete de proyectos 
+(informes). El adjunto podrÃ¡ marcar el cuadro correspondiente al proyecto y asÃ­ ver sus 
+evaluaciones, realizadas por diversos expertos. TendrÃ¡ la opciÃ³n de Â“Realizar Informe FinalÂ”, 
+donde escribirÃ¡ las conclusiones que saquÃ© a partir de la lectura de las evaluaciones. El 
+informe final se podrÃ¡ guardar y editar en posteriores sesiones, por Ãºltimo, tendrÃ¡ la opciÃ³n 
+de Â“Finalizar Informe FinalÂ” con la que ya darÃ¡ por terminado su redacciÃ³n y no podrÃ¡ modificar mÃ¡s. (##Figura##).
 
 
-Experto
--------
-Al entrar al sistema, el experto puede ver los proyectos que tiene asignados 
-para realizar la evaluación. Esta información se muestra en forma de tabla cuyos 
-campos corresponden al nombre de proyecto, la subárea a la que pertenece, el 
-estado de la evaluación del proyecto, fecha en la que se le asignó el 
-determinado proyecto y la fecha límite que tiene el experto para entregar el 
-informe de evaluación (##Figura##).
+\subsection{Experto}
+\subsubsection{Realizar evaluaciÃ³n de un proyecto}
+\begin{enumerate}
+\item Los proyectos asignados se muestran en una tabla. Para realizar la 
+evaluaciÃ³n de un proyecto, se marca y se pulsa ``Realizar evaluaciÃ³n''.
+\image{realizareval.pdf}{}{}{}
+\item Se expande el correspondiente modelo de evaluaciÃ³n, mostrando los 
+diferentes puntos a evaluar. En la parte izquierda de la pantalla se muestra la
+memoria del proyecto a evaluar.
+\image{evalexp.pdf}{}{}{}
+\item Se guardan los cambios realizados en la evaluaciÃ³n con el boton 
+``Guardar'' o se finaliza la evaluaciÃ³n pulsando ``Finalizar''.
+\image{saveend.pdf}{}{}{}
+\end{enumerate}
 
-Para realizar un informe, el usuario experto debe marcar el cuadro 
-correspondiente al proyecto del que desea realizar el informe y a continuación 
-se elige la opción de "Realizar evaluación". Al realizar esta acción, el 
-correspondiente modelo de evaluación del proyecto elegido se expande, mostrando 
-los diferentes puntos a evaluar. En la parte izquierda de la pantalla, se 
-muestra la memoria del proyecto a evaluar mediante una capa superpuesta. De esta 
-manera, el experto podrá consultar el proyecto mientras realiza la evaluación. 
-(##Figura##)
-
-El informe realizado se puede guardar y después continuarlo en posteriores 
-sesiones. Un vez finalizado el informe, se elegirá la opción "Finalizar" para 
-que conste en el campo correspondiente en la tabla de proyectos asignados, donde 
-"Estado de la evaluación" pasará a ser "Terminada". (##Figura##)
 
 
