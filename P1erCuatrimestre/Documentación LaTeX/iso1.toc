@@ -13,27 +13,29 @@
 \contentsline {subsection}{\numberline {5.2}Diagrama Relacional}{7}
 \contentsline {section}{\numberline {6}Manual de usuario}{7}
 \contentsline {subsection}{\numberline {6.1}Introducci\IeC {\'o}n}{7}
-\contentsline {subsection}{\numberline {6.2}Perfiles de usuario}{7}
-\contentsline {subsection}{\numberline {6.3}Interfaz de usuario}{7}
-\contentsline {subsubsection}{\numberline {6.3.1}Secretario}{7}
-\contentsline {subsubsection}{\numberline {6.3.2}Coordinador}{7}
-\contentsline {subsubsection}{\numberline {6.3.3}Adjunto}{7}
-\contentsline {subsubsection}{\numberline {6.3.4}Experto}{7}
-\contentsline {section}{\numberline {7}Implementaci\IeC {\'o}n}{7}
-\contentsline {subsection}{\numberline {7.1}Introducci\IeC {\'o}n}{7}
-\contentsline {subsection}{\numberline {7.2}C\IeC {\'o}digo fuente}{7}
-\contentsline {subsubsection}{\numberline {7.2.1}index.php}{7}
-\contentsline {subsubsection}{\numberline {7.2.2}settings.php}{9}
-\contentsline {subsubsection}{\numberline {7.2.3}login.css}{10}
-\contentsline {subsubsection}{\numberline {7.2.4}main.css}{10}
-\contentsline {subsubsection}{\numberline {7.2.5}users.php}{10}
-\contentsline {subsubsection}{\numberline {7.2.6}main.js}{10}
-\contentsline {subsubsection}{\numberline {7.2.7}eval\_infs.php}{12}
-\contentsline {subsubsection}{\numberline {7.2.8}eval\_mods.php}{12}
-\contentsline {subsubsection}{\numberline {7.2.9}evaluations.php}{12}
-\contentsline {subsubsection}{\numberline {7.2.10}loginout.php}{12}
-\contentsline {subsubsection}{\numberline {7.2.11}mysql.php}{13}
-\contentsline {subsubsection}{\numberline {7.2.12}login.php}{14}
-\contentsline {subsubsection}{\numberline {7.2.13}main.php}{15}
-\contentsline {subsubsection}{\numberline {7.2.14}users.php}{18}
-\contentsline {section}{\numberline {8}Bibliograf\IeC {\'\i }a}{21}
+\contentsline {subsection}{\numberline {6.2}Inicio de sesi\IeC {\'o}n}{7}
+\contentsline {subsection}{\numberline {6.3}Secretario}{8}
+\contentsline {subsubsection}{\numberline {6.3.1}Crear un modelo de evaluaci\IeC {\'o}n}{8}
+\contentsline {subsubsection}{\numberline {6.3.2}Modificar o eliminar un modelo de evaluaci\IeC {\'o}n}{9}
+\contentsline {subsection}{\numberline {6.4}Coordinador}{9}
+\contentsline {subsection}{\numberline {6.5}Adjunto}{10}
+\contentsline {subsection}{\numberline {6.6}Experto}{10}
+\contentsline {subsubsection}{\numberline {6.6.1}Realizar evaluaci\IeC {\'o}n de un proyecto}{10}
+\contentsline {section}{\numberline {7}Implementaci\IeC {\'o}n}{11}
+\contentsline {subsection}{\numberline {7.1}Introducci\IeC {\'o}n}{11}
+\contentsline {subsection}{\numberline {7.2}C\IeC {\'o}digo fuente}{11}
+\contentsline {subsubsection}{\numberline {7.2.1}index.php}{11}
+\contentsline {subsubsection}{\numberline {7.2.2}settings.php}{13}
+\contentsline {subsubsection}{\numberline {7.2.3}login.css}{14}
+\contentsline {subsubsection}{\numberline {7.2.4}main.css}{14}
+\contentsline {subsubsection}{\numberline {7.2.5}users.php}{14}
+\contentsline {subsubsection}{\numberline {7.2.6}main.js}{14}
+\contentsline {subsubsection}{\numberline {7.2.7}eval\_infs.php}{16}
+\contentsline {subsubsection}{\numberline {7.2.8}eval\_mods.php}{16}
+\contentsline {subsubsection}{\numberline {7.2.9}evaluations.php}{16}
+\contentsline {subsubsection}{\numberline {7.2.10}loginout.php}{16}
+\contentsline {subsubsection}{\numberline {7.2.11}mysql.php}{17}
+\contentsline {subsubsection}{\numberline {7.2.12}login.php}{18}
+\contentsline {subsubsection}{\numberline {7.2.13}main.php}{19}
+\contentsline {subsubsection}{\numberline {7.2.14}users.php}{22}
+\contentsline {section}{\numberline {8}Bibliograf\IeC {\'\i }a}{25}

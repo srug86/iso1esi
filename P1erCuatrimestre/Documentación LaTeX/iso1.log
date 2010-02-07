@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  27 JAN 2010 21:09
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  28 JAN 2010 12:26
 entering extended mode
  %&-line parsing enabled.
 **iso1.tex
@@ -418,7 +418,35 @@ Package: listings 2004/10/17 1.3b (Carsten Heinz)
 )
 (/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)) (./iso1.aux)
+)) (./iso1.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `iso1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -434,8 +462,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 (/usr/share/texmf/tex/context/base/supp-pdf.tex
@@ -536,13 +563,910 @@ File: omslmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 45.
- [4] [5]
+ [4] [5] (./manual
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-(./index.php
+<imagesinterface/acceso.pdf, id=25, 927.465pt x 536.0025pt>
+File: imagesinterface/acceso.pdf Graphic file (type pdf)
+
+<use imagesinterface/acceso.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/introducirdatos.pdf, id=26, 279.0425pt x 142.5325pt>
+File: imagesinterface/introducirdatos.pdf Graphic file (type pdf)
+
+<use imagesinterface/introducirdatos.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: File `a\IeC {\~n}adirmod.pdf' not found on input line 35.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \def 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \def 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Please use \mathaccent for accents in math mode.
+<argument> ...t@spacefactor \spacefactor }\accent 
+                                                  126 n\egroup \spacefactor ...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+<argument> ... }\accent 126 n\egroup \spacefactor 
+                                                  \accent@spacefactor \penal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor adirmo...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra \endcsname.
+<argument> ...irmod.pdf width\GPT@page \endcsname 
+                                                  bp
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Please use \mathaccent for accents in math mode.
+\filename@base ...acefactor \spacefactor }\accent 
+                                                  126 n\egroup \spacefactor ...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ccent 126 n\egroup \spacefactor 
+                                                  \accent@spacefactor \penal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ctor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor adirmod
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra \endcsname.
+<argument> ...ase .pdf height\GPT@page \endcsname 
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+
+LaTeX Warning: Command \\ invalid in math mode on input line 35.
+
+
+! LaTeX Error: Command \\ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Please use \mathaccent for accents in math mode.
+\filename@base ...acefactor \spacefactor }\accent 
+                                                  126 n\egroup \spacefactor ...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ccent 126 n\egroup \spacefactor 
+                                                  \accent@spacefactor \penal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ctor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor adirmod
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra \endcsname.
+<argument> ...ase .pdf height\GPT@page \endcsname 
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+LaTeX Warning: Command \\ invalid in math mode on input line 35.
+
+
+! LaTeX Error: Command \\ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Please use \mathaccent for accents in math mode.
+\filename@base ...acefactor \spacefactor }\accent 
+                                                  126 n\egroup \spacefactor ...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ccent 126 n\egroup \spacefactor 
+                                                  \accent@spacefactor \penal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ctor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor adirmod
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra \endcsname.
+\Gin@urx ...n@base .pdf width\GPT@page \endcsname 
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm ignoring this, since I wasn't doing a \csname.
+
+File: a\penalty \@M \hskip \z@skip \unhbox \voidb@x \bgroup \let \unhbox \voidb
+@x \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \spacefa
+ctor }\accent 126 n\egroup \spacefactor \accent@spacefactor \penalty \@M \hskip
+ \z@skip \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \s
+pacefactor }\spacefactor \accent@spacefactor adirmod.pdf Graphic file (type pdf
+)
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Please use \mathaccent for accents in math mode.
+\filename@base ...acefactor \spacefactor }\accent 
+                                                  126 n\egroup \spacefactor ...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Extra }, or forgotten \endgroup.
+\filename@base ...acefactor }\accent 126 n\egroup 
+                                                  \spacefactor \accent@space...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ccent 126 n\egroup \spacefactor 
+                                                  \accent@spacefactor \penal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ctor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor adirmod
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra \endcsname.
+\@providesfile ... \xdef \csname ver@#1\endcsname 
+                                                  {#2}\endgroup 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+<use a\penalty \@M \hskip \z@skip \unhbox \voidb@x \bgroup \let \unhbox \voidb@
+x \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \spacefac
+tor }\accent 126 n\egroup \spacefactor \accent@spacefactor \penalty \@M \hskip 
+\z@skip \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \sp
+acefactor }\spacefactor \accent@spacefactor adirmod.pdf>
+! Missing \endcsname inserted.
+<to be read again> 
+                   \penalty 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+
+! LaTeX Error: Command \\ unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Please use \mathaccent for accents in math mode.
+\filename@base ...acefactor \spacefactor }\accent 
+                                                  126 n\egroup \spacefactor ...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ccent 126 n\egroup \spacefactor 
+                                                  \accent@spacefactor \penal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\filename@base ...ctor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor adirmod
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra \endcsname.
+<argument> ...print \@empty \else !\fi \endcsname 
+                                                  \ifGPT@viewport \ifdim \Gi...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Extra }, or forgotten $.
+\Gscale@box ...scale@y {#2}\setbox \z@ \hbox {{#3}
+                                                  }\setbox \tw@ \hbox {\Gsca...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\Gscale@box ...cale@y {#2}\setbox \z@ \hbox {{#3}}
+                                                  \setbox \tw@ \hbox {\Gscal...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\Ginclude@pdf ...e \egroup \fi \GPT@clipend \fi }}
+                                                  
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\Gin@setfile ...csname Ginclude@#1\endcsname {#3}}
+                                                  \dp \z@ \z@ \ht \z@ \Gin@r...
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! \textfont 7 is undefined (character ^^P).
+<inserted text> $
+                 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Somewhere in the math formula just ended, you used the
+stated character from an undefined font family. For example,
+plain TeX doesn't allow \it or \sl in subscripts. Proceed,
+and I'll try to forget that I needed that character.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! \textfont 7 is undefined (character ^^P).
+<inserted text> $
+                 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Somewhere in the math formula just ended, you used the
+stated character from an undefined font family. For example,
+plain TeX doesn't allow \it or \sl in subscripts. Proceed,
+and I'll try to forget that I needed that character.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! \textfont 7 is undefined (character ^^P).
+<inserted text> $
+                 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Somewhere in the math formula just ended, you used the
+stated character from an undefined font family. For example,
+plain TeX doesn't allow \it or \sl in subscripts. Proceed,
+and I'll try to forget that I needed that character.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! \textfont 7 is undefined (character ^^P).
+<inserted text> $
+                 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Somewhere in the math formula just ended, you used the
+stated character from an undefined font family. For example,
+plain TeX doesn't allow \it or \sl in subscripts. Proceed,
+and I'll try to forget that I needed that character.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! \textfont 7 is undefined (character ^^P).
+<inserted text> $
+                 
+l.35 \imagen{añadirmod.pdf}{10cm}{}{}
+                                      
+Somewhere in the math formula just ended, you used the
+stated character from an undefined font family. For example,
+plain TeX doesn't allow \it or \sl in subscripts. Proceed,
+and I'll try to forget that I needed that character.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+
+Underfull \vbox (badness 2951) has occurred while \output is active []
+
+ [7]
+<imagesinterface/convmod.pdf, id=31, 537.00626pt x 337.26pt>
+File: imagesinterface/convmod.pdf Graphic file (type pdf)
+
+<use imagesinterface/convmod.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/convmostrada.pdf, id=32, 1132.23pt x 578.16pt>
+File: imagesinterface/convmostrada.pdf Graphic file (type pdf)
+
+<use imagesinterface/convmostrada.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/formularios.pdf, id=33, 254.9525pt x 214.8025pt>
+File: imagesinterface/formularios.pdf Graphic file (type pdf)
+
+<use imagesinterface/formularios.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/modifmod.pdf, id=34, 995.72pt x 249.93375pt>
+File: imagesinterface/modifmod.pdf Graphic file (type pdf)
+
+<use imagesinterface/modifmod.pdf> [8 <./imagesinterface/acceso.pdf> <./imagesi
+nterface/introducirdatos.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.62 con las acciones que puede realizar. (#
+                                            #Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.62 con las acciones que puede realizar. (##
+                                             Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.62 ...as acciones que puede realizar. (##Figura#
+                                                  #).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.62 ...s acciones que puede realizar. (##Figura##
+                                                  ).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 una opción llamada 
+                           Leer Informe Final. Tras esta acción, podrá r...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 una opción llamada Leer Informe Final
+                                               . Tras esta acción, podrá r...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 llamada 
+               Validar. Esta acción le permitirá la validación automát...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 llamada Validar
+                        . Esta acción le permitirá la validación automát...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.70 ...te envío a la institución convocante. (#
+                                                  #Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.70 ...e envío a la institución convocante. (##
+                                                  Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.70 ...o a la institución convocante. (##Figura#
+                                                  #).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.70 ... a la institución convocante. (##Figura##
+                                                  ).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+[9 <./imagesinterface/convmod.pdf> <./imagesinterface/convmostrada.pdf> <./imag
+esinterface/formularios.pdf>]
+! You can't use `macro parameter character #' in horizontal mode.
+l.75 ...entes acciones que puede llevar a cabo. (#
+                                                  #Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.75 ...ntes acciones que puede llevar a cabo. (##
+                                                  Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.75 ...ciones que puede llevar a cabo. (##Figura#
+                                                  #).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.75 ...iones que puede llevar a cabo. (##Figura##
+                                                  ).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...iversos expertos. Tendrá la opción de 
+                                                  Realizar Informe Final,
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...� la opción de Realizar Informe Final
+                                                  ,
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 de 
+          Finalizar Informe Final con la que ya dará por terminado su red...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 de Finalizar Informe Final
+                                    con la que ya dará por terminado su red...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.83 ... redacción y no podrá modificar más. (#
+                                                  #Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.83 ...redacción y no podrá modificar más. (##
+                                                  Figura##).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.83 ...ón y no podrá modificar más. (##Figura#
+                                                  #).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.83 ...�n y no podrá modificar más. (##Figura##
+                                                  ).
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+<imagesinterface/realizareval.pdf, id=76, 990.70125pt x 328.22626pt>
+File: imagesinterface/realizareval.pdf Graphic file (type pdf)
+
+<use imagesinterface/realizareval.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/evalexp.pdf, id=77, 800.9925pt x 570.13pt>
+File: imagesinterface/evalexp.pdf Graphic file (type pdf)
+
+<use imagesinterface/evalexp.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/saveend.pdf, id=78, 170.6375pt x 33.12375pt>
+File: imagesinterface/saveend.pdf Graphic file (type pdf)
+
+<use imagesinterface/saveend.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [10 <./imagesinterface/modifmod.pdf>] (./index.php
 LaTeX Font Info:    Try loading font information for OML+lmr on input line 1.
- (/usr/share/texmf/tex/latex/lm/omllmr.fd
+
+(/usr/share/texmf/tex/latex/lm/omllmr.fd
 File: omllmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
@@ -577,14 +1501,14 @@ l.3   HECHO EN ESTA SESIÓN
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[7]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 4.
-
+[11 <./imagesinterface/realizareval.pdf> <./imagesinterface/evalexp.pdf> <./ima
+gesinterface/saveend.pdf>]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -951,7 +1875,7 @@ or \DeclareInputMath before using this key.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+ [12]
 Overfull \hbox (12.76065pt too wide) in paragraph at lines 73--75
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -959,13 +1883,13 @@ Overfull \hbox (12.76065pt too wide) in paragraph at lines 73--75
 ) (./settings.php)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [13]
 (./js/main.js
 Overfull \hbox (24.76077pt too wide) in paragraph at lines 40--41
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[10]
+[14]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1158,7 +2082,7 @@ or \DeclareInputMath before using this key.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [15]
 (./source/loginout.php
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -1169,7 +2093,7 @@ Overfull \hbox (24.76077pt too wide) in paragraph at lines 15--16
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[12]
+[16]
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1184,7 +2108,7 @@ Overfull \hbox (6.76059pt too wide) in paragraph at lines 58--59
 [][][][][][][][][][][][][][][][] 
  []
 
-) (./source/mysql.php [13]) (./theme/login.php
+) (./source/mysql.php [17]) (./theme/login.php
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1217,7 +2141,7 @@ Overfull \hbox (0.76053pt too wide) in paragraph at lines 24--25
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[14]
+[18]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1304,7 +2228,7 @@ l.39 ...ef="" alt="">¿Ha olvidado su contraseña?
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/main.php [15]
+) (./theme/main.php [19]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1416,7 +2340,7 @@ or \DeclareInputMath before using this key.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [20]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1700,7 +2624,7 @@ or \DeclareInputMath before using this key.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [21]
 Overfull \hbox (6.76059pt too wide) in paragraph at lines 162--163
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1887,7 +2811,7 @@ l.180           Juan Miguel Torres Triviño<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/users.php [18]
+) (./theme/users.php [22]
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
 with LaTeX.
@@ -1950,7 +2874,7 @@ or \DeclareInputMath before using this key.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [23]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2035,27 +2959,32 @@ or \DeclareInputMath before using this key.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20])
-[21] (./iso1.aux) ) 
+ [24])
+[25] (./iso1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4259 strings out of 94074
- 54182 string characters out of 1165152
- 142438 words of memory out of 1500000
- 7446 multiletter control sequences out of 10000+50000
- 44552 words of font info for 46 fonts, out of 1200000 for 2000
+ 4321 strings out of 94074
+ 55671 string characters out of 1165152
+ 141492 words of memory out of 1500000
+ 7493 multiletter control sequences out of 10000+50000
+ 48766 words of font info for 47 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 38i,13n,43p,1063b,1829s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
-athsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb>
-Output written on iso1.pdf (21 pages, 232190 bytes).
+ 39i,13n,43p,1063b,1831s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/s
+hare/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy10.pfb>
+Output written on iso1.pdf (25 pages, 1657944 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
