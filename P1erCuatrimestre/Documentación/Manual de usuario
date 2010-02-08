@@ -71,16 +71,21 @@ su correspondiente envío a la institución convocante. (##Figura##).
 
 \subsection{Adjunto}
 
-Tras la correcta autentificación por parte de un usuario adjunto, se le mostrará una 
-pantalla de la siguiente forma con las correspondientes acciones que puede llevar a cabo. (##Figura##).
+Tras la correcta autentificación por parte de un usuario adjunto, se le mostrará una pantalla de la siguiente forma con las correspondientes acciones que puede llevar a cabo.
+\imagen{adjprinc.pdf}{13cm}{/small{Ventana Principal del adjunto.}}{a1}
+\subsubsection{Realizar Informe Final}
+\begin{enumerate}
+\item Seleccionar el proyecto deseado de entre los disponibles. Los proyectos asignados se muestran en una tabla.
+\imagen{seladj.pdf}{13cm}{/small{Selección de proyecto.}}{a2}
+\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver que expertos han realizado evaluaciones sobre el proyecto.
+\imagen{listaexp.pdf}{13cm}{/small{Expertos del proyecto seleccionado.}}{a3}
+\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada por cada uno de los expertos.
+\imagen{coneval.pdf}{13cm}{/small{Consulta evaluación.}}{a4}
+\item Para proceder a realizar el informe final, pulsar ``Realización de evaluación'' y se expandirá el correspondiente modelo de evaluación.
+\imagen{inffinal.pdf}{13cm}{/small{Realización informe final.}}{a5}
+\item El adjunto podrá ``Guardar'' o ``Finalizar Evaluación'', el primero nos permite guardar los cambios y editar en posteriores sesiones, mientras que el segundo dará por finalizado el informe.
+\imagen{opinf.pdf}{13cm}{/small{Realización informe final.}}{a6}
 
-La pantalla para este tipo de usuario contendrá una tabla formada con los campos: 
-nombre de proyecto, subárea asignada y la fecha de devolución del paquete de proyectos 
-(informes). El adjunto podrá marcar el cuadro correspondiente al proyecto y así ver sus 
-evaluaciones, realizadas por diversos expertos. Tendrá la opción de Realizar Informe Final, 
-donde escribirá las conclusiones que saqué a partir de la lectura de las evaluaciones. El 
-informe final se podrá guardar y editar en posteriores sesiones, por último, tendrá la opción 
-de Finalizar Informe Final con la que ya dará por terminado su redacción y no podrá modificar más. (##Figura##).
 
 
 \subsection{Experto}
