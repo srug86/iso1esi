@@ -64,32 +64,46 @@ Se marca el paquete de la convocatoria que se desea modificar y se pulsa
 \subsection{Coordinador}
 
 Una vez introducidos los datos de un coordinador, le aparecerá la siguiente ventana 
-con las acciones que puede realizar. (##Figura##).
+con las acciones que puede realizar,(ver figura \ref{c1}).
+\imagen{corprinc.pdf}{13cm}{/small{Ventana Principal del coordinador.}}{c1}
+\subsubsection{Ver/ Modificar informe final}
+\begin{enumerate}
+\item Seleccionar el proyecto deseado de entre los disponibles (ver figura \ref{c2}). Los proyectos asignados se muestran en una tabla.
+\imagen{selcor.pdf}{13cm}{/small{Selección de proyecto.}}{c2}
 
-La información disponible para este tipo de usuario se mostrará en forma de tabla, 
-que contiene los campos: nombre de proyecto, área y subárea asignada. El coordinador 
-podrá marcar el cuadro correspondiente al proyecto que desea revisar, para lo cual tendrá 
-una opción llamada Leer Informe Final. Tras esta acción, podrá realizar una lectura, 
-pero nunca ninguna modificación. Por último, le aparecerá una opción en esta ventana 
-llamada Validar. Esta acción le permitirá la validación automática del proyecto y 
-su correspondiente envío a la institución convocante. (##Figura##).
+\item Para proceder a consultar/modificar el informe final, pulsar ``Ver/ Modificar evaluación'' y se expandirá el correspondiente modelo de evaluación (ver figura \ref{c3}).
+\imagen{modinf.pdf}{13cm}{/small{Ver/ modificar el informe final.}}{c3}
+
+\item El coordinador podrá ``Guardar'' o ``Finalizar'', (ver figura \ref{c4}), el primero nos permite guardar los cambios y editar en posteriores sesiones, mientras que el segundo dará por finalizado el informe.
+\imagen{opcor.pdf}{13cm}{/small{Guardar o finalizar informe final.}}{c4}
+\end{enumerate}
+
+\subsubsection{Validar informe final}
+Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se puede ver en la figura \ref{c5}.
+\imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}
 
 \subsection{Adjunto}
 
-Tras la correcta autentificación por parte de un usuario adjunto, se le mostrará una pantalla de la siguiente forma con las correspondientes acciones que puede llevar a cabo.
+Tras la correcta autentificación por parte de un usuario adjunto, se le mostrará una pantalla de la siguiente forma con las correspondientes acciones que pueden llevar a cabo, como se puede ver en la figura \ref{a1}.
 \imagen{adjprinc.pdf}{13cm}{/small{Ventana Principal del adjunto.}}{a1}
-\subsubsection{Realizar Informe Final}
+\subsubsection{Realizar informe final}
 \begin{enumerate}
-\item Seleccionar el proyecto deseado de entre los disponibles. Los proyectos asignados se muestran en una tabla.
+\item Seleccionar el proyecto deseado de entre los disponibles (ver figura \ref{a2}). Los proyectos asignados se muestran en una tabla.
 \imagen{seladj.pdf}{13cm}{/small{Selección de proyecto.}}{a2}
-\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver que expertos han realizado evaluaciones sobre el proyecto.
+
+\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver que expertos han realizado evaluaciones sobre el proyecto, como se puede ver en la figura \ref{a3}.
 \imagen{listaexp.pdf}{13cm}{/small{Expertos del proyecto seleccionado.}}{a3}
-\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada por cada uno de los expertos.
+
+\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada por cada uno de los expertos, como se puede ver en la figura \ref{a4}.
 \imagen{coneval.pdf}{13cm}{/small{Consulta evaluación.}}{a4}
-\item Para proceder a realizar el informe final, pulsar ``Realización de evaluación'' y se expandirá el correspondiente modelo de evaluación.
+
+\item Para proceder a realizar el informe final, pulsar ``Realizar evaluación'' y se expandirá el correspondiente modelo de evaluación (ver figura \ref{a5}).
 \imagen{inffinal.pdf}{13cm}{/small{Realización informe final.}}{a5}
-\item El adjunto podrá ``Guardar'' o ``Finalizar Evaluación'', el primero nos permite guardar los cambios y editar en posteriores sesiones, mientras que el segundo dará por finalizado el informe.
-\imagen{opinf.pdf}{13cm}{/small{Realización informe final.}}{a6}
+
+\item El adjunto podrá ``Guardar'' o ``Finalizar'', (ver figura \ref{a6}), el primero nos permite guardar los cambios y editar en posteriores sesiones, mientras que el segundo dará por finalizado el informe.
+\imagen{opinf.pdf}{13cm}{/small{Guardar o finalizar informe final.}}{a6}
+
+\end{enumerate}
 
 
 \subsection{Experto}
