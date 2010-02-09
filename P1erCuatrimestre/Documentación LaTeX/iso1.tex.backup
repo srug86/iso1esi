@@ -1,17 +1,14 @@
-\documentclass[a4paper,12pt,spanish,twoside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish]{babel}
-\usepackage[pdftex]{graphicx}
-\usepackage{listings}
-\input{latex-func.tex}
+\documentclass[12pt,a4paper,spanish,twoside]{article}
 
+\input{latex-func.tex}
 
 % Margenes
 \usepackage[margin=2.5cm,top=3cm]{geometry}
 \begin{document}
 \tableofcontents
+\newpage
 \section{Introducción}
+\input{Introduccion}
 \section{Especificación de Requisitos}
 \subsection{Requisitos iniciales de Sistema}
 Se trata de desarrollar una aplicación para gestión distribuída de la revisión de proyectos
@@ -20,10 +17,10 @@ sistema lo mantiene una agencia de evaluación de proyectos, que básicamente se
 encarga de ofrecer una valoración de los proyectos de investigación que le envían
 distintos organismos (ministerios, comunidades autónomas, etc.). Existe un conjunto de
 áreas temáticas, y cada área está descompuesta en un conjunto de subareas. Cada área
-tiene una persona "coordinadora", que se encarga de asignar proyectos a cada uno de los
-"adjuntos" de cada subarea. El adjunto se encargará de asignar la evaluación de sus
+tiene una persona ``coordinadora'', que se encarga de asignar proyectos a cada uno de los
+``adjunto'' de cada subarea. El adjunto se encargará de asignar la evaluación de sus
 proyectos a los expertos más adecuados, y de, finalmente realizar los informes finales
-de evaluación. El sistema lo usan los siguientes tipos de usuario:
+de evaluación. El sistema es utilizado por los siguientes tipos de usuario:
 
 \begin{itemize}
 \item Los expertos, que realizan evaluaciones de proyectos. Se les invita, y ellos pueden
@@ -42,38 +39,46 @@ investigadores, texto de la convocatoria, etc.).
 \subsection{Análisis de requisitos del sistema}
 Tras una serie de reuniones, los requisitos finales para nuestro sistema son los siguientes:
 \begin{itemize}
+
 \item \textbf{Usuarios}
 \begin{itemize}
-\item Acceden al sistema mediante un nombre de usuario, que será la cuenta de correo; y una contraseña, que podrá modificar.
-\item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno con un diferente tipo de funcionalidad y rango.
-\item Cada usuario podrá modificar sus datos personales y tendrá una vista restringida sobre la lista de proyectos dependiendo 
-de su rango en el sistema.
+\item Acceden al sistema mediante un nombre de usuario, que será la cuenta de correo; y una 
+contraseña, que podrá modificar.
+\item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno con un diferente 
+tipo de funcionalidad y rango.
+\item Cada usuario podrá modificar sus datos personales y tendrá una vista restringida sobre la 
+lista de proyectos dependiendo de su rango en el sistema.
 \end{itemize}
 
 \item \textbf{Paquete de Proyectos}
-\\Las instituciones solicitantes mandan los proyectos en paquetes al secretario, los cuales contienen:
+\\Las instituciones solicitantes mandan los proyectos en paquetes al secretario, los cuales 
+contienen:
 \begin{itemize}
 \item La convocatoria.
 \item Las bases del proyecto.
 \item Institución convocante.
 \item Los proyectos, que pueden venir, aunque no necesariamente, clasificados por área.
-\item Uno o varios modelos de informe de evaluación que contengan los puntos a evaluar del correspondiente proyecto. 
+\item Uno o varios modelos de informe de evaluación que contengan los puntos a evaluar del 
+correspondiente proyecto. 
 \item Cada proyecto tendrá una fecha en la cuál tiene que estar evaluado.
 \end{itemize}
+
 \item \textbf{Secretario}
 \begin{itemize}
-\item Usuarios: Es el encargado de añadir, modificar y eliminar a los usuarios del sistema: coordinadores, adjuntos 
+\item Usuarios: Es el encargado de añadir, modificar y eliminar a los usuarios del sistema: 
+coordinadores, adjuntos 
 y expertos.
 \item Coordinadores: Elegirá el coordinador de cada área.
-\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos y los introduce al sistema: las bases, 
-la convocatoria, la institución convocante, los proyectos, el cual asignará al área correspondiente; etc. También 
-podrá modificar cualquier información referente a estas solicitudes. 
-\item Modelos de evaluación: Dependiendo de la información que contenga el proyecto, elaborará unos modelos de informe 
-de evaluación.
-\item Plazos expertos: Decidirá los plazos que tienen los expertos para aceptar o declinar la invitación para realizar 
-el informe de evaluación, así como una vez aceptado, la fecha para entregar dicho informe. Todo esto se incluirá en el modelo de evaluación.
-
+\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos y los introduce 
+al sistema: las bases, la convocatoria, la institución convocante, los proyectos, el cual asignará 
+al área correspondiente; etc. También podrá modificar cualquier información referente a estas solicitudes. 
+\item Modelos de evaluación: Dependiendo de la información que contenga el proyecto, elaborará unos 
+modelos de informe de evaluación.
+\item Plazos expertos: Decidirá los plazos que tienen los expertos para aceptar o declinar la invitación 
+para realizar el informe de evaluación, así como una vez aceptado, la fecha para entregar dicho informe. 
+Todo esto se incluirá en el modelo de evaluación.
 \end{itemize}
+
 \item \textbf{Coordinador}
 \begin{itemize}
 \item Pertenece a una única área.
@@ -82,11 +87,13 @@ el informe de evaluación, así como una vez aceptado, la fecha para entregar di
 \item Reasignar proyecto a otra subárea, si el adjunto se lo indica.
 \item Valida los informes pendientes que los adjuntos de las subáreas de su área realizan.
 \end{itemize}
+
 \item \textbf{Área}
 \begin{itemize}
 \item Está asociada a un único coordinador y tiene, a su vez, varias subáreas. 
 \item El número de subáreas podrá ser diferente en cada área.
 \end{itemize}
+
 \item \textbf{Adjunto}
 \begin{itemize}
 \item Pertenece únicamente a una subárea.
@@ -106,76 +113,114 @@ los informes de los distintos expertos que hayan aceptado realizar la evaluació
 validado por el coordinador de su área.
 \item Evalúa el trabajo del experto basándose en la formalidad de los plazos y la calidad de su informe.
 \item Puede recomendar al secretario añadir expertos.
-\item Dentro de la lista de proyectos a las que los adjuntos tienen acceso, tendrán una sublista de los expertos que están revisando ese proyecto.
+\item Dentro de la lista de proyectos a las que los adjuntos tienen acceso, tendrán una sublista de los expertos 
+que están revisando ese proyecto.
 \item Podrá avisar al coordinador cuando el proyecto no corresponda a su subárea.
 \end{itemize}
+
 \item \textbf{Subárea}
 \begin{itemize}
 \item Sólo podrá pertenecer a un área y tiene un único adjunto asociado.
 \end{itemize}
+
 \item \textbf{Expertos}
 \begin{itemize}
 \item Podrán tener asignados varios proyectos a la vez. 
 \item No podrán pertenecer a la misma institución solicitante de la evaluación.
 \item Podrá aceptar o declinar las invitaciones de evaluación de proyectos.
-\item Cuando acepte la invitación, podrá acceder a la documentación de ese proyecto e ir realizando progresivamente el informe en varias sesiones.
+\item Cuando acepte la invitación, podrá acceder a la documentación de ese proyecto e ir realizando 
+progresivamente el informe en varias sesiones.
 \item Una vez que haya terminado el informe finalizará el proceso de evaluación.
-\item Recibirá avisos de finalización de plazos por parte del adjunto para finalizar el informe, vía correo electrónico.
-\item Cada uno tendrá una serie de palabras clave asociadas a su temática. Éstas palabras clave se utilizarán como parámetros en las búsquedas.
+\item Recibirá avisos de finalización de plazos por parte del adjunto para finalizar el informe, 
+vía correo electrónico.
+\item Cada uno tendrá una serie de palabras clave asociadas a su temática. Éstas palabras clave se 
+utilizarán como parámetros en las búsquedas.
 \item Tendrá una lista de evaluaciones pendientes, que podrá aceptar o rechazar.
-
 \end{itemize}
+
 \end{itemize}
 
 \section{Análisis de sistema}
 \subsection{Diagrama de flujo de datos}
 
-%\imagen{DC.pdf}{}{Diagrama de Contexto}{}
-%\imagen{DFD.0.pdf}{}{Diagrama de Sistemas}{}
-%\imagen{DFD.1.pdf}{}{Gestión de Usuarios}{}
-%\imagen{DFD.2.pdf}{}{Gestión de Paquetes Proyectos}{}
-%\imagen{DFD.3.pdf}{}{Gestión de Evaluaciones}{}
-%\imagen{DFD.3.1.pdf}{}{Gestión de Modelos}{}
-%\imagen{DFD.3.2.pdf}{}{Gestión de Informes Evaluaciones}{}
-%\imagen{DFD.4.pdf}{}{Gestión de Expertos}{}
+\imagen{diagramas/DC.pdf}{15cm}{Diagrama de Contexto}{}
+%\imagen{DFD.0.pdf}{14cm}{Diagrama de Sistemas}{}
+%\imagen{DFD.1.pdf}{14cm}{Gestión de Usuarios}{}
+%\imagen{DFD.2.pdf}{14cm}{Gestión de Paquetes Proyectos}{}
+%\imagen{DFD.3.pdf}{14cm}{Gestión de Evaluaciones}{}
+%\imagen{DFD.3.1.pdf}{14cm}{Gestión de Modelos}{}
+%\imagen{DFD.3.2.pdf}{14cm}{Gestión de Informes Evaluaciones}{}
+%\imagen{DFD.4.pdf}{14cm}{Gestión de Expertos}{}
 
 \subsection{Definición de Flujo de Datos}
-%\input{Diccionario}
+\input{diccionario}
 
 \section{Diseño del Sistema}
-%\imagen{DE.pdf}{}{}{}
 \subsection{Diagrama de Diseño Estructurado}
+%\imagen{DE_1.pdf}{14cm}{}{}
+%\imagen{DE_2.pdf}{14cm}{}{}
+%\imagen{DE_3.pdf}{14cm}{}{}
+%\imagen{DE_4.pdf}{14cm}{}{}
+%\imagen{DE_5.pdf}{14cm}{}{}
+%\imagen{DE_6.pdf}{14cm}{}{}
+%\imagen{DE_7.pdf}{14cm}{}{}
 
 \section{Base de Datos}
 \subsection{Diagrama Entidad/Interrelación}
-%\image{ER.pdf}{}{Diagrama Entidad/Interrelación}{}
+%\imagen{ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}
 \subsection{Diagrama Relacional}
-%\image{MRE.pdf}{}{Diagrama Relacional}{}
+%\imagen{MRE.pdf}{15cm}{Diagrama Relacional}{}
 
 \section{Manual de usuario}
-\subsection{Introducción}
-\subsection{Perfiles de usuario}
-\subsection{Interfaz de usuario}
-%aquí se explica la interfaz donde todos los usuarios tiene que loguearse
-\subsubsection{Secretario}
-\subsubsection{Coordinador}
-\subsubsection{Adjunto}
-\subsubsection{Experto}
-
+\input{manual}
 \section{Implementación}
 \subsection{Introducción}
 \subsection{Código fuente}
-\lstinputlisting{index.php}
-\lstinputlisting{settings.php}
-\lstinputlisting{css/login.css}
-\lstinputlisting{css/main.css}
-\lstinputlisting{css/users.php}
-\lstinputlisting{js/main.js}
-\lstinputlisting{source/eval_infs.php}
-\lstinputlisting{source/eval_mods.php}
-\lstinputlisting{source/evaluations.php}
-\lstinputlisting{source/loginout.php}
-\lstinputlisting{source/mysql.php}
+\subsubsection{index.php}
+\lstinputlisting{implementacion/index.php}
+\subsubsection{settings.php}
+\lstinputlisting{implementacion/settings.php}
+\subsubsection{evalmodels.js}
+\lstinputlisting{implementacion/js/evalmodels.js}
+\subsubsection{evalreports.js}
+\lstinputlisting{implementacion/js/evalreports.js}
+\subsubsection{main.js}
+\lstinputlisting{implementacion/js/main.js}
+\subsubsection{projects.js}
+\lstinputlisting{implementacion/js/projects.js}
+
+\subsubsection{evaluation\_models.php}
+\lstinputlisting{implementacion/source/evaluation_models.php}
+\subsubsection{evaluation\_reports.php}
+\lstinputlisting{implementacion/source/evaluation_reports.php}
+\subsubsection{loginout.php}
+\lstinputlisting{implementacion/source/loginout.php}
+\subsubsection{mysql.php}
+\lstinputlisting{implementacion/source/mysql.php}
+
+\subsubsection{evaluation\_models.php}
+\lstinputlisting{implementacion/theme/evaluation_models.php}
+\subsubsection{evaluation\_reports.php}
+\lstinputlisting{implementacion/theme/evaluation_reports.php}
+\subsubsection{login.php}
+\lstinputlisting{implementacion/theme/login.php}
+\subsubsection{main.php}
+\lstinputlisting{implementacion/theme/main.php}
+\subsubsection{projects.php}
+\lstinputlisting{implementacion/theme/projects.php}
+\subsubsection{users.php}
+\lstinputlisting{implementacion/theme/users.php}
+
+\subsubsection{evalmodels.css}
+\lstinputlisting{implementacion/theme/css/evalmodels.css}
+\subsubsection{evalreports.css}
+\lstinputlisting{implementacion/theme/css/evalreports.css}
+\subsubsection{login.css}
+\lstinputlisting{implementacion/theme/css/login.css}
+\subsubsection{main.css}
+\lstinputlisting{implementacion/theme/css/main.css}
+\subsubsection{users.php}
+\lstinputlisting{implementacion/theme/css/users.php}
 
 \section{Bibliografía}
 
