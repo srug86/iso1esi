@@ -18,11 +18,15 @@ correspondiente a las funciones que puede realizar con respecto a las
 evaluaciones de informes.
 
 \subsection{Inicio de sesión}
-\imagen{acceso.pdf}{13cm}{}{}
+
+
+La pantalla de inicio de la aplicación se puede observar en la figura \ref{img1}.
+\imagen{acceso.pdf}{13cm}{\small{Acceso a la aplicación.}}{img1}
 \begin{itemize}
-\item Se introduce el usuario y la contraseña proporcionados en el correo de 
-Alta.
-\imagen{introducirdatos.pdf}{4cm}{}{}
+\item Se introduce el usuario y la contraseña (ver figura \ref{img2}) proporcionados en el correo de 
+alta.
+\imagen{introducirdatos.pdf}{4cm}{\small{Datos del usuario.}}{img2}
+
 \item Si los datos son incorrectos, no se puede acceder a la aplicación y se
 muestra un mensaje de error.
 \end{itemize}
@@ -30,31 +34,32 @@ muestra un mensaje de error.
 \subsection{Secretario}
 \subsubsection{Crear un modelo de evaluación}
 \begin{enumerate}
-\item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación. Se despliega
+\item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se puede ver en la figura \ref{img3}. Se despliega
 los datos que se pueden introducir en un modelo de evaluación.
-\imagen{añadirmod.pdf}{10cm}{}{}
+\imagen{anadirmod.pdf}{10cm}{\small{Añadir modelo de evaluación.}}{img3}
 \item Ver convocatoria de un paquete de proyectos.
 \begin{itemize}
-\item En la sección CONVOCATORIAS se despliega una lista donde se puede elegir
+\item En la sección CONVOCATORIAS se despliega una lista (figura \ref{img4}) donde se puede elegir
 el paquete de proyectos del que se desea ver la convocatoria.
-\imagen{convmod.pdf}{10cm}{}{}
+\imagen{convmod.pdf}{10cm}{\small{Elección de paquete de proyectos.}}{img4}
 \item Se elige un paquete de proyectos y se pulsa ``Ver''. A la derecha de la 
-página se muestra la información de la convocatoria.
-\imagen{convmostrada.pdf}{13cm}{}{} 
+página se muestra la información de la convocatoria (figura \ref{img5}).
+\imagen{convmostrada.pdf}{13cm}{\small{Información de convocatoria.}}{img5} 
 \end{itemize}
 \item Agregar los tipos de elementos de la sección FORMULARIOS pulsando 
-``Añadir''.
-\imagen{formularios.pdf}{4cm}{}{}
-En la sección \emph{Estructura} se muestra el resultado del modelo de evaluación 
-que se está creando.
+``Añadir'', como se puede observar en la figura \ref{img6}. En la sección 
+\emph{Estructura} se muestra el resultado del modelo de evaluación que se está 
+creando.
+
+\imagen{formularios.pdf}{4cm}{\small{Opciones de modelos de evaluación.}}{img6}
 \item Guardar el modelo de evaluación realizado. Para ello se pulsa el botón 
 ``Guardar'' que está situado bajo la sección FORMULARIOS.
 \end{enumerate}
 
 \subsubsection{Modificar o eliminar un modelo de evaluación}
 Se marca el paquete de la convocatoria que se desea modificar y se pulsa 
-``Modificar'' o ``Eliminar'' según se desee.
-\imagen{modifmod.pdf}{14cm}{}{}
+``Modificar'' o ``Eliminar'' según se desee (figura \ref{img7}).
+\imagen{modifmod.pdf}{14cm}{\small{Modificación y eliminación de un modelo.}}{img7}
 
 \subsection{Coordinador}
 
@@ -87,20 +92,23 @@ Tras la correcta autentificación por parte de un usuario adjunto, se le mostrar
 \imagen{opinf.pdf}{13cm}{/small{Realización informe final.}}{a6}
 
 
-
 \subsection{Experto}
 \subsubsection{Realizar evaluación de un proyecto}
 \begin{enumerate}
 \item Los proyectos asignados se muestran en una tabla. Para realizar la 
-evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación''.
-\imagen{realizareval.pdf}{13cm}{}{}
+evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación'' (ver 
+figura \ref{img8}).
+\imagen{realizareval.pdf}{13cm}{\small{Elegir proyecto para evaluación.}}{img8}
+
 \item Se expande el correspondiente modelo de evaluación, mostrando los 
 diferentes puntos a evaluar. En la parte izquierda de la pantalla se muestra la
-memoria del proyecto a evaluar.
-\imagen{evalexp.pdf}{13cm}{}{}
+memoria del proyecto a evaluar, como se puede ver en la figura \ref{img9}.
+\imagen{evalexp.pdf}{13cm}{\small{Realización de evaluación.}}{img9}
+
 \item Se guardan los cambios realizados en la evaluación con el boton 
-``Guardar'' o se finaliza la evaluación pulsando ``Finalizar''.
-\imagen{saveend.pdf}{4cm}{}{}
+``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura \ref{img10}).
+\imagen{saveend.pdf}{4cm}{\small{Guardar o finalizar evaluación.}}{img10}
+
 \end{enumerate}
 
 
