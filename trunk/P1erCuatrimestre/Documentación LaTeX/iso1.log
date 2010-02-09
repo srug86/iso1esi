@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  28 JAN 2010 12:26
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.12.31)  9 FEB 2010 22:03
 entering extended mode
  %&-line parsing enabled.
 **iso1.tex
@@ -437,15 +437,6 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = `iso1.aux'.
 
@@ -543,6 +534,9 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 4.
 (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+Underfull \vbox (badness 1810) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.95134pt.
@@ -563,85 +557,288 @@ File: omslmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 45.
- [4] [5] (./manual
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [4] [5]
+<imagesinterface/diagramas/DC.pdf, id=21, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DC.pdf Graphic file (type pdf)
 
- [6]
-<imagesinterface/acceso.pdf, id=25, 927.465pt x 536.0025pt>
-File: imagesinterface/acceso.pdf Graphic file (type pdf)
-
-<use imagesinterface/acceso.pdf>
+<use imagesinterface/diagramas/DC.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imagesinterface/introducirdatos.pdf, id=26, 279.0425pt x 142.5325pt>
-File: imagesinterface/introducirdatos.pdf Graphic file (type pdf)
+<imagesinterface/diagramas/DFD0.pdf, id=22, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD0.pdf Graphic file (type pdf)
 
-<use imagesinterface/introducirdatos.pdf>
+<use imagesinterface/diagramas/DFD0.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<imagesinterface/diagramas/DFD1.pdf, id=23, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD1.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `a\IeC {\~n}adirmod.pdf' not found on input line 35.
+<use imagesinterface/diagramas/DFD1.pdf>
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
+<imagesinterface/diagramas/DFD2.pdf, id=24, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD2.pdf Graphic file (type pdf)
 
-! Missing number, treated as zero.
-<to be read again> 
-                   \def 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+<use imagesinterface/diagramas/DFD2.pdf>
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \def 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/diagramas/DFD3.pdf, id=25, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD3.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DFD3.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/diagramas/DFD31.pdf, id=26, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD31.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DFD31.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/diagramas/DFD32.pdf, id=27, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD32.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DFD32.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/diagramas/DFD4.pdf, id=28, 597.23125pt x 845.1575pt>
+File: imagesinterface/diagramas/DFD4.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DFD4.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./diccionario
+
+! Package inputenc Error: Unicode char \u8:﻿ not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ﻿
+       \textbf{USUARIOS} = @id\_usuario + tipo + e-mail + contraseña + nomb...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[6]
+
+LaTeX Warning: Text page 7 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[7 <./imagesinterface/diagramas/DC.pdf>]
+
+LaTeX Warning: Text page 8 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[8 <./imagesinterface/diagramas/DFD0.pdf>]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[9 <./imagesinterface/diagramas/DFD1.pdf>]
+
+LaTeX Warning: Text page 10 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[10 <./imagesinterface/diagramas/DFD2.pdf>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[11 <./imagesinterface/diagramas/DFD3.pdf>]
+
+LaTeX Warning: Text page 12 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[12 <./imagesinterface/diagramas/DFD31.pdf>]
+
+LaTeX Warning: Text page 13 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[13 <./imagesinterface/diagramas/DFD32.pdf>]
+
+LaTeX Warning: Text page 14 contains only floats.
+
+
+Overfull \vbox (3.38087pt too high) has occurred while \output is active []
+
+
+[14 <./imagesinterface/diagramas/DFD4.pdf>]
+Overfull \hbox (26.42928pt too wide) in paragraph at lines 26--27
+[]\OT1/lmr/bx/n/12 EXPERTOS-PROYECTOS \OT1/lmr/m/n/12 = @id[]usuario + @id[]paq
+proy + @id[]proyecto + id[]informe
+ []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+l.44 \textbf{tipo} = [secretario \mid
+                                      coordinador \mid adjunto \mid experto]
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.45 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.46 \textbf{dígito} = [0 \mid
+                                1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.47 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.48 \textbf{día} = [1 \mid
+                             2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.49 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 \textbf{mes} = [Enero \mid
+                                Febrero \mid Marzo \mid Abril \mid Mayo \mid...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.52 \textbf{nota} = [0 \mid
+                             1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.53 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.56 ...tbf{estado\_proyecto} = [sin\_evaluar \mid
+                                                   expertos\_evaluando \mid ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.57 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 \textbf{estado\_informe} = [en\_proceso \mid
+                                                  finalizado]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \vbox (badness 1418) has occurred while \output is active []
+
+ [15]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.60 \textbf{asunto} = [alta\_usuario \mid
+                                           invitación \mid aviso\_plazos]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 60.
+
 ! Please use \mathaccent for accents in math mode.
-<argument> ...t@spacefactor \spacefactor }\accent 
-                                                  126 n\egroup \spacefactor ...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.60 ...f{asunto} = [alta\_usuario \mid invitació
+                                                  n \mid aviso\_plazos]
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
 ! You can't use `\spacefactor' in math mode.
-<argument> ... }\accent 126 n\egroup \spacefactor 
-                                                  \accent@spacefactor \penal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.60 ...f{asunto} = [alta\_usuario \mid invitació
+                                                  n \mid aviso\_plazos]
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
@@ -649,828 +846,1117 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 ! You can't use `\spacefactor' in math mode.
 <argument> ...cefactor \spacefactor }\spacefactor 
-                                                  \accent@spacefactor adirmo...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+                                                  \accent@spacefactor 
+l.60 ...f{asunto} = [alta\_usuario \mid invitació
+                                                  n \mid aviso\_plazos]
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Extra \endcsname.
-<argument> ...irmod.pdf width\GPT@page \endcsname 
-                                                  bp
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Please use \mathaccent for accents in math mode.
-\filename@base ...acefactor \spacefactor }\accent 
-                                                  126 n\egroup \spacefactor ...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ccent 126 n\egroup \spacefactor 
-                                                  \accent@spacefactor \penal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ctor \spacefactor }\spacefactor 
-                                                  \accent@spacefactor adirmod
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Extra \endcsname.
-<argument> ...ase .pdf height\GPT@page \endcsname 
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-LaTeX Warning: Command \\ invalid in math mode on input line 35.
-
-
-! LaTeX Error: Command \\ unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Please use \mathaccent for accents in math mode.
-\filename@base ...acefactor \spacefactor }\accent 
-                                                  126 n\egroup \spacefactor ...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ccent 126 n\egroup \spacefactor 
-                                                  \accent@spacefactor \penal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ctor \spacefactor }\spacefactor 
-                                                  \accent@spacefactor adirmod
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Extra \endcsname.
-<argument> ...ase .pdf height\GPT@page \endcsname 
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-LaTeX Warning: Command \\ invalid in math mode on input line 35.
-
-
-! LaTeX Error: Command \\ unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Please use \mathaccent for accents in math mode.
-\filename@base ...acefactor \spacefactor }\accent 
-                                                  126 n\egroup \spacefactor ...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ccent 126 n\egroup \spacefactor 
-                                                  \accent@spacefactor \penal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ctor \spacefactor }\spacefactor 
-                                                  \accent@spacefactor adirmod
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Extra \endcsname.
-\Gin@urx ...n@base .pdf width\GPT@page \endcsname 
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm ignoring this, since I wasn't doing a \csname.
-
-File: a\penalty \@M \hskip \z@skip \unhbox \voidb@x \bgroup \let \unhbox \voidb
-@x \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \spacefa
-ctor }\accent 126 n\egroup \spacefactor \accent@spacefactor \penalty \@M \hskip
- \z@skip \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \s
-pacefactor }\spacefactor \accent@spacefactor adirmod.pdf Graphic file (type pdf
-)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Please use \mathaccent for accents in math mode.
-\filename@base ...acefactor \spacefactor }\accent 
-                                                  126 n\egroup \spacefactor ...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-! Extra }, or forgotten \endgroup.
-\filename@base ...acefactor }\accent 126 n\egroup 
-                                                  \spacefactor \accent@space...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ccent 126 n\egroup \spacefactor 
-                                                  \accent@spacefactor \penal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `\spacefactor' in math mode.
-\filename@base ...ctor \spacefactor }\spacefactor 
-                                                  \accent@spacefactor adirmod
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Extra \endcsname.
-\@providesfile ... \xdef \csname ver@#1\endcsname 
-                                                  {#2}\endgroup 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-<use a\penalty \@M \hskip \z@skip \unhbox \voidb@x \bgroup \let \unhbox \voidb@
-x \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \spacefac
-tor }\accent 126 n\egroup \spacefactor \accent@spacefactor \penalty \@M \hskip 
-\z@skip \setbox \@tempboxa \hbox {n\global \mathchardef \accent@spacefactor \sp
-acefactor }\spacefactor \accent@spacefactor adirmod.pdf>
-! Missing \endcsname inserted.
-<to be read again> 
-                   \penalty 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-! LaTeX Error: Command \\ unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+l.61 
+     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.66 ...�n Estado} = [evaluado\_por\_expertos \mid
+                                                   evaluado\_por\_adjunto \m...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.67 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (55.76814pt too wide) in paragraph at lines 66--67
+[]\OT1/lmr/bx/n/12 Actualizaci^^Son Es-ta-do \OT1/lmr/m/n/12 = [eva-lua-do[]por
+[]expertos $\OMS/lmsy/m/n/12 j \OML/lmm/m/it/12 evaluado[]por[]adjunto \OMS/lms
+y/m/n/12 j \OML/lmm/m/it/12 validado[]coodinador\OT1/lmr/m/n/12 ]$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 \textbf{Adjuntos} = [Consulta Subárea \mid
+                                                 Asignar Subárea]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 68.
+
 ! Please use \mathaccent for accents in math mode.
-\filename@base ...acefactor \spacefactor }\accent 
-                                                  126 n\egroup \spacefactor ...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.68 ...s} = [Consulta Subárea \mid Asignar Subá
+                                                  rea]
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
 ! You can't use `\spacefactor' in math mode.
-\filename@base ...ccent 126 n\egroup \spacefactor 
-                                                  \accent@spacefactor \penal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.68 ...s} = [Consulta Subárea \mid Asignar Subá
+                                                  rea]
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 ! You can't use `\spacefactor' in math mode.
-\filename@base ...ctor \spacefactor }\spacefactor 
-                                                  \accent@spacefactor adirmod
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.68 ...s} = [Consulta Subárea \mid Asignar Subá
+                                                  rea]
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-! Extra \endcsname.
-<argument> ...print \@empty \else !\fi \endcsname 
-                                                  \ifGPT@viewport \ifdim \Gi...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I'm ignoring this, since I wasn't doing a \csname.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! Extra }, or forgotten $.
-\Gscale@box ...scale@y {#2}\setbox \z@ \hbox {{#3}
-                                                  }\setbox \tw@ \hbox {\Gsca...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\Gscale@box ...cale@y {#2}\setbox \z@ \hbox {{#3}}
-                                                  \setbox \tw@ \hbox {\Gscal...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\Ginclude@pdf ...e \egroup \fi \GPT@clipend \fi }}
-                                                  
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\Gin@setfile ...csname Ginclude@#1\endcsname {#3}}
-                                                  \dp \z@ \z@ \ht \z@ \Gin@r...
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 ...ificación} = [Datos Autentificación \mid
+                                                   Verificar Autentificar]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! \textfont 7 is undefined (character ^^P).
-<inserted text> $
-                 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-Missing character: There is no � in font lmex10!
-Missing character: There is no � in font lmex10!
-! Missing } inserted.
-<inserted text> 
-                }
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+l.93 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
+l.96 ...zos} = nombre + apellidos + [tpo\_inv \mid
+                                                   tpo\_eval] + id\_proyecto...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.97 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (21.49785pt too wide) in paragraph at lines 102--103
+[]\OT1/lmr/bx/n/12 Cambio Es-ta-do \OT1/lmr/m/n/12 = *\OT1/lmr/m/it/12 El es-ta
+-do del pro-yec-to cam-bia de 'sin[]evaluar' a 'ex-per-tos[]evaluando'\OT1/lmr/
+m/n/12 * 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.110 ... Expertos} = [Expertos Seleccionados \mid
+                                                   Expertos Búsqueda \mid e...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 110.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.110 ...[Expertos Seleccionados \mid Expertos Bú
+                                                  squeda \mid email]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.110 ...[Expertos Seleccionados \mid Expertos Bú
+                                                  squeda \mid email]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.110 ...[Expertos Seleccionados \mid Expertos Bú
+                                                  squeda \mid email]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.111 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+[16]
+Overfull \hbox (0.44594pt too wide) in paragraph at lines 118--119
+[]\OT1/lmr/bx/n/12 Consulta Sub^^Sarea \OT1/lmr/m/n/12 = *\OT1/lmr/m/it/12 Con-
+sul-ta de las sub^^Sareas don-de tra-ba-ja el usua-rio, el id[]usuario
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.130 ...luación} = [id\_modelo + estructura \mid
+                                                   ID Modelo]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.131 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.161 ...bf{Expertos} = [Parámetros Consulta \mid
+                                                   Resultado Consulta \mid P...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 161.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.161 ...nsulta \mid Resultado Consulta \mid Pará
+                                                  metros Búsqueda \mid Resu...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.161 ...nsulta \mid Resultado Consulta \mid Pará
+                                                  metros Búsqueda \mid Resu...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.161 ...nsulta \mid Resultado Consulta \mid Pará
+                                                  metros Búsqueda \mid Resu...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 161.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.161 ...d Resultado Consulta \mid Parámetros Bú
+                                                  squeda \mid Resultado Bús...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.161 ...d Resultado Consulta \mid Parámetros Bú
+                                                  squeda \mid Resultado Bús...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.161 ...d Resultado Consulta \mid Parámetros Bú
+                                                  squeda \mid Resultado Bús...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 161.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.161 ... Parámetros Búsqueda \mid Resultado Bú
+                                                  squeda \mid ID Experto \mi...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.161 ... Parámetros Búsqueda \mid Resultado Bú
+                                                  squeda \mid ID Experto \mi...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.161 ... Parámetros Búsqueda \mid Resultado Bú
+                                                  squeda \mid ID Experto \mi...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.162 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.173 ...tos} = [Relación Expertos-Proyectos \mid
+                                                   Valoración Expertos \mid...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 173.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.173 ...ación Expertos-Proyectos \mid Valoració
+                                                  n Expertos \mid Fin Relaci...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...ación Expertos-Proyectos \mid Valoració
+                                                  n Expertos \mid Fin Relaci...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...ación Expertos-Proyectos \mid Valoració
+                                                  n Expertos \mid Fin Relaci...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 173.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.173 ...id Valoración Expertos \mid Fin Relació
+                                                  n \mid Fecha Asignación \...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...id Valoración Expertos \mid Fin Relació
+                                                  n \mid Fecha Asignación \...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...id Valoración Expertos \mid Fin Relació
+                                                  n \mid Fecha Asignación \...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 173.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.173 ... \mid Fin Relación \mid Fecha Asignació
+                                                  n \mid Nueva Relación \mi...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.173 ... \mid Fin Relación \mid Fecha Asignació
+                                                  n \mid Nueva Relación \mi...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.173 ... \mid Fin Relación \mid Fecha Asignació
+                                                  n \mid Nueva Relación \mi...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 173.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.173 ...mid Fecha Asignación \mid Nueva Relació
+                                                  n \mid Valoración Trabajo]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...mid Fecha Asignación \mid Nueva Relació
+                                                  n \mid Valoración Trabajo]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...mid Fecha Asignación \mid Nueva Relació
+                                                  n \mid Valoración Trabajo]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 173.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.173 ...ión \mid Nueva Relación \mid Valoració
+                                                  n Trabajo]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...ión \mid Nueva Relación \mid Valoració
+                                                  n Trabajo]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.173 ...ión \mid Nueva Relación \mid Valoració
+                                                  n Trabajo]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.174 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+
+Overfull \hbox (39.94719pt too wide) in paragraph at lines 173--174
+[]\OT1/lmr/bx/n/12 Expertos-Proyectos \OT1/lmr/m/n/12 = [Re-la-ci^^Son Expertos
+-Proyectos $\OMS/lmsy/m/n/12 j \OML/lmm/m/it/12 Valoraci[]nExpertos \OMS/lmsy/m
+/n/12 j \OML/lmm/m/it/12 FinRelaci[]n \OMS/lmsy/m/n/12 j
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.191 ...me Evaluación} = [Informe Rechazado \mid
+                                                   Nuevo Informe]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.192 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.193 ...royectos} = [Institución Convocante \mid
+                                                   Fecha límite \mid Plazo ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 193.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.193 ...= [Institución Convocante \mid Fecha lí
+                                                  mite \mid Plazo invitación]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.193 ...= [Institución Convocante \mid Fecha lí
+                                                  mite \mid Plazo invitación]
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 193.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.193 ...= [Institución Convocante \mid Fecha lí
+                                                  mite \mid Plazo invitación]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.193 ...= [Institución Convocante \mid Fecha lí
+                                                  mite \mid Plazo invitación]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 193.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.193 ... \mid Fecha límite \mid Plazo invitació
+                                                  n]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.193 ... \mid Fecha límite \mid Plazo invitació
+                                                  n]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.193 ... \mid Fecha límite \mid Plazo invitació
+                                                  n]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.194 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.194 
+      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! \textfont 7 is undefined (character ^^P).
-<inserted text> $
-                 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-Missing character: There is no � in font lmex10!
-Missing character: There is no � in font lmex10!
-! \textfont 7 is undefined (character ^^P).
-<inserted text> $
-                 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-Missing character: There is no � in font lmex10!
-Missing character: There is no � in font lmex10!
-! \textfont 7 is undefined (character ^^P).
-<inserted text> $
-                 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-Missing character: There is no � in font lmex10!
-Missing character: There is no � in font lmex10!
-! \textfont 7 is undefined (character ^^P).
-<inserted text> $
-                 
-l.35 \imagen{añadirmod.pdf}{10cm}{}{}
-                                      
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
 Missing character: There is no � in font lmex10!
 Missing character: There is no � in font lmex10!
 Missing character: There is no � in font lmex10!
 Missing character: There is no � in font lmex10!
 
-Underfull \vbox (badness 2951) has occurred while \output is active []
+Overfull \hbox (7.52151pt too wide) in paragraph at lines 193--194
+[]\OT1/lmr/bx/n/12 Info Pa-que-tes Pro-yec-tos \OT1/lmr/m/n/12 = [Ins-ti-tu-ci^
+^Son Con-vo-can-te $\OMS/lmsy/m/n/12 j \OML/lmm/m/it/12 Fechal[]$ 
+ []
 
- [7]
-<imagesinterface/convmod.pdf, id=31, 537.00626pt x 337.26pt>
-File: imagesinterface/convmod.pdf Graphic file (type pdf)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.195 ...bf{Información Proyecto} = [Tiempos \mid
+                                                   Consulta Área Proyecto \...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-<use imagesinterface/convmod.pdf>
+
+LaTeX Warning: Command \' invalid in math mode on input line 195.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.195 ...ón Proyecto} = [Tiempos \mid Consulta Á
+                                                  rea Proyecto \mid Cambio E...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.195 ...ón Proyecto} = [Tiempos \mid Consulta Á
+                                                  rea Proyecto \mid Cambio E...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.195 ...ón Proyecto} = [Tiempos \mid Consulta Á
+                                                  rea Proyecto \mid Cambio E...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.196 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.225 \textbf{Invitación} = [Petición \mid
+                                             Aceptación]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 225.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.225 ...Invitación} = [Petición \mid Aceptació
+                                                  n]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.225 ...Invitación} = [Petición \mid Aceptació
+                                                  n]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.225 ...Invitación} = [Petición \mid Aceptació
+                                                  n]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.226 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.241 ...luación} = [id\_modelo + estructura \mid
+                                                   Nuevo Modelo Evaluación ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 241.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.241 ...+ estructura \mid Nuevo Modelo Evaluació
+                                                  n \mid id\_modelo]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.241 ...+ estructura \mid Nuevo Modelo Evaluació
+                                                  n \mid id\_modelo]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.241 ...+ estructura \mid Nuevo Modelo Evaluació
+                                                  n \mid id\_modelo]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.242 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+
+Overfull \hbox (21.20915pt too wide) in paragraph at lines 241--242
+[]\OT1/lmr/bx/n/12 Modelos Eva-lua-ci^^Son \OT1/lmr/m/n/12 = [id[]modelo + es-t
+ruc-tu-ra $\OMS/lmsy/m/n/12 j \OML/lmm/m/it/12 NuevoModeloEvaluaci[]n \OMS/lmsy
+/m/n/12 j \OML/lmm/m/it/12 id[]modelo\OT1/lmr/m/n/12 ]$ 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.259 ...ada + fecha\_salida + fecha\_límite \mid
+                                                   Proyectos]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.260 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Overfull \hbox (3.83087pt too wide) in paragraph at lines 285--286
+[]\OT1/lmr/bx/n/12 Relaci^^Son Expertos-Proyectos \OT1/lmr/m/n/12 = id[]usuario
+ + id[]proyecto + id[]paquete + id[]informe
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.307 ... + (currículum) + (palabras\_clave) \mid
+                                                   Parámetros]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 307.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.307 ...rrículum) + (palabras\_clave) \mid Pará
+                                                  metros]
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.307 ...rrículum) + (palabras\_clave) \mid Pará
+                                                  metros]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.307 ...rrículum) + (palabras\_clave) \mid Pará
+                                                  metros]
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.308 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font lmex10!
+Missing character: There is no � in font lmex10!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20])
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_1.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_1.pdf, id=144, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_1.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_1.pdf>
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_2.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_2.pdf, id=145, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_2.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_2.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imagesinterface/convmostrada.pdf, id=32, 1132.23pt x 578.16pt>
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_3.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_3.pdf, id=146, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_3.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_3.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_4.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_4.pdf, id=147, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_4.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_4.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_5.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_5.pdf, id=148, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_5.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_5.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_6.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_6.pdf, id=149, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_6.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_6.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./imagesinterface/diagramas/DE_7.pdf): 
+PDF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<imagesinterface/diagramas/DE_7.pdf, id=150, 845.1575pt x 597.23125pt>
+File: imagesinterface/diagramas/DE_7.pdf Graphic file (type pdf)
+
+<use imagesinterface/diagramas/DE_7.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./manual [21 <./imagesinterface/diagramas/DE_1.pdf, page is rotated 90 degrees
+>] [22 <./imagesinterface/diagramas/DE_2.pdf, page is rotated 90 degrees>]
+<imagesinterface/acceso.pdf, id=170, 927.465pt x 536.0025pt>
+File: imagesinterface/acceso.pdf Graphic file (type pdf)
+
+<use imagesinterface/acceso.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/introducirdatos.pdf, id=171, 279.0425pt x 142.5325pt>
+File: imagesinterface/introducirdatos.pdf Graphic file (type pdf)
+
+<use imagesinterface/introducirdatos.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/anadirmod.pdf, id=172, 998.73125pt x 528.97626pt>
+File: imagesinterface/anadirmod.pdf Graphic file (type pdf)
+
+<use imagesinterface/anadirmod.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/convmod.pdf, id=173, 537.00626pt x 337.26pt>
+File: imagesinterface/convmod.pdf Graphic file (type pdf)
+
+<use imagesinterface/convmod.pdf> [23 <./imagesinterface/diagramas/DE_3.pdf, pa
+ge is rotated 90 degrees>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imagesinterface/convmostrada.pdf, id=183, 1132.23pt x 578.16pt>
 File: imagesinterface/convmostrada.pdf Graphic file (type pdf)
 
 <use imagesinterface/convmostrada.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imagesinterface/formularios.pdf, id=33, 254.9525pt x 214.8025pt>
+<imagesinterface/formularios.pdf, id=184, 254.9525pt x 214.8025pt>
 File: imagesinterface/formularios.pdf Graphic file (type pdf)
 
 <use imagesinterface/formularios.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imagesinterface/modifmod.pdf, id=34, 995.72pt x 249.93375pt>
+<imagesinterface/modifmod.pdf, id=185, 995.72pt x 249.93375pt>
 File: imagesinterface/modifmod.pdf Graphic file (type pdf)
 
-<use imagesinterface/modifmod.pdf> [8 <./imagesinterface/acceso.pdf> <./imagesi
-nterface/introducirdatos.pdf>]
+<use imagesinterface/modifmod.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.62 con las acciones que puede realizar. (#
-                                            #Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<imagesinterface/corprinc.pdf, id=186, 770.78204pt x 453.13551pt>
+File: imagesinterface/corprinc.pdf Graphic file (type pdf)
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.62 con las acciones que puede realizar. (##
-                                             Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<use imagesinterface/corprinc.pdf>
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.62 ...as acciones que puede realizar. (##Figura#
-                                                  #).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.62 ...s acciones que puede realizar. (##Figura##
-                                                  ).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<imagesinterface/selcor.pdf, id=187, 770.78204pt x 453.13551pt>
+File: imagesinterface/selcor.pdf Graphic file (type pdf)
 
+<use imagesinterface/selcor.pdf> [24 <./imagesinterface/diagramas/DE_4.pdf, pag
+e is rotated 90 degrees>]
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 una opción llamada 
-                           Leer Informe Final. Tras esta acción, podrá r...
+<imagesinterface/modinf.pdf, id=197, 757.98582pt x 453.13551pt>
+File: imagesinterface/modinf.pdf Graphic file (type pdf)
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<use imagesinterface/modinf.pdf>
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+<imagesinterface/opcor.pdf, id=198, 757.98582pt x 453.13551pt>
+File: imagesinterface/opcor.pdf Graphic file (type pdf)
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 una opción llamada Leer Informe Final
-                                               . Tras esta acción, podrá r...
+<use imagesinterface/opcor.pdf>
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<imagesinterface/valinf.pdf, id=199, 770.78204pt x 453.13551pt>
+File: imagesinterface/valinf.pdf Graphic file (type pdf)
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+<use imagesinterface/valinf.pdf>
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 llamada 
-               Validar. Esta acción le permitirá la validación automát...
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<imagesinterface/adjprinc.pdf, id=200, 770.78204pt x 453.13551pt>
+File: imagesinterface/adjprinc.pdf Graphic file (type pdf)
 
+<use imagesinterface/adjprinc.pdf>
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 llamada Validar
-                        . Esta acción le permitirá la validación automát...
+<imagesinterface/seladj.pdf, id=201, 770.78204pt x 453.13551pt>
+File: imagesinterface/seladj.pdf Graphic file (type pdf)
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<use imagesinterface/seladj.pdf> [25 <./imagesinterface/diagramas/DE_5.pdf, pag
+e is rotated 90 degrees>]
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.70 ...te envío a la institución convocante. (#
-                                                  #Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+LaTeX Warning: Text page 26 contains only floats.
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.70 ...e envío a la institución convocante. (##
-                                                  Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+[26 <./imagesinterface/diagramas/DE_6.pdf, page is rotated 90 degrees> <./image
+sinterface/diagramas/DE_7.pdf, page is rotated 90 degrees>]
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.70 ...o a la institución convocante. (##Figura#
-                                                  #).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.70 ... a la institución convocante. (##Figura##
-                                                  ).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<imagesinterface/listaexp.pdf, id=227, 757.98582pt x 453.13551pt>
+File: imagesinterface/listaexp.pdf Graphic file (type pdf)
 
-[9 <./imagesinterface/convmod.pdf> <./imagesinterface/convmostrada.pdf> <./imag
-esinterface/formularios.pdf>]
-! You can't use `macro parameter character #' in horizontal mode.
-l.75 ...entes acciones que puede llevar a cabo. (#
-                                                  #Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<use imagesinterface/listaexp.pdf>
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.75 ...ntes acciones que puede llevar a cabo. (##
-                                                  Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.75 ...ciones que puede llevar a cabo. (##Figura#
-                                                  #).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<imagesinterface/coneval.pdf, id=228, 757.98582pt x 453.13551pt>
+File: imagesinterface/coneval.pdf Graphic file (type pdf)
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.75 ...iones que puede llevar a cabo. (##Figura##
-                                                  ).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+<use imagesinterface/coneval.pdf> [27 <./imagesinterface/acceso.pdf> <./imagesi
+nterface/introducirdatos.pdf> <./imagesinterface/anadirmod.pdf>]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+<imagesinterface/inffinal.pdf, id=253, 757.98582pt x 453.13551pt>
+File: imagesinterface/inffinal.pdf Graphic file (type pdf)
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.80 ...iversos expertos. Tendrá la opción de 
-                                                  Realizar Informe Final,
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<use imagesinterface/inffinal.pdf>
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+<imagesinterface/opinf.pdf, id=254, 757.98582pt x 453.13551pt>
+File: imagesinterface/opinf.pdf Graphic file (type pdf)
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.80 ...� la opción de Realizar Informe Final
-                                                  ,
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<use imagesinterface/opinf.pdf> [28 <./imagesinterface/convmod.pdf> <./imagesin
+terface/convmostrada.pdf> <./imagesinterface/formularios.pdf>]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 de 
-          Finalizar Informe Final con la que ya dará por terminado su red...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 de Finalizar Informe Final
-                                    con la que ya dará por terminado su red...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.83 ... redacción y no podrá modificar más. (#
-                                                  #Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.83 ...redacción y no podrá modificar más. (##
-                                                  Figura##).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.83 ...ón y no podrá modificar más. (##Figura#
-                                                  #).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in horizontal mode.
-l.83 ...�n y no podrá modificar más. (##Figura##
-                                                  ).
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-<imagesinterface/realizareval.pdf, id=76, 990.70125pt x 328.22626pt>
+<imagesinterface/realizareval.pdf, id=277, 990.70125pt x 328.22626pt>
 File: imagesinterface/realizareval.pdf Graphic file (type pdf)
 
 <use imagesinterface/realizareval.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imagesinterface/evalexp.pdf, id=77, 800.9925pt x 570.13pt>
+<imagesinterface/evalexp.pdf, id=278, 800.9925pt x 570.13pt>
 File: imagesinterface/evalexp.pdf Graphic file (type pdf)
 
 <use imagesinterface/evalexp.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imagesinterface/saveend.pdf, id=78, 170.6375pt x 33.12375pt>
+<imagesinterface/saveend.pdf, id=279, 170.6375pt x 33.12375pt>
 File: imagesinterface/saveend.pdf Graphic file (type pdf)
 
 <use imagesinterface/saveend.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [10 <./imagesinterface/modifmod.pdf>] (./index.php
+) [29 <./imagesinterface/modifmod.pdf> <./imagesinterface/corprinc.pdf>]
+(./implementacion/index.php
 LaTeX Font Info:    Try loading font information for OML+lmr on input line 1.
-
-(/usr/share/texmf/tex/latex/lm/omllmr.fd
+ (/usr/share/texmf/tex/latex/lm/omllmr.fd
 File: omllmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
 (Font)              Font shape `OML/lmm/m/it' tried instead on input line 1.
+ [30 <./imagesinterface/selcor.pdf> <./imagesinterface/modinf.pdf>]
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 2.
 
@@ -1507,8 +1993,6 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 4.
-[11 <./imagesinterface/realizareval.pdf> <./imagesinterface/evalexp.pdf> <./ima
-gesinterface/saveend.pdf>]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -1595,6 +2079,7 @@ l.10      última la numeración,
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
+[31 <./imagesinterface/opcor.pdf> <./imagesinterface/valinf.pdf>]
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
 with LaTeX.
@@ -1765,6 +2250,10 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [32 <./imagesinterface/adjprinc.pdf> <./imagesinterface/seladj.pdf>]
+
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
 
@@ -1872,24 +2361,385 @@ l.28 ... Revisión de Proyectos de Investigación
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
+[33 <./imagesinterface/listaexp.pdf> <./imagesinterface/coneval.pdf>] [34 <./im
+agesinterface/inffinal.pdf> <./imagesinterface/opinf.pdf>] [35 <./imagesinterfa
+ce/realizareval.pdf> <./imagesinterface/evalexp.pdf> <./imagesinterface/saveend
+.pdf>]
 Overfull \hbox (12.76065pt too wide) in paragraph at lines 73--75
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./settings.php)
+) (./implementacion/settings.php) [36] (./implementacion/js/evalmodels.js
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 17--18
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ..."El primer elemento debe ser una sección"
+                                                  );
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ..."El primer elemento debe ser una sección"
+                                                  );
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (24.76077pt too wide) in paragraph at lines 44--45
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 45--46
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 52--53
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-(./js/main.js
+ [37]
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 65--66
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70                     str += 'Opción 
+                                         '+(i+1)+': <input type="text" name=...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70                     str += 'Opción 
+                                         '+(i+1)+': <input type="text" name=...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (30.76083pt too wide) in paragraph at lines 70--71
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89         alert("Sólo 
+                          se puede modificar un modelo a la vez");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89         alert("Sólo 
+                          se puede modificar un modelo a la vez");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125 ...irm("Si "+str+" un modelo de evaluación 
+                                                  que ya se ha "
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125 ...irm("Si "+str+" un modelo de evaluación 
+                                                  que ya se ha "
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126                       +"empleado en algún 
+                                                 "
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126                       +"empleado en algún 
+                                                 "
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127                       +"proyecto afectará 
+                                                 a la consistencia de la inf...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127                       +"proyecto afectará 
+                                                 a la consistencia de la inf...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 ...rá a la consistencia de la información 
+                                                  "
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 ...rá a la consistencia de la información 
+                                                  "
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (30.76083pt too wide) in paragraph at lines 127--128
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...                +"en el sistema. ¿Desea 
+                                                  continuar de todos modos?");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...                +"en el sistema. ¿Desea 
+                                                  continuar de todos modos?");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) (./implementacion/js/evalreports.js
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[39]
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50         res = confirm("¡Advertencia!
+                                           Este informe de evaluación ha si...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50         res = confirm("¡Advertencia!
+                                           Este informe de evaluación ha si...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...�Advertencia! Este informe de evaluación 
+                                                  ha sido ya "
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...�Advertencia! Este informe de evaluación 
+                                                  ha sido ya "
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 50--51
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ...          +"finalizado por usted. ¿Desea 
+                                                  continuar de todos modos?");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ...          +"finalizado por usted. ¿Desea 
+                                                  continuar de todos modos?");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (30.76083pt too wide) in paragraph at lines 51--52
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./implementacion/js/main.js [40]
 Overfull \hbox (24.76077pt too wide) in paragraph at lines 40--41
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[14]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2053,37 +2903,208 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94     alert("Esta funcionalidad no está 
-                                            implementada");
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94     alert("Esta funcionalidad no está 
-                                            implementada");
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-(./source/loginout.php
+ [41]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94     alert("Esta funcionalidad no está 
+                                            implementada");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94     alert("Esta funcionalidad no está 
+                                            implementada");
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) (./implementacion/js/projects.js)
+(./implementacion/source/evaluation_models.php
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...SION['msg'] = "Modelo guardado con éxito"
+                                                  ;
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...SION['msg'] = "Modelo guardado con éxito"
+                                                  ;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[42]) (./implementacion/source/evaluation_reports.php
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 ...ION['msg'] = "Informe guardado con éxito"
+                                                  ;
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 ...ION['msg'] = "Informe guardado con éxito"
+                                                  ;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 39--40
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40   $_SESSION['msg'] = "Evaluación 
+                                       guardada con éxito";
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40   $_SESSION['msg'] = "Evaluación 
+                                       guardada con éxito";
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ...'msg'] = "Evaluación guardada con éxito"
+                                                  ;
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ...'msg'] = "Evaluación guardada con éxito"
+                                                  ;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[43]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62   $_SESSION['msg'] = "Evaluación 
+                                       finalizada con éxito";
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62   $_SESSION['msg'] = "Evaluación 
+                                       finalizada con éxito";
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...sg'] = "Evaluación finalizada con éxito"
+                                                  ;
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...sg'] = "Evaluación finalizada con éxito"
+                                                  ;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) (./implementacion/source/loginout.php
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2093,7 +3114,7 @@ Overfull \hbox (24.76077pt too wide) in paragraph at lines 15--16
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[16]
+[44]
 Overfull \hbox (0.76053pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2108,7 +3129,640 @@ Overfull \hbox (6.76059pt too wide) in paragraph at lines 58--59
 [][][][][][][][][][][][][][][][] 
  []
 
-) (./source/mysql.php [17]) (./theme/login.php
+) (./implementacion/source/mysql.php [45])
+(./implementacion/theme/evaluation_models.php [46]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ef="javascript:new_model();" alt="Añadir 
+                                                  modelo">Añadir</a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ef="javascript:new_model();" alt="Añadir 
+                                                  modelo">Añadir</a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ew_model();" alt="Añadir modelo">Añadir<
+                                                  /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ew_model();" alt="Añadir modelo">Añadir<
+                                                  /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 11--12
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (24.76077pt too wide) in paragraph at lines 12--13
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 13--14
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...<div class="title">Modelos de evaluación 
+                                                  registrados</div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ...<div class="title">Modelos de evaluación 
+                                                  registrados</div>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20             <td>Nº 
+                         Proyectos</td><td>Nº Secciones</td><td>Nº Element...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20             <td>Nº 
+                         Proyectos</td><td>Nº Secciones</td><td>Nº Element...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20             <td>Nº Proyectos</td><td>Nº 
+                                               Secciones</td><td>Nº Element...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20             <td>Nº Proyectos</td><td>Nº 
+                                               Secciones</td><td>Nº Element...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...oyectos</td><td>Nº Secciones</td><td>Nº 
+                                                  Elementos</td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...oyectos</td><td>Nº Secciones</td><td>Nº 
+                                                  Elementos</td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 20--21
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...s="title">'.$type.' modelo de evaluación<
+                                                  /div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...s="title">'.$type.' modelo de evaluación<
+                                                  /div>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 110--111
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 119--120
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125           $str .= 'Opción 
+                                 '.($i+1).': <input type="text" name="sec['....
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125           $str .= 'Opción 
+                                 '.($i+1).': <input type="text" name="sec['....
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 126--127
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 147--148
+[][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174             <li>Sección<
+                               /li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174             <li>Sección<
+                               /li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175             <li>Área 
+                            de texto</li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175             <li>Área 
+                            de texto</li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180                 <option value="default">Nº 
+                                                  de opciones</option>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180                 <option value="default">Nº 
+                                                  de opciones</option>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192                 <option value="default">Nº 
+                                                  de opciones</option>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192                 <option value="default">Nº 
+                                                  de opciones</option>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.204                 <option value="default">Nº 
+                                                  de opciones</option>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.204                 <option value="default">Nº 
+                                                  de opciones</option>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...script:add_form(\'sec\')" alt="">Añadir<
+                                                  /a></li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...script:add_form(\'sec\')" alt="">Añadir<
+                                                  /a></li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 218--219
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 ...script:add_form(\'are\')" alt="">Añadir<
+                                                  /a></li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 ...script:add_form(\'are\')" alt="">Añadir<
+                                                  /a></li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 219--220
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...script:add_form(\'fie\')" alt="">Añadir<
+                                                  /a></li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...script:add_form(\'fie\')" alt="">Añadir<
+                                                  /a></li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 220--221
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.221 ...script:add_form(\'lst\')" alt="">Añadir<
+                                                  /a></li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.221 ...script:add_form(\'lst\')" alt="">Añadir<
+                                                  /a></li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 221--222
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 ...script:add_form(\'rad\')" alt="">Añadir<
+                                                  /a></li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 ...script:add_form(\'rad\')" alt="">Añadir<
+                                                  /a></li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 222--223
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.223 ...script:add_form(\'chk\')" alt="">Añadir<
+                                                  /a></li>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.223 ...script:add_form(\'chk\')" alt="">Añadir<
+                                                  /a></li>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 223--224
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (./implementacion/theme/evaluation_reports.php [50]
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 18--19
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 140--141
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 141--142
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53])
+(./implementacion/theme/login.php
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2141,7 +3795,6 @@ Overfull \hbox (0.76053pt too wide) in paragraph at lines 24--25
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[18]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2228,7 +3881,10 @@ l.39 ...ef="" alt="">¿Ha olvidado su contraseña?
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/main.php [19]
+) (./implementacion/theme/main.php [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2334,121 +3990,121 @@ Type  H <return>  for immediate help.
                                                   
 l.66     ."Proyectos de Investigación"
                                        ;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109     <div id="title">Gestión 
+                                   Distribuída de la
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109     <div id="title">Gestión 
+                                   Distribuída de la
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109     <div id="title">Gestión Distribuída 
+                                                de la
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109     <div id="title">Gestión Distribuída 
+                                                de la
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110       Revisión 
+                      de Proyectos de Investigación</div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110       Revisión 
+                      de Proyectos de Investigación</div>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 ...Revisión de Proyectos de Investigación<
+                                                  /div>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 ...Revisión de Proyectos de Investigación<
+                                                  /div>
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109     <div id="title">Gestión 
-                                   Distribuída de la
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109     <div id="title">Gestión 
-                                   Distribuída de la
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109     <div id="title">Gestión Distribuída 
-                                                de la
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109     <div id="title">Gestión Distribuída 
-                                                de la
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110       Revisión 
-                      de Proyectos de Investigación</div>
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110       Revisión 
-                      de Proyectos de Investigación</div>
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
-h LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...Revisión de Proyectos de Investigación<
-                                                  /div>
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...Revisión de Proyectos de Investigación<
-                                                  /div>
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
+ [56]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2622,9 +4278,6 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
 Overfull \hbox (6.76059pt too wide) in paragraph at lines 162--163
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2721,6 +4374,10 @@ Overfull \hbox (6.76059pt too wide) in paragraph at lines 170--171
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
 
@@ -2811,7 +4468,620 @@ l.180           Juan Miguel Torres Triviño<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (./theme/users.php [22]
+) (./implementacion/theme/projects.php
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...       alt="">Ver / Modificar evaluación<
+                                                  /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...       alt="">Ver / Modificar evaluación<
+                                                  /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17              alt="">Validar evaluación<
+                                             /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17              alt="">Validar evaluación<
+                                             /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...ascript:woimp();" alt="">Asignar subárea<
+                                                  /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...ascript:woimp();" alt="">Asignar subárea<
+                                                  /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ...     <td></td><td>Nombre</td><td>Subárea<
+                                                  /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ...     <td></td><td>Nombre</td><td>Subárea<
+                                                  /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24             <td>Estado de la evaluación<
+                                              /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24             <td>Estado de la evaluación<
+                                              /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 ..."without_eval": $state = "Sin evaluación"
+                                                  ; break;
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 ..."without_eval": $state = "Sin evaluación"
+                                                  ; break;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[58]
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 40--41
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 49--50
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75              alt="">Realizar evaluación<
+                                              /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75              alt="">Realizar evaluación<
+                                              /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77              alt="">Finalizar evaluación<
+                                               /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77              alt="">Finalizar evaluación<
+                                               /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...ref="javascript:woimp();" alt="">Subárea 
+                                                  errónea</a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...ref="javascript:woimp();" alt="">Subárea 
+                                                  errónea</a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...script:woimp();" alt="">Subárea errónea<
+                                                  /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...script:woimp();" alt="">Subárea errónea<
+                                                  /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...<td>Exps.</td><td>Nombre</td><td>Subárea<
+                                                  /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...<td>Exps.</td><td>Nombre</td><td>Subárea<
+                                                  /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86             <td>Estado de la evaluación<
+                                              /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86             <td>Estado de la evaluación<
+                                              /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 ..."without_eval": $state = "Sin evaluación"
+                                                  ; break;
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 ..."without_eval": $state = "Sin evaluación"
+                                                  ; break;
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Overfull \hbox (24.76077pt too wide) in paragraph at lines 109--110
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 ...>Nombre</td><td>Estado de la evaluación<
+                                                  /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 ...>Nombre</td><td>Estado de la evaluación<
+                                                  /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...         alt="Ver informe de evaluación"
+                                                  >
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...         alt="Ver informe de evaluación"
+                                                  >
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 151--152
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.76065pt too wide) in paragraph at lines 164--165
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.76059pt too wide) in paragraph at lines 165--166
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175              alt="">Realizar evaluación<
+                                               /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175              alt="">Realizar evaluación<
+                                               /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177              alt="">Finalizar evaluación<
+                                                /a>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177              alt="">Finalizar evaluación<
+                                                /a>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.182 ...    <td></td><td>Nombre</td><td>Subárea<
+                                                  /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.182 ...    <td></td><td>Nombre</td><td>Subárea<
+                                                  /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183             <td>Estado de la evaluación<
+                                               /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183             <td>Estado de la evaluación<
+                                               /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184             <td>Fecha de asignación<
+                                           /td><td>Fecha límite</td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184             <td>Fecha de asignación<
+                                           /td><td>Fecha límite</td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
+h LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...cha de asignación</td><td>Fecha límite<
+                                                  /td>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...cha de asignación</td><td>Fecha límite<
+                                                  /td>
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Overfull \hbox (24.76077pt too wide) in paragraph at lines 197--198
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61])
+(./implementacion/theme/users.php
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
 with LaTeX.
@@ -2871,10 +5141,7 @@ l.35         $position .= "<strong>Subárea<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
+[62]
 
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
@@ -2930,6 +5197,10 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+
 ! Package inputenc Error: Unicode char \u8:�\expandafter not set up for use wit
 h LaTeX.
 
@@ -2956,25 +5227,41 @@ l.109       <li class="loff">Subáreas<
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
+) (./implementacion/theme/css/evalmodels.css [64]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24])
-[25] (./iso1.aux)
+ [65])
+(./implementacion/theme/css/evalreports.css [66])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+(./implementacion/theme/css/login.css) (./implementacion/theme/css/main.css
+[68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69])
+(./implementacion/theme/css/users.php [70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72])
+[73] (./iso1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4321 strings out of 94074
- 55671 string characters out of 1165152
- 141492 words of memory out of 1500000
- 7493 multiletter control sequences out of 10000+50000
- 48766 words of font info for 47 fonts, out of 1200000 for 2000
+ 4514 strings out of 94074
+ 61260 string characters out of 1165152
+ 144772 words of memory out of 1500000
+ 7621 multiletter control sequences out of 10000+50000
+ 51743 words of font info for 48 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 39i,13n,43p,1063b,1831s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/s
+ 39i,13n,43p,1063b,1833s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/s
 hare/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/l
@@ -2982,9 +5269,9 @@ mr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmsy10.pfb>
-Output written on iso1.pdf (25 pages, 1657944 bytes).
+Output written on iso1.pdf (73 pages, 2893066 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
+ 513 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
