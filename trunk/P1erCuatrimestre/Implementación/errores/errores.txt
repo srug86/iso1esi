@@ -4,3 +4,11 @@
       Saludos dsd la alu
 
 	Respecto a los adjuntos y coordinadores,mas que un error, es una observación, creo que sería mejor llamar a sus opciones "Realizar Informe Final","Finalizar Informe Final","Validar Informe Final" y "Ver/modificar Informe Final" en vez de evaluación, ya que así lo hemos reflejado en los dfd.
+
+	En la parte de la implementación del secretario, a la hora de crear una estructura de un nuevo modelo de evaluación, en la sección "Ver" "CONVOCATORIAS" los paquetes de proyectos seleccionados no se corresponden con los paquetes de proyectos registrados en la base de datos.
+
+En la parte de Expertos, la funcionalidad de Finalizar evaluación (de la parte superior) no cambia el estado. En cambio, el botón de Finalizar dentro del informe de evaluación si lo cambia.
+
+En la parte de Adjuntos, el botón finalizar no pone el estado como "validado por el adjunto" sino "validado por el coordinador".
+
+En la vista de Adjuntos, cuando consultamos (la lupa) los informes de los expertos sale un "Notice: ....". Hay una captura de miguelito.
