@@ -1,0 +1,18 @@
+Árbol de pruebas
+
+|--Secretario (5699591)	
+|	Luis Muñoz Villarreal
+|--------	Coordinador (5692939) (Área 3)
+|	|	Sergio de la Rubia García-Carpintero	
+|	|--------Adjunto  (5701903) (Subárea 4)
+|	|	|	Juan Miguel Torres Triviño
+|	|	|---------Experto (70582355) ==> 5-1 (expecting evaluation)
+|	|	|	`	Alicia Serrano Sánchez
+| 	|	`---------Experto (5702008) ==> 5-1 (expecting evaluation)
+|	|		`	Miguel Millán Sánchez-Grande
+|	|---------	Adjunto (5692919) (Subárea 1)
+|	|	|	Rafael Ferrán González
+|	|	`----------Experto (5699592)==> 5-2 (expecting evaluation)
+`	`		`	Alejandro Fernández Cabeza 
+
+
