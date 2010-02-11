@@ -1,4 +1,6 @@
       Nos hemos dado cuenta Sergio y yo, que una vez validada una evaluación por un usuario superior en la jerarquía de la empresa, cualquier usuario con menor rango que hubiera tomado parte en la evaluación puede modificar dicha evaluación,  es decir, por ejemplo, cuando el coordinador ha validado un informe, el adjunto e incluso, los expertos pueden volver a modificarlo. Se supone que, en este caso, una vez que el coordinador lo valida debería desaparecer de la pantalla del adjunto, no? Al igual que cuando el adjunto lo valida, debería desaparecer de la pantalla de los expertos.
+
+	
       Saludos dsd la alu
 
 	Respecto a los adjuntos y coordinadores,mas que un error, es una observación, creo que sería mejor llamar a sus opciones "Realizar Informe Final","Finalizar Informe Final","Validar Informe Final" y "Ver/modificar Informe Final" en vez de evaluación, ya que así lo hemos reflejado en los dfd.
