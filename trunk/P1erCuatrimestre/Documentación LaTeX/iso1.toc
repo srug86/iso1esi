@@ -1,54 +1,63 @@
 \select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}
-\contentsline {section}{\numberline {2}Especificaci\IeC {\'o}n de Requisitos}{3}
-\contentsline {subsection}{\numberline {2.1}Requisitos iniciales de Sistema}{3}
-\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis de requisitos del sistema}{4}
-\contentsline {section}{\numberline {3}An\IeC {\'a}lisis de sistema}{6}
-\contentsline {subsection}{\numberline {3.1}Diagrama de flujo de datos}{6}
-\contentsline {subsection}{\numberline {3.2}Definici\IeC {\'o}n de Flujo de Datos}{6}
-\contentsline {subsubsection}{\numberline {3.2.1}Almacenes de datos}{6}
-\contentsline {subsubsection}{\numberline {3.2.2}Datos Elementales}{15}
-\contentsline {subsubsection}{\numberline {3.2.3}Flujos de datos}{16}
-\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del Sistema}{21}
-\contentsline {subsection}{\numberline {4.1}Diagrama de Dise\IeC {\~n}o Estructurado}{21}
-\contentsline {section}{\numberline {5}Base de Datos}{22}
-\contentsline {subsection}{\numberline {5.1}Diagrama Entidad/Interrelaci\IeC {\'o}n}{22}
-\contentsline {subsection}{\numberline {5.2}Diagrama Relacional}{22}
-\contentsline {section}{\numberline {6}Manual de usuario}{22}
-\contentsline {subsection}{\numberline {6.1}Introducci\IeC {\'o}n}{22}
-\contentsline {subsection}{\numberline {6.2}Inicio de sesi\IeC {\'o}n}{23}
-\contentsline {subsection}{\numberline {6.3}Secretario}{23}
-\contentsline {subsubsection}{\numberline {6.3.1}Crear un modelo de evaluaci\IeC {\'o}n}{23}
-\contentsline {subsubsection}{\numberline {6.3.2}Modificar o eliminar un modelo de evaluaci\IeC {\'o}n}{24}
-\contentsline {subsection}{\numberline {6.4}Coordinador}{24}
-\contentsline {subsubsection}{\numberline {6.4.1}Ver/Modificar informe final}{25}
-\contentsline {subsubsection}{\numberline {6.4.2}Validar informe final}{25}
-\contentsline {subsection}{\numberline {6.5}Adjunto}{25}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{4}
+\contentsline {section}{\numberline {2}Especificaci\IeC {\'o}n de requisitos}{4}
+\contentsline {subsection}{\numberline {2.1}Requisitos iniciales de sistema}{4}
+\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lisis de requisitos del sistema}{5}
+\contentsline {subsubsection}{\numberline {2.2.1}Usuarios}{5}
+\contentsline {subsubsection}{\numberline {2.2.2}Paquete de proyectos}{5}
+\contentsline {subsubsection}{\numberline {2.2.3}Secretario}{6}
+\contentsline {subsubsection}{\numberline {2.2.4}Coordinador}{6}
+\contentsline {subsubsection}{\numberline {2.2.5}\IeC {\'A}rea}{6}
+\contentsline {subsubsection}{\numberline {2.2.6}Adjunto}{6}
+\contentsline {subsubsection}{\numberline {2.2.7}Sub\IeC {\'a}rea}{7}
+\contentsline {subsubsection}{\numberline {2.2.8}Expertos}{7}
+\contentsline {section}{\numberline {3}An\IeC {\'a}lisis de sistema}{8}
+\contentsline {subsection}{\numberline {3.1}Diagrama de flujo de datos}{8}
+\contentsline {subsection}{\numberline {3.2}Definici\IeC {\'o}n de flujo de datos}{8}
+\contentsline {subsubsection}{\numberline {3.2.1}Almacenes de datos}{8}
+\contentsline {subsubsection}{\numberline {3.2.2}Datos Elementales}{17}
+\contentsline {subsubsection}{\numberline {3.2.3}Flujos de datos}{17}
+\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del sistema}{23}
+\contentsline {subsection}{\numberline {4.1}Diagrama de dise\IeC {\~n}o estructurado}{23}
+\contentsline {section}{\numberline {5}Base de datos}{23}
+\contentsline {subsection}{\numberline {5.1}Diagrama Entidad/Interrelaci\IeC {\'o}n}{23}
+\contentsline {subsection}{\numberline {5.2}Diagrama relacional}{23}
+\contentsline {section}{\numberline {6}Manual de usuario}{23}
+\contentsline {subsection}{\numberline {6.1}Introducci\IeC {\'o}n}{23}
+\contentsline {subsection}{\numberline {6.2}Inicio de sesi\IeC {\'o}n}{24}
+\contentsline {subsection}{\numberline {6.3}Secretario}{25}
+\contentsline {subsubsection}{\numberline {6.3.1}Crear un modelo de evaluaci\IeC {\'o}n}{25}
+\contentsline {subsubsection}{\numberline {6.3.2}Modificar o eliminar un modelo de evaluaci\IeC {\'o}n}{26}
+\contentsline {subsection}{\numberline {6.4}Coordinador}{26}
+\contentsline {subsubsection}{\numberline {6.4.1}Ver/Modificar informe final}{26}
+\contentsline {subsubsection}{\numberline {6.4.2}Validar informe final}{27}
+\contentsline {subsection}{\numberline {6.5}Adjunto}{27}
 \contentsline {subsubsection}{\numberline {6.5.1}Realizar informe final}{27}
-\contentsline {subsection}{\numberline {6.6}Experto}{29}
-\contentsline {subsubsection}{\numberline {6.6.1}Realizar evaluaci\IeC {\'o}n de un proyecto}{29}
-\contentsline {section}{\numberline {7}Implementaci\IeC {\'o}n}{30}
-\contentsline {subsection}{\numberline {7.1}Introducci\IeC {\'o}n}{30}
-\contentsline {subsection}{\numberline {7.2}C\IeC {\'o}digo fuente}{30}
-\contentsline {subsubsection}{\numberline {7.2.1}index.php}{30}
-\contentsline {subsubsection}{\numberline {7.2.2}settings.php}{36}
-\contentsline {subsubsection}{\numberline {7.2.3}evalmodels.js}{37}
-\contentsline {subsubsection}{\numberline {7.2.4}evalreports.js}{39}
-\contentsline {subsubsection}{\numberline {7.2.5}main.js}{40}
-\contentsline {subsubsection}{\numberline {7.2.6}projects.js}{42}
-\contentsline {subsubsection}{\numberline {7.2.7}evaluation\_models.php}{42}
-\contentsline {subsubsection}{\numberline {7.2.8}evaluation\_reports.php}{43}
-\contentsline {subsubsection}{\numberline {7.2.9}loginout.php}{44}
-\contentsline {subsubsection}{\numberline {7.2.10}mysql.php}{45}
-\contentsline {subsubsection}{\numberline {7.2.11}evaluation\_models.php}{46}
-\contentsline {subsubsection}{\numberline {7.2.12}evaluation\_reports.php}{50}
-\contentsline {subsubsection}{\numberline {7.2.13}login.php}{54}
-\contentsline {subsubsection}{\numberline {7.2.14}main.php}{54}
-\contentsline {subsubsection}{\numberline {7.2.15}projects.php}{58}
-\contentsline {subsubsection}{\numberline {7.2.16}users.php}{62}
-\contentsline {subsubsection}{\numberline {7.2.17}evalmodels.css}{64}
-\contentsline {subsubsection}{\numberline {7.2.18}evalreports.css}{66}
-\contentsline {subsubsection}{\numberline {7.2.19}login.css}{68}
-\contentsline {subsubsection}{\numberline {7.2.20}main.css}{68}
-\contentsline {subsubsection}{\numberline {7.2.21}users.php}{70}
-\contentsline {section}{\numberline {8}Bibliograf\IeC {\'\i }a}{73}
+\contentsline {subsection}{\numberline {6.6}Experto}{32}
+\contentsline {subsubsection}{\numberline {6.6.1}Realizar evaluaci\IeC {\'o}n de un proyecto}{32}
+\contentsline {section}{\numberline {7}Implementaci\IeC {\'o}n}{33}
+\contentsline {subsection}{\numberline {7.1}Introducci\IeC {\'o}n}{33}
+\contentsline {subsection}{\numberline {7.2}C\IeC {\'o}digo fuente}{33}
+\contentsline {subsubsection}{\numberline {7.2.1}index.php}{33}
+\contentsline {subsubsection}{\numberline {7.2.2}settings.php}{37}
+\contentsline {subsubsection}{\numberline {7.2.3}js/evalmodels.js}{37}
+\contentsline {subsubsection}{\numberline {7.2.4}js/evalreports.js}{40}
+\contentsline {subsubsection}{\numberline {7.2.5}js/main.js}{41}
+\contentsline {subsubsection}{\numberline {7.2.6}js/projects.js}{43}
+\contentsline {subsubsection}{\numberline {7.2.7}source/evaluation\_models.php}{43}
+\contentsline {subsubsection}{\numberline {7.2.8}source/evaluation\_reports.php}{44}
+\contentsline {subsubsection}{\numberline {7.2.9}source/loginout.php}{45}
+\contentsline {subsubsection}{\numberline {7.2.10}source/mysql.php}{46}
+\contentsline {subsubsection}{\numberline {7.2.11}theme/evaluation\_models.php}{47}
+\contentsline {subsubsection}{\numberline {7.2.12}theme/evaluation\_reports.php}{51}
+\contentsline {subsubsection}{\numberline {7.2.13}theme/login.php}{54}
+\contentsline {subsubsection}{\numberline {7.2.14}theme/main.php}{55}
+\contentsline {subsubsection}{\numberline {7.2.15}theme/projects.php}{59}
+\contentsline {subsubsection}{\numberline {7.2.16}theme/users.php}{62}
+\contentsline {subsubsection}{\numberline {7.2.17}theme/css/dialog.php}{65}
+\contentsline {subsubsection}{\numberline {7.2.18}theme/css/evalmodels.css}{67}
+\contentsline {subsubsection}{\numberline {7.2.19}theme/css/evalreports.css}{69}
+\contentsline {subsubsection}{\numberline {7.2.20}theme/css/login.css}{70}
+\contentsline {subsubsection}{\numberline {7.2.21}theme/css/main.css}{71}
+\contentsline {subsubsection}{\numberline {7.2.22}theme/css/users.php}{73}
+\contentsline {section}{\numberline {8}Bibliograf\IeC {\'\i }a}{76}
