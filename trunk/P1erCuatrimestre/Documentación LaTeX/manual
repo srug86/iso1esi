@@ -1,10 +1,10 @@
 \subsection{Introducción}
 
 La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
-aplicación web que incluye los elementos necesarios para una comunicación activa 
-entre el usuario y la información que puede manejar. Cada tipo de usuario podrá 
-manejar diferentes acciones según el rango que tenga en la empresa (secretario,
-coordinador, adjunto o experto).
+aplicación web que incluye los elementos necesarios para una comunicación 
+activa entre el usuario y la información que puede manejar. Cada tipo de 
+usuario podrá manejar diferentes acciones según el rango que tenga en la 
+empresa (secretario, coordinador, adjunto o experto).
 
 La implementación de la práctica incluye todo lo relacionado con la gestión de
 las evaluaciones. Entre las diferentes taréas a realizar se encuentra la
@@ -18,13 +18,12 @@ correspondiente a las funciones que puede realizar con respecto a las
 evaluaciones de informes.
 
 \subsection{Inicio de sesión}
-
-
-La pantalla de inicio de la aplicación se puede observar en la figura \ref{img1}.
+La pantalla de inicio de la aplicación se puede observar en la figura 
+\ref{img1}.
 \imagen{acceso.pdf}{13cm}{\small{Acceso a la aplicación.}}{img1}
 \begin{itemize}
-\item Se introduce el usuario y la contraseña (ver figura \ref{img2}) proporcionados en el correo de 
-alta.
+\item Se introduce el usuario y la contraseña (ver figura \ref{img2}) 
+proporcionados en el correo de alta.
 \imagen{introducirdatos.pdf}{4cm}{\small{Datos del usuario.}}{img2}
 
 \item Si los datos son incorrectos, no se puede acceder a la aplicación y se
@@ -34,13 +33,15 @@ muestra un mensaje de error.
 \subsection{Secretario}
 \subsubsection{Crear un modelo de evaluación}
 \begin{enumerate}
-\item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se puede ver en la figura \ref{sc1}. Se despliega
-los datos que se pueden introducir en un modelo de evaluación.
+\item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se 
+puede ver en la figura \ref{sc1}. Se despliega los datos que se pueden 
+introducir en un modelo de evaluación.
 \imagen{anadirmod.pdf}{10cm}{\small{Añadir modelo de evaluación.}}{sc1}
 \item Ver convocatoria de un paquete de proyectos.
 \begin{itemize}
-\item En la sección CONVOCATORIAS se despliega una lista (figura \ref{sc2}) donde se puede elegir
-el paquete de proyectos del que se desea ver la convocatoria.
+\item En la sección CONVOCATORIAS se despliega una lista (figura \ref{sc2}) 
+donde se puede elegir el paquete de proyectos del que se desea ver la 
+convocatoria.
 \imagen{convmod.pdf}{10cm}{\small{Elección de paquete de proyectos.}}{sc2}
 \item Se elige un paquete de proyectos y se pulsa ``Ver''. A la derecha de la 
 página se muestra la información de la convocatoria (figura \ref{sc3}).
@@ -63,23 +64,30 @@ Se marca el paquete de la convocatoria que se desea modificar y se pulsa
 
 \subsection{Coordinador}
 
-Una vez introducidos los datos de un coordinador, le aparecerá la siguiente ventana 
-con las acciones que puede realizar (figura \ref{c1}).
+Una vez introducidos los datos de un coordinador, aparecerá la siguiente 
+ventana con las acciones que puede realizar (figura \ref{c1}).
 \imagen{corprinc.pdf}{13cm}{\small{Ventana Principal del coordinador.}}{c1}
 \subsubsection{Ver/Modificar informe final}
 \begin{enumerate}
-\item Seleccionar el proyecto deseado de entre los disponibles (ver figura \ref{c2}). Los proyectos asignados se muestran en una tabla.
+\item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
+\ref{c2}). Los proyectos asignados se muestran en una tabla.
 \imagen{selcor.pdf}{13cm}{\small{Selección de proyecto.}}{c2}
 
-\item Para proceder a consultar/modificar el informe final, pulsar ``Ver/Modificar evaluación'' y se expandirá el correspondiente modelo de evaluación (ver figura \ref{c3}).
+\item Para proceder a consultar/modificar el informe final, pulsar 
+``Ver/Modificar evaluación'' y se expandirá el correspondiente modelo de 
+evaluación (ver figura \ref{c3}).
 \imagen{modinf.pdf}{13cm}{\small{Ver/modificar el informe final.}}{c3}
 
-\item Se pulsa ``Guardar'' o ``Finalizar'' como se puede observar en la figura \ref{c4}. El botón ``Guardar'' permite guardar los cambios y editar en posteriores sesiones, mientras que el boton ``Finalizar'' dará por finalizado el informe.
+\item Se pulsa ``Guardar'' o ``Finalizar'' como se puede observar en la figura 
+\ref{c4}. El botón ``Guardar'' permite guardar los cambios y editar en 
+posteriores sesiones, mientras que el boton ``Finalizar'' dará por finalizado 
+el informe.
 \imagen{opcor.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{c4}
 \end{enumerate}
 
 \subsubsection{Validar informe final}
-Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se puede ver en la figura \ref{c5}.
+Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se 
+çpuede ver en la figura \ref{c5}.
 \imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}
 
 \subsection{Adjunto}
@@ -87,22 +95,28 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 \imagen{adjprinc.pdf}{13cm}{\small{Ventana Principal del adjunto.}}{a1}
 \subsubsection{Realizar informe final}
 \begin{enumerate}
-\item Seleccionar el proyecto deseado de entre los disponibles (ver figura \ref{a2}). Los proyectos asignados se muestran en una tabla.
+\item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
+\ref{a2}). Los proyectos asignados se muestran en una tabla.
 \imagen{seladj.pdf}{13cm}{\small{Selección de proyecto.}}{a2}
 
-\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver qué expertos han realizado evaluaciones sobre el proyecto, como se puede ver en la figura \ref{a3}.
+\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver qué 
+expertos han realizado evaluaciones sobre el proyecto, como se puede ver en la 
+figura \ref{a3}.
 \imagen{listaexp.pdf}{13cm}{\small{Expertos del proyecto seleccionado.}}{a3}
 
-\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada por cada uno de los expertos (figura \ref{a4}).
+\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada 
+por cada uno de los expertos (figura \ref{a4}).
 \imagen{coneval.pdf}{13cm}{\small{Consulta evaluación.}}{a4}
 
-\item Para proceder a realizar el informe final, pulsar ``Realizar evaluación'' y se expandirá el correspondiente modelo de evaluación (figura \ref{a5}).
+\item Para proceder a realizar el informe final, pulsar ``Realizar evaluación'' 
+y se expandirá el correspondiente modelo de evaluación (figura \ref{a5}).
 \imagen{inffinal.pdf}{13cm}{\small{Realización informe final.}}{a5}
 
-\item El adjunto podrá ``Guardar'' o ``Finalizar Evaluación'' (figura \ref{a6}), el primero nos permite guardar los cambios y editar en posteriores sesiones, mientras que el segundo dará por finalizado el informe.
-\imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}
+\item El adjunto podrá ``Guardar'' o ``Finalizar Evaluación'' 
+(figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
+posteriores sesiones, mientras que el segundo dará por finalizado el informe.
+\imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}
 \end{enumerate}
-
 
 \subsection{Experto}
 \subsubsection{Realizar evaluación de un proyecto}
@@ -116,7 +130,8 @@ diferentes puntos a evaluar. En la parte izquierda de la pantalla se muestra la
 memoria del proyecto a evaluar, como se puede ver en la figura \ref{img9}.
 \imagen{evalexp.pdf}{13cm}{\small{Realización de evaluación.}}{img9}
 \item Se guardan los cambios realizados en la evaluación con el boton 
-``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura \ref{img10}).
+``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura 
+\ref{img10}).
 \imagen{saveend.pdf}{4cm}{\small{Guardar o finalizar evaluación.}}{img10}
 
 \end{enumerate}
