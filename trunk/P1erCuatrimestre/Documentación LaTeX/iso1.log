@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2009.12.31)  13 FEB 2010 16:04
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2009.12.31)  13 FEB 2010 18:53
 entering extended mode
  %&-line parsing enabled.
 **\input iso1.tex
@@ -481,24 +481,12 @@ driver: pdftex
 \@twosidetrue \@mparswitchtrue 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
+ <logoesi.pdf, id=1, 598.235pt x 845.1575pt>
+File: logoesi.pdf Graphic file (type pdf)
+ <use logoesi.pdf> [1
 
-
-! LaTeX Error: File `logoesi' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 ... Serrano Sánchez}{13 de Febrero del 2010}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./iso1.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logoesi.pdf>] [2] (./iso
+1.toc)
 \tf@toc=\write4
 \openout4 = `iso1.toc'.
 
