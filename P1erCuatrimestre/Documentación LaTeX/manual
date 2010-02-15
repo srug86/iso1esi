@@ -2,15 +2,16 @@
 
 La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
 aplicación web que incluye todo lo necesario para conseguir una comunicación 
-activa entre el usuario y la información que puede manejar. Cada usuario podrá manejar diferentes acciones según el rango que tenga en la 
-empresa (secretario, coordinador, adjunto o experto).
+activa entre el usuario y la información que puede manejar. Cada usuario podrá 
+manejar diferentes acciones según el rango que tenga en la empresa (secretario,
+coordinador, adjunto o experto).
 
 La implementación de la práctica incluye todo lo relacionado con la gestión de
-las evaluaciones. Entre las diferentes posibilidades de la aplicación se encuentran: la
-realización de modelos de evaluación, la realización de informes de evaluación, 
-la modificación de informes de evaluación, la eliminación de informes de evaluación, 
-la consulta de informes de evaluación y el envío de informes de evaluación a la 
-institución convocante.
+las evaluaciones. Entre las diferentes posibilidades de la aplicación se 
+encuentran: la realización de modelos de evaluación, la realización de informes
+de evaluación, la modificación de informes de evaluación, la eliminación de 
+informes de evaluación, la consulta de informes de evaluación y el envío de 
+informes de evaluación a la institución convocante.
 
 
 \subsection{Inicio de sesión}
@@ -61,7 +62,8 @@ creando.
 \subsubsection{Modificar o eliminar un modelo de evaluación}
 Se marca el paquete de la convocatoria que se desea modificar y se pulsa 
 ``Modificar'' o ``Eliminar'' según se desee (figura \ref{img7}).
-\imagen{modifmod.pdf}{14cm}{\small{Modificación y eliminación de un modelo.}}{img7}
+\imagen{modifmod.pdf}{14cm}{\small{Modificación y eliminación de un modelo.}}
+{img7}
 
 \subsection{Coordinador}
 
@@ -113,7 +115,7 @@ por cada uno de los expertos (figura \ref{a4}).
 y se expandirá el correspondiente modelo de evaluación (figura \ref{a5}).
 \imagen{inffinal.pdf}{13cm}{\small{Realización informe final.}}{a5}
 
-\item El adjunto podrá ``Guardar'' o ``Finalizar Evaluación'' 
+\item El adjunto podrá ``Guardar'' o ``Finalizar evaluación'' 
 (figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
 posteriores sesiones, mientras que el segundo dará por finalizado el informe.
 \imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}
