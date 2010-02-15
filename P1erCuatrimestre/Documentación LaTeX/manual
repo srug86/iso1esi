@@ -1,21 +1,17 @@
-\subsection{Introducción}
+﻿\subsection{Introducción}
 
 La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
-aplicación web que incluye los elementos necesarios para una comunicación 
-activa entre el usuario y la información que puede manejar. Cada tipo de 
-usuario podrá manejar diferentes acciones según el rango que tenga en la 
+aplicación web que incluye todo lo necesario para conseguir una comunicación 
+activa entre el usuario y la información que puede manejar. Cada usuario podrá manejar diferentes acciones según el rango que tenga en la 
 empresa (secretario, coordinador, adjunto o experto).
 
 La implementación de la práctica incluye todo lo relacionado con la gestión de
-las evaluaciones. Entre las diferentes taréas a realizar se encuentra la
-realización de modelos de evaluación, realización de informes de evaluación, 
-modificación de informes de evaluación, eliminación de informes de evaluación, 
-consulta de informes de evaluación y envío de informes de evaluación a la 
+las evaluaciones. Entre las diferentes posibilidades de la aplicación se encuentran: la
+realización de modelos de evaluación, la realización de informes de evaluación, 
+la modificación de informes de evaluación, la eliminación de informes de evaluación, 
+la consulta de informes de evaluación y el envío de informes de evaluación a la 
 institución convocante.
 
-La página inicial para cada tipo de usuario muestra la información 
-correspondiente a las funciones que puede realizar con respecto a las 
-evaluaciones de informes.
 
 \subsection{Inicio de sesión}
 La pantalla de inicio de la aplicación se puede observar en la figura 
@@ -30,11 +26,16 @@ proporcionados en el correo de alta.
 muestra un mensaje de error.
 \end{itemize}
 
+La página inicial para cada tipo de usuario muestra la información 
+correspondiente a las funciones que puede realizar con respecto a las 
+evaluaciones de informes.
+
+
 \subsection{Secretario}
 \subsubsection{Crear un modelo de evaluación}
 \begin{enumerate}
 \item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se 
-puede ver en la figura \ref{sc1}. Se despliega los datos que se pueden 
+puede ver en la figura \ref{sc1}. Se despliegan los datos que se pueden 
 introducir en un modelo de evaluación.
 \imagen{anadirmod.pdf}{10cm}{\small{Añadir modelo de evaluación.}}{sc1}
 \item Ver convocatoria de un paquete de proyectos.
@@ -54,7 +55,7 @@ creando.
 
 \imagen{formularios.pdf}{4cm}{\small{Opciones de modelos de evaluación.}}{sc4}
 \item Guardar el modelo de evaluación realizado. Para ello se pulsa el botón 
-``Guardar'' que está situado bajo la sección FORMULARIOS.
+``Guardar'' que está situado al final de la sección FORMULARIOS.
 \end{enumerate}
 
 \subsubsection{Modificar o eliminar un modelo de evaluación}
@@ -80,14 +81,14 @@ evaluación (ver figura \ref{c3}).
 
 \item Se pulsa ``Guardar'' o ``Finalizar'' como se puede observar en la figura 
 \ref{c4}. El botón ``Guardar'' permite guardar los cambios y editar en 
-posteriores sesiones, mientras que el boton ``Finalizar'' dará por finalizado 
+posteriores sesiones, mientras que el botón ``Finalizar'' dará por finalizado 
 el informe.
 \imagen{opcor.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{c4}
 \end{enumerate}
 
 \subsubsection{Validar informe final}
 Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se 
-çpuede ver en la figura \ref{c5}.
+puede ver en la figura \ref{c5}.
 \imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}
 
 \subsection{Adjunto}
@@ -129,12 +130,11 @@ evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación'' (figura
 diferentes puntos a evaluar. En la parte izquierda de la pantalla se muestra la
 memoria del proyecto a evaluar, como se puede ver en la figura \ref{img9}.
 \imagen{evalexp.pdf}{13cm}{\small{Realización de evaluación.}}{img9}
-\item Se guardan los cambios realizados en la evaluación con el boton 
+\item Se guardan los cambios realizados en la evaluación con el botón 
 ``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura 
 \ref{img10}).
 \imagen{saveend.pdf}{4cm}{\small{Guardar o finalizar evaluación.}}{img10}
 
 \end{enumerate}
-
 
 
