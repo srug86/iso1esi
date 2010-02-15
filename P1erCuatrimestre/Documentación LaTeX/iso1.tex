@@ -7,8 +7,8 @@
 \begin{document}
 \portada{Ingeniería del Software I}{Práctica Primer Cuatrimestre}{Gestión 
 Distribuída de la Revisión de Proyectos de Investigación}{Sergio de la Rubia
-García-Carpintero\\Luis Muñoz Villarreal\\Miguel Millán Sánchez-Grande\\Juan
-Miguel Torres Triviño\\Alicia Serrano Sánchez}{13 de Febrero del 2010}
+García-Carpintero\\Miguel Millán Sánchez-Grande\\Luis Muñoz Villarreal\\Alicia
+Serrano Sánchez\\Juan Miguel Torres Triviño}{17 de Febrero del 2010}
 
 \tableofcontents
 \newpage
@@ -49,28 +49,28 @@ niveles de desarrollo.
 
 \section{Especificación de requisitos}
 \subsection{Requisitos iniciales de sistema}
-Se trata de desarrollar una aplicación para gestión distribuída de la
+Se trata de desarrollar una aplicación para la gestión distribuída de la
 revisión de proyectos de investigación (y otro tipo de solicitudes, como
 becas, acciones integradas, etc.). El sistema lo mantiene una agencia de
 evaluación de proyectos, que básicamente se encarga de ofrecer una valoración
 de los proyectos de investigación que le envían distintos organismos
 (ministerios, comunidades autónomas, etc.). Existe un conjunto de áreas
-temáticas, y cada área está descompuesta en un conjunto de subareas. Cada
+temáticas, y cada área está descompuesta en un conjunto de subáreas. Cada
 área tiene una persona ``coordinadora'', que se encarga de asignar proyectos
-a cada uno de los ``adjunto'' de cada subarea. El adjunto se encargará de
-asignar la evaluación de sus proyectos a los expertos más adecuados, y de,
-finalmente realizar los informes finales de evaluación. El sistema es
+a cada uno de los ``adjuntos'' de cada subárea. El adjunto se encargará de
+asignar la evaluación de sus proyectos a los expertos más adecuados y de,
+finalmente, realizar los informes finales de evaluación. El sistema es
 utilizado por los siguientes tipos de usuario: 
 
 \begin{itemize}
-\item Los expertos, que realizan evaluaciones de proyectos. Se les invita, y
-  ellos pueden aceptar o declinar, y si aceptan tiene un tiempo específico
-  para enviar sus informes. 
+\item Los expertos, que realizan evaluaciones de proyectos. Reciben una 
+  invitación, y ellos pueden aceptar o declinar, y si aceptan tiene un tiempo 
+  específico para enviar sus informes. 
 \item Los adjuntos, que realizan asignaciones a expertos. También desasignan
-  o insisten si el experto tarda demasiado. Una vez recibidos los informes de
-  los expertos, realiza un único informe final, que es el que se devuelve a
-  la entidad solicitante, una vez validado por el coordinador del área
-  correspondiente. 
+  expertos o insisten si el experto tarda demasiado. Una vez recibidos los 
+  informes de los expertos, realiza un único informe final, que es el que se 
+  devuelve a la entidad solicitante, una vez validado por el coordinador del 
+  área correspondiente. 
 \item Los coordinadores, que asignan proyectos a los adjuntos, y realizan la
   supervisión de todos los informes.
 \item Secretario de la agencia de evaluación, que carga en el sistema todos
@@ -85,7 +85,7 @@ los siguientes:
 \subsubsection{Usuarios}
 \begin{itemize}
 \item Acceden al sistema mediante un nombre de usuario, que será la cuenta de
-  correo; y una contraseña, que podrá modificar.
+  correo; y una contraseña, que se podrá modificar.
 \item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno
   con un diferente tipo de funcionalidad y rango. 
 \item Cada usuario podrá modificar sus datos personales y tendrá una vista
@@ -763,10 +763,10 @@ secretario, los cuales contienen:
  \begin{tabular}{|p{10cm}|c|}\hline 
   Apellidos y Nombre & Porcentaje \\ \hline \hline
   de la Rubia García-Carpintero, Sergio & 20\% \\ \hline
-  Muñoz Villareal, Luis & 20\% \\ \hline
   Millán Sánchez-Grande, Miguel & 20\% \\ \hline
-  Torres Triviño, Juan Miguel & 20\% \\ \hline
-  Serrano Sánchez, Alicia & 20\% \\ \hline 
+  Muñoz Villareal, Luis & 20\% \\ \hline
+  Serrano Sánchez, Alicia & 20\% \\ \hline
+  Torres Triviño, Juan Miguel & 20\% \\ \hline 
  \end{tabular}
 \end{center}
 
