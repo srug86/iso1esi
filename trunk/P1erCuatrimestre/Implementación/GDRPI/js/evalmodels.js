@@ -12,8 +12,9 @@ function view_conv() {
     if (val_select("conv")) {
         convs++;
         var select = document.getElementById("conv");
-        var id = select.selectedIndex;
-        var title = select.options[id].text;
+        var id = select.value;
+        var index = select.selectedIndex
+        var title = select.options[index].text;
         $("#dialogs").append('<div id="conv'+convs+'" class="convs"></div>');
         Ajax("viewconv", "#conv"+convs, "conv="+id);
         $("#conv"+convs).dialog({title: "Convocatoria: "+title, 

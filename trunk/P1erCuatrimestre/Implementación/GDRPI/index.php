@@ -1,16 +1,13 @@
 <?php
 /*
   HECHO EN ESTA SESIÓN
-   - Foto de los usuarios de colores u otra foto mejor
-   - Colores de la vista de las evaluaciones
-   - Color X de las capas del formulario de los modelos
   
   PROBLEMAS
    - Al eleminar de un formulario de un modelo una sección, no siendo esta la
      última la numeración, no aparece correctamente
 
    DUDAS
-   - ¿Los paquetes de proyectos y los proyectos no deberían tener un nombre?
+   - ¿Los paquetes de proyectos y los proyectos no deberían tener un nombre?   
    - ¿No que relacionar los modelos con los proyectos? 
      Creo que habría que hacer la siguiente relación:
      Proyecto --> Modelo --> Paquete
@@ -21,19 +18,14 @@
    - Cambiado area por aid en usuarios
 
    HACER
-   - Mensajes de advertencia para modificaciones
  */
 
 /* ---------------------------------------------------------------- *
  * Gestión Distribuída de la Revisión de Proyectos de Investigación *
  * ---------------------------------------------------------------- */         
 
-/* Define +  Errors + Locals */
+/* Define */
 define('GDRPI', 1);
-error_reporting(E_ALL);
-setlocale(LC_ALL, "es_ES.utf-8");
-
-$time_start = microtime();
 
 /* Includes */
 include 'settings.php';
