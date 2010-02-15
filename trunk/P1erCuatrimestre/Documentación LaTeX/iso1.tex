@@ -14,8 +14,8 @@ Serrano Sánchez\\Juan Miguel Torres Triviño}{17 de Febrero del 2010}
 \newpage
 \section{Introducción}
 El objetivo de la práctica es conocer y simular el ciclo de vida seguido
-durante el desarrollo de software. Para ello se va a realizar un supuesto
-práctico que incluye análisis de resquisitos, diseño e implementación del
+durante el desarrollo del software. Para ello se va a realizar un supuesto
+práctico que incluye análisis de requisitos, diseño e implementación del
 mismo. 
 
 Dado que el enunciado fijado para la práctica no proporcionaba toda la
@@ -39,10 +39,10 @@ objetivos básicos de la ingeniería del software: los procesos del ciclo de
 vida software y sus diferentes formas de organización en distintos modelos
 del ciclo de vida; los conceptos y actividades fundamentales del análisis
 de requisitos y ser conscientes de la importancia que el análisis de
-requisitos tiene en el desarrollo y mantenimiento de software; los conceptos,
+requisitos tiene en el desarrollo y mantenimiento del software; los conceptos,
 técnicas y diagramas básicos del paradigma de desarrollo estructurado: desde
-el análisis a la prueba y despliegue; un modelo de proceso de aplicación del
-paradigma estructurado, que incluya el proceso de análisis y diseño
+el análisis a las pruebas y el despliegue; un modelo de proceso de aplicación
+del paradigma estructurado, que incluya el proceso de análisis y diseño
 estructurado, heurísticas de transición entre ambos, y estrategias de prueba;
 y las posibilidades que ofrece la reutilización del software en todos los
 niveles de desarrollo. 
@@ -457,9 +457,9 @@ secretario, los cuales contienen:
 
   \mathbf{Fecha Asignación} = *\emph{Se utiliza para el aviso de plazos}*
 
-  \mathbf{Fecha límite} = fecha\_límite
+  \mathbf{Fecha Límite} = fecha\_límite
 
-  \mathbf{Fecha límite} = *\emph{Se utiliza para indicar el plazo de
+  \mathbf{Fecha Límite} = *\emph{Se utiliza para indicar el plazo de
     realización del informe al experto}* 
 
   \mathbf{Fin Relación} = id\_usuario + id\_proyecto + id\_paquete
@@ -585,10 +585,10 @@ secretario, los cuales contienen:
   (palabras\_clave) 
 
   \mathbf{Parámetros} = *\emph{Son los parámetros de búsqueda de
-    usuarios. Todos los campos con opcionales ya que se pueden realizar
+    usuarios. Todos los campos son opcionales ya que se pueden realizar
     búsquedas de usuarios de varias maneras}* 
 
-  \mathbf{Parámetros Consulta} = Parámetros Búsqueda = (@id\_usuario) +
+  \mathbf{Parámetros Consulta} = Parámetros Búsqueda = (id\_usuario) +
   (tipo) + (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) +
   (área) + (institución) + (currículum) + (palabras\_clave) 
 
@@ -621,7 +621,7 @@ secretario, los cuales contienen:
     Expertos y Proyectos. Se devolverá una lista según los parámetros de
     consulta}* 
 
-  \mathbf{Resultado Consulta} = Resultado Búsqueda = {@id\_usuario + tipo +
+  \mathbf{Resultado Consulta} = Resultado Búsqueda = {id\_usuario + tipo +
     e-mail + contraseña + nombre + apellidos + teléfono + área + institución
     + currículum + {palabras\_clave}} 
 
@@ -631,7 +631,7 @@ secretario, los cuales contienen:
 
   \mathbf{Subárea Asignada} =id\_subárea
 
-  \mathbf{Subárea Asignada} = *\emph{Se le añade un subárea a cada proyecto}*
+  \mathbf{Subárea Asignada} = *\emph{Se le añade una subárea a cada proyecto}*
 
   \mathbf{Subárea Proyectos} = id\_subárea + id\_proyecto + id\_paquete
 
@@ -658,12 +658,12 @@ secretario, los cuales contienen:
     para un proyecto, recibirá una valoración según el tiempo de realización
     y la calidad del informe}* 
 
-  \mathbf{Valoración trabajo} = {tpo\_realización + calidad\_informe}
+  \mathbf{Valoración Trabajo} = {tpo\_realización + calidad\_informe}
 
-  \mathbf{Valoración trabajo} = *\emph{Se utiliza en búsqueda de expertos}*
+  \mathbf{Valoración Trabajo} = *\emph{Se utiliza en búsqueda de expertos}*
 
   \mathbf{Verificar Autentificar} = *\emph{Mostrar que la autentificación es
-    correcta. Si introduce incorréctamente el id o la contraseña o ambas, se
+    correcta. Si introduce incorrectamente el id o la contraseña o ambas, se
     mostrará una plantalla en la que se indicará: 'Usuario o contraseña son
     incorrectas'}* 
 \end{displaymath}
@@ -756,7 +756,7 @@ secretario, los cuales contienen:
 \lstinputlisting{implementacion/theme/css/main.css}
 
 \subsubsection{theme/css/users.php}
-\lstinputlisting{implementacion/theme/css/users.php}ç
+\lstinputlisting{implementacion/theme/css/users.php}
 
 \section{Carga de trabajo}
 \begin{center}
@@ -764,7 +764,7 @@ secretario, los cuales contienen:
   Apellidos y Nombre & Porcentaje \\ \hline \hline
   de la Rubia García-Carpintero, Sergio & 20\% \\ \hline
   Millán Sánchez-Grande, Miguel & 20\% \\ \hline
-  Muñoz Villareal, Luis & 20\% \\ \hline
+  Muñoz Villarreal, Luis & 20\% \\ \hline
   Serrano Sánchez, Alicia & 20\% \\ \hline
   Torres Triviño, Juan Miguel & 20\% \\ \hline 
  \end{tabular}
