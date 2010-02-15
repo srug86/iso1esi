@@ -156,7 +156,8 @@ function view_report() {
       switch ($type) {
       case "are": $txt .= '<p>'.$datrep.'</p>'; break;
       case "fie": $txt .= '<p>'.$el.'</p>'; break;
-      case "lst": $txt .= '<p>'.$el[$datrep].'</p>'; break;
+      case "lst": $txt .= '<p>'.$datrep == "" ? $el[$datrep] : ""
+        .'</p>'; break;
       case "rad": $txt .= '<p>'.$el[$datrep].'</p>'; break;
       case "chk":
         foreach ($el as $k => $str)

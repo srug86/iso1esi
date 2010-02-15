@@ -54,8 +54,8 @@ function user_color() {
   if (!isset($_user['color'])) {
     $color = "";
     switch ($_user['type']) {
-    case "secretary": $color = "#ff950e"; break;
-    case "coordinator": $color = "blue"; break;
+    case "secretary": $color = "#db871a"; break; //ff950e
+    case "coordinator": $color = "#6e407b"; break; //
     case "attached": $color = "green"; break;
     case "expert": $color = "#004586"; break;
     }

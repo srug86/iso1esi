@@ -42,7 +42,7 @@ function save_expert_report() {
 }
 
 function end_report() {
-  global $_mysql;
+  global $_mysql, $_user;
 
   $id = $_POST['id'];
   if ($_user['type'] == "expert")
@@ -50,10 +50,10 @@ function end_report() {
   else  {
     $ppid = substr($id, 2, strpos($id, "p", 2)-2);
     $pid = substr($id, strpos($id, "p", 2)+1);
-    if ($_user['type'] = "coordinator")
+    if ($_user['type'] == "coordinator")
       $sql = "UPDATE projects SET state='validated_coordinator' "
         ."WHERE id=$pid AND pid=$ppid";
-    else if ($_user['type'] = "attached")
+    else if ($_user['type'] == "attached")
       $sql = "UPDATE projects SET state='evaluated_attached' "
         ."WHERE id=$pid AND pid=$ppid";
   }

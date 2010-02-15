@@ -12,9 +12,9 @@ function coordinator_projects() {
       <div id="projects">
         <div id="buttons">
           <a href="javascript:make_report(\'coordinator\');"
-             alt="">Ver / Modificar evaluación</a>
+             alt="">Ver / Modificar informe</a>
           <a href="javascript:end_report(\'coordinator\');"
-             alt="">Validar evaluación</a>
+             alt="">Validar informe</a>
           <a href="javascript:woimp();" alt="">Asignar subárea</a>
         </div>
         <div class="title">Proyectos asignados</div>
@@ -72,9 +72,9 @@ function attached_projects() {
       <div id="projects">
         <div id="buttons">
           <a href="javascript:make_report(\'attached\');"
-             alt="">Realizar evaluación</a>
+             alt="">Realizar informe</a>
           <a href="javascript:end_report(\'attached\');"
-             alt="">Finalizar evaluación</a>
+             alt="">Finalizar informe</a>
           <a href="javascript:woimp();" alt="">Asignar expertos</a>
           <a href="javascript:woimp();" alt="">Valorar experto</a>
           <a href="javascript:woimp();" alt="">Subárea errónea</a>
@@ -87,21 +87,29 @@ function attached_projects() {
           </tr>';
 
   foreach ($r as $row) {
-    $eval = 0;
+    $eval = 0; $locked = false;
     switch ($row['state']) {
     case "without_eval": $state = "Sin evaluación"; break;
     case "experts_evaluating": $state = "Expertos evaluando"; break;
     case "evaluated_experts": $state = "Evaluado por los expertos"; break;
     case "evaluated_attached":
-      $eval = 1; $state = "Evaluado por el adjunto"; break;
+    $eval = 1; $state = "Evaluado por el adjunto"; break;
     case "validated_coordinator":
-      $eval = 1; $state = "Validado por el coordinador"; break;
+    $locked = true; $state = "Validado por el coordinador"; break;
     }
     $id = 'pp'.$row['pid'].'p'.$row['id'];
     echo '
           <tr>
-            <td>
-              <input type="checkbox" name="'.$id.'" value="'.$eval.'" />
+            <td>';
+    
+    if (!$locked)
+      echo '<input type="checkbox" name="'.$id.'" value="'.$eval.'" />';
+    else
+      echo '<a href="javascript:view_report('.$id.')"
+                   alt="Ver informe de evaluación">
+                <img src="theme/images/view.png" alt="" /></a>';
+
+    echo '
             </td>
             <td><a id="'.$id.'"
                   href="javascript:expand(\''.$id.'\')"
@@ -160,7 +168,8 @@ function projects_experts() {
 function expert_projects() {
   global $_mysql, $_uid, $_user;
 
-  $r = $_mysql->rows("SELECT er.id, p.name, s.name AS sub, er.state, "
+  $r = $_mysql->rows("SELECT er.id, p.name, s.name AS sub, er.state AS erst, "
+                     ."p.state AS pst, "
                      ."ep.assign_date, (ep.assign_date+p.eval_time*24*60*60) "
                      ."AS eval_time FROM `experts-projects` ep, projects p, "
                      ."eval_reports er, subareas s WHERE ep.uid=$_uid AND "
@@ -169,6 +178,7 @@ function expert_projects() {
                      ."AND er.id = ep.rid ORDER BY ep.assign_date DESC");
   echo '
     <div id="content">
+      <div id="reports"></div>
       <div id="projects">
         <div id="buttons">
           <a href="javascript:make_report(\'expert\');"
@@ -187,13 +197,29 @@ function expert_projects() {
   foreach ($r as $row) {
     $atime = strftime("%e/%I/%Y", $row['assign_date']);
     $etime = strftime("%e/%I/%Y", $row['eval_time']);
-    $state = $row['state'] == "in_process" ? "En proceso" : "Terminada";
-    $eval = $state == "Terminada" ? 1 : 0;
-    
+
+    $locked = true;
+    if ($row['pst'] == "evaluated_attached") $state = "Evaluado por el adjunto";
+    elseif ($row['pst'] == "validated_coordinator")
+      $state = "Validado por el coordinador";
+    else {
+      $state = $row['erst'] == "in_process" ? "En proceso" : "Terminada";
+      $locked = false;
+      $eval = $state == "Terminada" ? 1 : 0;
+    }
+
     echo '
           <tr>
-            <td><input type="checkbox" name="'.$row['id'].'" value="'.$eval
-         .'" /></td>
+            <td>';
+
+    if (!$locked)
+      echo '<input type="checkbox" name="'.$row['id'].'" value="'.$eval.'" />';
+    else
+      echo '<a href="javascript:view_report('.$row['id'].')"
+                   alt="Ver informe de evaluación">
+                <img src="theme/images/view.png" alt="" /></a>';
+
+    echo '</td>
             <td>'.$row['name'].'</td><td>'.$row['sub'].'</td><td>'.$state.'</td>
             <td>'.$atime.'</td><td>'.$etime.'</td>
           </tr>';

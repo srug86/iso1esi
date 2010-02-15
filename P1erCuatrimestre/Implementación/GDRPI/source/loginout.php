@@ -48,7 +48,7 @@ function login() {
   $userid = isset($_POST['userid']) ? $_POST['userid'] : null;
   $pass = isset($_POST['pass']) ? $_POST['pass'] : null;
 
-  if ($userid && $pass) {
+  if (intval($userid) && $pass) {
     $dbpass = $_mysql->field("SELECT password FROM users WHERE id=$userid");
     if ($dbpass == sha1($pass)) {
       $_SESSION['uid'] = $_uid = $userid;
