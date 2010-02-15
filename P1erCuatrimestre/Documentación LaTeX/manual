@@ -77,7 +77,7 @@ ventana con las acciones que puede realizar (figura \ref{c1}).
 \imagen{selcor.pdf}{13cm}{\small{Selección de proyecto.}}{c2}
 
 \item Para proceder a consultar/modificar el informe final, pulsar 
-``Ver/Modificar evaluación'' y se expandirá el correspondiente modelo de 
+``Ver/Modificar informe'' y se expandirá el correspondiente modelo de 
 evaluación (ver figura \ref{c3}).
 \imagen{modinf.pdf}{13cm}{\small{Ver/modificar el informe final.}}{c3}
 
@@ -111,11 +111,11 @@ figura \ref{a3}.
 por cada uno de los expertos (figura \ref{a4}).
 \imagen{coneval.pdf}{13cm}{\small{Consulta evaluación.}}{a4}
 
-\item Para proceder a realizar el informe final, pulsar ``Realizar evaluación'' 
+\item Para proceder a realizar el informe final, pulsar ``Realizar informe'' 
 y se expandirá el correspondiente modelo de evaluación (figura \ref{a5}).
 \imagen{inffinal.pdf}{13cm}{\small{Realización informe final.}}{a5}
 
-\item El adjunto podrá ``Guardar'' o ``Finalizar evaluación'' 
+\item El adjunto podrá ``Guardar'' o ``Finalizar informe'' 
 (figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
 posteriores sesiones, mientras que el segundo dará por finalizado el informe.
 \imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}
