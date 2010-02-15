@@ -1,0 +1,42 @@
+Crear modelos de evaluación
+---------------------------
+1. Entramos al sistema como secretario (5699591).
+2. Añadir modelo de evaluación.
+3. Elegir un paquete de proyectos.
+4. Añadimos secciones.
+5. Guardamos modelo de evaluación.
+6. Modificar modelos de evaluación.
+7. Eliminar el modelo creado.
+
+Realizar evaluación por experto
+-------------------------------
+1. Entramos al sistema como experto (5702008)
+2. Seleccionar proyecto asignado.
+3. Realizar evaluación. ???????? (Ver evaluación)
+4. Guardamos evaluación.
+5. Modificamos evaluación pulsado realizar evaluación.
+6. Finalizamos evaluación (ver que el estado de la evaluación cambia).
+7. Entramos en el coordinador (5692939)
+8. Vemos el estado de los proyectos que tiene asociado.
+
+Gestión del adjunto
+-------------------
+1. Entramos al sistema como adjunto (5701903)
+2. Se puede observar todos los proyectos asociados a este adjunto con el 
+determinado estado de la evaluación del proyecto.
+3. Para ver los expertos asociados, se pulsa '+'.
+4. Aparecerán los expertos asignados a ese proyecto junto con el estado de la
+evaluación de cada uno de ellos.
+5. Se selecciona un proyecto y se realiza el informe final.
+6. Guardamos informe final.
+7. Entramos en experto para demostrar que no se puede modificar la evaluación.
+8. Entramos de nuevo en coordinador para ver estado.
+9. En adjunto, finalizamos informe final.
+
+Validar por el coordinador
+--------------------------
+1. Seleccionar un proyecto para ver/modificar el informe.
+2. Validar informe.
+3. Entramos en adjunto y experto para demostrar que no se puede modificar la 
+evaluación.
+
