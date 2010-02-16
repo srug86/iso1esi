@@ -39,9 +39,16 @@ SIN CORREGIR
 # mostrar las vistas de dichos modelos, no salen sus valores; sólamente salen
 # los datos de los campos de texto.
 # campos
-----------------------------------------------------------------------------
-Cuando el/los expertos terminan su evaluación ese cambio no se refleja en el estado del adjunto, pero si se mira con el + si se ve el estado de la evaluación de los expertos.
 
--------------------------------------------------------------------------
+HECHO
+Me cago en su puta madre lo que me ha costado hacerlo
+# Cuando el/los expertos terminan su evaluación ese cambio no se refleja en el
+# estado del adjunto, pero si se mira con el + si se ve el estado de la 
+# evaluación de los expertos.
 
-Cuando un adjunto intenta realizar un informe sin que los expertos hayan hecho nada, el programa casca y dice esto : Warning: Invalid argument supplied for foreach() in /var/www/iso1esi/GDRPI/theme/evaluation_reports.php on line 72
+CORREGIDO
+Ocurre si no se asocia un modelo a un proyecto
+# Cuando un adjunto intenta realizar un informe sin que los expertos hayan
+# hecho nada, el programa casca y dice esto : Warning: Invalid argument
+# supplied for foreach() in /var/www/iso1esi/GDRPI/theme/evaluation_reports.php
+# on line 72
