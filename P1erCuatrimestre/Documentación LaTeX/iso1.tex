@@ -21,7 +21,8 @@
 
 % Licencia
 \licencia{Sergio de la Rubia García-Carpintero, Miguel Millán Sánchez-Grande,
-  Luis Muñoz Villarreal, Alicia Serrano Sánchez, Juan Miguel Torres Triviño}
+  Luis Muñoz Vi\-lla\-rre\-al, Alicia Serrano Sánchez, Juan Miguel Torres 
+Triviño}
 
 % Índice de contenido
 \tableofcontents
@@ -82,17 +83,17 @@ finalmente, realizar los informes finales de evaluación. El sistema es
 utilizado por los siguientes tipos de usuario: 
 
 \begin{itemize}
-\item Los expertos, que realizan evaluaciones de proyectos. Reciben una 
+\item Los expertos realizan evaluaciones de proyectos. Reciben una 
   invitación, y ellos pueden aceptar o declinar, y si aceptan tiene un tiempo 
   específico para enviar sus informes. 
-\item Los adjuntos, que realizan asignaciones a expertos. También desasignan
+\item Los adjuntos realizan asignaciones a expertos. También desasignan
   expertos o insisten si el experto tarda demasiado. Una vez recibidos los 
   informes de los expertos, realiza un único informe final, que es el que se 
   devuelve a la entidad solicitante, una vez validado por el coordinador del 
   área correspondiente. 
-\item Los coordinadores, que asignan proyectos a los adjuntos, y realizan la
+\item Los coordinadores asignan proyectos a los adjuntos, y realizan la
   supervisión de todos los informes.
-\item Secretario de la agencia de evaluación, que carga en el sistema todos
+\item Secretario de la agencia de evaluación carga en el sistema todos
   los documentos de los proyectos (memoria del proyecto, currículum de los
   investigadores, texto de la convocatoria, etc.). 
 \end{itemize}
@@ -103,10 +104,10 @@ los siguientes:
 
 \subsection{Usuarios}
 \begin{itemize}
-\item Acceden al sistema mediante un nombre de usuario, que será la cuenta de
-  correo; y una contraseña, que se podrá modificar.
+\item Acceden al sistema mediante un nombre de usuario, que será el dni; y una 
+contraseña, que se podrá modificar.
 \item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno
-  con un diferente tipo de funcionalidad y rango. 
+  con diferente funcionalidad y rango. 
 \item Cada usuario podrá modificar sus datos personales y tendrá una vista
   restringida sobre la lista de proyectos dependiendo de su rango en el 
   sistema.
@@ -128,19 +129,19 @@ secretario, los cuales contienen:
 
 \subsection{Secretario}
 \begin{itemize}
-\item Usuarios: Es el encargado de añadir, modificar y eliminar a los
-  usuarios del sistema: coordinadores, adjuntos y expertos.
-\item Coordinadores: Elegirá el coordinador de cada área.
-\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos
-  y los introduce al sistema: las bases, la convocatoria, la institución
-  convocante, los proyectos, el cual asignará al área correspondiente;
-  etc. También podrá modificar cualquier información referente a estas
+\item[Usuarios] Es el encargado de añadir, modificar y eliminar a los
+  usuarios del sistema (coordinadores, adjuntos y expertos).
+\item[Coordinadores] Elegirá el coordinador de cada área.
+\item[Paquetes de proyecto] Recibe las solicitudes de evaluación de proyectos
+  y los introduce al sistema(las bases, la convocatoria, la institución
+  convocante, los proyectos, el cual asignará al área correspondiente...). 
+  También podrá modificar cualquier información referente a estas
   solicitudes. 
-\item Modelos de evaluación: Dependiendo de la información que contenga el
+\item[Modelos de evaluación] Dependiendo de la información que contenga el
   proyecto, elaborará unos modelos de informe de evaluación. 
-\item Plazos expertos: Decidirá los plazos que tienen los expertos para
+\item[Plazos expertos] Decidirá los plazos que tienen los expertos para
   aceptar o declinar la invitación para realizar el informe de evaluación,
-  así como una vez aceptado, la fecha para entregar dicho informe. Todo esto
+  y una vez aceptada, la fecha para entregar dicho informe. Todo esto
   se incluirá en el modelo de evaluación.
 \end{itemize}
 
@@ -149,8 +150,8 @@ secretario, los cuales contienen:
 \item Pertenece a una única área.
 \item Establece las subáreas de los proyectos que son asignados a su área.
 \item Asigna al adjunto de cada subárea.
-\item Reasignar proyecto a otra subárea, si el adjunto se lo indica.
-\item Valida los informes pendientes que los adjuntos de las subáreas de su
+\item Reasigna proyecto a otra subárea, si el adjunto se lo indica.
+\item Valida los informes pendientes que los adjuntos de su correspondiente 
   área realizan.
 \end{itemize}
 
@@ -163,55 +164,54 @@ secretario, los cuales contienen:
 \subsection{Adjunto}
 \begin{itemize}
 \item Pertenece únicamente a una subárea.
-\item Tendrá una cola de proyectos asignados.
-\item Buscará a los expertos especificando el área, la institución, palabras
+\item Tiene una cola de proyectos asignados.
+\item Busca a los expertos especificando el área, la institución, palabras
   clave y valoraciones en las que se prioriza la formalidad de plazos y
   calidad de las evaluaciones. 
-\item Una vez finalizada la búsqueda, elegirá a uno o más expertos según
-  considere necesario y les enviará un modelo de invitación predeterminada
+\item Una vez finalizada la búsqueda, elige a uno o más expertos según
+  considere necesario y les envia un modelo de invitación predeterminada
   mediante correo electrónico para la  evaluación del proyecto.  
-\item Avisará de los plazos que tiene el experto para aceptar o declinar una
+\item Avisa de los plazos que tiene el experto para aceptar o declinar una
   invitación según definió el secretario. Además, una vez aceptada dicha
-  invitación, le avisará de los plazos de entrega del informe de evaluación,
+  invitación, le avisa de los plazos de entrega del informe de evaluación,
   también definidos por el secretario. 
-\item Podrá reasignar las evaluaciones si el experto declina la invitación,
+\item Puede reasignar las evaluaciones si el experto declina la invitación,
   no obtiene contestación dentro del plazo o si el experto no cumple con los
   plazos de entrega del informe de evaluación.
-\item El adjunto podrá insistir cuando esté próxima la fecha límite de
+\item El adjunto puede insistir cuando esté próxima la fecha límite de
   entrega del informe de evaluación. 
 \item Una vez realizada las evaluaciones de los expertos, el adjunto
-  realizará un informe final teniendo en cuenta los informes de los distintos
+  realiza un informe final teniendo en cuenta los informes de los distintos
   expertos que hayan aceptado realizar la evaluación. Este informe final
-  deberá ser validado por el coordinador de su área. 
+  debe ser validado por el coordinador de su área. 
 \item Evalúa el trabajo del experto basándose en la formalidad de los plazos
   y la calidad de su informe. 
 \item Puede recomendar al secretario añadir expertos.
 \item Dentro de la lista de proyectos a las que los adjuntos tienen acceso,
-  tendrán una sublista de los expertos que están revisando ese proyecto. 
-\item Podrá avisar al coordinador cuando el proyecto no corresponda a su
+  tiene una sublista de los expertos que están revisando ese proyecto. 
+\item Puede avisar al coordinador cuando el proyecto no corresponda a su
   subárea. 
 \end{itemize}
 
 \subsection{Subárea}
 \begin{itemize}
-\item Sólo podrá pertenecer a un área y tiene un único adjunto asociado.
+\item Sólo puede pertenecer a un área y tiene un único adjunto asociado.
 \end{itemize}
 
 \subsection{Expertos}
 \begin{itemize}
-\item Podrán tener asignados varios proyectos a la vez. 
-\item No podrán pertenecer a la misma institución solicitante de la evaluación.
-\item Podrá aceptar o declinar las invitaciones de evaluación de proyectos.
-\item Cuando acepte la invitación, podrá acceder a la documentación de ese
+\item Pueden tener asignados varios proyectos a la vez. 
+\item No pueden pertenecer a la misma institución solicitante de la evaluación.
+\item Pueden aceptar o declinar las invitaciones de evaluación de proyectos.
+\item Cuando acepte la invitación, pueden acceder a la documentación de ese
   proyecto e ir realizando progresivamente el informe en varias sesiones. 
-\item Una vez que haya terminado el informe finalizará el proceso de 
-  evaluación.
-\item Recibirá avisos de finalización de plazos por parte del adjunto para
+\item Una vez que terminen el informe finalizan el proceso de evaluación.
+\item Reciben avisos de finalización de plazos por parte del adjunto para
   finalizar el informe, vía correo electrónico.
-\item Cada uno tendrá una serie de palabras clave asociadas a su
-  temática. Éstas palabras clave se utilizarán como parámetros en las
+\item Cada uno tiene una serie de palabras clave asociadas a su
+  temática. Éstas palabras clave se utilizan como parámetros en las
   búsquedas. 
-\item Tendrá una lista de evaluaciones pendientes, que podrá aceptar o 
+\item Tienen una lista de evaluaciones pendientes, que pueden aceptar o 
   rechazar.
 \end{itemize}
 
@@ -283,7 +283,7 @@ secretario, los cuales contienen:
 \item[INFORMES EVALUACIÓN] = @id\_informe + id\_modelo\_eval +
   estado\_informe + datos 
 
-\item[datos] = *\emph{El experto, el adjunto y el coordinador rellenarán los
+\item[datos] = *\emph{El experto, el adjunto y el coordinador rellenan los
     campos correspondientes al modelo de evaluación del proyecto}* 
 
 \item[PLANTILLAS CORREOS] = @id\_plantilla + asunto + cuerpo
@@ -322,7 +322,7 @@ secretario, los cuales contienen:
 
 \section{Flujos de datos}
 \begin{description}
-\item[Aceptación] = *\emph{En el perfil del adjunto aparecerá la lista de
+\item[Aceptación] = *\emph{En el perfil del adjunto aparece la lista de
     expertos seleccionados y se indica si han aceptado o declinado}* 
 
 \item[Actualización Estado] = [evaluado\_por\_expertos $\mid$
@@ -564,7 +564,7 @@ secretario, los cuales contienen:
   id\_modelo\_eval + estado\_proyecto 
 
 \item[Memoria Proyecto] = *\emph{Se lee para poder realizar el informe. El
-    adjunto también leerá el estado en que se encuentra la evaluación del
+    adjunto también lee el estado en que se encuentra la evaluación del
     proyecto}* 
 
 \item[Modelo] = id\_modelo\_eval
@@ -679,7 +679,7 @@ secretario, los cuales contienen:
   tpo\_realización + calidad\_informe 
 
 \item[Valoración Expertos] = *\emph{Cada informe elaborado por un experto
-    para un proyecto, recibirá una valoración según el tiempo de realización
+    para un proyecto, recibe una valoración según el tiempo de realización
     y la calidad del informe}* 
 
 \item[Valoración trabajo] = {tpo\_realización + calidad\_informe}
@@ -687,8 +687,8 @@ secretario, los cuales contienen:
 \item[Valoración trabajo] = *\emph{Se utiliza en búsqueda de expertos}*
 
 \item[Verificar Autentificar] = *\emph{Mostrar que la autentificación es
-    correcta. Si introduce incorréctamente el id o la contraseña o ambas, se
-    mostrará una plantalla en la que se indicará: 'Usuario o contraseña son
+    correcta. Si introduce incorrectamente el id o la contraseña o ambas, se
+    muestra una plantalla en la que se indica: 'Usuario o contraseña son
     incorrectas'}* 
 \end{description}
 
@@ -696,9 +696,9 @@ secretario, los cuales contienen:
 \chapter{Especificación de procesos}
 \section{Gestión de usuarios}
 \subsection{Listado de usuarios}
-En este proceso se introducen unos parámetros de consulta, que son dados
-implícitamente por el usuario o por el propio sistema. Dependiendo de quién
-realice la consulta, el sistema proporciona el acceso a unos datos u
+En este proceso se introducen parámetros de consulta. Estos parámetros 
+puede ser introducidos directa o indirectamente por el usuario. Dependiendo de 
+quién realice la consulta, el sistema proporciona el acceso a unos datos u
 otros. Al realizar esta consulta, el proceso consulta los almacenes de datos
 SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea
 en que trabajen dichos usuarios del sistema. La relación jerárquica del
@@ -840,10 +840,10 @@ PROCESO Autentificar_Usuarios (Datos_Autentificación)
 \end{lstlisting}
 
 \subsection{Modificar datos personales}
-Una vez que el usuario recibe el correo de alta, el siguiente paso es
-utilizar este proceso para introducir sus datos personales para que el
-sistema tenga una ficha de cada empleado. Este proceso es accesible en todo
-momento para poder modificar cualquier dato o error.
+Una vez que el usuario recibe el correo de alta, se utilizar este proceso para 
+introducir sus datos personales para que el sistema tenga una ficha de cada 
+empleado. Este proceso es accesible en todo momento para poder modificar 
+cualquier dato o error.
 \subsubsection{Pseudocódigo}
 \begin{lstlisting}[inputencoding=utf8/latin1]
 PROCESO Modificar_Datos_Personales (Datos_Personales)
@@ -903,9 +903,9 @@ PROCESO Añadir_Paquete_de_Proyectos/Proyectos (Paquetes_Proyectos)
 
 \subsection{Modificar paquete de proyecto/proyectos}
 Es el encargado de realizar cualquier variación sobre los paquetes de proyecto y
-sobre los proyectos, ya sea cambiar algún error descubierto, cambiar un proyecto
-de subárea a petición de algún adjunto. Se tienen diferentes opciones 
-dependiendo de qué usuario invoque dicho proceso ya que el secretario asigna el 
+sobre los proyectos, ya sea cambiar algún error descubierto o cambiar un 
+proyecto de subárea a petición de algún adjunto. Se tienen diferentes opciones 
+dependiendo de qué usuario invoque dicho proceso, ya que el secretario asigna el
 área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo 
 alegando que ese proyecto no pertenece realmente a su subárea.
 
@@ -967,9 +967,8 @@ PROCESO Modificar_Paquete_de_Proyectos(Paquetes_Proyectos, Área_Proyectos, Proy
 \section{Gestión de evaluaciones}
 
 \subsection{Añadir modelo de evaluación}
-Este proceso es exclusivo del secretario. Éste lee los datos de la convocatoria 
-del paquete de proyectos para poder generar un modelo de evaluación a seguir 
-para cada informe de evaluación que se escriba de cada proyecto.
+Este proceso es exclusivo del secretario, que lee los datos de la convocatoria 
+del paquete de proyectos para poder generar un modelo de evaluación.
 
 \subsubsection{Pseudocódigo}
 \begin{lstlisting}[inputencoding=utf8/latin1]
@@ -980,7 +979,7 @@ PROCESO Añadir_Modelo_Evaluación ()
 
 \subsection{Modificar modelo de evaluación}
 Se complementa con el proceso ``Añadir Modelo de Evaluación''. Si se encuentra 
-algún error en el modelo o cambian los prerrequisitos sobre algún proyecto, se 
+algún error en el modelo o cambian los prerrequisitos sobre algún proyecto,  
 cambiará consecuentemente el modelo de evaluación de dicho proyecto.
 
 \subsubsection{Pseudocódigo}
@@ -997,15 +996,15 @@ PROCESO Modificar_Modelo_Evaluación ()
 
 \subsection{Consulta de Informes}
 Se devuelve una serie de informes de evaluación restringidos por quién los pide.
-Todo usuario que haga una petición sobre la lectura de los informes tendrá 
-acceso a los suyos y a los que hayan sido escritos por los usuarios que estén de
-bajo en la jerarquía de la empresa.
+Todo usuario que haga una petición sobre la lectura de los informes tiene 
+acceso a los suyos y a los que hayan sido escritos por los usuarios que estén 
+debajo en la jerarquía de la empresa.
 \begin{itemize}
 \item[Experto] sólo puede tener acceso a su propio informe.
 \item[Adjunto] puede consultar su propio informe y el de todos los expertos que 
 tengan asignado un proyecto de su subárea.
-\item[Coordinador] puede su propio informe, el de los adjuntos y el de los 
-expertos.
+\item[Coordinador] tiene acceso a su propio informe, al de los adjuntos y al de 
+los expertos.
 \end{itemize}
 
 \subsubsection{Pseudocódigo}
@@ -1034,9 +1033,9 @@ PROCESO Cconsulta_de_Informes()
 \subsection{Realizar informe}
 Proceso mediante el cual todos los usuarios pueden escribir y editar sus propios
 informes. Se leen datos de los almacenes PROYECTOS y MODELOS DE EVALUACIÓN para 
-saber qué evaluar y cómo evaluarlos. Casi todos las llamadas a este proceso son 
+saber qué evaluar y cómo evaluarlos. Casi todas las llamadas a este proceso son 
 de lectura y escritura. En cuanto al acceso de datos, por lo general, cada 
-usuario sólo podrá editar sus propios informes. Los informes de adjuntos y 
+usuario sólo puede editar sus propios informes. Los informes de adjuntos y 
 coordinadores se pueden basar en informes de evaluación escritos con 
 anterioridad para realizar el suyo propio.
 
@@ -1069,7 +1068,7 @@ PROCESO REALIZAR_INFORME()
 
 \subsection{Devolver evaluaciones}
 Este proceso se encarga de recopilar todas las evaluaciones pertenecientes a un 
-mismo paquete de proyectos y entregárselas al la institución convocante.
+mismo paquete de proyectos y entregarlas al la institución convocante.
 
 \subsubsection{Pseudocódigo}
 \begin{lstlisting}[inputencoding=utf8/latin1]
@@ -1111,9 +1110,9 @@ PROCESO CONSULTA_EXPERTOS (Parámetros_Consulta)
 Es una búsqueda detallada a petición del adjunto. El adjunto busca los datos de 
 expertos que estén relacionados con el proyecto a evaluar. Se introducen los 
 parámetros de búsqueda y el programa devuelve una lista. Ésta lista puede ser 
-vacía o puede mostrar un conjunto de expertos que concuerden con los 
-prerrequisitos, ordenándolos por la valoración que tengan, que no pertenezcan a 
-la asociación convocante y que sean de su área.
+vacía o puede mostrar un conjunto de expertos que tiene relación con los 
+prerrequisitos establecidos, ordenándolos por la valoración que tengan, que no 
+pertenezcan a la asociación convocante y que sean de su área.
 
 \subsubsection{Pseudocódigo}
 \begin{lstlisting}[inputencoding=utf8/latin1]
@@ -1131,11 +1130,11 @@ Y PROYECTOS[Párametros_Búsqueda.Proyecto].Área = USUARIOS.[ÍNDICE] .ÁREA EN
 \end{lstlisting}
 
 \subsection{Invitación expertos}
-Una vez listados los expertos, el adjunto en cuestión selecciona a uno o varios 
+Una vez listados los expertos, el adjunto selecciona a uno o varios 
 de la lista. El proceso les manda un correo de invitación para participar en la 
 evaluación de un proyecto. El correo de invitación se escoge de una serie de 
-plantillas y se rellena con los datos del proyecto (no todos, ya que el experto 
-no tiene acceso a la mayoría del proyecto hasta que no acepta la petición). El 
+plantillas y se rellena con algunos datos del proyecto (el experto no puede 
+tener toda la información del proyecto hasta que acepte la invitación). El 
 experto seleccionado tiene una fecha límite para responder a dicho correo. Si el
 experto no contesta, la invitación se toma como rechazada.
 
@@ -1194,7 +1193,7 @@ PROCESO AVISOS_DE_PLAZOS (ID_Experto)
 
 \subsection{Valorar expertos}
 Una vez finalizado el informe de evaluación, el adjunto lo lee y examina con la 
-finalidad de valorar el trabajo realizado por el experto. El adjunto manda al 
+finalidad de valorar el trabajo realizado por el experto. El adjunto manda al
 sistema una valoración y este lo incluye en la instancia correspondiente del 
 experto y el proyecto.
 
@@ -1205,8 +1204,11 @@ PROCESO VALORAR_EXPERTOS(Valoración_Expertos)
 
 \end{lstlisting}
 
-\chapter{Diseño del sistema}
-\section{Diagrama de diseño estructurado}
+\section{Diagrama Entidad/Interrelación}
+\imagen{diagramas/ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}{}
+
+\part{Diseño del sistema}
+\chapter{Diagrama de diseño estructurado}
 % \imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
 %   de la revisión de Proyectos de Investigación}{}{H} 
 
@@ -1222,13 +1224,10 @@ PROCESO VALORAR_EXPERTOS(Valoración_Expertos)
 
 % \imagen{diagramas/DE_7.pdf}{14cm}{Gestión de Expertos}}{}{H}
 
-\chapter{Base de datos}
-\section{Diagrama Entidad/Interrelación}
-\imagen{diagramas/ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}{}
-
-\section{Diagrama relacional}
+\chapter{Diagrama relacional}
 \imagen{diagramas/MRE.pdf}{15cm}{Diagrama Relacional}{}{}
 
+\part{Implementación}
 \chapter{Manual de usuario}
 \section{Introducción}
 La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
@@ -1238,7 +1237,7 @@ manejar diferentes acciones según el rango que tenga en la empresa (secretario,
 coordinador, adjunto o experto).
 
 La implementación de la práctica incluye todo lo relacionado con la gestión de
-las evaluaciones. Entre las diferentes posibilidades de la aplicación se 
+las e\-va\-lua\-cio\-nes. Entre las diferentes posibilidades de la aplicación se
 encuentran: la realización de modelos de evaluación, la realización de informes
 de evaluación, la modificación de informes de evaluación, la eliminación de 
 informes de evaluación, la consulta de informes de evaluación y el envío de 
@@ -1251,8 +1250,8 @@ La pantalla de inicio de la aplicación se puede observar en la figura
 \imagen{acceso.pdf}{13cm}{\small{Acceso a la aplicación.}}{img1}{}
 
 \begin{itemize}
-\item Se introduce el usuario y la contraseña (ver figura \ref{img2})
-  proporcionados en el correo de alta.
+\item Se introduce el usuario y la contraseña proporcionados en el correo de 
+alta (figura \ref{img2}).
 
 \imagen{introducirdatos.pdf}{4cm}{\small{Datos del usuario.}}{img2}{}
 
@@ -1309,33 +1308,32 @@ Se marca el paquete de la convocatoria que se desea modificar y se pulsa
 {img7}{}
 
 \section{Coordinador}
-Una vez introducidos los datos de un coordinador, aparecerá la siguiente 
-ventana con las acciones que puede realizar (figura \ref{c1}).
+La pantalla principal del coordinador muestra las posibles acciones a realizar 
+(figura \ref{c1}).
 \imagen{corprinc.pdf}{13cm}{\small{Ventana Principal del coordinador.}}{c1}{}
 
 \subsection{Ver/Modificar informe final}
 \begin{enumerate}
-\item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
+\item Se seleccionar el proyecto deseado de entre los disponibles (figura 
   \ref{c2}). Los proyectos asignados se muestran en una tabla.
   
   \imagen{selcor.pdf}{13cm}{\small{Selección de proyecto.}}{c2}{}
 
-\item Para proceder a consultar/modificar el informe final, pulsar 
-  ``Ver/Modificar informe'' y se expandirá el correspondiente modelo de 
-  evaluación (ver figura \ref{c3}).
+\item Para consultar o modificar el informe final, pulsar 
+  ``Ver/Modificar informe'' y se expande el correspondiente modelo de 
+  evaluación (figura \ref{c3}).
 
   \imagen{modinf.pdf}{13cm}{\small{Ver/modificar el informe final.}}{c3}{}
 
-\item Se pulsa ``Guardar'' o ``Finalizar'' como se puede observar en la figura 
-  \ref{c4}. El botón ``Guardar'' permite guardar los cambios y editar en 
-  posteriores sesiones, mientras que el botón ``Finalizar'' dará por finalizado 
-  el informe.
+\item El botón ``Guardar'' permite guardar los cambios y editar en 
+  posteriores sesiones, mientras que el botón ``Finalizar'' dar por finalizado 
+  el informe (figura \ref{c4}).
   
   \imagen{opcor.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{c4}{}
 \end{enumerate}
 
 \subsection{Validar informe final}
-Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se 
+Se selecciona el proyecto deseado y se pulsa ``Validar informe final'', como se 
 puede ver en la figura \ref{c5}.
 \imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}{}
 
@@ -1345,30 +1343,30 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 
 \subsection{Realizar informe final}
 \begin{enumerate}
-\item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
+\item Se selecciona el proyecto deseado de entre los disponibles (figura 
   \ref{a2}). Los proyectos asignados se muestran en una tabla.
   
   \imagen{seladj.pdf}{13cm}{\small{Selección de proyecto.}}{a2}{}
 
-\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver qué 
+\item Pulsando la opción ``+'', que aparece en la columna Exps, se puede ver que
   expertos han realizado evaluaciones sobre el proyecto, como se puede ver en
   la figura \ref{a3}. 
 
   \imagen{listaexp.pdf}{13cm}{\small{Expertos del proyecto seleccionado.}}{a3}{}
 
-\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada 
+\item Pulsando el icono de consulta, se puede acceder a la evaluación realizada 
   por cada uno de los expertos (figura \ref{a4}).
 
   \imagen{coneval.pdf}{13cm}{\small{Consulta evaluación.}}{a4}{}
 
-\item Para proceder a realizar el informe final, pulsar ``Realizar informe'' 
-  y se expandirá el correspondiente modelo de evaluación (figura \ref{a5}).
+\item Para realizar el informe final, se pulsa ``Realizar informe'' 
+  para que se expanda el correspondiente modelo de evaluación (figura \ref{a5}).
   
   \imagen{inffinal.pdf}{13cm}{\small{Realización informe final.}}{a5}{}
 
-\item El adjunto podrá ``Guardar'' o ``Finalizar informe'' 
+\item El adjunto puede ``Guardar'' o ``Finalizar informe'' 
   (figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
-  posteriores sesiones, mientras que el segundo dará por finalizado el informe.
+  posteriores sesiones, mientras que el segundo finaliza el informe.
   
   \imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}{}
 \end{enumerate}
@@ -1385,7 +1383,7 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 
 \item Se expande el correspondiente modelo de evaluación, mostrando los 
   diferentes puntos a evaluar. En la parte izquierda de la pantalla se
-  muestra la memoria del proyecto a evaluar, como se puede ver en la figura
+  muestra la memoria de dicho proyecto, como se puede ver en la figura
   \ref{img9}. 
 
   \imagen{evalexp.pdf}{13cm}{\small{Realización de evaluación.}}{img9}{}
@@ -1467,7 +1465,7 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 % \subsection{theme/css/users.php}
 % \lstinputlisting{implementacion/theme/css/users.php}
 
-\chapter{Carga de trabajo}
+\chapter*{Apéndice: Carga de trabajo}
 \begin{center}
  \begin{tabular}{|p{10cm}|c|}\hline 
   Apellidos y Nombre & Porcentaje \\ \hline \hline
