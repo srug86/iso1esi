@@ -1,5 +1,5 @@
 % Clase
-\documentclass[12pt,a4paper,spanish,twoside]{article}
+\documentclass[12pt,a4paper,spanish,twoside]{book}
 
 % Órdenes auxiliares
 \input{latex-func.tex}
@@ -11,15 +11,26 @@
 \usepackage[margin=2.5cm,top=3cm]{geometry}
 
 \begin{document}
+
+% Portada
 \portada{Ingeniería del Software I}{Práctica 1: Desarrollo estructurado}
 {GDRPI: Gestión Distribuída de la Revisión\\de Proyectos de Investigación}
 {Sergio de la Rubia García-Carpintero\\Miguel Millán Sánchez-Grande\\Luis
   Muñoz Villarreal\\Alicia Serrano Sánchez\\Juan Miguel Torres Triviño}
 {17 de Febrero del 2010}
 
+% Licencia
+\licencia{Sergio de la Rubia García-Carpintero, Miguel Millán Sánchez-Grande,
+  Luis Muñoz Villarreal, Alicia Serrano Sánchez, Juan Miguel Torres Triviño}
+
+% Índice de contenido
 \tableofcontents
 \newpage
-\section{Introducción}
+
+% Índice de figuras
+\listoffigures
+
+\chapter*{Prólogo}
 El objetivo de la práctica es conocer y simular el ciclo de vida seguido
 durante el desarrollo del software. Para ello se va a realizar un supuesto
 práctico que incluye análisis de requisitos, diseño e implementación del
@@ -54,8 +65,8 @@ estructurado, heurísticas de transición entre ambos, y estrategias de prueba;
 y las posibilidades que ofrece la reutilización del software en todos los
 niveles de desarrollo. 
 
-\section{Especificación de requisitos}
-\subsection{Requisitos iniciales de sistema}
+\chapter{Especificación de requisitos}
+\section{Requisitos iniciales de sistema}
 Se trata de desarrollar una aplicación para la gestión distribuída de la
 revisión de proyectos de investigación (y otro tipo de solicitudes, como
 becas, acciones integradas, etc.). El sistema lo mantiene una agencia de
@@ -85,11 +96,11 @@ utilizado por los siguientes tipos de usuario:
   investigadores, texto de la convocatoria, etc.). 
 \end{itemize}
 
-\subsection{Análisis de requisitos del sistema}
+\section{Análisis de requisitos del sistema}
 Tras una serie de reuniones, los requisitos finales para nuestro sistema son
 los siguientes: 
 
-\subsubsection{Usuarios}
+\subsection{Usuarios}
 \begin{itemize}
 \item Acceden al sistema mediante un nombre de usuario, que será la cuenta de
   correo; y una contraseña, que se podrá modificar.
@@ -100,7 +111,7 @@ los siguientes:
   sistema.
 \end{itemize}
 
-\subsubsection{Paquete de proyectos}
+\subsection{Paquete de proyectos}
 Las instituciones solicitantes mandan los proyectos en paquetes al
 secretario, los cuales contienen: 
 \begin{itemize}
@@ -114,7 +125,7 @@ secretario, los cuales contienen:
 \item Cada proyecto tendrá una fecha en la cuál tiene que estar evaluado.
 \end{itemize}
 
-\subsubsection{Secretario}
+\subsection{Secretario}
 \begin{itemize}
 \item Usuarios: Es el encargado de añadir, modificar y eliminar a los
   usuarios del sistema: coordinadores, adjuntos y expertos.
@@ -132,7 +143,7 @@ secretario, los cuales contienen:
   se incluirá en el modelo de evaluación.
 \end{itemize}
 
-\subsubsection{Coordinador}
+\subsection{Coordinador}
 \begin{itemize}
 \item Pertenece a una única área.
 \item Establece las subáreas de los proyectos que son asignados a su área.
@@ -142,13 +153,13 @@ secretario, los cuales contienen:
   área realizan.
 \end{itemize}
 
-\subsubsection{Área}
+\subsection{Área}
 \begin{itemize}
 \item Está asociada a un único coordinador y tiene, a su vez, varias subáreas. 
 \item El número de subáreas podrá ser diferente en cada área.
 \end{itemize}
 
-\subsubsection{Adjunto}
+\subsection{Adjunto}
 \begin{itemize}
 \item Pertenece únicamente a una subárea.
 \item Tendrá una cola de proyectos asignados.
@@ -180,12 +191,12 @@ secretario, los cuales contienen:
   subárea. 
 \end{itemize}
 
-\subsubsection{Subárea}
+\subsection{Subárea}
 \begin{itemize}
 \item Sólo podrá pertenecer a un área y tiene un único adjunto asociado.
 \end{itemize}
 
-\subsubsection{Expertos}
+\subsection{Expertos}
 \begin{itemize}
 \item Podrán tener asignados varios proyectos a la vez. 
 \item No podrán pertenecer a la misma institución solicitante de la evaluación.
@@ -203,8 +214,8 @@ secretario, los cuales contienen:
   rechazar.
 \end{itemize}
 
-\section{Análisis de sistema}
-\subsection{Diagrama de flujo de datos}
+\chapter{Análisis de sistema}
+\section{Diagrama de flujo de datos}
 
 \imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}{H}
 
@@ -221,8 +232,8 @@ secretario, los cuales contienen:
 %\imagen{diagramas/DFD32.pdf}{15.5cm}{Gestión de Informes Evaluaciones}{df32}{H}
 % \imagen{diagramas/DFD4.pdf}{15.5cm}{Gestión de Expertos}{df4}{H}
 
-\subsection{Definición de flujo de datos}
-\subsubsection{Almacenes de datos}
+\section{Definición de flujo de datos}
+\subsection{Almacenes de datos}
 \begin{description}
 \item[USUARIOS] = @id\_usuario + tipo + e-mail + contraseña + nombre +
   apellidos + teléfono + id\_área + institución + currículum +
@@ -277,7 +288,7 @@ secretario, los cuales contienen:
 \item[PLANTILLAS CORREOS] = @id\_plantilla + asunto + cuerpo
 \end{description}
 
-\subsubsection{Datos Elementales}
+\subsection{Datos Elementales}
 \begin{description}
 \item[tipo] = [secretario $\mid$ coordinador $\mid$ adjunto $\mid$ experto]
 
@@ -308,7 +319,7 @@ secretario, los cuales contienen:
 \item[asunto] = [alta\_usuario $\mid$ invitación $\mid$ aviso\_plazos]
 \end{description}
 
-\subsubsection{Flujos de datos}
+\subsection{Flujos de datos}
 \begin{description}
 \item[Aceptación] = *\emph{En el perfil del adjunto aparecerá la lista de
     expertos seleccionados y se indica si han aceptado o declinado}* 
@@ -680,8 +691,8 @@ secretario, los cuales contienen:
     incorrectas'}* 
 \end{description}
 
-\section{Diseño del sistema}
-\subsection{Diagrama de diseño estructurado}
+\chapter{Diseño del sistema}
+\section{Diagrama de diseño estructurado}
 \imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
   de la revisión de Proyectos de Investigación}{}{H} 
 
@@ -697,15 +708,15 @@ secretario, los cuales contienen:
 
 %\imagen{diagramas/DE_7.pdf}{14cm}{Gestión de Expertos}}{}{H}
 
-\section{Base de datos}
-\subsection{Diagrama Entidad/Interrelación}
+\chapter{Base de datos}
+\section{Diagrama Entidad/Interrelación}
 \imagen{diagramas/ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}{}
 
-\subsection{Diagrama relacional}
+\section{Diagrama relacional}
 \imagen{diagramas/MRE.pdf}{15cm}{Diagrama Relacional}{}{}
 
-\section{Manual de usuario}
-\subsection{Introducción}
+\chapter{Manual de usuario}
+\section{Introducción}
 La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
 aplicación web que incluye todo lo necesario para conseguir una comunicación 
 activa entre el usuario y la información que puede manejar. Cada usuario podrá 
@@ -719,7 +730,7 @@ de evaluación, la modificación de informes de evaluación, la eliminación de
 informes de evaluación, la consulta de informes de evaluación y el envío de 
 informes de evaluación a la institución convocante.
 
-\subsection{Inicio de sesión}
+\section{Inicio de sesión}
 La pantalla de inicio de la aplicación se puede observar en la figura
 \ref{img1}.
 
@@ -740,8 +751,8 @@ correspondiente a las funciones que puede realizar con respecto a las
 evaluaciones de informes.
 
 
-\subsection{Secretario}
-\subsubsection{Crear un modelo de evaluación}
+\section{Secretario}
+\subsection{Crear un modelo de evaluación}
 \begin{enumerate}
 \item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se 
   puede ver en la figura \ref{sc1}. Se despliegan los datos que se pueden 
@@ -777,18 +788,18 @@ evaluaciones de informes.
   ``Guardar'' que está situado al final de la sección FORMULARIOS.
 \end{enumerate}
 
-\subsubsection{Modificar o eliminar un modelo de evaluación}
+\subsection{Modificar o eliminar un modelo de evaluación}
 Se marca el paquete de la convocatoria que se desea modificar y se pulsa 
 ``Modificar'' o ``Eliminar'' según se desee (figura \ref{img7}).
 \imagen{modifmod.pdf}{14cm}{\small{Modificación y eliminación de un modelo.}}
 {img7}{}
 
-\subsection{Coordinador}
+\section{Coordinador}
 Una vez introducidos los datos de un coordinador, aparecerá la siguiente 
 ventana con las acciones que puede realizar (figura \ref{c1}).
 \imagen{corprinc.pdf}{13cm}{\small{Ventana Principal del coordinador.}}{c1}{}
 
-\subsubsection{Ver/Modificar informe final}
+\subsection{Ver/Modificar informe final}
 \begin{enumerate}
 \item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
   \ref{c2}). Los proyectos asignados se muestran en una tabla.
@@ -809,16 +820,16 @@ ventana con las acciones que puede realizar (figura \ref{c1}).
   \imagen{opcor.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{c4}{}
 \end{enumerate}
 
-\subsubsection{Validar informe final}
+\subsection{Validar informe final}
 Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se 
 puede ver en la figura \ref{c5}.
 \imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}{}
 
-\subsection{Adjunto}
+\section{Adjunto}
 La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 \imagen{adjprinc.pdf}{13cm}{\small{Ventana Principal del adjunto.}}{a1}{}
 
-\subsubsection{Realizar informe final}
+\subsection{Realizar informe final}
 \begin{enumerate}
 \item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
   \ref{a2}). Los proyectos asignados se muestran en una tabla.
@@ -848,8 +859,8 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
   \imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}{}
 \end{enumerate}
 
-\subsection{Experto}
-\subsubsection{Realizar evaluación de un proyecto}
+\section{Experto}
+\subsection{Realizar evaluación de un proyecto}
 \begin{enumerate}
 \item Los proyectos asignados se muestran en una tabla. Para realizar la 
   evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación''
@@ -872,77 +883,77 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
   \imagen{saveend.pdf}{4cm}{\small{Guardar o finalizar evaluación.}}{img10}{}
 \end{enumerate}
 
-\section{Implementación}
-\subsection{Introducción}
+\chapter{Implementación}
+\section{Introducción}
 
-\subsection{Código fuente}
-% \subsubsection{index.php}
+\section{Código fuente}
+% \subsection{index.php}
 % \lstinputlisting[language=PHP]{implementacion/index.php}
 
-% \subsubsection{settings.php}
+% \subsection{settings.php}
 % \lstinputlisting{implementacion/settings.php}
 
-% \subsubsection{js/evalmodels.js}
+% \subsection{js/evalmodels.js}
 % \lstinputlisting{implementacion/js/evalmodels.js}
 
-% \subsubsection{js/evalreports.js}
+% \subsection{js/evalreports.js}
 % \lstinputlisting{implementacion/js/evalreports.js}
 
-% \subsubsection{js/main.js}
+% \subsection{js/main.js}
 % \lstinputlisting{implementacion/js/main.js}
 
-% \subsubsection{js/projects.js}
+% \subsection{js/projects.js}
 % \lstinputlisting{implementacion/js/projects.js}
 
-% \subsubsection{source/evaluation\_models.php}
+% \subsection{source/evaluation\_models.php}
 % \lstinputlisting{implementacion/source/evaluation_models.php}
 
-% \subsubsection{source/evaluation\_reports.php}
+% \subsection{source/evaluation\_reports.php}
 % \lstinputlisting{implementacion/source/evaluation_reports.php}
 
-% \subsubsection{source/loginout.php}
+% \subsection{source/loginout.php}
 % \lstinputlisting{implementacion/source/loginout.php}
 
-% \subsubsection{source/mysql.php}
+% \subsection{source/mysql.php}
 % \lstinputlisting{implementacion/source/mysql.php}
 
-% \subsubsection{theme/evaluation\_models.php}
+% \subsection{theme/evaluation\_models.php}
 % \lstinputlisting{implementacion/theme/evaluation_models.php}
 
-% \subsubsection{theme/evaluation\_reports.php}
+% \subsection{theme/evaluation\_reports.php}
 % \lstinputlisting{implementacion/theme/evaluation_reports.php}
 
-% \subsubsection{theme/login.php}
+% \subsection{theme/login.php}
 % \lstinputlisting{implementacion/theme/login.php}
 
-% \subsubsection{theme/main.php}
+% \subsection{theme/main.php}
 % \lstinputlisting{implementacion/theme/main.php}
 
-% \subsubsection{theme/projects.php}
+% \subsection{theme/projects.php}
 % \lstinputlisting{implementacion/theme/projects.php}
 
-% \subsubsection{theme/users.php}
+% \subsection{theme/users.php}
 % \lstinputlisting{implementacion/theme/users.php}
 
-% \subsubsection{theme/css/dialog.php}
+% \subsection{theme/css/dialog.php}
 % \lstinputlisting{implementacion/theme/css/dialog.php}
 
-% \subsubsection{theme/css/evalmodels.css}
+% \subsection{theme/css/evalmodels.css}
 % \lstinputlisting{implementacion/theme/css/evalmodels.css}
 
-% \subsubsection{theme/css/evalreports.css}
+% \subsection{theme/css/evalreports.css}
 % \lstinputlisting{implementacion/theme/css/evalreports.css}
 
-% \subsubsection{theme/css/login.css}
+% \subsection{theme/css/login.css}
 % \lstinputlisting{implementacion/theme/css/login.css}
 
-% \subsubsection{theme/css/main.css}
+% \subsection{theme/css/main.css}
 % \lstinputlisting{implementacion/theme/css/main.css}
 
-% \subsubsection{theme/css/users.php}
+% \subsection{theme/css/users.php}
 % \lstinputlisting{implementacion/theme/css/users.php}
 
-\section{Carga de trabajo}
+\chapter{Carga de trabajo}
 \begin{center}
  \begin{tabular}{|p{10cm}|c|}\hline 
   Apellidos y Nombre & Porcentaje \\ \hline \hline
