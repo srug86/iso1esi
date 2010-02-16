@@ -7,6 +7,7 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{latexsym}
 \usepackage{fancybox}
+\usepackage{float}
 
 % Ruta para las imágenes
 \graphicspath{{imagesinterface/}}
@@ -22,7 +23,7 @@
 \setlength{\parskip}{6pt}
 
 % Entorno Listings para código fuente
-\usepackage{listings}
+\usepackage{listingsutf8}[2007/11/11]
 
 \lstset{
   frame=Ltb, %forma del cuadro
@@ -43,7 +44,8 @@
   numberstyle=\tiny,
   numberfirstline= false,
   %
-  texcl=true
+  inputencoding=utf8/latin1
+  %texcl=true
 }
 
 % minimizar fragmentado de listados
@@ -91,11 +93,12 @@
 
 
 % ------------------ Macro para insertar una imagen ---------------------------
-%    Uso: \imagen{nombreFichero}{Ancho}{Etiqueta}{Identificador}
+%    Uso: \imagen{nombreFichero}{Ancho}{Etiqueta}{Identificador}{Colocador}
 % -----------------------------------------------------------------------------
 \usepackage{ifthen}
-\def\imagen#1#2#3#4{
-  \begin{figure}[!h]
+\def\imagen#1#2#3#4#5{
+%  \ifthenelse{\equal{#5}{}}{\begin{figure}[!h]}{\begin{figure}[#5]}
+\begin{figure}[H]
     \begin{center}
       \ifthenelse{\equal{#2}{}}
       {\includegraphics{#1}}{\resizebox{#2}{!}{\includegraphics{#1}}}
@@ -115,7 +118,7 @@
   \vspace*{-2cm}
 
   \begin{center}
-    \includegraphics[scale=0.25]{logoesi}
+    \includegraphics[scale=0.25]{logoesi.pdf}
   
     \vspace*{1.5cm}
     {\Large \textbf{Universidad de Castilla-La Mancha\\ 

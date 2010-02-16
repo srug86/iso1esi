@@ -1,25 +1,4 @@
 <?php
-/*
-  HECHO EN ESTA SESIÓN
-  
-  PROBLEMAS
-   - Al eleminar de un formulario de un modelo una sección, no siendo esta la
-     última la numeración, no aparece correctamente
-
-   DUDAS
-   - ¿Los paquetes de proyectos y los proyectos no deberían tener un nombre?   
-   - ¿No que relacionar los modelos con los proyectos? 
-     Creo que habría que hacer la siguiente relación:
-     Proyecto --> Modelo --> Paquete
-   - Experto-proyecto debe tener una clave ajena al paquete de proyectos
-     porque sólo con el proyecto no es suficiente
-   - Cambiado eid por uid en expertos-proyectos
-   - Cambiado state en proyectos
-   - Cambiado area por aid en usuarios
-
-   HACER
- */
-
 /* ---------------------------------------------------------------- *
  * Gestión Distribuída de la Revisión de Proyectos de Investigación *
  * ---------------------------------------------------------------- */         
@@ -35,8 +14,6 @@ include 'theme/main.php';
 
 session_start();
 $_mysql = new MySQL();
-
-//unset($_SESSION);
 
 /* Global variables */
 $_uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : null;

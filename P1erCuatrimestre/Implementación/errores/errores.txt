@@ -33,7 +33,7 @@ CORREGIDO
 # En la vista de Adjuntos, cuando consultamos (la lupa) los informes de los
 # expertos sale un "Notice: ....". Hay una captura de miguelito. 
 # (NO SUBIÓ LA CAPTURA)
-------------------------------------------------------------------------------
+
 SIN CORREGIR
 # Cuando creas un modelo y pones secciones con radianes o cajas, a la hora de
 # mostrar las vistas de dichos modelos, no salen sus valores; sólamente salen
