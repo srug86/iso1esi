@@ -1,8 +1,15 @@
 Árbol de pruebas
+
 Área 5 = tecnología
 Subárea 1 = Ingenería eléctrica
 Subárea 2 = Ingeniería mecánica
 Subárea 3 = Metalurgía
+
+Proyecto 1 => rid 1 => emid 3 => uid 5655433
+Proyecto 2 => rid 3 => emid 5 => uid 5720012
+Proyecto 3 => rid 2 => emid 7 => uid 3412367
+
+
 
 |--Secretario (5699591)	
 |	Luis Muñoz Villarreal
