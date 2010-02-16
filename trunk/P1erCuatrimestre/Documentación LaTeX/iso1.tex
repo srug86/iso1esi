@@ -1,14 +1,21 @@
+% Clase
 \documentclass[12pt,a4paper,spanish,twoside]{article}
 
+% Órdenes auxiliares
 \input{latex-func.tex}
+
+% Encabezado y pie
+\encabezado{Ingeniería del software I. Práctica 1: Desarrollo estructurado}
 
 % Margenes
 \usepackage[margin=2.5cm,top=3cm]{geometry}
+
 \begin{document}
-\portada{Ingeniería del Software I}{Práctica Primer Cuatrimestre}{Gestión 
-Distribuída de la Revisión de Proyectos de Investigación}{Sergio de la Rubia
-García-Carpintero\\Miguel Millán Sánchez-Grande\\Luis Muñoz Villarreal\\Alicia
-Serrano Sánchez\\Juan Miguel Torres Triviño}{17 de Febrero del 2010}
+\portada{Ingeniería del Software I}{Práctica 1: Desarrollo estructurado}
+{GDRPI: Gestión Distribuída de la Revisión\\de Proyectos de Investigación}
+{Sergio de la Rubia García-Carpintero\\Miguel Millán Sánchez-Grande\\Luis
+  Muñoz Villarreal\\Alicia Serrano Sánchez\\Juan Miguel Torres Triviño}
+{17 de Febrero del 2010}
 
 \tableofcontents
 \newpage
@@ -199,570 +206,741 @@ secretario, los cuales contienen:
 \section{Análisis de sistema}
 \subsection{Diagrama de flujo de datos}
 
-\imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}
-\imagen{diagramas/DFD0.pdf}{15.5cm}{Diagrama de Sistemas}{0}
-\imagen{diagramas/DFD1.pdf}{15.5cm}{Gestión de Usuarios}{1}
-\imagen{diagramas/DFD2.pdf}{15.5cm}{Gestión de Paquetes Proyectos}{2}
-\imagen{diagramas/DFD3.pdf}{15.5cm}{Gestión de Evaluaciones}{3}
-\imagen{diagramas/DFD31.pdf}{15.5cm}{Gestión de Modelos}{31}
-\imagen{diagramas/DFD32.pdf}{15.5cm}{Gestión de Informes Evaluaciones}{32}
-\imagen{diagramas/DFD4.pdf}{15.5cm}{Gestión de Expertos}{4}
+\imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}{H}
+
+\imagen{diagramas/DFD0.pdf}{15.5cm}{Diagrama de Sistemas}{df0}{H}
+
+\imagen{diagramas/DFD1.pdf}{15.5cm}{Gestión de Usuarios}{df1}{H}
+
+\imagen{diagramas/DFD2.pdf}{15.5cm}{Gestión de Paquetes Proyectos}{df2}{H}
+
+\imagen{diagramas/DFD3.pdf}{15.5cm}{Gestión de Evaluaciones}{df3}{H}
+
+\imagen{diagramas/DFD31.pdf}{15.5cm}{Gestión de Modelos}{df31}{H}
+
+%\imagen{diagramas/DFD32.pdf}{15.5cm}{Gestión de Informes Evaluaciones}{df32}{H}
+% \imagen{diagramas/DFD4.pdf}{15.5cm}{Gestión de Expertos}{df4}{H}
 
 \subsection{Definición de flujo de datos}
 \subsubsection{Almacenes de datos}
-\begin{displaymath}
-  \mathbf{USUARIOS} = @id\_usuario + tipo + e-mail + contraseña + 
-  nombre + apellidos + teléfono + id\_área + institución + currículum +
-  palabras\_clave
+\begin{description}
+\item[USUARIOS] = @id\_usuario + tipo + e-mail + contraseña + nombre +
+  apellidos + teléfono + id\_área + institución + currículum +
+  palabras\_clave 
 
-  \mathbf{PAQUETES PROYECTOS} = @id\_paquete + nombre\_paquete + institución
-  + bases + convocatoria + fecha\_entrada + fecha\_salida + fecha\_límite 
+\item[PAQUETES PROYECTOS] = @id\_paquete + nombre\_paquete + institución +
+  bases + convocatoria + fecha\_entrada + fecha\_salida + fecha\_límite 
 
-  \mathbf{fecha\_entrada} = fecha\_salida = fecha\_límite = día + mes + año
+\item[fecha\_entrada] = fecha\_salida = fecha\_límite = día + mes + año
 
-  \mathbf{MODELOS EVALUACIÓN} = @id\_modelo + cppid + estructura
+\item[MODELOS EVALUACIÓN] = @id\_modelo + cppid + estructura
 
-  \mathbf{cppid} = *\emph{Identificador de la convocatoria del paquete de
+\item[cppid] = *\emph{Identificador de la convocatoria del paquete de
     proyectos correspondiente}* 
 
-  \mathbf{ÁREAS} = @id\_área + nombre
+\item[ÁREAS] = @id\_área + nombre
 
-  \mathbf{SUBÁREAS} = @id\_subárea + @id\_área + id\_usuario + nombre
+\item[SUBÁREAS] = @id\_subárea + @id\_área + id\_usuario + nombre
 
-  \mathbf{SUBÁREAS} = *\emph{El id\_usuario es sólo para los adjuntos. El resto
+\item[SUBÁREAS] = *\emph{El id\_usuario es sólo para los adjuntos. El resto
     de usuarios no tiene área asignada}* 
 
-  \mathbf{PROYECTOS} = @id\_proyecto + @id\_paquete + nombre\_proyecto +
-  memoria + id\_área + id\_subárea + estado\_proyecto + tpo\_inv + tpo\_eval
-  + id\_modelo\_eval + evaluación 
+\item[PROYECTOS] = @id\_proyecto + @id\_paquete + nombre\_proyecto + memoria
+  + id\_área + id\_subárea + estado\_proyecto + tpo\_inv + tpo\_eval +
+  id\_modelo\_eval + evaluación 
 
-  \mathbf{tpo\_inv} = *\emph{Tiempo que tiene un experto para aceptar o
-    declinar una invitación}* 
+\item[tpo\_inv] = *\emph{Tiempo que tiene un experto para aceptar o declinar
+    una invitación}* 
 
-  \mathbf{tpo\_eval} = *\emph{Tiempo que tiene un experto para realizar una
+\item[tpo\_eval] = *\emph{Tiempo que tiene un experto para realizar una
     evaluación desde su aceptación}* 
 
-  \mathbf{evaluación} = *\emph{Informe final realizado}*
+\item[evaluación] = *\emph{Informe final realizado}*
 
-  \mathbf{EXPERTOS-PROYECTOS} = @id\_usuario + @id\_paqproy + @id\_proyecto +
+\item[EXPERTOS-PROYECTOS] = @id\_usuario + @id\_paqproy + @id\_proyecto +
   id\_informe + valoración + fecha\_asignación 
 
-  \mathbf{valoración} = tpo\_realización + calidad\_informe
+\item[valoración] = tpo\_realización + calidad\_informe
 
-  \mathbf{fecha\_asignación} = día + mes + año
+\item[fecha\_asignación] = día + mes + año
 
-  \mathbf{tpo\_realización} = nota
+\item[tpo\_realización] = nota
 
-  \mathbf{calidad\_informe} = nota
+\item[calidad\_informe] = nota
 
-  \mathbf{INFORMES EVALUACIÓN} = @id\_informe + id\_modelo\_eval +
+\item[INFORMES EVALUACIÓN] = @id\_informe + id\_modelo\_eval +
   estado\_informe + datos 
 
-  \mathbf{datos} = *\emph{El experto, el adjunto y el coordinador rellenarán
-    los campos correspondientes al modelo de evaluación del proyecto}* 
+\item[datos] = *\emph{El experto, el adjunto y el coordinador rellenarán los
+    campos correspondientes al modelo de evaluación del proyecto}* 
 
-  \mathbf{PLANTILLAS CORREOS} = @id\_plantilla + asunto + cuerpo
-\end{displaymath}
+\item[PLANTILLAS CORREOS] = @id\_plantilla + asunto + cuerpo
+\end{description}
 
 \subsubsection{Datos Elementales}
-\begin{displaymath}
-  \mathbf{tipo} = [secretario \mid coordinador \mid adjunto \mid experto]
+\begin{description}
+\item[tipo] = [secretario $\mid$ coordinador $\mid$ adjunto $\mid$ experto]
 
-  \mathbf{dígito} = [0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid
-  8 \mid 9] 
+\item[dígito] = [0 $\mid$ 1 $\mid$ 2 $\mid$ 3 $\mid$ 4 $\mid$ 5 $\mid$ 6
+  $\mid$ 7 $\mid$ 8 $\mid$ 9] 
 
-  \mathbf{día} = [1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9
-  \mid 10 \mid 11 \mid 12 \mid 13 \mid 14 \mid 15 \mid 16 \mid 17 \mid 18
-  \mid 19 \mid 20 \mid 21 \mid 22 \mid 23 \mid 24 \mid 25 \mid 26 \mid 27
-  \mid 28 \mid 29 \mid 30 \mid 31] 
+\item[día] = [1 $\mid$ 2 $\mid$ 3 $\mid$ 4 $\mid$ 5 $\mid$ 6 $\mid$ 7 $\mid$
+  8 $\mid$ 9 $\mid$ 10 $\mid$ 11 $\mid$ 12 $\mid$ 13 $\mid$ 14 $\mid$ 15
+  $\mid$ 16 $\mid$ 17 $\mid$ 18 $\mid$ 19 $\mid$ 20 $\mid$ 21 $\mid$ 22
+  $\mid$ 23 $\mid$ 24 $\mid$ 25 $\mid$ 26 $\mid$ 27 $\mid$ 28 $\mid$ 29
+  $\mid$ 30 $\mid$ 31] 
 
-  \mathbf{mes} = [Enero \mid Febrero \mid Marzo \mid Abril \mid Mayo \mid
-  Junio \mid Julio \mid Agosto \mid Septiembre \mid Octubre \mid Noviembre
-  \mid Diciembre] 
+\item[mes] = [Enero $\mid$ Febrero $\mid$ Marzo $\mid$ Abril $\mid$ Mayo
+  $\mid$ Junio $\mid$ Julio $\mid$ Agosto $\mid$ Septiembre $\mid$ Octubre
+  $\mid$ Noviembre $\mid$ Diciembre] 
 
-  \mathbf{nota} = [0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8
-  \mid 9 \mid 10] 
+\item[nota] = [0 $\mid$ 1 $\mid$ 2 $\mid$ 3 $\mid$ 4 $\mid$ 5 $\mid$ 6 $\mid$
+  7 $\mid$ 8 $\mid$ 9 $\mid$ 10] 
 
-  \mathbf{año} = 2 + dígito + dígito + dígito
+\item[año] = 2 + dígito + dígito + dígito
 
-  \mathbf{estado\_proyecto} = [sin\_evaluar \mid expertos\_evaluando \mid
-  evaluado\_por\_expertos \mid evaluado\_por\_adjunto \mid
+\item[estado\_proyecto] = [sin\_evaluar $\mid$ expertos\_evaluando $\mid$
+  evaluado\_por\_expertos $\mid$ evaluado\_por\_adjunto $\mid$
   validado\_coodinador] 
 
-  \mathbf{estado\_informe} = [en\_proceso \mid finalizado]
+\item[estado\_informe] = [en\_proceso $\mid$ finalizado]
 
-  \mathbf{asunto} = [alta\_usuario \mid invitación \mid aviso\_plazos]
-\end{displaymath}
+\item[asunto] = [alta\_usuario $\mid$ invitación $\mid$ aviso\_plazos]
+\end{description}
 
 \subsubsection{Flujos de datos}
-\begin{displaymath}
-  \mathbf{Aceptación} = *\emph{En el perfil del adjunto aparecerá la lista de
+\begin{description}
+\item[Aceptación] = *\emph{En el perfil del adjunto aparecerá la lista de
     expertos seleccionados y se indica si han aceptado o declinado}* 
 
-  \mathbf{Actualización Estado} = [evaluado\_por\_expertos \mid
-  evaluado\_por\_adjunto \mid validado\_coodinador] 
+\item[Actualización Estado] = [evaluado\_por\_expertos $\mid$
+  evaluado\_por\_adjunto $\mid$ validado\_coodinador] 
 
-  \mathbf{Adjuntos} = [Consulta Subárea \mid Asignar Subárea]
+\item[Adjuntos] = [Consulta Subárea $\mid$ Asignar Subárea]
 
-  \mathbf{Adjuntos} = *\emph{Los usuarios adjuntos añadidos se asignan a una
+\item[Adjuntos] = *\emph{Los usuarios adjuntos añadidos se asignan a una
     subárea. Se escribe en la tabla SUBÁREAS}* 
  
-  \mathbf{Alta Usuario} = id\_usuario + tipo + e-mail + contraseña
+\item[Alta Usuario] = id\_usuario + tipo + e-mail + contraseña
 
-  \mathbf{Alta Usuario} = *\emph{El secretario da de alta a los usuarios
+\item[Alta Usuario] = *\emph{El secretario da de alta a los usuarios
     introduciendo su identificador, el tipo de usuario, el e-mail y la
     contraseña}* 
 
-  \mathbf{Área} = id\_área + nombre
+\item[Área] = id\_área + nombre
 
-  \mathbf{Área} = *\emph{Los usuarios añadidos se asignan a una área}*
+\item[Área] = *\emph{Los usuarios añadidos se asignan a una área}*
 
-  \mathbf{Área Asignada} = id\_área
+\item[Área Asignada] = id\_área
 
-  \mathbf{Área Asignada} = *\emph{Se le añade un área a cada proyecto}*
+\item[Área Asignada] = *\emph{Se le añade un área a cada proyecto}*
 
-  \mathbf{Área Proyectos} = id\_área + id\_paqproy + id\_proyecto
+\item[Área Proyectos] = id\_área + id\_paqproy + id\_proyecto
 
-  \mathbf{Área Proyectos} = *\emph{Asignación de un área a un proyecto}*
+\item[Área Proyectos] = *\emph{Asignación de un área a un proyecto}*
 
-  \mathbf{Asignar Subárea} = id\_subárea + id\_área + id\_usuario +
-  nombre\_subárea. 
+\item[Asignar Subárea] = id\_subárea + id\_área + id\_usuario + nombre\_subárea.
 
-  \mathbf{Asignar Subárea} = *\emph{Se introduce una fila nueva en la tabla
+\item[Asignar Subárea] = *\emph{Se introduce una fila nueva en la tabla
     SUBÁREAS}* 
 
-  \mathbf{Autentificación} = [Datos Autentificación \mid Verificar 
-    Autentificar]
+\item[Autentificación] = [Datos Autentificación $\mid$ Verificar Autentificar]
 
-  \mathbf{Autentificación} = *\emph{Acceso al sistema con una cuenta de
-    usuario y verificación de la autentificación}* 
+\item[Autentificación] = *\emph{Acceso al sistema con una cuenta de usuario y
+    verificación de la autentificación}* 
 
-  \mathbf{Avisos Plazos} = nombre + apellidos + [tpo\_inv \mid tpo\_eval] +
-    id\_proyecto + id\_paquete + nombre\_proyecto + cuerpo 
+\item[Avisos Plazos] = nombre + apellidos + [tpo\_inv $\mid$ tpo\_eval] +
+  id\_proyecto + id\_paquete + nombre\_proyecto + cuerpo 
 
-  \mathbf{Avisos Plazos} = *\emph{Correo de advertencia de fecha límite de
+\item[Avisos Plazos] = *\emph{Correo de advertencia de fecha límite de
     evaluación de un proyecto}* 
 
-  \mathbf{Cambio Estado} = estado\_proyecto
+\item[Cambio Estado] = estado\_proyecto
 
-  \mathbf{Cambio Estado} = *\emph{El estado del proyecto cambia de
-    'sin\_evaluar' a 'expertos\_evaluando'}* 
+\item[Cambio Estado] = *\emph{El estado del proyecto cambia de 'sin\_evaluar'
+    a 'expertos\_evaluando'}* 
 
-  \mathbf{Consulta Área Proyecto} = área
+\item[Consulta Área Proyecto] = área
 
-  \mathbf{Consulta Área Proyecto} = *\emph{Se extrae el área del proyecto
-    para buscar expertos relacionados con ese área}* 
+\item[Consulta Área Proyecto] = *\emph{Se extrae el área del proyecto para
+    buscar expertos relacionados con ese área}* 
 
-  \mathbf{Consulta Autentificación} = e-mail + contraseña
+\item[Consulta Autentificación] = e-mail + contraseña
 
-  \mathbf{Consulta Expertos} = [Expertos Seleccionados \mid Expertos Búsqueda
-  \mid email] 
+\item[Consulta Expertos] = [Expertos Seleccionados $\mid$ Expertos Búsqueda
+  $\mid$ email] 
 
-  \mathbf{Consulta Informes Expertos} = id\_informe + id\_modelo\_eval +
+\item[Consulta Informes Expertos] = id\_informe + id\_modelo\_eval +
   estado\_informe + datos 
 
-  \mathbf{Consulta Informes Expertos} = *\emph{Ver informes de proyectos de
+\item[Consulta Informes Expertos] = *\emph{Ver informes de proyectos de
     expertos}* 
 
-  \mathbf{Consulta Subárea} = id\_subárea + id\_área + (id\_usuario) + nombre
+\item[Consulta Subárea] = id\_subárea + id\_área + (id\_usuario) + nombre
 
-  \mathbf{Consulta Subárea} = *\emph{Consulta de las subáreas donde trabaja
-    el usuario, el id\_usuario es opcional ya que el flujo consultar usuario
-    que va desde modificar datos personales a Subáreas no utiliza el
-    id\_usuario, sino que lee para asignarle un subárea}* 
+\item[Consulta Subárea] = *\emph{Consulta de las subáreas donde trabaja el
+    usuario, el id\_usuario es opcional ya que el flujo consultar usuario que
+    va desde modificar datos personales a Subáreas no utiliza el id\_usuario,
+    sino que lee para asignarle un subárea}* 
 
-  \mathbf{Consulta Usuarios} = id\_usuario + tipo + e-mail + contraseña +
-  nombre + apellidos, teléfono + id\_área + institución + currículum +
+\item[Consulta Usuarios] = id\_usuario + tipo + e-mail + contraseña + nombre
+  + apellidos, teléfono + id\_área + institución + currículum +
   palabras\_clave 
 
-  \mathbf{Convocatoria} = convocatoria
+\item[Convocatoria] = convocatoria
 
-  \mathbf{convocatoria}: *\emph{En la convocatoria del paquete de proyectos
+\item[convocatoria]: *\emph{En la convocatoria del paquete de proyectos
     encontramos todo lo necerario para realizar los Modelos de Evaluación}* 
 
-  \mathbf{Correo Alta} = id\_usuario + contraseña + nombre + apellidos + área
-  + cuerpo 
+\item[Correo Alta] = id\_usuario + contraseña + nombre + apellidos + área +
+  cuerpo 
 
-  \mathbf{Correo Alta} = *\emph{Correo de confirmación de registro de un
-    nuevo usuario en el sistema}* 
+\item[Correo Alta] = *\emph{Correo de confirmación de registro de un nuevo
+    usuario en el sistema}* 
 
-  \mathbf{Criterios Evaluación} = [id\_modelo + estructura \mid ID Modelo]
+\item[Criterios Evaluación] = [id\_modelo + estructura $\mid$ ID Modelo]
 
-  \mathbf{Criterios Evaluación} = *\emph{Añadir, modificar o eliminar los
-    modelos de evaluación a utilizar para realizar los informes}* 
+\item[Criterios Evaluación] = *\emph{Añadir, modificar o eliminar los modelos
+    de evaluación a utilizar para realizar los informes}* 
 
-  \mathbf{Datos Autentificación} = id\_usuario + contraseña
+\item[Datos Autentificación] = id\_usuario + contraseña
 
-  \mathbf{Datos Paquetes Proyectos} = (id\_paquete) + (institución) + (bases)
-  + (convocatoria) + (fecha\_entrada) + (fecha\_salida) + (fecha\_límite) 
+\item[Datos Paquetes Proyectos] = (id\_paquete) + (institución) + (bases) +
+  (convocatoria) + (fecha\_entrada) + (fecha\_salida) + (fecha\_límite) 
 
-  \mathbf{Datos Paquetes Proyectos} = *\emph{Se añaden, se modifican y se
+\item[Datos Paquetes Proyectos] = *\emph{Se añaden, se modifican y se
     consultan los datos de los paquetes de proyectos}* 
 
-  \mathbf{Datos Personales} = id\_usuario + tipo + e-mail + contraseña +
-  nombre + apellidos + teléfono + área + institución + currículum +
-  palabras\_clave 
+\item[Datos Personales] = id\_usuario + tipo + e-mail + contraseña + nombre +
+  apellidos + teléfono + área + institución + currículum + palabras\_clave 
 
-  \mathbf{Datos Personales} = *\emph{Modificación de los datos personales de
-    un usuario}* 
+\item[Datos Personales] = *\emph{Modificación de los datos personales de un
+    usuario}* 
 
-  \mathbf{Datos Proyectos} = (id\_proyecto) + (id\_paquete) + (memoria) +
-  (área) + (subárea) + (estado\_proyecto) + (tpo\_inv) + (tpo\_eval) +
+\item[Datos Proyectos] = (id\_proyecto) + (id\_paquete) + (memoria) + (área)
+  + (subárea) + (estado\_proyecto) + (tpo\_inv) + (tpo\_eval) +
   (id\_modelo\_eval) + (evaluación) 
 
-  \mathbf{Datos Proyectos} = *\emph{Se añaden, se modifican y se consultan
-    los datos de los proyectos. Son todos opcionales por el flujo de datos en
-    la modificación}* 
+\item[Datos Proyectos] = *\emph{Se añaden, se modifican y se consultan los
+    datos de los proyectos. Son todos opcionales por el flujo de datos en la
+    modificación}* 
 
-  \mathbf{Datos Usuarios} = id\_usuario
-  \mathbf{Datos Usuarios} = *\emph{Se le pasa el id del usuario para
-    eliminarlo de la base de datos}* 
+\item[Datos Usuarios] = id\_usuario
 
-  \mathbf{email} = email
+\item[Datos Usuarios] = *\emph{Se le pasa el id del usuario para eliminarlo
+    de la base de datos}* 
 
-  \mathbf{email} = *\emph{Se extrae el email de los expertos para mandarles
-    la invitación}* 
+\item[email] = *\emph{Se extrae el email de los expertos para mandarles la
+    invitación}* 
 
-  \mathbf{Evaluaciones} = id\_paquete + {evaluación}
+\item[Evaluaciones] = id\_paquete + {evaluación}
 
-  \mathbf{Evaluaciones} = *\emph{Evaluaciones correspondientes a los
-    proyectos de un paquete y que son enviadas a la institución convocante
-    una vez que estén realizadas}* 
+\item[Evaluaciones] = *\emph{Evaluaciones correspondientes a los proyectos de
+    un paquete y que son enviadas a la institución convocante una vez que
+    estén realizadas}* 
 
-  \mathbf{Experto Desasignado} = id\_usuario + id\_proyecto + id\_paquete
+\item[Experto Desasignado] = id\_usuario + id\_proyecto + id\_paquete
 
-  \mathbf{Expertos} = [Parámetros Consulta \mid Resultado Consulta \mid
-  Parámetros Búsqueda \mid Resultado Búsqueda \mid ID Experto \mid Experto
-  Desasignado] 
+\item[Expertos] = [Parámetros Consulta $\mid$ Resultado Consulta $\mid$
+  Parámetros Búsqueda $\mid$ Resultado Búsqueda $\mid$ ID Experto $\mid$
+  Experto Desasignado] 
 
-  \mathbf{Expertos} = *\emph{Tráfico relacionado con la búsqueda, consulta,
+\item[Expertos] = *\emph{Tráfico relacionado con la búsqueda, consulta,
     asignación y desasignación de expertos para las evaluaciones de
     proyectos}* 
 
-  \mathbf{Expertos Búsqueda} = {@id\_usuario + tipo + e-mail + contraseña +
+\item[Expertos Búsqueda] = {@id\_usuario + tipo + e-mail + contraseña +
     nombre + apellidos + teléfono + área + institución + currículum +
     {palabras\_clave}} 
 
-  \mathbf{Expertos Búsqueda} = *\emph{Lista de expertos resultado de la
+\item[Expertos Búsqueda] = *\emph{Lista de expertos resultado de la
     consulta}* 
 
-  \mathbf{Expertos Seleccionados} = {@id\_usuario + tipo + e-mail +
-    contraseña + nombre + apellidos + teléfono + área + institución +
-    currículum + {palabras\_clave}} 
+\item[Expertos Seleccionados] = {@id\_usuario + tipo + e-mail + contraseña +
+    nombre + apellidos + teléfono + área + institución + currículum +
+    {palabras\_clave}} 
 
-  \mathbf{Expertos Seleccionados} = *\emph{Lista de expertos resultado de la
+\item[Expertos Seleccionados] = *\emph{Lista de expertos resultado de la
     consulta}* 
 
-  \mathbf{Expertos-Proyectos} = [Relación Expertos-Proyectos \mid Valoración
-  Expertos \mid Fin Relación \mid Fecha Asignación \mid Nueva Relación \mid
-  Valoración Trabajo] 
+\item[Expertos-Proyectos] = [Relación Expertos-Proyectos $\mid$ Valoración
+  Expertos $\mid$ Fin Relación $\mid$ Fecha Asignación $\mid$ Nueva Relación
+  $\mid$ Valoración Trabajo] 
 
-  \mathbf{Fecha Asignación} = fecha\_asignación
+\item[Fecha Asignación] = fecha\_asignación
 
-  \mathbf{Fecha Asignación} = *\emph{Se utiliza para el aviso de plazos}*
+\item[Fecha Asignación] = *\emph{Se utiliza para el aviso de plazos}*
 
-  \mathbf{Fecha Límite} = fecha\_límite
+\item[Fecha límite] = fecha\_límite
 
-  \mathbf{Fecha Límite} = *\emph{Se utiliza para indicar el plazo de
-    realización del informe al experto}* 
+\item[Fecha límite] = *\emph{Se utiliza para indicar el plazo de realización
+    del informe al experto}* 
 
-  \mathbf{Fin Relación} = id\_usuario + id\_proyecto + id\_paquete
+\item[Fin Relación] = id\_usuario + id\_proyecto + id\_paquete
 
-  \mathbf{Fin Relación} = *\emph{Se elimina una tupla de la tabla
+\item[Fin Relación] = *\emph{Se elimina una tupla de la tabla
     EXPERTOS-PROYECTOS}* 
 
-  \mathbf{ID Experto} = id\_usuario
+\item[ID Experto] = id\_usuario
 
-  \mathbf{ID Modelo} = id\_modelo
+\item[ID Modelo] = id\_modelo
 
-  \mathbf{Info Informe Evaluación} = [Informe Rechazado \mid Nuevo Informe]
+\item[Info Informe Evaluación] = [Informe Rechazado $\mid$ Nuevo Informe]
 
-  \mathbf{Info Paquetes Proyectos} = [Institución Convocante \mid Fecha
-  límite \mid Plazo invitación] 
+\item[Info Paquetes Proyectos] = [Institución Convocante $\mid$ Fecha límite
+  $\mid$ Plazo invitación] 
 
-  \mathbf{Información Proyecto} = [Tiempos \mid Consulta Área Proyecto \mid
-  Cambio Estado \mid Nombre Proyecto] 
+\item[Información Proyecto] = [Tiempos $\mid$ Consulta Área Proyecto $\mid$
+  Cambio Estado $\mid$ Nombre Proyecto] 
 
-  \mathbf{Informe Final} = id\_proyecto + id\_paquete + estado\_proyecto +
+\item[Informe Final] = id\_proyecto + id\_paquete + estado\_proyecto +
   evaluación 
 
-  \mathbf{Informe Final} = *\emph{Se muestran los datos referidos a los
-    informes finales de los proyectos y también el coordinador introduce el
-    informe final de evaluación del proyecto una vez finalizado este para ser
+\item[Informe Final] = *\emph{Se muestran los datos referidos a los informes
+    finales de los proyectos y también el coordinador introduce el informe
+    final de evaluación del proyecto una vez finalizado este para ser
     devuelto a la institución convocante}* 
 
-  \mathbf{Informe Rechazado} = id\_informe
+\item[Informe Rechazado] = id\_informe
 
-  \mathbf{Informe Rechazado} = *\emph{Se elimina la tupla correspondiente en
-    la tabla INFORMES EVALUACIÓN}* 
+\item[Informe Rechazado] = *\emph{Se elimina la tupla correspondiente en la
+    tabla INFORMES EVALUACIÓN}* 
 
-  \mathbf{Informes Adjuntos} = id\_informe + id\_modelo\_eval +
-  estado\_informe + datos 
+\item[Informes Adjuntos] = id\_informe + id\_modelo\_eval + estado\_informe +
+  datos 
 
-  \mathbf{Informes Adjuntos} = *\emph{Ve y/o modifica el informe final de
+\item[Informes Adjuntos] = *\emph{Ve y/o modifica el informe final de
     evaluación de un adjunto}* 
 
-  \mathbf{Informes Coordinadores} = id\_informe + id\_modelo\_eval +
+\item[Informes Coordinadores] = id\_informe + id\_modelo\_eval +
   estado\_informe + datos 
 
-  \mathbf{Informes Coordinadores} = *\emph{Validar o modificar informe final
-    del adjunto}* 
+\item[Informes Coordinadores] = *\emph{Validar o modificar informe final del
+    adjunto}* 
 
-  \mathbf{Informes Evaluación} = id\_informe + id\_modelo\_eval +
-  estado\_informe + datos 
+\item[Informes Evaluación] = id\_informe + id\_modelo\_eval + estado\_informe
+  + datos 
 
-  \mathbf{Informes Evaluación} = *\emph{Introducir, mostrar, modificar o
-    eliminar los datos referidos a un informe de evaluación. Además modifica,
-    cuando es oportuno, el estado en el que se encuentra dicho informe}* 
+\item[Informes Evaluación] = *\emph{Introducir, mostrar, modificar o eliminar
+    los datos referidos a un informe de evaluación. Además modifica, cuando
+    es oportuno, el estado en el que se encuentra dicho informe}* 
 
-  \mathbf{Informes Expertos} = id\_informe + id\_modelo\_eval +
-  estado\_informe + datos 
+\item[Informes Expertos] = id\_informe + id\_modelo\_eval + estado\_informe +
+  datos 
 
-  \mathbf{Informes Expertos} = *\emph{Añadir o modificar informes de
-    proyectos por parte de los expertos}* 
+\item[Informes Expertos] = *\emph{Añadir o modificar informes de proyectos
+    por parte de los expertos}* 
 
-  \mathbf{Institución Convocante} = institución
+\item[Institución Convocante] = institución
 
-  \mathbf{Institución Convocante} = *\emph{Se consulta la institución
-    convocante para que no coincida en la búsqueda de expertos}* 
+\item[Institución Convocante] = *\emph{Se consulta la institución convocante
+    para que no coincida en la búsqueda de expertos}* 
 
-  \mathbf{Invitación} = [Petición \mid Aceptación]
+\item[Invitación] = [Petición $\mid$ Aceptación]
 
-  \mathbf{Invitación} = *\emph{Correo de invitación a un experto para que
-    evalúe un proyecto y respuesta de éste}* 
+\item[Invitación] = *\emph{Correo de invitación a un experto para que evalúe
+    un proyecto y respuesta de éste}* 
 
-  \mathbf{Lista Usuarios} = {id\_usuario + tipo + e-mail + contraseña +
-    nombre + apellidos + teléfono + área + institución + currículum +
+\item[Lista Usuarios] = {id\_usuario + tipo + e-mail + contraseña + nombre +
+    apellidos + teléfono + área + institución + currículum +
     {palabras\_clave}} 
 
-  \mathbf{Lista Usuarios} = *\emph{Lista devuelta por una búsqueda o consulta
-    de usuarios}* 
+\item[Lista Usuarios] = *\emph{Lista devuelta por una búsqueda o consulta de
+    usuarios}* 
 
-  \mathbf{Memoria Proyecto} = id\_proyecto + id\_paquete + memoria +
+\item[Memoria Proyecto] = id\_proyecto + id\_paquete + memoria +
   id\_modelo\_eval + estado\_proyecto 
 
-  \mathbf{Memoria Proyecto} = *\emph{Se lee para poder realizar el
-    informe. El adjunto también leerá el estado en que se encuentra la
-    evaluación del proyecto}* 
+\item[Memoria Proyecto] = *\emph{Se lee para poder realizar el informe. El
+    adjunto también leerá el estado en que se encuentra la evaluación del
+    proyecto}* 
 
-  \mathbf{Modelo} = id\_modelo\_eval
+\item[Modelo] = id\_modelo\_eval
 
-  \mathbf{Modelo} = *\emph{Se consulta el id del modelo de evaluación para
-    poder asignárselo a los proyectos y también se consulta por si se quiere
-    hacer un cambio en paquetes de proyectos}* 
+\item[Modelo] = *\emph{Se consulta el id del modelo de evaluación para poder
+    asignárselo a los proyectos y también se consulta por si se quiere hacer
+    un cambio en paquetes de proyectos}* 
 
-  \mathbf{Modelos Evaluación} = [id\_modelo + estructura \mid Nuevo Modelo
-  Evaluación \mid id\_modelo] 
+\item[Modelos Evaluación] = [id\_modelo + estructura $\mid$ Nuevo Modelo
+  Evaluación $\mid$ id\_modelo] 
 
-  \mathbf{Modelos Evaluación} = *\emph{Insertar, modificar o eliminar las
+\item[Modelos Evaluación] = *\emph{Insertar, modificar o eliminar las
     estructuras que deben seguir los informes de evaluación de cada
     proyecto}* 
 
-  \mathbf{Nombre Proyecto} = id\_proyecto + nombre
+\item[Nombre Proyecto] = id\_proyecto + nombre
 
-  \mathbf{Nueva Relación} = id\_usuario + id\_proyecto + id\_paquete +
+\item[Nueva Relación] = id\_usuario + id\_proyecto + id\_paquete +
   id\_informe + valoración + fecha\_asignación 
 
-  \mathbf{Nueva Relación} = *\emph{Se inserta una tupla en la tabla
+\item[Nueva Relación] = *\emph{Se inserta una tupla en la tabla
     EXPERTOS-PROYECTOS}* 
 
-  \mathbf{Nuevo Informe} = id\_informe + id\_modelo\_eval + estado\_informe +
-  datos 
+\item[Nuevo Informe] = id\_informe + id\_modelo\_eval + estado\_informe + datos
 
-  \mathbf{Nuevo Informe} = *\emph{Se inserta una tupla en la tabla INFORMES
+\item[Nuevo Informe] = *\emph{Se inserta una tupla en la tabla INFORMES
     EVALUACIÓN. El estado\_informe será 'en\_proceso'}* 
 
-  \mathbf{Nuevo Modelo Evaluación} = id\_modelo + estructura
+\item[Nuevo Modelo Evaluación] = id\_modelo + estructura
 
-  \mathbf{Nuevo Modelo Evaluación} = *\emph{Añade un nuevo Modelo de
-    Evaluación}* 
+\item[Nuevo Modelo Evaluación] = *\emph{Añade un nuevo Modelo de Evaluación}*
 
-  \mathbf{Paquetes Proyectos} = [id\_paquete + institución +
-  nº\_de\_proyectos + bases + convocatoria + fecha\_entrada + fecha\_salida +
-  fecha\_límite \mid Proyectos] 
+\item[Paquetes Proyectos] = [id\_paquete + institución + nº\_de\_proyectos +
+  bases + convocatoria + fecha\_entrada + fecha\_salida + fecha\_límite
+  $\mid$ Proyectos] 
 
-  \mathbf{Paquetes Proyectos} = *\emph{Paquetes de proyectos enviados por la
+\item[Paquetes Proyectos] = *\emph{Paquetes de proyectos enviados por la
     institución convocante para su evaluación}* 
 
-  \mathbf{Parámetros} = (id\_usuario) + (tipo) + (e-mail) + (nombre) +
+\item[Parámetros] = (id\_usuario) + (tipo) + (e-mail) + (nombre) +
   (apellidos) + (teléfono) + (área) + (institución) + (currículum) +
   (palabras\_clave) 
 
-  \mathbf{Parámetros} = *\emph{Son los parámetros de búsqueda de
-    usuarios. Todos los campos son opcionales ya que se pueden realizar
-    búsquedas de usuarios de varias maneras}* 
+\item[Parámetros] = *\emph{Son los parámetros de búsqueda de usuarios. Todos
+    los campos con opcionales ya que se pueden realizar búsquedas de usuarios
+    de varias maneras}* 
 
-  \mathbf{Parámetros Consulta} = Parámetros Búsqueda = (id\_usuario) +
-  (tipo) + (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) +
-  (área) + (institución) + (currículum) + (palabras\_clave) 
+\item[Parámetros Consulta] = Parámetros Búsqueda = (@id\_usuario) + (tipo) +
+  (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) + (área) +
+  (institución) + (currículum) + (palabras\_clave) 
 
-  \mathbf{Petición} = id\_usuario + nombre + apellidos + id\_proyecto +
+\item[Petición] = id\_usuario + nombre + apellidos + id\_proyecto +
   nombre\_proyecto + tmp\_invitación + Correo\_invitación 
 
-  \mathbf{Plantilla} = id\_plantilla + asunto + cuerpo.
+\item[Plantilla] = id\_plantilla + asunto + cuerpo.
 
-  \mathbf{Plantilla} = *\emph{Para mandar los correos pertinentes}*
+\item[Plantilla] = *\emph{Para mandar los correos pertinentes}*
 
-  \mathbf{Plazo Invitación} = tmp\_invitación
+\item[Plazo Invitación] = tmp\_invitación
 
-  \mathbf{Proyecto Rechazado} = id\_proyecto + id\_paquete + id\_subárea
+\item[Proyecto Rechazado] = id\_proyecto + id\_paquete + id\_subárea
 
-  \mathbf{Proyecto Rechazado} = *\emph{Aviso del adjunto al coordinador de su
+\item[Proyecto Rechazado] = *\emph{Aviso del adjunto al coordinador de su
     área para informar de que el proyecto no corresponde a su subárea y debe,
     por tanto, asignarse a otro subárea distinta}* 
 
-  \mathbf{Proyectos} = id\_proyecto + id\_paquete + nombre\_proyecto +
-  memoria + área + subárea + estado\_proyecto + tpo\_inv + tpo\_eval +
-  id\_modelo\_eval + evaluación 
+\item[Proyectos] = id\_proyecto + id\_paquete + nombre\_proyecto + memoria +
+  área + subárea + estado\_proyecto + tpo\_inv + tpo\_eval + id\_modelo\_eval
+  + evaluación 
 
-  \mathbf{Proyectos} = *\emph{Consulta la memoria del proyecto para realizar
-    el informe de evaluación}* 
+\item[Proyectos] = *\emph{Consulta la memoria del proyecto para realizar el
+    informe de evaluación}* 
 
-  \mathbf{Relación Expertos-Proyectos} = {id\_usuario + id\_proyecto +
+\item[Relación Expertos-Proyectos] = {id\_usuario + id\_proyecto +
     id\_paquete + id\_informe + valoración + fecha\_asignación} 
 
-  \mathbf{Relación Expertos-Proyectos} = *\emph{Lista de la relación entre
+\item[Relación Expertos-Proyectos] = *\emph{Lista de la relación entre
     Expertos y Proyectos. Se devolverá una lista según los parámetros de
     consulta}* 
 
-  \mathbf{Resultado Consulta} = Resultado Búsqueda = {id\_usuario + tipo +
+\item[Resultado Consulta] = Resultado Búsqueda = {@id\_usuario + tipo +
     e-mail + contraseña + nombre + apellidos + teléfono + área + institución
     + currículum + {palabras\_clave}} 
 
-  \mathbf{Subárea Adjuntos} = id\_subárea + id\_usuario
+\item[Subárea Adjuntos] = id\_subárea + id\_usuario
 
-  \mathbf{Subárea Adjuntos} = *\emph{Asignación de un adjunto a una subárea}*
+\item[Subárea Adjuntos] = *\emph{Asignación de un adjunto a una subárea}*
 
-  \mathbf{Subárea Asignada} =id\_subárea
+\item[Subárea Asignada] = id\_subárea
 
-  \mathbf{Subárea Asignada} = *\emph{Se le añade una subárea a cada proyecto}*
+\item[Subárea Asignada] = *\emph{Se le añade un subárea a cada proyecto}*
 
-  \mathbf{Subárea Proyectos} = id\_subárea + id\_proyecto + id\_paquete
+\item[Subárea Proyectos] = id\_subárea + id\_proyecto + id\_paquete
 
-  \mathbf{Subárea Proyectos} = *\emph{Asignación de un proyecto a una subárea}*
+\item[Subárea Proyectos] = *\emph{Asignación de un proyecto a una subárea}*
 
-  \mathbf{Tiempos} = tpo\_eval
+\item[Tiempos] = tpo\_eval
 
-  \mathbf{Tiempos} = *\emph{Se consulta el tiempo de evaluación para saber
-    cuanto le queda al experto para realizar el informe}* 
+\item[Tiempos] = *\emph{Se consulta el tiempo de evaluación para saber cuanto
+    le queda al experto para realizar el informe}* 
 
-  \mathbf{Usuarios} = [id\_usuario + tipo + e-mail + contraseña + (nombre) +
+\item[Usuarios] = [id\_usuario + tipo + e-mail + contraseña + (nombre) +
   (apellidos) + (teléfono) + (área) + (institución) + (currículum) +
-  (palabras\_clave) \mid Parámetros] 
+  (palabras\_clave) $\mid$ Parámetros] 
 
-  \mathbf{Usuarios} = *\emph{Da el alta a los usuarios, los consulta o
-    modifica sus datos. Modifica el coordinador asociado a un área. Incluye
-    los parámetros de búsqueda introducidos para realizar dicha búsqueda de
+\item[Usuarios] = *\emph{Da el alta a los usuarios, los consulta o modifica
+    sus datos. Modifica el coordinador asociado a un área. Incluye los
+    parámetros de búsqueda introducidos para realizar dicha búsqueda de
     usuarios}* 
 
-  \mathbf{Valoración Expertos} = id\_usuario + id\_proyecto + id\_paquete +
+\item[Valoración Expertos] = id\_usuario + id\_proyecto + id\_paquete +
   tpo\_realización + calidad\_informe 
 
-  \mathbf{Valoración Expertos} = *\emph{Cada informe elaborado por un experto
+\item[Valoración Expertos] = *\emph{Cada informe elaborado por un experto
     para un proyecto, recibirá una valoración según el tiempo de realización
     y la calidad del informe}* 
 
-  \mathbf{Valoración Trabajo} = {tpo\_realización + calidad\_informe}
+\item[Valoración trabajo] = {tpo\_realización + calidad\_informe}
 
-  \mathbf{Valoración Trabajo} = *\emph{Se utiliza en búsqueda de expertos}*
+\item[Valoración trabajo] = *\emph{Se utiliza en búsqueda de expertos}*
 
-  \mathbf{Verificar Autentificar} = *\emph{Mostrar que la autentificación es
-    correcta. Si introduce incorrectamente el id o la contraseña o ambas, se
+\item[Verificar Autentificar] = *\emph{Mostrar que la autentificación es
+    correcta. Si introduce incorréctamente el id o la contraseña o ambas, se
     mostrará una plantalla en la que se indicará: 'Usuario o contraseña son
     incorrectas'}* 
-\end{displaymath}
+\end{description}
 
 \section{Diseño del sistema}
 \subsection{Diagrama de diseño estructurado}
-\imagen{diagramas/DE_1.pdf}{15cm}{\small{Gestión distribuida de la revisión de 
-Proyectos de Investigación}}{} 
-\imagen{diagramas/DE_2.pdf}{15cm}{\small{Gestión de Usuarios}}{}
-\imagen{diagramas/DE_3.pdf}{15cm}{\small{Gestión de Paquetes de Proyectos}}{}
-\imagen{diagramas/DE_4.pdf}{15cm}{\small{Gestión de Evaluaciones}}{}
-\imagen{diagramas/DE_5.pdf}{15cm}{\small{Gestión de modelos}}{}
-\imagen{diagramas/DE_6.pdf}{14cm}{\small{Gestión de Informes de 
- Evaluaciones}}{}
-\imagen{diagramas/DE_7.pdf}{14cm}{\small{Gestión de Expertos}}{}
+\imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
+  de la revisión de Proyectos de Investigación}{}{H} 
+
+\imagen{diagramas/DE_2.pdf}{15cm}{Gestión de Usuarios}{}{H}
+
+\imagen{diagramas/DE_3.pdf}{15cm}{Gestión de Paquetes de Proyectos}{}{H}
+
+\imagen{diagramas/DE_4.pdf}{15cm}{Gestión de Evaluaciones}{}{H}
+
+\imagen{diagramas/DE_5.pdf}{15cm}{Gestión de modelos}{}{H}
+
+\imagen{diagramas/DE_6.pdf}{14cm}{Gestión de Informes de Evaluaciones}{}{H}
+
+%\imagen{diagramas/DE_7.pdf}{14cm}{Gestión de Expertos}}{}{H}
 
 \section{Base de datos}
 \subsection{Diagrama Entidad/Interrelación}
-\imagen{diagramas/ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}
+\imagen{diagramas/ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}{}
 
 \subsection{Diagrama relacional}
-\imagen{diagramas/MRE.pdf}{15cm}{Diagrama Relacional}{}
+\imagen{diagramas/MRE.pdf}{15cm}{Diagrama Relacional}{}{}
 
 \section{Manual de usuario}
-\input{manual}
+\subsection{Introducción}
+La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
+aplicación web que incluye todo lo necesario para conseguir una comunicación 
+activa entre el usuario y la información que puede manejar. Cada usuario podrá 
+manejar diferentes acciones según el rango que tenga en la empresa (secretario,
+coordinador, adjunto o experto).
+
+La implementación de la práctica incluye todo lo relacionado con la gestión de
+las evaluaciones. Entre las diferentes posibilidades de la aplicación se 
+encuentran: la realización de modelos de evaluación, la realización de informes
+de evaluación, la modificación de informes de evaluación, la eliminación de 
+informes de evaluación, la consulta de informes de evaluación y el envío de 
+informes de evaluación a la institución convocante.
+
+\subsection{Inicio de sesión}
+La pantalla de inicio de la aplicación se puede observar en la figura
+\ref{img1}.
+
+\imagen{acceso.pdf}{13cm}{\small{Acceso a la aplicación.}}{img1}{}
+
+\begin{itemize}
+\item Se introduce el usuario y la contraseña (ver figura \ref{img2})
+  proporcionados en el correo de alta.
+
+\imagen{introducirdatos.pdf}{4cm}{\small{Datos del usuario.}}{img2}{}
+
+\item Si los datos son incorrectos, no se puede acceder a la aplicación y se
+  muestra un mensaje de error. 
+\end{itemize}
+
+La página inicial para cada tipo de usuario muestra la información 
+correspondiente a las funciones que puede realizar con respecto a las 
+evaluaciones de informes.
+
+
+\subsection{Secretario}
+\subsubsection{Crear un modelo de evaluación}
+\begin{enumerate}
+\item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se 
+  puede ver en la figura \ref{sc1}. Se despliegan los datos que se pueden 
+  introducir en un modelo de evaluación.
+  
+  \imagen{anadirmod.pdf}{10cm}{Añadir modelo de evaluación.}{sc1}{}
+
+\item Ver convocatoria de un paquete de proyectos.
+  \begin{itemize}
+  \item En la sección CONVOCATORIAS se despliega una lista (figura \ref{sc2}) 
+    donde se puede elegir el paquete de proyectos del que se desea ver la 
+    convocatoria.
+
+    \imagen{convmod.pdf}{10cm}{\small{Elección de paquete de
+        proyectos.}}{sc2}{}
+
+  \item Se elige un paquete de proyectos y se pulsa ``Ver''. A la derecha de la 
+    página se muestra la información de la convocatoria (figura \ref{sc3}).
+
+    \imagen{convmostrada.pdf}{13cm}{\small{Información de
+        convocatoria.}}{sc3}{}  
+  \end{itemize}
+
+\item Agregar los tipos de elementos de la sección FORMULARIOS pulsando 
+  ``Añadir'', como se puede observar en la figura \ref{sc4}. En la sección 
+  \emph{Estructura} se muestra el resultado del modelo de evaluación que se
+  está creando.
+
+  \imagen{formularios.pdf}{4cm}{\small{Opciones de modelos de
+      evaluación.}}{sc4}{} 
+
+\item Guardar el modelo de evaluación realizado. Para ello se pulsa el botón 
+  ``Guardar'' que está situado al final de la sección FORMULARIOS.
+\end{enumerate}
+
+\subsubsection{Modificar o eliminar un modelo de evaluación}
+Se marca el paquete de la convocatoria que se desea modificar y se pulsa 
+``Modificar'' o ``Eliminar'' según se desee (figura \ref{img7}).
+\imagen{modifmod.pdf}{14cm}{\small{Modificación y eliminación de un modelo.}}
+{img7}{}
+
+\subsection{Coordinador}
+Una vez introducidos los datos de un coordinador, aparecerá la siguiente 
+ventana con las acciones que puede realizar (figura \ref{c1}).
+\imagen{corprinc.pdf}{13cm}{\small{Ventana Principal del coordinador.}}{c1}{}
+
+\subsubsection{Ver/Modificar informe final}
+\begin{enumerate}
+\item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
+  \ref{c2}). Los proyectos asignados se muestran en una tabla.
+  
+  \imagen{selcor.pdf}{13cm}{\small{Selección de proyecto.}}{c2}{}
+
+\item Para proceder a consultar/modificar el informe final, pulsar 
+  ``Ver/Modificar informe'' y se expandirá el correspondiente modelo de 
+  evaluación (ver figura \ref{c3}).
+
+  \imagen{modinf.pdf}{13cm}{\small{Ver/modificar el informe final.}}{c3}{}
+
+\item Se pulsa ``Guardar'' o ``Finalizar'' como se puede observar en la figura 
+  \ref{c4}. El botón ``Guardar'' permite guardar los cambios y editar en 
+  posteriores sesiones, mientras que el botón ``Finalizar'' dará por finalizado 
+  el informe.
+  
+  \imagen{opcor.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{c4}{}
+\end{enumerate}
+
+\subsubsection{Validar informe final}
+Se marca el proyecto seleccionado y se pulsa ``Validar informe final'', como se 
+puede ver en la figura \ref{c5}.
+\imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}{}
+
+\subsection{Adjunto}
+La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
+\imagen{adjprinc.pdf}{13cm}{\small{Ventana Principal del adjunto.}}{a1}{}
+
+\subsubsection{Realizar informe final}
+\begin{enumerate}
+\item Seleccionar el proyecto deseado de entre los disponibles (ver figura 
+  \ref{a2}). Los proyectos asignados se muestran en una tabla.
+  
+  \imagen{seladj.pdf}{13cm}{\small{Selección de proyecto.}}{a2}{}
+
+\item Pulsando la opción ``+'', que aparece en la columna Exps, podrá ver qué 
+  expertos han realizado evaluaciones sobre el proyecto, como se puede ver en
+  la figura \ref{a3}. 
+
+  \imagen{listaexp.pdf}{13cm}{\small{Expertos del proyecto seleccionado.}}{a3}{}
+
+\item Pulsando el icono de consulta, podrá acceder a la evaluación realizada 
+  por cada uno de los expertos (figura \ref{a4}).
+
+  \imagen{coneval.pdf}{13cm}{\small{Consulta evaluación.}}{a4}{}
+
+\item Para proceder a realizar el informe final, pulsar ``Realizar informe'' 
+  y se expandirá el correspondiente modelo de evaluación (figura \ref{a5}).
+  
+  \imagen{inffinal.pdf}{13cm}{\small{Realización informe final.}}{a5}{}
+
+\item El adjunto podrá ``Guardar'' o ``Finalizar informe'' 
+  (figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
+  posteriores sesiones, mientras que el segundo dará por finalizado el informe.
+  
+  \imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}{}
+\end{enumerate}
+
+\subsection{Experto}
+\subsubsection{Realizar evaluación de un proyecto}
+\begin{enumerate}
+\item Los proyectos asignados se muestran en una tabla. Para realizar la 
+  evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación''
+  (figura \ref{img8}). 
+
+  \imagen{realizareval.pdf}{13cm}{\small{Elegir proyecto para
+      evaluación.}}{img8}{} 
+
+\item Se expande el correspondiente modelo de evaluación, mostrando los 
+  diferentes puntos a evaluar. En la parte izquierda de la pantalla se
+  muestra la memoria del proyecto a evaluar, como se puede ver en la figura
+  \ref{img9}. 
+
+  \imagen{evalexp.pdf}{13cm}{\small{Realización de evaluación.}}{img9}{}
+
+\item Se guardan los cambios realizados en la evaluación con el botón 
+  ``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura 
+  \ref{img10}).
+  
+  \imagen{saveend.pdf}{4cm}{\small{Guardar o finalizar evaluación.}}{img10}{}
+\end{enumerate}
 
 \section{Implementación}
 \subsection{Introducción}
 
 \subsection{Código fuente}
-\subsubsection{index.php}
-\lstinputlisting{implementacion/index.php}
+% \subsubsection{index.php}
+% \lstinputlisting[language=PHP]{implementacion/index.php}
 
-\subsubsection{settings.php}
-\lstinputlisting{implementacion/settings.php}
+% \subsubsection{settings.php}
+% \lstinputlisting{implementacion/settings.php}
 
-\subsubsection{js/evalmodels.js}
-\lstinputlisting{implementacion/js/evalmodels.js}
+% \subsubsection{js/evalmodels.js}
+% \lstinputlisting{implementacion/js/evalmodels.js}
 
-\subsubsection{js/evalreports.js}
-\lstinputlisting{implementacion/js/evalreports.js}
+% \subsubsection{js/evalreports.js}
+% \lstinputlisting{implementacion/js/evalreports.js}
 
-\subsubsection{js/main.js}
-\lstinputlisting{implementacion/js/main.js}
+% \subsubsection{js/main.js}
+% \lstinputlisting{implementacion/js/main.js}
 
-\subsubsection{js/projects.js}
-\lstinputlisting{implementacion/js/projects.js}
+% \subsubsection{js/projects.js}
+% \lstinputlisting{implementacion/js/projects.js}
 
-\subsubsection{source/evaluation\_models.php}
-\lstinputlisting{implementacion/source/evaluation_models.php}
+% \subsubsection{source/evaluation\_models.php}
+% \lstinputlisting{implementacion/source/evaluation_models.php}
 
-\subsubsection{source/evaluation\_reports.php}
-\lstinputlisting{implementacion/source/evaluation_reports.php}
+% \subsubsection{source/evaluation\_reports.php}
+% \lstinputlisting{implementacion/source/evaluation_reports.php}
 
-\subsubsection{source/loginout.php}
-\lstinputlisting{implementacion/source/loginout.php}
+% \subsubsection{source/loginout.php}
+% \lstinputlisting{implementacion/source/loginout.php}
 
-\subsubsection{source/mysql.php}
-\lstinputlisting{implementacion/source/mysql.php}
+% \subsubsection{source/mysql.php}
+% \lstinputlisting{implementacion/source/mysql.php}
 
-\subsubsection{theme/evaluation\_models.php}
-\lstinputlisting{implementacion/theme/evaluation_models.php}
+% \subsubsection{theme/evaluation\_models.php}
+% \lstinputlisting{implementacion/theme/evaluation_models.php}
 
-\subsubsection{theme/evaluation\_reports.php}
-\lstinputlisting{implementacion/theme/evaluation_reports.php}
+% \subsubsection{theme/evaluation\_reports.php}
+% \lstinputlisting{implementacion/theme/evaluation_reports.php}
 
-\subsubsection{theme/login.php}
-\lstinputlisting{implementacion/theme/login.php}
+% \subsubsection{theme/login.php}
+% \lstinputlisting{implementacion/theme/login.php}
 
-\subsubsection{theme/main.php}
-\lstinputlisting{implementacion/theme/main.php}
+% \subsubsection{theme/main.php}
+% \lstinputlisting{implementacion/theme/main.php}
 
-\subsubsection{theme/projects.php}
-\lstinputlisting{implementacion/theme/projects.php}
+% \subsubsection{theme/projects.php}
+% \lstinputlisting{implementacion/theme/projects.php}
 
-\subsubsection{theme/users.php}
-\lstinputlisting{implementacion/theme/users.php}
+% \subsubsection{theme/users.php}
+% \lstinputlisting{implementacion/theme/users.php}
 
-\subsubsection{theme/css/dialog.php}
-\lstinputlisting{implementacion/theme/css/dialog.php}
+% \subsubsection{theme/css/dialog.php}
+% \lstinputlisting{implementacion/theme/css/dialog.php}
 
-\subsubsection{theme/css/evalmodels.css}
-\lstinputlisting{implementacion/theme/css/evalmodels.css}
+% \subsubsection{theme/css/evalmodels.css}
+% \lstinputlisting{implementacion/theme/css/evalmodels.css}
 
-\subsubsection{theme/css/evalreports.css}
-\lstinputlisting{implementacion/theme/css/evalreports.css}
+% \subsubsection{theme/css/evalreports.css}
+% \lstinputlisting{implementacion/theme/css/evalreports.css}
 
-\subsubsection{theme/css/login.css}
-\lstinputlisting{implementacion/theme/css/login.css}
+% \subsubsection{theme/css/login.css}
+% \lstinputlisting{implementacion/theme/css/login.css}
 
-\subsubsection{theme/css/main.css}
-\lstinputlisting{implementacion/theme/css/main.css}
+% \subsubsection{theme/css/main.css}
+% \lstinputlisting{implementacion/theme/css/main.css}
 
-\subsubsection{theme/css/users.php}
-\lstinputlisting{implementacion/theme/css/users.php}
+% \subsubsection{theme/css/users.php}
+% \lstinputlisting{implementacion/theme/css/users.php}
 
 \section{Carga de trabajo}
 \begin{center}
@@ -776,6 +954,7 @@ Proyectos de Investigación}}{}
  \end{tabular}
 \end{center}
 
-\section{Bibliografía}
+% \bibliographystyle{plain} 
+% \bibliography{iso1}
 
 \end{document}

@@ -1,16 +1,16 @@
 ﻿Usuarios:- ID, tipo, e-mail, contraseña, nombre, apellidos, teléfono, (área) institución, currículum, palabras_clave.
 
-Paquetes de proyectos:- ID, institución, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
+Paquetes de proyectos:- ID, nombre, institución, bases, convocatoria, fecha_entrada, fecha_salida, fecha_límite. 
 
-Modelos de evaluación:- ID, estructura.
+Modelos de evaluación:- ID, (convocatoria), estructura.
 
 Áreas:- ID, nombre.
 
 Subáreas:- ID, (IDÁ), (idu), nombre.
 
-Proyectos:- ID, (PAQ), memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (id_modelo_eval), evaluación.
+Proyectos:- ID, (PAQ), nombre, memoria, (área), (subárea), estado, tpo_inv, tpo_eval, (id_modelo_eval), evaluación.
 
-Expertos-Proyectos:- (IDE), (IDP), (idi), valoración, fecha_asignación.
+Expertos-Proyectos:- (IDE), (IDPP), (IDP), (idi), valoración, fecha_asignación.
 
 Informes_evaluación:- ID, (id_modelo_eval), estado, datos. 
 
