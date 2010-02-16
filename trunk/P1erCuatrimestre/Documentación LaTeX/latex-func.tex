@@ -70,8 +70,8 @@
 \fancyfoot{}                    % Delete current footer settings
 
 % Capítulo
-% \renewcommand{\chaptermark}[1]{ % Lower Case Chapter marker style
-%   \markboth{\chaptername\ \thechapter.\ #1}{}} 
+\renewcommand{\chaptermark}[1]{ % Lower Case Chapter marker style
+  \markboth{\chaptername\ \thechapter.\ #1}{}} 
 
 % Sección
 \renewcommand{\sectionmark}[1]{ % Lower case Section marker style
@@ -84,8 +84,8 @@
 % ------------------ Macro para encabezados y pies de página-------------------
 %    Uso: \encabezado{pares(pag izquierda)}
 % -----------------------------------------------------------------------------
-\def\encabezado#1{
-  \fancyhead[RE]{\bfseries#1}     % In the right on even pages
+\def\encabezado{
+  \fancyhead[RE]{\bfseries\leftmark}    % In the right on even pages
   \fancyhead[LO]{\bfseries\rightmark}  % In the left on odd pages
   \renewcommand{\headrulewidth}{0.5pt} % Width of head rule
 }

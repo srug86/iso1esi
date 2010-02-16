@@ -5,7 +5,7 @@
 \input{latex-func.tex}
 
 % Encabezado y pie
-\encabezado{Ingeniería del software I. Práctica 1: Desarrollo estructurado}
+\encabezado
 
 % Margenes
 \usepackage[margin=2.5cm,top=3cm]{geometry}
@@ -65,6 +65,7 @@ estructurado, heurísticas de transición entre ambos, y estrategias de prueba;
 y las posibilidades que ofrece la reutilización del software en todos los
 niveles de desarrollo. 
 
+\part{Análisis}
 \chapter{Especificación de requisitos}
 \section{Requisitos iniciales de sistema}
 Se trata de desarrollar una aplicación para la gestión distribuída de la
@@ -214,26 +215,26 @@ secretario, los cuales contienen:
   rechazar.
 \end{itemize}
 
-\chapter{Análisis de sistema}
-\section{Diagrama de flujo de datos}
+\chapter{Diagrama de flujo de datos}
 
-\imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}{H}
+% \imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}{H}
 
-\imagen{diagramas/DFD0.pdf}{15.5cm}{Diagrama de Sistemas}{df0}{H}
+% \imagen{diagramas/DFD0.pdf}{15.5cm}{Diagrama de Sistemas}{df0}{H}
 
-\imagen{diagramas/DFD1.pdf}{15.5cm}{Gestión de Usuarios}{df1}{H}
+% \imagen{diagramas/DFD1.pdf}{15.5cm}{Gestión de Usuarios}{df1}{H}
 
-\imagen{diagramas/DFD2.pdf}{15.5cm}{Gestión de Paquetes Proyectos}{df2}{H}
+% \imagen{diagramas/DFD2.pdf}{15.5cm}{Gestión de Paquetes Proyectos}{df2}{H}
 
-\imagen{diagramas/DFD3.pdf}{15.5cm}{Gestión de Evaluaciones}{df3}{H}
+% \imagen{diagramas/DFD3.pdf}{15.5cm}{Gestión de Evaluaciones}{df3}{H}
 
-\imagen{diagramas/DFD31.pdf}{15.5cm}{Gestión de Modelos}{df31}{H}
+% \imagen{diagramas/DFD31.pdf}{15.5cm}{Gestión de Modelos}{df31}{H}
 
-%\imagen{diagramas/DFD32.pdf}{15.5cm}{Gestión de Informes Evaluaciones}{df32}{H}
+% \imagen{diagramas/DFD32.pdf}{15.5cm}{Gestión de Informes Evaluaciones}{df32}{H}
+
 % \imagen{diagramas/DFD4.pdf}{15.5cm}{Gestión de Expertos}{df4}{H}
 
-\section{Definición de flujo de datos}
-\subsection{Almacenes de datos}
+\chapter{Diccionario de datos}
+\section{Almacenes de datos}
 \begin{description}
 \item[USUARIOS] = @id\_usuario + tipo + e-mail + contraseña + nombre +
   apellidos + teléfono + id\_área + institución + currículum +
@@ -288,7 +289,7 @@ secretario, los cuales contienen:
 \item[PLANTILLAS CORREOS] = @id\_plantilla + asunto + cuerpo
 \end{description}
 
-\subsection{Datos Elementales}
+\section{Datos elementales}
 \begin{description}
 \item[tipo] = [secretario $\mid$ coordinador $\mid$ adjunto $\mid$ experto]
 
@@ -319,7 +320,7 @@ secretario, los cuales contienen:
 \item[asunto] = [alta\_usuario $\mid$ invitación $\mid$ aviso\_plazos]
 \end{description}
 
-\subsection{Flujos de datos}
+\section{Flujos de datos}
 \begin{description}
 \item[Aceptación] = *\emph{En el perfil del adjunto aparecerá la lista de
     expertos seleccionados y se indica si han aceptado o declinado}* 
@@ -691,22 +692,104 @@ secretario, los cuales contienen:
     incorrectas'}* 
 \end{description}
 
+
+\chapter{Especificación de procesos}
+\section{Gestión de usuarios}
+\subsection{Listado de usuarios}
+En este proceso se introducen unos parámetros de consulta, que son dados
+implícitamente por el usuario o por el propio sistema. Dependiendo de quién
+realice la consulta, el sistema proporciona el acceso a unos datos u
+otros. Al realizar esta consulta, el proceso consulta los almacenes de datos
+SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea
+en que trabajen dichos usuarios del sistema. La relación jerárquica del
+sistema a qué información tiene acceso cada usuario.
+
+\begin{description}
+\item[Secretario] puede ver todos los datos.
+\item[Coordinador] puede ver todos los adjuntos de su Área y todos los
+  expertos.
+\item[Adjunto] puede acceder a los expertos.
+\item[Expertos] no tienen esta opción.
+\end{description}
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Listado_de_usuarios (Lista Parámetros)
+ Lista_Usuarios <= Vacía
+	índice <= 0
+	SI Usuario_activo = Adjunto ENTONCES
+		REPETIR
+			SI USUARIOS[índice].tipo = Experto
+			Y USUARIOS[índice] = Lista_parámetros ENTONCES
+				AÑADIR USUARIOS[índice] A Lista_Usuarios
+			índice++
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+	SI Usuario_activo = Coordinador ENTONCES
+		REPETIR
+			SI (USUARIOS[índice].tipo = Experto
+			O USUARIOS[índice].tipo = Adjunto)
+			Y USUARIOS[índice] = Lista_parámetros ENTONCES
+				AÑADIR USUARIOS[índice] A Lista_Usuarios
+				índice++
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+	SI Usuario_activo = Secretario ENTONCES
+		REPETIR
+			SI USUARIOS[índice] = Lista_parámetros ENTONCES
+				AÑADIR USUARIOS[índice] A Lista_Usuarios
+				índice++
+		HASTA índice > USUARIOS.Número_Tuplas
+	FIN SI
+	RETORNA Lista_Usuarios
+
+\end{lstlisting}
+
+\subsection{Añadir usuarios}
+Este proceso es exclusivo para el secretario, ya que es el único con
+privilegios para introducir nuevos usuarios en el sistema. El sistema recibe
+una nueva instancia de usuario y devuelve un correo de alta siguiendo un
+modelo predefinido.
+
+\subsection{Modificar usuario}
+Es el encargado de alterar todos los datos profesionales de los usuarios, es
+exclusivo del secretario y del coordinador. El coordinador tiene la opción de
+elegir a sus adjuntos de entre los expertos ya existentes y el secretario se
+encarga de asignar expertos nuevos a subáreas y de elegir a los coordinadores
+de entre los adjuntos y expertos existentes. Al invocar este proceso se
+introduce el usuario que se quiere modificar y de entre todas las subáreas
+posibles se selecciona una en función de las aptitudes del usuario. 
+
+\subsection{Eliminar usuarios}
+Se encarga de eliminar instancias de usuarios del sistema en el almacén de
+Usuarios. Sólo el secretario tiene privilegios para ejecutar este proceso. 
+
+\subsection{Autentificar usuarios}
+Es el proceso que se ejecuta al inicio de cada sesión de usuario. Se encarga
+de verificar que el nombre de usuario y su contraseña son correctos.
+
+\subsection{Modificar datos personales}
+Una vez que el usuario reciba el correo de alta, el siguiente paso es
+utilizar este proceso para introducir sus datos personales para que el
+sistema tenga una ficha de cada empleado. Este proceso es accesible en todo
+momento para poder modificar cualquier cambio o error.
+
 \chapter{Diseño del sistema}
 \section{Diagrama de diseño estructurado}
-\imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
-  de la revisión de Proyectos de Investigación}{}{H} 
+% \imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
+%   de la revisión de Proyectos de Investigación}{}{H} 
 
-\imagen{diagramas/DE_2.pdf}{15cm}{Gestión de Usuarios}{}{H}
+% \imagen{diagramas/DE_2.pdf}{15cm}{Gestión de Usuarios}{}{H}
 
-\imagen{diagramas/DE_3.pdf}{15cm}{Gestión de Paquetes de Proyectos}{}{H}
+% \imagen{diagramas/DE_3.pdf}{15cm}{Gestión de Paquetes de Proyectos}{}{H}
 
-\imagen{diagramas/DE_4.pdf}{15cm}{Gestión de Evaluaciones}{}{H}
+% \imagen{diagramas/DE_4.pdf}{15cm}{Gestión de Evaluaciones}{}{H}
 
-\imagen{diagramas/DE_5.pdf}{15cm}{Gestión de modelos}{}{H}
+% \imagen{diagramas/DE_5.pdf}{15cm}{Gestión de modelos}{}{H}
 
-\imagen{diagramas/DE_6.pdf}{14cm}{Gestión de Informes de Evaluaciones}{}{H}
+% \imagen{diagramas/DE_6.pdf}{14cm}{Gestión de Informes de Evaluaciones}{}{H}
 
-%\imagen{diagramas/DE_7.pdf}{14cm}{Gestión de Expertos}}{}{H}
+% \imagen{diagramas/DE_7.pdf}{14cm}{Gestión de Expertos}}{}{H}
 
 \chapter{Base de datos}
 \section{Diagrama Entidad/Interrelación}

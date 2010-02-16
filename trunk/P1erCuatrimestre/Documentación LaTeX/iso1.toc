@@ -1,40 +1,49 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Especificaci\IeC {\'o}n de requisitos}{11}
-\contentsline {section}{\numberline {1.1}Requisitos iniciales de sistema}{11}
-\contentsline {section}{\numberline {1.2}An\IeC {\'a}lisis de requisitos del sistema}{11}
-\contentsline {subsection}{\numberline {1.2.1}Usuarios}{12}
-\contentsline {subsection}{\numberline {1.2.2}Paquete de proyectos}{12}
-\contentsline {subsection}{\numberline {1.2.3}Secretario}{12}
-\contentsline {subsection}{\numberline {1.2.4}Coordinador}{13}
-\contentsline {subsection}{\numberline {1.2.5}\IeC {\'A}rea}{13}
-\contentsline {subsection}{\numberline {1.2.6}Adjunto}{13}
-\contentsline {subsection}{\numberline {1.2.7}Sub\IeC {\'a}rea}{14}
-\contentsline {subsection}{\numberline {1.2.8}Expertos}{14}
-\contentsline {chapter}{\numberline {2}An\IeC {\'a}lisis de sistema}{15}
-\contentsline {section}{\numberline {2.1}Diagrama de flujo de datos}{16}
-\contentsline {section}{\numberline {2.2}Definici\IeC {\'o}n de flujo de datos}{21}
-\contentsline {subsection}{\numberline {2.2.1}Almacenes de datos}{21}
-\contentsline {subsection}{\numberline {2.2.2}Datos Elementales}{22}
-\contentsline {subsection}{\numberline {2.2.3}Flujos de datos}{23}
-\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o del sistema}{29}
-\contentsline {section}{\numberline {3.1}Diagrama de dise\IeC {\~n}o estructurado}{29}
-\contentsline {chapter}{\numberline {4}Base de datos}{35}
-\contentsline {section}{\numberline {4.1}Diagrama Entidad/Interrelaci\IeC {\'o}n}{36}
-\contentsline {section}{\numberline {4.2}Diagrama relacional}{37}
-\contentsline {chapter}{\numberline {5}Manual de usuario}{39}
-\contentsline {section}{\numberline {5.1}Introducci\IeC {\'o}n}{39}
-\contentsline {section}{\numberline {5.2}Inicio de sesi\IeC {\'o}n}{39}
-\contentsline {section}{\numberline {5.3}Secretario}{40}
-\contentsline {subsection}{\numberline {5.3.1}Crear un modelo de evaluaci\IeC {\'o}n}{40}
-\contentsline {subsection}{\numberline {5.3.2}Modificar o eliminar un modelo de evaluaci\IeC {\'o}n}{42}
-\contentsline {section}{\numberline {5.4}Coordinador}{43}
-\contentsline {subsection}{\numberline {5.4.1}Ver/Modificar informe final}{43}
-\contentsline {subsection}{\numberline {5.4.2}Validar informe final}{45}
-\contentsline {section}{\numberline {5.5}Adjunto}{46}
-\contentsline {subsection}{\numberline {5.5.1}Realizar informe final}{46}
-\contentsline {section}{\numberline {5.6}Experto}{49}
-\contentsline {subsection}{\numberline {5.6.1}Realizar evaluaci\IeC {\'o}n de un proyecto}{49}
-\contentsline {chapter}{\numberline {6}Implementaci\IeC {\'o}n}{51}
-\contentsline {section}{\numberline {6.1}Introducci\IeC {\'o}n}{51}
-\contentsline {section}{\numberline {6.2}C\IeC {\'o}digo fuente}{51}
-\contentsline {chapter}{\numberline {7}Carga de trabajo}{53}
+\contentsline {part}{I\hspace {1em}An\IeC {\'a}lisis}{11}
+\contentsline {chapter}{\numberline {1}Especificaci\IeC {\'o}n de requisitos}{13}
+\contentsline {section}{\numberline {1.1}Requisitos iniciales de sistema}{13}
+\contentsline {section}{\numberline {1.2}An\IeC {\'a}lisis de requisitos del sistema}{13}
+\contentsline {subsection}{\numberline {1.2.1}Usuarios}{14}
+\contentsline {subsection}{\numberline {1.2.2}Paquete de proyectos}{14}
+\contentsline {subsection}{\numberline {1.2.3}Secretario}{14}
+\contentsline {subsection}{\numberline {1.2.4}Coordinador}{15}
+\contentsline {subsection}{\numberline {1.2.5}\IeC {\'A}rea}{15}
+\contentsline {subsection}{\numberline {1.2.6}Adjunto}{15}
+\contentsline {subsection}{\numberline {1.2.7}Sub\IeC {\'a}rea}{16}
+\contentsline {subsection}{\numberline {1.2.8}Expertos}{16}
+\contentsline {chapter}{\numberline {2}Diagrama de flujo de datos}{17}
+\contentsline {chapter}{\numberline {3}Diccionario de datos}{19}
+\contentsline {section}{\numberline {3.1}Almacenes de datos}{19}
+\contentsline {section}{\numberline {3.2}Datos elementales}{20}
+\contentsline {section}{\numberline {3.3}Flujos de datos}{20}
+\contentsline {chapter}{\numberline {4}Especificaci\IeC {\'o}n de procesos}{27}
+\contentsline {section}{\numberline {4.1}Gesti\IeC {\'o}n de usuarios}{27}
+\contentsline {subsection}{\numberline {4.1.1}Listado de usuarios}{27}
+\contentsline {subsubsection}{Pseudoc\IeC {\'o}digo}{27}
+\contentsline {subsection}{\numberline {4.1.2}A\IeC {\~n}adir usuarios}{28}
+\contentsline {subsection}{\numberline {4.1.3}Modificar usuario}{28}
+\contentsline {subsection}{\numberline {4.1.4}Eliminar usuarios}{28}
+\contentsline {subsection}{\numberline {4.1.5}Autentificar usuarios}{28}
+\contentsline {subsection}{\numberline {4.1.6}Modificar datos personales}{28}
+\contentsline {chapter}{\numberline {5}Dise\IeC {\~n}o del sistema}{31}
+\contentsline {section}{\numberline {5.1}Diagrama de dise\IeC {\~n}o estructurado}{31}
+\contentsline {chapter}{\numberline {6}Base de datos}{33}
+\contentsline {section}{\numberline {6.1}Diagrama Entidad/Interrelaci\IeC {\'o}n}{34}
+\contentsline {section}{\numberline {6.2}Diagrama relacional}{35}
+\contentsline {chapter}{\numberline {7}Manual de usuario}{37}
+\contentsline {section}{\numberline {7.1}Introducci\IeC {\'o}n}{37}
+\contentsline {section}{\numberline {7.2}Inicio de sesi\IeC {\'o}n}{37}
+\contentsline {section}{\numberline {7.3}Secretario}{38}
+\contentsline {subsection}{\numberline {7.3.1}Crear un modelo de evaluaci\IeC {\'o}n}{38}
+\contentsline {subsection}{\numberline {7.3.2}Modificar o eliminar un modelo de evaluaci\IeC {\'o}n}{40}
+\contentsline {section}{\numberline {7.4}Coordinador}{41}
+\contentsline {subsection}{\numberline {7.4.1}Ver/Modificar informe final}{41}
+\contentsline {subsection}{\numberline {7.4.2}Validar informe final}{43}
+\contentsline {section}{\numberline {7.5}Adjunto}{44}
+\contentsline {subsection}{\numberline {7.5.1}Realizar informe final}{44}
+\contentsline {section}{\numberline {7.6}Experto}{47}
+\contentsline {subsection}{\numberline {7.6.1}Realizar evaluaci\IeC {\'o}n de un proyecto}{47}
+\contentsline {chapter}{\numberline {8}Implementaci\IeC {\'o}n}{49}
+\contentsline {section}{\numberline {8.1}Introducci\IeC {\'o}n}{49}
+\contentsline {section}{\numberline {8.2}C\IeC {\'o}digo fuente}{49}
+\contentsline {chapter}{\numberline {9}Carga de trabajo}{51}
