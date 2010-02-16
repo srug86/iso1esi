@@ -702,46 +702,47 @@ realice la consulta, el sistema proporciona el acceso a unos datos u
 otros. Al realizar esta consulta, el proceso consulta los almacenes de datos
 SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea
 en que trabajen dichos usuarios del sistema. La relación jerárquica del
-sistema a qué información tiene acceso cada usuario.
+sistema estipula a qué información tiene acceso cada usuario:
 
 \begin{description}
 \item[Secretario] puede ver todos los datos.
 \item[Coordinador] puede ver todos los adjuntos de su Área y todos los
   expertos.
 \item[Adjunto] puede acceder a los expertos.
-\item[Expertos] no tienen esta opción.
+\item[Expertos] no tienen información de acceso de ningún otro usuario del 
+sistema.
 \end{description}
 
 \subsubsection{Pseudocódigo}
 \begin{lstlisting}[inputencoding=utf8/latin1]
 PROCESO Listado_de_usuarios (Lista Parámetros)
- Lista_Usuarios <= Vacía
-	índice <= 0
-	SI Usuario_activo = Adjunto ENTONCES
-		REPETIR
-			SI USUARIOS[índice].tipo = Experto
-			Y USUARIOS[índice] = Lista_parámetros ENTONCES
-				AÑADIR USUARIOS[índice] A Lista_Usuarios
-			índice++
-		HASTA índice > USUARIOS.Número_Tuplas
-	FIN SI
-	SI Usuario_activo = Coordinador ENTONCES
-		REPETIR
-			SI (USUARIOS[índice].tipo = Experto
-			O USUARIOS[índice].tipo = Adjunto)
-			Y USUARIOS[índice] = Lista_parámetros ENTONCES
-				AÑADIR USUARIOS[índice] A Lista_Usuarios
-				índice++
-		HASTA índice > USUARIOS.Número_Tuplas
-	FIN SI
-	SI Usuario_activo = Secretario ENTONCES
-		REPETIR
-			SI USUARIOS[índice] = Lista_parámetros ENTONCES
-				AÑADIR USUARIOS[índice] A Lista_Usuarios
-				índice++
-		HASTA índice > USUARIOS.Número_Tuplas
-	FIN SI
-	RETORNA Lista_Usuarios
+  Lista_Usuarios <= Vacía
+  índice <= 0
+  SI Usuario_activo = Adjunto ENTONCES
+    REPETIR
+      SI USUARIOS[índice].tipo = Experto
+      Y USUARIOS[índice] = Lista_parámetros ENTONCES
+        AÑADIR USUARIOS[índice] A Lista_Usuarios
+      índice++
+    HASTA índice > USUARIOS.Número_Tuplas
+  FIN SI
+  SI Usuario_activo = Coordinador ENTONCES
+    REPETIR
+      SI (USUARIOS[índice].tipo = Experto
+      O USUARIOS[índice].tipo = Adjunto)
+      Y USUARIOS[índice] = Lista_parámetros ENTONCES
+        AÑADIR USUARIOS[índice] A Lista_Usuarios
+	      índice++
+    HASTA índice > USUARIOS.Número_Tuplas
+  FIN SI
+  SI Usuario_activo = Secretario ENTONCES
+    REPETIR
+      SI USUARIOS[índice] = Lista_parámetros ENTONCES
+        AÑADIR USUARIOS[índice] A Lista_Usuarios
+        índice++
+    HASTA índice > USUARIOS.Número_Tuplas
+  FIN SI
+  RETORNA Lista_Usuarios
 
 \end{lstlisting}
 
@@ -750,6 +751,18 @@ Este proceso es exclusivo para el secretario, ya que es el único con
 privilegios para introducir nuevos usuarios en el sistema. El sistema recibe
 una nueva instancia de usuario y devuelve un correo de alta siguiendo un
 modelo predefinido.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Añadir_Usuarios (Usuarios)
+  SI Usuario_activo = Secretario ENTONCES
+    AÑADIR Usuarios A USUARIOS
+    Correo_Alta <=   (LEER PLANTILLAS_CORREOS.asunto = Alta)
+                                + (Usuarios.id_nombre) + (Usuarios.correo)
+                                + (Usuarios.contraseña)
+    RETORNA Correo_Alta
+  FIN SI
+\end{lstlisting}
 
 \subsection{Modificar usuario}
 Es el encargado de alterar todos los datos profesionales de los usuarios, es
@@ -760,19 +773,437 @@ de entre los adjuntos y expertos existentes. Al invocar este proceso se
 introduce el usuario que se quiere modificar y de entre todas las subáreas
 posibles se selecciona una en función de las aptitudes del usuario. 
 
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Modificar_Usuario (Usuarios, Subárea_Adjunto)
+  índice <= 0
+  SI Usuario_activo = Secretario Y VACIO(Usuarios) = FALSO ENTONCES
+    REPETIR
+      SI Usuarios.id_usuario = USUARIOS[índice].id_usuario ENTONCES
+        USUARIOS[índice] <= Usuarios
+        SALIR
+      SINO
+        índice++
+      FIN SI
+    HASTA índice > USUARIOS.Número_Tuplas
+  SINO
+    SI Usuario_activo = Coordinador Y VACIO(Subárea_Adjunto) = FALSO ENTONCES
+      REPETIR
+        SI Subárea_Adjunto.id_subárea = SUBÁREAS[índice].id_subárea ENTONCES
+          SUBÁREAS[índice].id_usuario <= Subárea_Adjunto.id_usuaio
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > SUBÁREAS.Número_Tuplas
+    FIN SI
+  FIN SI
+\end{lstlisting}
+
 \subsection{Eliminar usuarios}
-Se encarga de eliminar instancias de usuarios del sistema en el almacén de
-Usuarios. Sólo el secretario tiene privilegios para ejecutar este proceso. 
+Se encarga de eliminar instancias de usuarios del sistema en el almacén 
+USUARIOS. Sólo el secretario tiene privilegios para ejecutar este proceso. 
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Eliminar_Usuarios (Usuarios)
+  índice <= 0
+  SI Usuario_activo = Secretario ENTONCES
+    REPETIR
+      SI Usuarios.id_usuario = USUARIOS[índice].id_usuario ENTONCES
+        ELIMINAR USUARIOS[índice]
+        SALIR
+      SINO
+        índice++
+      FIN SI
+    HASTA índice > USUARIOS.Número_Tuplas
+  FIN SI
+\end{lstlisting}
 
 \subsection{Autentificar usuarios}
 Es el proceso que se ejecuta al inicio de cada sesión de usuario. Se encarga
 de verificar que el nombre de usuario y su contraseña son correctos.
 
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Autentificar_Usuarios (Datos_Autentificación)
+  índice <= 0
+  REPETIR
+    SI Datos_Autentificación.id_usuario = USUARIOS[índice].id_usuario
+    Y Datos_Autentificación.contraseña = USUARIOS[índice].contraseña ENTONCES
+      Verificar_Autentificar <= VERDADERO
+      SALIR
+    SINO
+      Verificar_Autentificar <= FALSO
+    FIN SI
+  HASTA índice > USUARIOS.Número_Tuplas
+  RETORNA Verificar_Autentificar
+\end{lstlisting}
+
 \subsection{Modificar datos personales}
-Una vez que el usuario reciba el correo de alta, el siguiente paso es
+Una vez que el usuario recibe el correo de alta, el siguiente paso es
 utilizar este proceso para introducir sus datos personales para que el
 sistema tenga una ficha de cada empleado. Este proceso es accesible en todo
-momento para poder modificar cualquier cambio o error.
+momento para poder modificar cualquier dato o error.
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Modificar_Datos_Personales (Datos_Personales)
+  índice <= 0
+  REPETIR
+    SI Usuario_activo.id_usuario = USUARIOS[índice].id_usuario ENTONCES
+      USUARIOS[índice] <= Datos_Personales
+      SALIR
+    SINO
+      índice++
+    FIN SI
+  HASTA índice > USUARIOS.Número_Tuplas
+\end{lstlisting}
+
+\section{Gestión de paquetes de proyectos}
+
+\subsection{Consulta de paquetes de proyecto/proyectos}
+Este proceso se utiliza tanto para listar los proyectos como para consultar la 
+convocatoria de los paquetes de proyectos.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1] 
+PROCESO Consulta_Paquetes_de_Proyectos/Proyectos ()
+  SI Usuario_activo.tipo = Secretario ENTONCES
+    SI Elección_1 = Paquete ENTONCES
+      MOSTRAR PAQUETES_PROYECTOS
+      RETORNO PAQUETES_PROYECTOS[Elección_2].Convocatoria
+    SINO
+      SI Elección_1 = Proyecto ENTONCES
+        MOSTRAR PROYECTOS
+        RETORNO PROYECTOS[Elección_2]
+      FIN SI
+    FIN SI
+  FIN SI
+\end{lstlisting}
+
+\subsection{Añadir paquete de proyecto/proyectos}
+Se encarga de introducir los paquetes de proyectos en el sistema. A partir de 
+estos paquetes y leyendo el modelo de evaluación, el proceso se encarga de 
+introducir todos los proyectos en el sistema.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Añadir_Paquete_de_Proyectos/Proyectos (Paquetes_Proyectos)
+  SI Usuario_activo.tipo = Secretario ENTONCES
+    SI Paquetes_Proyectos ES UN Paquete_Proyecto ENTONCES
+      AÑADIR Paquetes_Proyectos A PAQUETES_PROYECTOS
+    SINO
+      SI Paquetes_Proyectos ES UN Proyecto ENTONCES
+        id_modelo <= LEER MODELOS_EVALUACIÓN
+        Paquetes_Proyectos.id_modelo_eval <= id_modelo
+        AÑADIR Paquetes_Proyectos A PROYECTOS
+      FIN SI
+    FIN SI
+  FIN SI
+\end{lstlisting}
+
+\subsection{Modificar paquete de proyecto/proyectos}
+Es el encargado de realizar cualquier variación sobre los paquetes de proyecto y
+sobre los proyectos, ya sea cambiar algún error descubierto, cambiar un proyecto
+de subárea a petición de algún adjunto. Se tienen diferentes opciones 
+dependiendo de qué usuario invoque dicho proceso ya que el secretario asigna el 
+área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo 
+alegando que ese proyecto no pertenece realmente a su subárea.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Modificar_Paquete_de_Proyectos(Paquetes_Proyectos, Área_Proyectos, Proyecto_Rechazado, Subárea_Proyectos)
+  índice <= 0
+  SI Usuario_activo.tipo = Secretario ENTONCES
+    SI Paquetes_Proyectos ES UN Paquete_Proyecto ENTONCES
+      REPETIR
+        SI Paquetes_Proyectos.id_paquete = PAQUETES_PROYECTOS[índice].id_paquete ENTONCES
+          PAQUETES_PROYECTOS[índice] <= Paquetes_Proyectos
+          SALIR
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > PAQUETES_PROYECTOS.Número_Tuplas
+    SINO
+      SI Paquetes_Proyectos ES UN Proyecto ENTONCES
+        REPETIR
+          SI Paquetes_Proyectos.id_proyecto = PROYECTOS[índice].id_proyecto 
+          Y Paquetes_Proyectos.id_paquete = PROYECTOS[índice].id_paquete ENTONCES
+            SI Vacio(Área_Proyectos) = FALSO ENTONCES
+              PROYECTOS[índice].id_área = Área_Proyecto
+            SINO
+              PROYECTOS[índice] <= Paquetes_Proyectos
+            SALIR
+          SINO
+            índice++
+          FIN SI
+        HASTA índice > PROYECTOS.Número_Tuplas
+      FIN SI
+    FIN SI
+  SINO
+    SI Usuario_activo.tipo = Coordinador
+    Y Paquetes_Proyectos ES UN Paquete_Proyecto ENTONCES
+      REPETIR
+        SI Paquetes_Proyectos.id_proyecto = PROYECTOS[índice].id_proyecto
+        Y Paquetes_Proyectos.id_paquete = PROYECTOS[índice].id_paquete  ENTONCES
+          SI Vacio(Subárea_Proyectos) = FALSO ENTONCES
+            PROYECTOS[índice].id_subárea = Subárea_Proyectos
+          SINO
+            SI Vacio(Proyecto_Rechazado) = FALSO ENTONCES
+              MOSTRAR ÁREAS
+              SI Elección_1 NO = Proyecto_Rechazado.id_subárea ENTONCES
+                PROYECTOS[índice].Elección_1 <= Paquetes_Proyectos.id_subárea
+              FIN SI
+            FIN SI
+          FIN SI
+          SALIR
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > PROYECTOS.Número_Tuplas
+    FIN SI
+  FIN SI
+\end{lstlisting}
+
+\section{Gestión de evaluaciones}
+
+\subsection{Añadir modelo de evaluación}
+Este proceso es exclusivo del secretario. Éste lee los datos de la convocatoria 
+del paquete de proyectos para poder generar un modelo de evaluación a seguir 
+para cada informe de evaluación que se escriba de cada proyecto.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Añadir_Modelo_Evaluación ()
+  MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].Convocatoria  Criterios_Evaluación <=  LEER_DATOS_ENTRADA()
+  MODELOS_EVALUACIÓN [Elección_2] <= Criterios_Evaluación
+\end{lstlisting}
+
+\subsection{Modificar modelo de evaluación}
+Se complementa con el proceso ``Añadir Modelo de Evaluación''. Si se encuentra 
+algún error en el modelo o cambian los prerrequisitos sobre algún proyecto, se 
+cambiará consecuentemente el modelo de evaluación de dicho proyecto.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Modificar_Modelo_Evaluación ()
+  MOSTRAR PAQUETES_PROYECTOS[Elección_1].Convocatoria
+  MOSTRAR MODELOS_EVALUACIÓN[Elección_2]
+  Criterios_Evaluación <= LEER_DATOS_ENTRADA()
+  SI VACIO(Criterios_Evaluación) = FALSO ENTONCES
+    MODELOS_EVALUACIÓN[Elección_2] = Criterios_Evaluación
+  FIN SI
+\end{lstlisting}
+
+
+\subsection{Consulta de Informes}
+Se devuelve una serie de informes de evaluación restringidos por quién los pide.
+Todo usuario que haga una petición sobre la lectura de los informes tendrá 
+acceso a los suyos y a los que hayan sido escritos por los usuarios que estén de
+bajo en la jerarquía de la empresa.
+\begin{itemize}
+\item[Experto] sólo puede tener acceso a su propio informe.
+\item[Adjunto] puede consultar su propio informe y el de todos los expertos que 
+tengan asignado un proyecto de su subárea.
+\item[Coordinador] puede su propio informe, el de los adjuntos y el de los 
+expertos.
+\end{itemize}
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO Cconsulta_de_Informes()
+  STATUS<=FINALIZADO
+  SI Usuario_activo.tipo = COORDINADOR ENTONCES
+    MOSTRAR PROYECTOS[Elección_1].Informe_Final
+    INICIALIZAR(ÍNDICE)
+    MIENTRAS HAYA_SIGUIENTE HACER
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
+      SIGUIENTE(ÍNDICE)
+    FIN MIENTRAS
+  SINO Usuario_activo.tipo = ADJUNTO ENTONCES
+    INICIALIZAR(ÍNDICE)
+    MIENTRAS HAYA_SIGUIENTE HACER
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
+      SIGUIENTE(ÍNDICE)
+    FIN MIENTRAS
+  SINO Usuario_activo.tipo = EXPERTO ENTONCES
+    MOSTRAR INFORMES_EVALUACIÓN[Elección_1][Usuario_activo.id]
+
+  FIN SI
+\end{lstlisting}
+
+\subsection{Realizar informe}
+Proceso mediante el cual todos los usuarios pueden escribir y editar sus propios
+informes. Se leen datos de los almacenes PROYECTOS y MODELOS DE EVALUACIÓN para 
+saber qué evaluar y cómo evaluarlos. Casi todos las llamadas a este proceso son 
+de lectura y escritura. En cuanto al acceso de datos, por lo general, cada 
+usuario sólo podrá editar sus propios informes. Los informes de adjuntos y 
+coordinadores se pueden basar en informes de evaluación escritos con 
+anterioridad para realizar el suyo propio.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO REALIZAR_INFORME()
+  MOSTRAR MODELOS_EVALUACION[Elección_1]
+  STATUS<=FINALIZADO
+  SI Usuario_activo.tipo = COORDINADOR ENTONCES
+    MOSTRAR PROYECTOS[Elección_1].Informe_Final
+    INICIALIZAR(ÍNDICE)
+    MIENTRAS HAYA_SIGUIENTE HACER
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
+      SIGUIENTE(ÍNDICE)
+    FIN MIENTRAS
+    Informe_Final <= LEER_DATOS_ENTRADA()
+  SINO Usuario_activo.tipo = ADJUNTO ENTONCES
+    INICIALIZAR(ÍNDICE)
+    MIENTRAS HAYA_SIGUIENTE HACER
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
+      SIGUIENTE(ÍNDICE)
+    FIN MIENTRAS
+    Informe_Evaluación <= LEER_DATOS_ENTRADA()
+
+  SINO Usuario_activo.tipo = EXPERTO ENTONCES
+    MOSTRAR INFORMES_EVALUACIÓN[Elección_1][Usuario_activo.id]
+    Informe_Evaluación <= LEER_DATOS_ENTRADA()
+  FIN SI
+\end{lstlisting}
+
+\subsection{Devolver evaluaciones}
+Este proceso se encarga de recopilar todas las evaluaciones pertenecientes a un 
+mismo paquete de proyectos y entregárselas al la institución convocante.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO DEVOLVER_EVALUACIONES()
+  DEVOLVER PROYECTOS[Eleccion_1].Informe_Final
+\end{lstlisting}
+
+
+\section{Gestión de expertos}
+
+\subsection{Consulta expertos}
+Consulta sobre los expertos del sistema. Se introducen una serie de parámetros y
+en función de ellos el proceso busca y devuelve una serie de expertos. La 
+información de la consulta muestra los proyectos en los cuales están 
+involucrados en ese momento, y algunas características de dichos proyectos, cómo
+las fechas de entrega y de finalización.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO CONSULTA_EXPERTOS (Parámetros_Consulta)
+  INICIALIZAR(ÍNDICE )
+  MIENTRAS HAYA_SIGUIENTE HACER
+    SI  Parámetros_Consulta = USUARIOS[ÍNDICE] ENTONCES
+      MOSTRAR USUARIOS[ÍNDICE]
+      INICIALIZAR(ÍNDICE_2)
+      MIENTRAS HAYA_SIGUIENTE HACER
+        SI EXPERTOS-PROYECTOS[ÍNDICE_2].EXPERTO = USUARIOS[ÍNDICE] ENTONCES
+          MOSTRAR EXPERTOS-PROYECTOS[ÍNDICE_2]
+          PROYECTO=EXPERTOS-PROYECTOS[ÍNDICE_2].PROYECTO
+          MOSTRAR PROYECTOS[PROYECTO].Tiempos
+        FIN SI
+      FIN MIENTRAS
+    FIN SI
+  FIN MIENTRAS
+
+\end{lstlisting}
+
+\subsection{Búsqueda expertos}
+Es una búsqueda detallada a petición del adjunto. El adjunto busca los datos de 
+expertos que estén relacionados con el proyecto a evaluar. Se introducen los 
+parámetros de búsqueda y el programa devuelve una lista. Ésta lista puede ser 
+vacía o puede mostrar un conjunto de expertos que concuerden con los 
+prerrequisitos, ordenándolos por la valoración que tengan, que no pertenezcan a 
+la asociación convocante y que sean de su área.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO BÚSQUEDA_EXPERTOS (Párametros_Búsqueda)
+  INICIALIZAR(ÍNDICE )
+  CREAR LISTA_EXPERTOS
+  MIENTRAS HAYA_SIGUIENTE HACER
+    SI  Parámetros_Búsqueda.Usuario = USUARIOS[ÍNDICE] 
+Y  USUARIOS[ÍNDICE].INSTITUCIÓN NO = PAQUETES_PROYECTOS[Párametros_Búsqueda.PAQUETE_PROYECTO].INSTITUCIÓN_CONVOCANTE 
+Y PROYECTOS[Párametros_Búsqueda.Proyecto].Área = USUARIOS.[ÍNDICE] .ÁREA ENTONCES 
+      LISTA_EXPERTOS. AÑADIR(USUARIOS[ÍNDICE])          FIN SI
+  FIN MIENTRAS
+  DEVOLVER LISTA_EXPERTOS  
+
+\end{lstlisting}
+
+\subsection{Invitación expertos}
+Una vez listados los expertos, el adjunto en cuestión selecciona a uno o varios 
+de la lista. El proceso les manda un correo de invitación para participar en la 
+evaluación de un proyecto. El correo de invitación se escoge de una serie de 
+plantillas y se rellena con los datos del proyecto (no todos, ya que el experto 
+no tiene acceso a la mayoría del proyecto hasta que no acepta la petición). El 
+experto seleccionado tiene una fecha límite para responder a dicho correo. Si el
+experto no contesta, la invitación se toma como rechazada.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO INVITACIÓN_EXPERTOS (ID_Experto)
+  INICIALIZAR (ÍNDICE)
+  MIENTRAS HAYA_SIGUIENTE HACER
+    SI USUARIOS[ÍNDICE].ID = ID_Experto ENTONCES
+      Correo_Invitación <= (PLANTILLAS_CORREOS.asunto = Invitación) + (PROYECTOS[Elección_1].nombre) + (PAQUETES_PROYECTOS[PROYECTOS[Elección_1].id_paquete) + (USUARIOS[ÍNDICE].correo)
+    FIN SI
+  FIN MIENTRAS
+
+\end{lstlisting}
+
+\subsection{Aceptar invitación experto}
+En este punto es donde la respuesta del experto es procesada. Cuando un experto 
+acepta la invitación se genera automáticamente una relación entre el proyecto y 
+el experto. De esta forma el experto tiene acceso a todos los datos del 
+proyecto. En este proceso también se actualiza el estado del proyecto.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO ACEPTAR_INVITACIÓN_EXPERTO(Aceptación)
+  PROYECTOS[Elección_1].estado <= En_proceso  
+  EXPERTOS-PROYECTOS.crear_instancia (Aceptación.id_experto, Aceptación.id_proyecto, (INFORMES_EVALUACIÓN.crear_instancia().id_informe))
+
+\end{lstlisting}
+
+\subsection{Desasignar experto / Rechazar informe}
+Este proceso se invoca cuando algún experto está consumiendo más tiempo del 
+fijado a priori y el adjunto decide desasignar al experto del proyecto. Se 
+elimina la relación expertos-proyectos y su informe de evaluación.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO_DESASIGNAR_EXPERTO_/_RECHAZAR_INFORME(Experto_Desasignado)
+  Informe <= EXPERTOS-PROYECTOS[Experto_Desasignado.id_experto][Experto_Desasignado.id_proyecto].id_informe
+  BORRAR PROYECTOS[Experto_Desasignado.id_experto][Experto_Desasignado.id_proyecto]  
+  BORRAR INFORMES_EVALUACIÓN[Informe]
+
+\end{lstlisting}
+
+\subsection{Aviso de plazos}
+El adjunto avisa al experto de la fecha límite para realizar la evaluación del 
+proyecto, la fecha en la que se lo asignaron y los tiempos predefinidos en el 
+proyecto.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO AVISOS_DE_PLAZOS (ID_Experto)
+  Correo_Plazos <= ((PLANTILLAS_CORREOS.asunto = aviso_plazos) + proyecto[Elección_1].tpo_inv + EXPERTOS-PROYECTOS[ID_Expertos][Elección_1].fecha_asignación + PAQUETES_PROYECTOS[Elección2] + USUARIOS[ID_Experto].correo)
+  DEVOLVER Correo_Plazos
+
+\end{lstlisting}
+
+\subsection{Valorar expertos}
+Una vez finalizado el informe de evaluación, el adjunto lo lee y examina con la 
+finalidad de valorar el trabajo realizado por el experto. El adjunto manda al 
+sistema una valoración y este lo incluye en la instancia correspondiente del 
+experto y el proyecto.
+
+\subsubsection{Pseudocódigo}
+\begin{lstlisting}[inputencoding=utf8/latin1]
+PROCESO VALORAR_EXPERTOS(Valoración_Expertos)
+  EXPERTOS-PROYECTOS[Valoración_Expertos.id_Experto][Valoración_Expertos.id_proyecto].valoración = Valoración Expertos
+
+\end{lstlisting}
 
 \chapter{Diseño del sistema}
 \section{Diagrama de diseño estructurado}
