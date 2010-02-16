@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.1.23)  16 FEB 2010 11:49
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.1.23)  16 FEB 2010 12:46
 entering extended mode
  %&-line parsing enabled.
 **\input iso1.tex
@@ -458,24 +458,6 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 
 LaTeX Warning: Label `' multiply defined.
 
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
 )
 \openout1 = `iso1.aux'.
 
@@ -580,10 +562,7 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 24.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [3] [4] (./iso1.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3.
-
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
+(Font)              <12> on input line 4.
  [5
 
 ])
@@ -593,361 +572,298 @@ Underfull \vbox (badness 1314) has occurred while \output is active []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 15.80573pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6] (./iso1.lof
-Underfull \vbox (badness 5771) has occurred while \output is active []
-
- [7
-
-])
+[6] (./iso1.lof)
 \tf@lof=\write5
 \openout5 = `iso1.lof'.
 
+ [7
 
-[8] [9
+] [8
 
-] [10
+] [9] [10
 
-]
+] [11] [12]
 Cap\'{\i }tulo 1.
-[11] [12] [13] [14]
+[13
+
+] [14] [15] [16]
 Cap\'{\i }tulo 2.
-<imagesinterface/diagramas/DC.pdf, id=223, 597.23125pt x 845.1575pt>
-File: imagesinterface/diagramas/DC.pdf Graphic file (type pdf)
+[17
 
-<use imagesinterface/diagramas/DC.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15
+] [18
 
 ]
-Overfull \vbox (223.6242pt too high) has occurred while \output is active []
+Cap\'{\i }tulo 3.
 
-
-[16 <./imagesinterface/diagramas/DC.pdf>]
-<imagesinterface/diagramas/DFD0.pdf, id=238, 597.432pt x 636.77902pt>
-File: imagesinterface/diagramas/DFD0.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DFD0.pdf>
-<imagesinterface/diagramas/DFD1.pdf, id=239, 597.432pt x 561.29701pt>
-File: imagesinterface/diagramas/DFD1.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DFD1.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17 <./imagesinterface/diagramas/DFD0.pdf
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DFD0.pdf): PDF inclusio
-n: Page Group detected which pdfTeX can't handle. Ignoring it.
->] <imagesinterface/diagramas/DFD2.pdf, id=252, 597.432pt x 589.40201pt>
-File: imagesinterface/diagramas/DFD2.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DFD2.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18 <./imagesinterface/diagramas/DFD1.pdf
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DFD1.pdf): PDF inclusio
-n: Page Group detected which pdfTeX can't handle. Ignoring it.
->] <imagesinterface/diagramas/DFD3.pdf, id=265, 597.432pt x 390.25798pt>
-File: imagesinterface/diagramas/DFD3.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DFD3.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19 <./imagesinterface/diagramas/DFD2.pdf
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DFD2.pdf): PDF inclusio
-n: Page Group detected which pdfTeX can't handle. Ignoring it.
->] <imagesinterface/diagramas/DFD31.pdf, id=279, 569.32701pt x 504.284pt>
-File: imagesinterface/diagramas/DFD31.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DFD31.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20 <./imagesinterface/diagramas/DFD3.pdf
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DFD3.pdf): PDF inclusio
-n: Page Group detected which pdfTeX can't handle. Ignoring it.
->] [21 <./imagesinterface/diagramas/DFD31.pdf
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DFD31.pdf): PDF inclusi
-on: Page Group detected which pdfTeX can't handle. Ignoring it.
->]
-Overfull \hbox (9.32837pt too wide) in paragraph at lines 266--268
+Overfull \hbox (9.32837pt too wide) in paragraph at lines 267--269
 []\OT1/lmr/m/n/12 = *\OT1/lmr/m/it/12 Tiem-po que tiene un ex-per-to para re-al
 izar una eval-u-aci^^Son des-de su aceptaci^^Son\OT1/lmr/m/n/12 * 
  []
 
 
-Overfull \hbox (12.06963pt too wide) in paragraph at lines 271--273
+Overfull \hbox (12.06963pt too wide) in paragraph at lines 272--274
 []\OT1/lmr/m/n/12 = @id[]usuario + @id[]paqproy + @id[]proyecto + id[]informe
  []
 
-[22]
-Overfull \hbox (37.00539pt too wide) in paragraph at lines 327--329
+[19]
+Overfull \hbox (37.00539pt too wide) in paragraph at lines 328--330
 []\OT1/lmr/m/n/12 = [eval-u-a-do[]por[]expertos $\OMS/lmsy/m/n/12 j$ \OT1/lmr/m
 /n/12 eval-u-a-do[]por[]adjunto $\OMS/lmsy/m/n/12 j$ \OT1/lmr/m/n/12 val-i-da-d
 o[]coodinador] 
  []
 
-
-Overfull \hbox (8.6369pt too wide) in paragraph at lines 371--373
+[20]
+Overfull \hbox (8.6369pt too wide) in paragraph at lines 372--374
 []\OT1/lmr/m/n/12 = *\OT1/lmr/m/it/12 El es-ta-do del proyec-to cam-bia de 'sin
 []evaluar' a 'ex-per-tos[]evaluando'\OT1/lmr/m/n/12 * 
  []
 
 
-Overfull \hbox (2.52635pt too wide) in paragraph at lines 384--386
+Overfull \hbox (2.52635pt too wide) in paragraph at lines 385--387
 []\OT1/lmr/m/n/12 = id[]informe + id[]modelo[]eval + es-ta-do[]informe + datos 
 
  []
 
-[23] [24]
-Overfull \hbox (9.99341pt too wide) in paragraph at lines 477--480
+[21] [22]
+Overfull \hbox (9.99341pt too wide) in paragraph at lines 478--481
 []\OT1/lmr/m/n/12 = [Relaci^^Son Expertos-Proyectos $\OMS/lmsy/m/n/12 j$ \OT1/l
 mr/m/n/12 Val-o-raci^^Son Ex-per-tos $\OMS/lmsy/m/n/12 j$ \OT1/lmr/m/n/12 Fin R
 elaci^^Son
  []
 
-[25]
-Overfull \hbox (3.36494pt too wide) in paragraph at lines 575--577
+[23]
+Overfull \hbox (3.36494pt too wide) in paragraph at lines 576--578
 []\OT1/lmr/m/n/12 = [id[]modelo + es-truc-tura $\OMS/lmsy/m/n/12 j$ \OT1/lmr/m/
 n/12 Nue-vo Mod-e-lo Eval-u-aci^^Son $\OMS/lmsy/m/n/12 j$ \OT1/lmr/m/n/12 id[]m
 odelo] 
  []
 
-[26]
-Overfull \hbox (35.10025pt too wide) in paragraph at lines 618--620
+[24]
+Overfull \hbox (35.10025pt too wide) in paragraph at lines 619--621
 []\OT1/lmr/m/n/12 = id[]usuario + nom-bre + apel-li-dos + id[]proyecto + nom-br
 e[]proyecto + tmp[]invitaci^^Son
  []
 
-[27] [28]
-Cap\'{\i }tulo 3.
+[25] [26]
+Cap\'{\i }tulo 4.
+(/usr/share/texmf-texlive/tex/latex/base/latin1.def
+File: latin1.def 2006/05/05 v1.1b Input encoding file
+)
+LaTeX Font Info:    Try loading font information for OML+lmr on input line 718.
 
 
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DE_1.pdf): PDF inclusio
-n: found PDF version <1.5>, but at most version <1.4> allowed
-<imagesinterface/diagramas/DE_1.pdf, id=327, 845.1575pt x 597.23125pt>
-File: imagesinterface/diagramas/DE_1.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DE_1.pdf>
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DE_2.pdf): PDF inclusio
-n: found PDF version <1.5>, but at most version <1.4> allowed
-<imagesinterface/diagramas/DE_2.pdf, id=328, 845.1575pt x 597.23125pt>
-File: imagesinterface/diagramas/DE_2.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DE_2.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29
-
- <./imagesinterface/diagramas/DE_1.pdf, page is rotated 90 degrees>]
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DE_3.pdf): PDF inclusio
-n: found PDF version <1.5>, but at most version <1.4> allowed
-<imagesinterface/diagramas/DE_3.pdf, id=338, 845.1575pt x 597.23125pt>
-File: imagesinterface/diagramas/DE_3.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DE_3.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30 <./imagesinterface/diagramas/DE_2.pdf, page is rotated 90 degrees>]
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DE_4.pdf): PDF inclusio
-n: found PDF version <1.5>, but at most version <1.4> allowed
-<imagesinterface/diagramas/DE_4.pdf, id=348, 845.1575pt x 597.23125pt>
-File: imagesinterface/diagramas/DE_4.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DE_4.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31 <./imagesinterface/diagramas/DE_3.pdf, page is rotated 90 degrees>]
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DE_5.pdf): PDF inclusio
-n: found PDF version <1.5>, but at most version <1.4> allowed
-<imagesinterface/diagramas/DE_5.pdf, id=359, 845.1575pt x 597.23125pt>
-File: imagesinterface/diagramas/DE_5.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DE_5.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32 <./imagesinterface/diagramas/DE_4.pdf, page is rotated 90 degrees>]
-
-pdfTeX warning: latex (file ./imagesinterface/diagramas/DE_6.pdf): PDF inclusio
-n: found PDF version <1.5>, but at most version <1.4> allowed
-<imagesinterface/diagramas/DE_6.pdf, id=369, 845.1575pt x 597.23125pt>
-File: imagesinterface/diagramas/DE_6.pdf Graphic file (type pdf)
-
-<use imagesinterface/diagramas/DE_6.pdf> [33 <./imagesinterface/diagramas/DE_5.
-pdf, page is rotated 90 degrees> <./imagesinterface/diagramas/DE_6.pdf, page is
- rotated 90 degrees>] [34
+(/usr/share/texmf/tex/latex/lm/omllmr.fd
+File: omllmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 718.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 726.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 726.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 726.
+ [27
 
 ]
-Cap\'{\i }tulo 4.
-<imagesinterface/diagramas/ER.pdf, id=388, 597.23125pt x 845.1575pt>
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.733 				AÑADIR 
+                  USUARIOS[índice] A Lista_Usuarios
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.740 				AÑADIR 
+                  USUARIOS[índice] A Lista_Usuarios
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[28] [29] [30
+
+]
+Cap\'{\i }tulo 5.
+[31] [32
+
+]
+Cap\'{\i }tulo 6.
+<imagesinterface/diagramas/ER.pdf, id=284, 597.23125pt x 845.1575pt>
 File: imagesinterface/diagramas/ER.pdf Graphic file (type pdf)
 
 <use imagesinterface/diagramas/ER.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [33]
 Overfull \vbox (205.12016pt too high) has occurred while \output is active []
 
 
-[36 <./imagesinterface/diagramas/ER.pdf>]
-<imagesinterface/diagramas/MRE.pdf, id=403, 597.23125pt x 845.1575pt>
+[34 <./imagesinterface/diagramas/ER.pdf>]
+<imagesinterface/diagramas/MRE.pdf, id=299, 597.23125pt x 845.1575pt>
 File: imagesinterface/diagramas/MRE.pdf Graphic file (type pdf)
 
-<use imagesinterface/diagramas/MRE.pdf> [37 <./imagesinterface/diagramas/MRE.pd
-f>] [38
+<use imagesinterface/diagramas/MRE.pdf> [35 <./imagesinterface/diagramas/MRE.pd
+f>] [36
 
 ]
-Cap\'{\i }tulo 5.
-<imagesinterface/acceso.pdf, id=424, 927.465pt x 536.0025pt>
+Cap\'{\i }tulo 7.
+<imagesinterface/acceso.pdf, id=319, 927.465pt x 536.0025pt>
 File: imagesinterface/acceso.pdf Graphic file (type pdf)
 
 <use imagesinterface/acceso.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-<imagesinterface/introducirdatos.pdf, id=428, 279.0425pt x 142.5325pt>
+ [37]
+<imagesinterface/introducirdatos.pdf, id=324, 279.0425pt x 142.5325pt>
 File: imagesinterface/introducirdatos.pdf Graphic file (type pdf)
 
 <use imagesinterface/introducirdatos.pdf>
-<imagesinterface/anadirmod.pdf, id=429, 998.73125pt x 528.97626pt>
+<imagesinterface/anadirmod.pdf, id=325, 998.73125pt x 528.97626pt>
 File: imagesinterface/anadirmod.pdf Graphic file (type pdf)
 
-<use imagesinterface/anadirmod.pdf> [40 <./imagesinterface/acceso.pdf> <./image
+<use imagesinterface/anadirmod.pdf> [38 <./imagesinterface/acceso.pdf> <./image
 sinterface/introducirdatos.pdf>]
-<imagesinterface/convmod.pdf, id=447, 537.00626pt x 337.26pt>
+<imagesinterface/convmod.pdf, id=343, 537.00626pt x 337.26pt>
 File: imagesinterface/convmod.pdf Graphic file (type pdf)
 
 <use imagesinterface/convmod.pdf>
-<imagesinterface/convmostrada.pdf, id=448, 1132.23pt x 578.16pt>
+<imagesinterface/convmostrada.pdf, id=344, 1132.23pt x 578.16pt>
 File: imagesinterface/convmostrada.pdf Graphic file (type pdf)
 
 <use imagesinterface/convmostrada.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./imagesinterface/anadirmod.pdf> <./imagesinterface/convmod.pdf>]
-<imagesinterface/formularios.pdf, id=464, 254.9525pt x 214.8025pt>
+ [39 <./imagesinterface/anadirmod.pdf> <./imagesinterface/convmod.pdf>]
+<imagesinterface/formularios.pdf, id=360, 254.9525pt x 214.8025pt>
 File: imagesinterface/formularios.pdf Graphic file (type pdf)
 
 <use imagesinterface/formularios.pdf>
-<imagesinterface/modifmod.pdf, id=465, 995.72pt x 249.93375pt>
+<imagesinterface/modifmod.pdf, id=361, 995.72pt x 249.93375pt>
 File: imagesinterface/modifmod.pdf Graphic file (type pdf)
 
 <use imagesinterface/modifmod.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./imagesinterface/convmostrada.pdf> <./imagesinterface/formularios.pdf>]
-<imagesinterface/corprinc.pdf, id=483, 770.78204pt x 453.13551pt>
+ [40 <./imagesinterface/convmostrada.pdf> <./imagesinterface/formularios.pdf>]
+<imagesinterface/corprinc.pdf, id=379, 770.78204pt x 453.13551pt>
 File: imagesinterface/corprinc.pdf Graphic file (type pdf)
 
 <use imagesinterface/corprinc.pdf>
-<imagesinterface/selcor.pdf, id=484, 770.78204pt x 453.13551pt>
+<imagesinterface/selcor.pdf, id=380, 770.78204pt x 453.13551pt>
 File: imagesinterface/selcor.pdf Graphic file (type pdf)
 
 <use imagesinterface/selcor.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43 <./imagesinterface/modifmod.pdf> <./imagesinterface/corprinc.pdf>]
-<imagesinterface/modinf.pdf, id=498, 757.98582pt x 453.13551pt>
+ [41 <./imagesinterface/modifmod.pdf> <./imagesinterface/corprinc.pdf>]
+<imagesinterface/modinf.pdf, id=393, 757.98582pt x 453.13551pt>
 File: imagesinterface/modinf.pdf Graphic file (type pdf)
 
 <use imagesinterface/modinf.pdf>
-<imagesinterface/opcor.pdf, id=499, 757.98582pt x 453.13551pt>
+<imagesinterface/opcor.pdf, id=394, 757.98582pt x 453.13551pt>
 File: imagesinterface/opcor.pdf Graphic file (type pdf)
 
 <use imagesinterface/opcor.pdf>
 Underfull \vbox (badness 1442) has occurred while \output is active []
 
- [44 <./imagesinterface/selcor.pdf> <./imagesinterface/modinf.pdf>]
-<imagesinterface/valinf.pdf, id=507, 770.78204pt x 453.13551pt>
+ [42 <./imagesinterface/selcor.pdf> <./imagesinterface/modinf.pdf>]
+<imagesinterface/valinf.pdf, id=402, 770.78204pt x 453.13551pt>
 File: imagesinterface/valinf.pdf Graphic file (type pdf)
 
 <use imagesinterface/valinf.pdf>
-<imagesinterface/adjprinc.pdf, id=508, 770.78204pt x 453.13551pt>
+<imagesinterface/adjprinc.pdf, id=403, 770.78204pt x 453.13551pt>
 File: imagesinterface/adjprinc.pdf Graphic file (type pdf)
 
 <use imagesinterface/adjprinc.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45 <./imagesinterface/opcor.pdf> <./imagesinterface/valinf.pdf>]
-<imagesinterface/seladj.pdf, id=516, 770.78204pt x 453.13551pt>
+ [43 <./imagesinterface/opcor.pdf> <./imagesinterface/valinf.pdf>]
+<imagesinterface/seladj.pdf, id=412, 770.78204pt x 453.13551pt>
 File: imagesinterface/seladj.pdf Graphic file (type pdf)
 
-<use imagesinterface/seladj.pdf> [46 <./imagesinterface/adjprinc.pdf> <./images
+<use imagesinterface/seladj.pdf> [44 <./imagesinterface/adjprinc.pdf> <./images
 interface/seladj.pdf>]
-<imagesinterface/listaexp.pdf, id=524, 757.98582pt x 453.13551pt>
+<imagesinterface/listaexp.pdf, id=420, 757.98582pt x 453.13551pt>
 File: imagesinterface/listaexp.pdf Graphic file (type pdf)
 
 <use imagesinterface/listaexp.pdf>
-<imagesinterface/coneval.pdf, id=525, 757.98582pt x 453.13551pt>
+<imagesinterface/coneval.pdf, id=421, 757.98582pt x 453.13551pt>
 File: imagesinterface/coneval.pdf Graphic file (type pdf)
 
 <use imagesinterface/coneval.pdf>
-<imagesinterface/inffinal.pdf, id=526, 757.98582pt x 453.13551pt>
+<imagesinterface/inffinal.pdf, id=422, 757.98582pt x 453.13551pt>
 File: imagesinterface/inffinal.pdf Graphic file (type pdf)
 
-<use imagesinterface/inffinal.pdf> [47 <./imagesinterface/listaexp.pdf> <./imag
+<use imagesinterface/inffinal.pdf> [45 <./imagesinterface/listaexp.pdf> <./imag
 esinterface/coneval.pdf>]
-<imagesinterface/opinf.pdf, id=534, 757.98582pt x 453.13551pt>
+<imagesinterface/opinf.pdf, id=430, 757.98582pt x 453.13551pt>
 File: imagesinterface/opinf.pdf Graphic file (type pdf)
 
 <use imagesinterface/opinf.pdf>
-<imagesinterface/realizareval.pdf, id=535, 990.70125pt x 328.22626pt>
+<imagesinterface/realizareval.pdf, id=431, 990.70125pt x 328.22626pt>
 File: imagesinterface/realizareval.pdf Graphic file (type pdf)
 
 <use imagesinterface/realizareval.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48 <./imagesinterface/inffinal.pdf> <./imagesinterface/opinf.pdf>]
-<imagesinterface/evalexp.pdf, id=543, 800.9925pt x 570.13pt>
+ [46 <./imagesinterface/inffinal.pdf> <./imagesinterface/opinf.pdf>]
+<imagesinterface/evalexp.pdf, id=439, 800.9925pt x 570.13pt>
 File: imagesinterface/evalexp.pdf Graphic file (type pdf)
 
 <use imagesinterface/evalexp.pdf>
-<imagesinterface/saveend.pdf, id=544, 170.6375pt x 33.12375pt>
+<imagesinterface/saveend.pdf, id=440, 170.6375pt x 33.12375pt>
 File: imagesinterface/saveend.pdf Graphic file (type pdf)
 
-<use imagesinterface/saveend.pdf> [49 <./imagesinterface/realizareval.pdf> <./i
-magesinterface/evalexp.pdf>] [50 <./imagesinterface/saveend.pdf>]
-Cap\'{\i }tulo 6.
-[51
+<use imagesinterface/saveend.pdf> [47 <./imagesinterface/realizareval.pdf> <./i
+magesinterface/evalexp.pdf>] [48 <./imagesinterface/saveend.pdf>]
+Cap\'{\i }tulo 8.
+[49
 
-] [52
+] [50
 
 ]
-Cap\'{\i }tulo 7.
-[53] (./iso1.aux)
+Cap\'{\i }tulo 9.
+[51] (./iso1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4213 strings out of 95087
- 58773 string characters out of 1183278
- 118879 words of memory out of 1500000
- 7263 multiletter control sequences out of 10000+50000
- 48476 words of font info for 41 fonts, out of 1200000 for 2000
+ 4469 strings out of 95087
+ 59609 string characters out of 1183278
+ 122741 words of memory out of 1500000
+ 7517 multiletter control sequences out of 10000+50000
+ 59688 words of font info for 53 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 36i,12n,43p,628b,465s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 36i,12n,43p,628b,2024s stack positions out of 5000i,500n,6000p,200000b,5000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/font
-s/type1/public/lm/lmsy10.pfb>
-Output written on iso1.pdf (53 pages, 3240427 bytes).
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/s
+hare/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/font
+s/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on iso1.pdf (51 pages, 2980192 bytes).
 PDF statistics:
- 612 PDF objects out of 1000 (max. 8388607)
+ 518 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
