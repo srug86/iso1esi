@@ -1,0 +1,15 @@
+PROCESO Consulta_Expertos(parámetros_consulta)
+  REPETIR
+    SI parámetros_consulta = USUARIOS[índice_1] ENTONCES
+      MOSTRAR USUARIOS[índice_1]
+      REPETIR
+        SI EXPERTOS-PROYECTOS[índice_2].id_experto = 
+        USUARIOS[índice_1] ENTONCES
+          MOSTRAR EXPERTOS-PROYECTOS[índice_2]
+          proyecto = EXPERTOS-PROYECTOS[índice_2].id_proyecto
+          MOSTRAR PROYECTOS[proyecto].tpo_eval
+        FIN SI
+      HASTA índice_2 > EXPERTOS-PROYECTOS.número_tuplas
+    FIN SI
+  HASTA índice_1 > USUARIOS.número_tuplas
+

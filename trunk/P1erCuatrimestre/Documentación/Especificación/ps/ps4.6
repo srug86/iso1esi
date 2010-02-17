@@ -1,0 +1,7 @@
+PROCESO Avisos_De_Plazos(id_experto)
+  correo_plazos <= ((PLANTILLAS_CORREOS.asunto = "Aviso Plazos") + 
+  PROYECTOS[Elección_1].tpo_inv + 
+  EXPERTOS-PROYECTOS[id_expertos][Elección_1].fecha_asignación + 
+  PAQUETES_PROYECTOS[Elección2] + USUARIOS[ID_Experto].correo)
+  RETORNAR correo_plazos
+

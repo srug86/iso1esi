@@ -1,0 +1,7 @@
+PROCESO Desasignar_Experto/Rechazar_Informe(experto_desasignado)
+  informe <= EXPERTOS-PROYECTOS[experto_desasignado.id_experto]
+  [experto_desasignado.id_proyecto].id_informe
+  BORRAR PROYECTOS[experto_desasignado.id_experto]
+  [experto_desasignado.id_proyecto]  
+  BORRAR INFORMES_EVALUACIÓN[informe]
+
