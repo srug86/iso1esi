@@ -1,4 +1,4 @@
-1.1
+﻿1.1
 PROCESO Listado_De_Usuarios (lista_parámetros)
   lista_usuarios <= VACÍA
   índice <= 0
@@ -27,87 +27,8 @@ PROCESO Listado_De_Usuarios (lista_parámetros)
     HASTA índice > USUARIOS.número_tuplas
   FIN SI
   RETORNA lista_usuarios
-
-
-1.2
-PROCESO Añadir_Usuarios (usuarios)
-  SI usuario_activo.tipo = "Secretario" ENTONCES
-    AÑADIR usuarios A USUARIOS
-    correo_alta <= (LEER PLANTILLAS_CORREOS.asunto = "Alta")
-            + (usuarios.id_nombre) + (usuarios.correo)
-            + (usuarios.contraseña)
-    RETORNA correo_alta
-  FIN SI
-
-
-1.3
-PROCESO Modificar_Usuario (usuarios, subárea_adjunto)
-  índice <= 0
-  SI usuario_activo.tipo = "Secretario" Y VACIO(usuarios) = FALSO ENTONCES
-    REPETIR
-      SI usuarios.id_usuario = USUARIOS[índice].id_usuario ENTONCES
-        USUARIOS[índice] <= usuarios
-        SALIR
-      SINO
-        índice++
-      FIN SI
-    HASTA índice > USUARIOS.número_tuplas
-  SINO
-    SI usuario_activo.tipo = "Coordinador" Y 
-    VACIO(subárea_adjunto) = FALSO ENTONCES
-      REPETIR
-        SI subárea_adjunto.id_subárea = SUBÁREAS[índice].id_subárea ENTONCES
-          SUBÁREAS[índice].id_usuario <= subárea_adjunto.id_usuaio
-        SINO
-          índice++
-        FIN SI
-      HASTA índice > SUBÁREAS.número_tuplas
-    FIN SI
-  FIN SI
-
-1.4
-PROCESO Eliminar_Usuarios (usuarios)
-  índice <= 0
-  SI usuario_activo.tipo = "Secretario" ENTONCES
-    REPETIR
-      SI usuarios.id_usuario = USUARIOS[índice].id_usuario ENTONCES
-        ELIMINAR USUARIOS[índice]
-        SALIR
-      SINO
-        índice++
-      FIN SI
-    HASTA índice > USUARIOS.número_tuplas
-  FIN SI
-
-1.5
-PROCESO Autentificar_Usuarios (datos_autentificación)
-  índice <= 0
-  REPETIR
-    SI datos_autentificación.id_usuario = USUARIOS[índice].id_usuario
-    Y datos_autentificación.contraseña = USUARIOS[índice].contraseña ENTONCES
-      verificar_autentificar <= VERDADERO
-      SALIR
-    SINO
-      verificar_autentificar <= FALSO
-    FIN SI
-  HASTA índice > USUARIOS.número_tuplas
-  RETORNA verificar_autentificar
-
-1.6
-PROCESO Modificar_Datos_Personales (datos_personales)
-  índice <= 0
-  REPETIR
-    SI usuario_activo.id_usuario = USUARIOS[índice].id_usuario ENTONCES
-      USUARIOS[índice] <= datos_personales
-      SALIR
-    SINO
-      índice++
-    FIN SI
-  HASTA índice > USUARIOS.número_tuplas
-  
   
 
-  
 
 
 
