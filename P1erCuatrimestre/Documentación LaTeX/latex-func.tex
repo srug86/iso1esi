@@ -9,6 +9,9 @@
 \usepackage{fancybox}
 \usepackage{float}
 
+% Rotaciones
+\usepackage[twoside]{rotating}
+
 % Ruta para las imágenes
 \graphicspath{{imagesinterface/}}
 
@@ -17,7 +20,7 @@
 \usepackage{colortbl}
 
 % Margenes
-\usepackage[margin=2.5cm,top=3cm]{geometry}
+%\usepackage[margin=2.5cm,top=3cm]{geometry}
 
 % Párrafos
 \setlength{\parskip}{6pt}
@@ -97,8 +100,8 @@
 % -----------------------------------------------------------------------------
 \usepackage{ifthen}
 \def\imagen#1#2#3#4#5{
-%  \ifthenelse{\equal{#5}{}}{\begin{figure}[!h]}{\begin{figure}[#5]}
-\begin{figure}[H]
+  \ifthenelse{\equal{#5}{}}{\begin{figure}[!h]}{\begin{figure}[#5]}
+%\begin{figure}[H]
     \begin{center}
       \ifthenelse{\equal{#2}{}}
       {\includegraphics{#1}}{\resizebox{#2}{!}{\includegraphics{#1}}}
@@ -148,7 +151,7 @@
 % -----------------------------------------------------------------------------
 \def\licencia#1{
   \thispagestyle{empty}  % Suprime la numeración de esta página
-  \vspace*{20cm}
+  \vspace*{16cm}
   \begin{small}
     \copyright~ #1. Se permite la copia, distribución y/o 
     modificación de este documento bajo los términos de la licencia de

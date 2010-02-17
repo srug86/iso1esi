@@ -1,22 +1,22 @@
-PROCESO Modificar_Usuario (usuarios, sub·rea_adjunto)
+PROCESO Modificar_Usuario (usuarios, sub√°rea_adjunto)
   SI usuario_activo.tipo = "Secretario" Y VACIO(usuarios) = FALSO ENTONCES
     REPETIR
-      SI usuarios.id_usuario = USUARIOS[Ìndice].id_usuario ENTONCES
-        USUARIOS[Ìndice] <= usuarios
+      SI usuarios.id_usuario = USUARIOS[√≠ndice].id_usuario ENTONCES
+        USUARIOS[√≠ndice] <= usuarios
         SALIR
       SINO
-        Ìndice++
+        √≠ndice++
       FIN SI
-    HASTA Ìndice > USUARIOS.n˙mero_tuplas
+    HASTA √≠ndice > USUARIOS.n√∫mero_tuplas
   SINO
     SI usuario_activo.tipo = "Coordinador" Y 
-    VACIO(sub·rea_adjunto) = FALSO ENTONCES
+    VACIO(sub√°rea_adjunto) = FALSO ENTONCES
       REPETIR
-        SI sub·rea_adjunto.id_sub·rea = SUB¡REAS[Ìndice].id_sub·rea ENTONCES
-          SUB¡REAS[Ìndice].id_usuario <= sub·rea_adjunto.id_usuaio
+        SI sub√°rea_adjunto.id_sub√°rea = SUB√ÅREAS[√≠ndice].id_sub√°rea ENTONCES
+          SUB√ÅREAS[√≠ndice].id_usuario <= sub√°rea_adjunto.id_usuaio
         SINO
-          Ìndice++
+          √≠ndice++
         FIN SI
-      HASTA Ìndice > SUB¡REAS.n˙mero_tuplas
+      HASTA √≠ndice > SUB√ÅREAS.n√∫mero_tuplas
     FIN SI
   FIN SI

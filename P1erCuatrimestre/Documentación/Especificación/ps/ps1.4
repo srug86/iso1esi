@@ -1,11 +1,11 @@
 PROCESO Eliminar_Usuarios (usuarios)
   SI usuario_activo.tipo = "Secretario" ENTONCES
     REPETIR
-      SI usuarios.id_usuario = USUARIOS[Ìndice].id_usuario ENTONCES
-        ELIMINAR USUARIOS[Ìndice]
+      SI usuarios.id_usuario = USUARIOS[√≠ndice].id_usuario ENTONCES
+        ELIMINAR USUARIOS[√≠ndice]
         SALIR
       SINO
-        Ìndice++
+        √≠ndice++
       FIN SI
-    HASTA Ìndice > USUARIOS.n˙mero_tuplas
+    HASTA √≠ndice > USUARIOS.n√∫mero_tuplas
   FIN SI

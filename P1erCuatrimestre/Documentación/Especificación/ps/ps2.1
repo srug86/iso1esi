@@ -1,12 +1,12 @@
 PROCESO Consulta_Paquetes_de_Proyectos/Proyectos ()
   SI usuario_activo.tipo = "Secretario" ENTONCES
-    SI Elecci髇_1 = "Paquete" ENTONCES
+    SI Elecci贸n_1 = "Paquete" ENTONCES
       MOSTRAR PAQUETES_PROYECTOS
-      RETORNO PAQUETES_PROYECTOS[Elecci髇_2].convocatoria
+      RETORNO PAQUETES_PROYECTOS[Elecci贸n_2].convocatoria
     SINO
-      SI Elecci髇_1 = "Proyecto" ENTONCES
+      SI Elecci贸n_1 = "Proyecto" ENTONCES
         MOSTRAR PROYECTOS
-        RETORNO PROYECTOS[Elecci髇_2]
+        RETORNO PROYECTOS[Elecci贸n_2]
       FIN SI
     FIN SI
   FIN SI

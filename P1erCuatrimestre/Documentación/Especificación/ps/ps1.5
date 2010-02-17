@@ -1,11 +1,11 @@
-PROCESO Autentificar_Usuarios (datos_autentificaciÛn)
+PROCESO Autentificar_Usuarios (datos_autentificaci√≥n)
   REPETIR
-    SI datos_autentificaciÛn.id_usuario = USUARIOS[Ìndice].id_usuario
-    Y datos_autentificaciÛn.contraseÒa = USUARIOS[Ìndice].contraseÒa ENTONCES
+    SI datos_autentificaci√≥n.id_usuario = USUARIOS[√≠ndice].id_usuario
+    Y datos_autentificaci√≥n.contrase√±a = USUARIOS[√≠ndice].contrase√±a ENTONCES
       verificar_autentificar <= VERDADERO
       SALIR
     SINO
       verificar_autentificar <= FALSO
     FIN SI
-  HASTA Ìndice > USUARIOS.n˙mero_tuplas
+  HASTA √≠ndice > USUARIOS.n√∫mero_tuplas
   RETORNA verificar_autentificar
