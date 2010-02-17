@@ -1,84 +1,87 @@
 2.1
 PROCESO Consulta_Paquetes_de_Proyectos/Proyectos ()
-	SI usuario_activo.tipo = "Secretario" ENTONCES
-		SI Elección_1 = "Paquete" ENTONCES
-			MOSTRAR PAQUETES_PROYECTOS
-			RETORNO PAQUETES_PROYECTOS[Elección_2].Convocatoria
-		SINO
-			SI Elección_1 = Proyecto ENTONCES
-				MOSTRAR PROYECTOS
-				RETORNO PROYECTOS[Elección_2]
-			FIN SI
-		FIN SI
-	FIN SI
+  SI usuario_activo.tipo = "Secretario" ENTONCES
+    SI Elección_1 = "Paquete" ENTONCES
+      MOSTRAR PAQUETES_PROYECTOS
+      RETORNO PAQUETES_PROYECTOS[Elección_2].convocatoria
+    SINO
+      SI Elección_1 = "Proyecto" ENTONCES
+        MOSTRAR PROYECTOS
+        RETORNO PROYECTOS[Elección_2]
+      FIN SI
+    FIN SI
+  FIN SI
 
 2.2
-PROCESO Añadir_Paquete_de_Proyectos/Proyectos (Paquetes_Proyectos)
-	SI Usuario_activo.tipo = Secretario ENTONCES
-		SI Paquetes_Proyectos ES UN Paquete_Proyecto ENTONCES
-			AÑADIR Paquetes_Proyectos A PAQUETES_PROYECTOS
-		SINO
-			SI Paquetes_Proyectos ES UN Proyecto ENTONCES
-				id_modelo <= LEER MODELOS_EVALUACIÓN
-				Paquetes_Proyectos.id_modelo_eval <= id_modelo
-				AÑADIR Paquetes_Proyectos A PROYECTOS
-			FIN SI
-		FIN SI
-	FIN SI
+PROCESO Añadir_Paquete_De_Proyectos/Proyectos (paquetes_proyectos)
+  SI usuario_activo.tipo = "Secretario" ENTONCES
+    SI paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
+      AÑADIR paquetes_proyectos A PAQUETES_PROYECTOS
+    SINO
+      SI paquetes_proyectos ES UN "Proyecto" ENTONCES
+        id_modelo <= MODELOS_EVALUACIÓN[Elección_1].id_modelo_eval
+        paquetes_proyectos.id_modelo_eval <= id_modelo
+        AÑADIR paquetes_proyectos A PROYECTOS
+      FIN SI
+    FIN SI
+  FIN SI
 
 2.3
-PROCESO Modificar_Paquete_de_Proyectos(Paquetes_Proyectos, Área_Proyectos, Proyecto_Rechazado, Subárea_Proyectos)
-	índice <= 0
-	SI Usuario_activo.tipo = Secretario ENTONCES
-		SI Paquetes_Proyectos ES UN Paquete_Proyecto ENTONCES
-			REPETIR
-				SI Paquetes_Proyectos.id_paquete = PAQUETES_PROYECTOS[índice].id_paquete ENTONCES
-					PAQUETES_PROYECTOS[índice] <= Paquetes_Proyectos
-					SALIR
-				SINO
-					índice++
-				FIN SI
-			HASTA índice > PAQUETES_PROYECTOS.Número_Tuplas
-		SINO
-			SI Paquetes_Proyectos ES UN Proyecto ENTONCES
-				REPETIR
-					SI Paquetes_Proyectos.id_proyecto = PROYECTOS[índice].id_proyecto 
-					Y Paquetes_Proyectos.id_paquete = PROYECTOS[índice].id_paquete ENTONCES
-						SI Vacio(Área_Proyectos) = FALSO ENTONCES
-							PROYECTOS[índice].id_área = Área_Proyecto
-						SINO
-							PROYECTOS[índice] <= Paquetes_Proyectos
-						SALIR
-					SINO
-						índice++
-					FIN SI
-				HASTA índice > PROYECTOS.Número_Tuplas
-			FIN SI
-		FIN SI
-	SINO
-		SI Usuario_activo.tipo = Coordinador
-		Y Paquetes_Proyectos ES UN Paquete_Proyecto ENTONCES
-			REPETIR
-				SI Paquetes_Proyectos.id_proyecto = PROYECTOS[índice].id_proyecto
-				Y Paquetes_Proyectos.id_paquete = PROYECTOS[índice].id_paquete  ENTONCES
-					SI Vacio(Subárea_Proyectos) = FALSO ENTONCES
-						PROYECTOS[índice].id_subárea = Subárea_Proyectos
-					SINO
-						SI Vacio(Proyecto_Rechazado) = FALSO ENTONCES
-							MOSTRAR ÁREAS
-							SI Elección_1 NO = Proyecto_Rechazado.id_subárea ENTONCES
-								PROYECTOS[índice].Elección_1 <= Paquetes_Proyectos.id_subárea
-							FIN SI
-						FIN SI
-					FIN SI
-					SALIR
-				SINO
-					índice++
-				FIN SI
-			HASTA índice > PROYECTOS.Número_Tuplas
-		FIN SI
-	FIN SI
-			
-			
-			
-					
+PROCESO Modificar_Paquete_De_Proyectos(paquetes_proyectos, área_proyectos, 
+proyecto_rechazado, subárea_proyectos)
+  índice <= 0
+  SI usuario_activo.tipo = "Secretario" ENTONCES
+    SI paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
+      REPETIR
+        SI paquetes_proyectos.id_paquete = 
+		PAQUETES_PROYECTOS[índice].id_paquete ENTONCES
+          PAQUETES_PROYECTOS[índice] <= paquetes_proyectos
+          SALIR
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > PAQUETES_PROYECTOS.número_tuplas
+    SINO
+      SI paquetes_proyectos ES UN "Proyecto" ENTONCES
+        REPETIR
+          SI paquetes_proyectos.id_proyecto = PROYECTOS[índice].id_proyecto 
+          Y paquetes_proyectos.id_paquete = PROYECTOS[índice].id_paquete 
+          ENTONCES
+            SI VACÍO(área_proyectos) = FALSO ENTONCES
+              PROYECTOS[índice].id_área = área_proyecto
+            SINO
+              PROYECTOS[índice] <= paquetes_proyectos
+            SALIR
+          SINO
+            índice++
+          FIN SI
+        HASTA índice > PROYECTOS.número_tuplas
+      FIN SI
+    FIN SI
+  SINO
+    SI usuario_activo.tipo = "Coordinador"
+    Y paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
+      REPETIR
+        SI paquetes_proyectos.id_proyecto = PROYECTOS[índice].id_proyecto
+        Y paquetes_proyectos.id_paquete = PROYECTOS[índice].id_paquete ENTONCES
+          SI VACÍO(subárea_proyectos) = FALSO ENTONCES
+            PROYECTOS[índice].id_subárea = subárea_proyectos
+          SINO
+            SI VACÍO(proyecto_rechazado) = FALSO ENTONCES
+              MOSTRAR ÁREAS
+              SI Elección_1 DISTINTO proyecto_rechazado.id_subárea ENTONCES
+                PROYECTOS[índice].Elección_1 <= paquetes_proyectos.id_subárea
+              FIN SI
+            FIN SI
+          FIN SI
+          SALIR
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > PROYECTOS.número_tuplas
+    FIN SI
+  FIN SI
+      
+      
+      
+          
