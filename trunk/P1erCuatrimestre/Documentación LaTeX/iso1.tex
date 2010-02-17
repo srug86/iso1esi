@@ -129,17 +129,17 @@ secretario, los cuales contienen:
 
 \subsection{Secretario}
 \begin{itemize}
-\item[Usuarios] Es el encargado de añadir, modificar y eliminar a los
+\item Usuarios: Es el encargado de añadir, modificar y eliminar a los
   usuarios del sistema (coordinadores, adjuntos y expertos).
-\item[Coordinadores] Elegirá el coordinador de cada área.
-\item[Paquetes de proyecto] Recibe las solicitudes de evaluación de proyectos
+\item Coordinadores: Elegirá el coordinador de cada área.
+\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos
   y los introduce al sistema(las bases, la convocatoria, la institución
   convocante, los proyectos, el cual asignará al área correspondiente...). 
   También podrá modificar cualquier información referente a estas
   solicitudes. 
-\item[Modelos de evaluación] Dependiendo de la información que contenga el
+\item Modelos de evaluación: Dependiendo de la información que contenga el
   proyecto, elaborará unos modelos de informe de evaluación. 
-\item[Plazos expertos] Decidirá los plazos que tienen los expertos para
+\item Plazos expertos: Decidirá los plazos que tienen los expertos para
   aceptar o declinar la invitación para realizar el informe de evaluación,
   y una vez aceptada, la fecha para entregar dicho informe. Todo esto
   se incluirá en el modelo de evaluación.
@@ -216,6 +216,13 @@ secretario, los cuales contienen:
 \end{itemize}
 
 \chapter{Diagrama de flujo de datos}
+Con un diagrama de flujo de datos, se pueden visualizar la forma en que el 
+sistema funcione, lo que el sistema va a lograr, y cómo el sistema se puede 
+poner en práctica. Los diagramas de flujo de datos pueden ser usados para 
+proporcionar al usuario final una idea física de cómo resultarán los datos a 
+última instancia, y cómo tienen un efecto sobre la estructura de todo el 
+sistema. La manera en que cualquier sistema es desarrollado puede determinarse a
+través de un diagrama de flujo de datos.
 
 % \imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}{H}
 
@@ -802,10 +809,10 @@ Todo usuario que haga una petición sobre la lectura de los informes tiene
 acceso a los suyos y a los que hayan sido escritos por los usuarios que estén 
 debajo en la jerarquía de la empresa.
 \begin{itemize}
-\item[Experto] sólo puede tener acceso a su propio informe.
-\item[Adjunto] puede consultar su propio informe y el de todos los expertos que 
+\item Experto: sólo puede tener acceso a su propio informe.
+\item Adjunto: puede consultar su propio informe y el de todos los expertos que 
 tengan asignado un proyecto de su subárea.
-\item[Coordinador] tiene acceso a su propio informe, al de los adjuntos y al de 
+\item Coordinador: tiene acceso a su propio informe, al de los adjuntos y al de 
 los expertos.
 \end{itemize}
 
@@ -1083,6 +1090,23 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 
 \chapter{Implementación}
 \section{Introducción}
+Para llegar a este punto de la práctica, se han seguido una serie de pautas de
+planificación y diseño para conseguir una implementación eficiente y viable.
+Con el objetivo de cumplir las necesidades del cliente se han utilizado los
+siguientes lenguajes:
+\begin{itemize}
+\item PHP\cite{achour}: lenguaje de cuarta generación que genera páginas de cara
+al servidor.
+\item XHTML\cite{wc}: encargado de la información y la estructura de la página.
+\item MySQL: se utiliza en el diseño e implemtación de la base de datos.
+\item CSS\cite{wc}: encargado de la maquetación y el estilo del modelado.
+\item JavaScript\cite{resig}: empleado en el \emph{framework jQuery} da 
+dinamismo al navegador.
+\end{itemize} 
+El objetivo es conocer el ámbito de aplicación de los servicios web, comprender 
+y diseñar arquitecturas orientadas a servicios. Además, conocer los estándares y
+los organismos de estandarización, conocer y aplicar técnicas de modelado y 
+especificación de procesos, y servicios web complejos.
 
 \section{Código fuente}
 % \subsection{index.php}
