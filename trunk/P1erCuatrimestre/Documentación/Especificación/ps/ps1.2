@@ -1,8 +1,8 @@
-PROCESO Añadir_Usuarios (usuarios)
+PROCESO AÃ±adir_Usuarios (usuarios)
   SI usuario_activo.tipo = "Secretario" ENTONCES
-    AÑADIR usuarios A USUARIOS
+    AÃ‘ADIR usuarios A USUARIOS
     correo_alta <= (LEER PLANTILLAS_CORREOS.asunto = "Alta")
             + (usuarios.id_nombre) + (usuarios.correo)
-            + (usuarios.contraseña)
+            + (usuarios.contraseÃ±a)
     RETORNA correo_alta
   FIN SI

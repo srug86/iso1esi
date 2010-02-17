@@ -1,53 +1,53 @@
-PROCESO Modificar_Paquete_De_Proyectos(paquetes_proyectos, ·rea_proyectos, 
-proyecto_rechazado, sub·rea_proyectos)
+PROCESO Modificar_Paquete_De_Proyectos(paquetes_proyectos, √°rea_proyectos, 
+proyecto_rechazado, sub√°rea_proyectos)
   SI usuario_activo.tipo = "Secretario" ENTONCES
     SI paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
       REPETIR
         SI paquetes_proyectos.id_paquete = 
-		PAQUETES_PROYECTOS[Ìndice].id_paquete ENTONCES
-          PAQUETES_PROYECTOS[Ìndice] <= paquetes_proyectos
+		PAQUETES_PROYECTOS[√≠ndice].id_paquete ENTONCES
+          PAQUETES_PROYECTOS[√≠ndice] <= paquetes_proyectos
           SALIR
         SINO
-          Ìndice++
+          √≠ndice++
         FIN SI
-      HASTA Ìndice > PAQUETES_PROYECTOS.n˙mero_tuplas
+      HASTA √≠ndice > PAQUETES_PROYECTOS.n√∫mero_tuplas
     SINO
       SI paquetes_proyectos ES UN "Proyecto" ENTONCES
         REPETIR
-          SI paquetes_proyectos.id_proyecto = PROYECTOS[Ìndice].id_proyecto 
-          Y paquetes_proyectos.id_paquete = PROYECTOS[Ìndice].id_paquete 
+          SI paquetes_proyectos.id_proyecto = PROYECTOS[√≠ndice].id_proyecto 
+          Y paquetes_proyectos.id_paquete = PROYECTOS[√≠ndice].id_paquete 
           ENTONCES
-            SI VACÕO(·rea_proyectos) = FALSO ENTONCES
-              PROYECTOS[Ìndice].id_·rea = ·rea_proyecto
+            SI VAC√çO(√°rea_proyectos) = FALSO ENTONCES
+              PROYECTOS[√≠ndice].id_√°rea = √°rea_proyecto
             SINO
-              PROYECTOS[Ìndice] <= paquetes_proyectos
+              PROYECTOS[√≠ndice] <= paquetes_proyectos
             SALIR
           SINO
-            Ìndice++
+            √≠ndice++
           FIN SI
-        HASTA Ìndice > PROYECTOS.n˙mero_tuplas
+        HASTA √≠ndice > PROYECTOS.n√∫mero_tuplas
       FIN SI
     FIN SI
   SINO
     SI usuario_activo.tipo = "Coordinador"
     Y paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
       REPETIR
-        SI paquetes_proyectos.id_proyecto = PROYECTOS[Ìndice].id_proyecto
-        Y paquetes_proyectos.id_paquete = PROYECTOS[Ìndice].id_paquete ENTONCES
-          SI VACÕO(sub·rea_proyectos) = FALSO ENTONCES
-            PROYECTOS[Ìndice].id_sub·rea = sub·rea_proyectos
+        SI paquetes_proyectos.id_proyecto = PROYECTOS[√≠ndice].id_proyecto
+        Y paquetes_proyectos.id_paquete = PROYECTOS[√≠ndice].id_paquete ENTONCES
+          SI VAC√çO(sub√°rea_proyectos) = FALSO ENTONCES
+            PROYECTOS[√≠ndice].id_sub√°rea = sub√°rea_proyectos
           SINO
-            SI VACÕO(proyecto_rechazado) = FALSO ENTONCES
-              MOSTRAR ¡REAS
-              SI ElecciÛn_1 DISTINTO proyecto_rechazado.id_sub·rea ENTONCES
-                PROYECTOS[Ìndice].ElecciÛn_1 <= paquetes_proyectos.id_sub·rea
+            SI VAC√çO(proyecto_rechazado) = FALSO ENTONCES
+              MOSTRAR √ÅREAS
+              SI Elecci√≥n_1 DISTINTO proyecto_rechazado.id_sub√°rea ENTONCES
+                PROYECTOS[√≠ndice].Elecci√≥n_1 <= paquetes_proyectos.id_sub√°rea
               FIN SI
             FIN SI
           FIN SI
           SALIR
         SINO
-          Ìndice++
+          √≠ndice++
         FIN SI
-      HASTA Ìndice > PROYECTOS.n˙mero_tuplas
+      HASTA √≠ndice > PROYECTOS.n√∫mero_tuplas
     FIN SI
   FIN SI

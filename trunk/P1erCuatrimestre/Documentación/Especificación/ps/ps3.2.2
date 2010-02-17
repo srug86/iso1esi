@@ -1,20 +1,20 @@
 PROCESO Realizar_Informe()
-  MOSTRAR MODELOS_EVALUACION[Elecci髇_1]
+  MOSTRAR MODELOS_EVALUACION[Elecci贸n_1]
   status <= "Finalizado"
   SI usuario_activo.tipo = "Coordinador" ENTONCES
-    MOSTRAR PROYECTOS[Elecci髇_1].informe_final
+    MOSTRAR PROYECTOS[Elecci贸n_1].informe_final
     REPETIR
-      MOSTRAR INFORMES_EVALUACI覰[Elecci髇_1][韓dice][status]
-      韓dice++
-    HASTA 韓dice > INFORMES_EVALUACI覰.n鷐ero_tuplas
+      MOSTRAR INFORMES_EVALUACI脫N[Elecci贸n_1][铆ndice][status]
+      铆ndice++
+    HASTA 铆ndice > INFORMES_EVALUACI脫N.n煤mero_tuplas
     informe_final <= LEER_DATOS_ENTRADA()
   SINO SI usuario_activo.tipo = "Adjunto" ENTONCES
     REPETIR
-      MOSTRAR INFORMES_EVALUACI覰[Elecci髇_1][韓dice][status]
-      韓dice++
-    HASTA 韓dice > INFORMES_EVALUACI覰.n鷐ero_tuplas
-    韓forme_evaluaci髇 <= LEER_DATOS_ENTRADA()
+      MOSTRAR INFORMES_EVALUACI脫N[Elecci贸n_1][铆ndice][status]
+      铆ndice++
+    HASTA 铆ndice > INFORMES_EVALUACI脫N.n煤mero_tuplas
+    铆nforme_evaluaci贸n <= LEER_DATOS_ENTRADA()
   SINO SI usuario_activo.tipo = "Experto" ENTONCES
-    MOSTRAR INFORMES_EVALUACI覰[Elecci髇_1][usuario_activo.id]
-    informe_evaluaci髇 <= LEER_DATOS_ENTRADA()
+    MOSTRAR INFORMES_EVALUACI脫N[Elecci贸n_1][usuario_activo.id]
+    informe_evaluaci贸n <= LEER_DATOS_ENTRADA()
   FIN SI

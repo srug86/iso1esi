@@ -7,9 +7,6 @@
 % Encabezado y pie
 \encabezado
 
-% Margenes
-\usepackage[margin=2.5cm,top=3cm]{geometry}
-
 \begin{document}
 
 % Portada
@@ -128,22 +125,22 @@ secretario, los cuales contienen:
 \end{itemize}
 
 \subsection{Secretario}
-\begin{itemize}
-\item Usuarios: Es el encargado de añadir, modificar y eliminar a los
+\begin{description}
+\item[Usuarios] Es el encargado de añadir, modificar y eliminar a los
   usuarios del sistema (coordinadores, adjuntos y expertos).
-\item Coordinadores: Elegirá el coordinador de cada área.
-\item Paquetes de proyecto: Recibe las solicitudes de evaluación de proyectos
+\item[Coordinadores] Elegirá el coordinador de cada área.
+\item[Paquetes de proyecto] Recibe las solicitudes de evaluación de proyectos
   y los introduce al sistema(las bases, la convocatoria, la institución
   convocante, los proyectos, el cual asignará al área correspondiente...). 
   También podrá modificar cualquier información referente a estas
   solicitudes. 
-\item Modelos de evaluación: Dependiendo de la información que contenga el
+\item[Modelos de evaluación] Dependiendo de la información que contenga el
   proyecto, elaborará unos modelos de informe de evaluación. 
-\item Plazos expertos: Decidirá los plazos que tienen los expertos para
+\item[Plazos expertos] Decidirá los plazos que tienen los expertos para
   aceptar o declinar la invitación para realizar el informe de evaluación,
   y una vez aceptada, la fecha para entregar dicho informe. Todo esto
   se incluirá en el modelo de evaluación.
-\end{itemize}
+\end{description}
 
 \subsection{Coordinador}
 \begin{itemize}
@@ -216,29 +213,22 @@ secretario, los cuales contienen:
 \end{itemize}
 
 \chapter{Diagrama de flujo de datos}
-Con un diagrama de flujo de datos, se pueden visualizar la forma en que el 
-sistema funcione, lo que el sistema va a lograr, y cómo el sistema se puede 
-poner en práctica. Los diagramas de flujo de datos pueden ser usados para 
-proporcionar al usuario final una idea física de cómo resultarán los datos a 
-última instancia, y cómo tienen un efecto sobre la estructura de todo el 
-sistema. La manera en que cualquier sistema es desarrollado puede determinarse a
-través de un diagrama de flujo de datos.
+\newpage
+\imagen{diagramas/DC.pdf}{14cm}{Diagrama de Contexto}{dc}{H}
 
-% \imagen{diagramas/DC.pdf}{15.5cm}{Diagrama de Contexto}{dc}{H}
+\imagen{diagramas/DFD0.pdf}{14cm}{Diagrama de Sistemas}{df0}{H}
 
-% \imagen{diagramas/DFD0.pdf}{15.5cm}{Diagrama de Sistemas}{df0}{H}
+\imagen{diagramas/DFD1.pdf}{14cm}{Gestión de Usuarios}{df1}{H}
 
-% \imagen{diagramas/DFD1.pdf}{15.5cm}{Gestión de Usuarios}{df1}{H}
+\imagen{diagramas/DFD2.pdf}{14cm}{Gestión de Paquetes Proyectos}{df2}{H}
 
-% \imagen{diagramas/DFD2.pdf}{15.5cm}{Gestión de Paquetes Proyectos}{df2}{H}
+\imagen{diagramas/DFD3.pdf}{14cm}{Gestión de Evaluaciones}{df3}{H}
 
-% \imagen{diagramas/DFD3.pdf}{15.5cm}{Gestión de Evaluaciones}{df3}{H}
+\imagen{diagramas/DFD31.pdf}{14cm}{Gestión de Modelos}{df31}{H}
 
-% \imagen{diagramas/DFD31.pdf}{15.5cm}{Gestión de Modelos}{df31}{H}
+\imagen{diagramas/DFD32.pdf}{14cm}{Gestión de Informes Evaluaciones}{df32}{H}
 
-% \imagen{diagramas/DFD32.pdf}{15.5cm}{Gestión de Informes Evaluaciones}{df32}{H}
-
-% \imagen{diagramas/DFD4.pdf}{15.5cm}{Gestión de Expertos}{df4}{H}
+\imagen{diagramas/DFD4.pdf}{14cm}{Gestión de Expertos}{df4}{H}
 
 \chapter{Diccionario de datos}
 \section{Almacenes de datos}
@@ -700,224 +690,257 @@ través de un diagrama de flujo de datos.
 \end{description}
 
 
-\chapter{Especificación de procesos}
-\section{Gestión de usuarios}
-\subsection{Listado de usuarios}
-En este proceso se introducen parámetros de consulta. Estos parámetros 
-puede ser introducidos directa o indirectamente por el usuario. Dependiendo de 
-quién realice la consulta, el sistema proporciona el acceso a unos datos u
-otros. Al realizar esta consulta, el proceso consulta los almacenes de datos
-SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea
-en que trabajen dichos usuarios del sistema. La relación jerárquica del
-sistema estipula a qué información tiene acceso cada usuario:
+% \chapter{Especificación de procesos}
+% \section{Gestión de usuarios}
+% \subsection{Listado de usuarios}
+% En este proceso se introducen parámetros de consulta. Estos parámetros 
+% puede ser introducidos directa o indirectamente por el usuario. Dependiendo de 
+% quién realice la consulta, el sistema proporciona el acceso a unos datos u
+% otros. Al realizar esta consulta, el proceso consulta los almacenes de datos
+% SUBÁREAS y USUARIOS, ya que devuelve los datos organizados según la subárea
+% en que trabajen dichos usuarios del sistema. La relación jerárquica del
+% sistema estipula a qué información tiene acceso cada usuario:
 
-\begin{description}
-\item[Secretario] puede ver todos los datos.
-\item[Coordinador] puede ver todos los adjuntos de su Área y todos los
-  expertos.
-\item[Adjunto] puede acceder a los expertos.
-\item[Expertos] no tienen información de acceso de ningún otro usuario del 
-sistema.
-\end{description}
+% \begin{description}
+% \item[Secretario] puede ver todos los datos.
+% \item[Coordinador] puede ver todos los adjuntos de su Área y todos los
+%   expertos.
+% \item[Adjunto] puede acceder a los expertos.
+% \item[Expertos] no tienen información de acceso de ningún otro usuario del 
+% sistema.
+% \end{description}
 
-\subsubsection{Pseudocódigo}
-%\lstinputlisting{ps1.1}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps1.1}
 
-\subsection{Añadir usuarios}
-Este proceso es exclusivo para el secretario, ya que es el único con
-privilegios para introducir nuevos usuarios en el sistema. El sistema recibe
-una nueva instancia de usuario y devuelve un correo de alta siguiendo un
-modelo predefinido.
+% \subsection{Añadir usuarios}
+% Este proceso es exclusivo para el secretario, ya que es el único con
+% privilegios para introducir nuevos usuarios en el sistema. El sistema recibe
+% una nueva instancia de usuario y devuelve un correo de alta siguiendo un
+% modelo predefinido.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps1.2}
 
-\subsection{Modificar usuario}
-Es el encargado de alterar todos los datos profesionales de los usuarios, es
-exclusivo del secretario y del coordinador. El coordinador tiene la opción de
-elegir a sus adjuntos de entre los expertos ya existentes y el secretario se
-encarga de asignar expertos nuevos a subáreas y de elegir a los coordinadores
-de entre los adjuntos y expertos existentes. Al invocar este proceso se
-introduce el usuario que se quiere modificar y de entre todas las subáreas
-posibles se selecciona una en función de las aptitudes del usuario. 
+% \subsection{Modificar usuario}
+% Es el encargado de alterar todos los datos profesionales de los usuarios, es
+% exclusivo del secretario y del coordinador. El coordinador tiene la opción de
+% elegir a sus adjuntos de entre los expertos ya existentes y el secretario se
+% encarga de asignar expertos nuevos a subáreas y de elegir a los coordinadores
+% de entre los adjuntos y expertos existentes. Al invocar este proceso se
+% introduce el usuario que se quiere modificar y de entre todas las subáreas
+% posibles se selecciona una en función de las aptitudes del usuario. 
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps1.3}
 
-\subsection{Eliminar usuarios}
-Se encarga de eliminar instancias de usuarios del sistema en el almacén 
-USUARIOS. Sólo el secretario tiene privilegios para ejecutar este proceso. 
+% \subsection{Eliminar usuarios}
+% Se encarga de eliminar instancias de usuarios del sistema en el almacén 
+% USUARIOS. Sólo el secretario tiene privilegios para ejecutar este proceso. 
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps1.4}
 
-\subsection{Autentificar usuarios}
-Es el proceso que se ejecuta al inicio de cada sesión de usuario. Se encarga
-de verificar que el nombre de usuario y su contraseña son correctos.
+% \subsection{Autentificar usuarios}
+% Es el proceso que se ejecuta al inicio de cada sesión de usuario. Se encarga
+% de verificar que el nombre de usuario y su contraseña son correctos.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps1.5}
 
-\subsection{Modificar datos personales}
-Una vez que el usuario recibe el correo de alta, se utilizar este proceso para 
-introducir sus datos personales para que el sistema tenga una ficha de cada 
-empleado. Este proceso es accesible en todo momento para poder modificar 
-cualquier dato o error.
+% \subsection{Modificar datos personales}
+% Una vez que el usuario recibe el correo de alta, se utilizar este proceso para 
+% introducir sus datos personales para que el sistema tenga una ficha de cada 
+% empleado. Este proceso es accesible en todo momento para poder modificar 
+% cualquier dato o error.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps1.6}
 
-\section{Gestión de paquetes de proyectos}
+% \section{Gestión de paquetes de proyectos}
 
-\subsection{Consulta de paquetes de proyecto/proyectos}
-Este proceso se utiliza tanto para listar los proyectos como para consultar la 
-convocatoria de los paquetes de proyectos.
+% \subsection{Consulta de paquetes de proyecto/proyectos}
+% Este proceso se utiliza tanto para listar los proyectos como para consultar la 
+% convocatoria de los paquetes de proyectos.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps2.1}
 
-\subsection{Añadir paquete de proyecto/proyectos}
-Se encarga de introducir los paquetes de proyectos en el sistema. A partir de 
-estos paquetes y leyendo el modelo de evaluación, el proceso se encarga de 
-introducir todos los proyectos en el sistema.
+% \subsection{Añadir paquete de proyecto/proyectos}
+% Se encarga de introducir los paquetes de proyectos en el sistema. A partir de 
+% estos paquetes y leyendo el modelo de evaluación, el proceso se encarga de 
+% introducir todos los proyectos en el sistema.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps2.2}
 
-\subsection{Modificar paquete de proyecto/proyectos}
-Es el encargado de realizar cualquier variación sobre los paquetes de proyecto y
-sobre los proyectos, ya sea cambiar algún error descubierto o cambiar un 
-proyecto de subárea a petición de algún adjunto. Se tienen diferentes opciones 
-dependiendo de qué usuario invoque dicho proceso, ya que el secretario asigna el
-área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo 
-alegando que ese proyecto no pertenece realmente a su subárea.
+% \subsection{Modificar paquete de proyecto/proyectos}
+% Es el encargado de realizar cualquier variación sobre los paquetes de proyecto y
+% sobre los proyectos, ya sea cambiar algún error descubierto o cambiar un 
+% proyecto de subárea a petición de algún adjunto. Se tienen diferentes opciones 
+% dependiendo de qué usuario invoque dicho proceso, ya que el secretario asigna el
+% área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo 
+% alegando que ese proyecto no pertenece realmente a su subárea.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps2.3}
 
-\section{Gestión de evaluaciones}
+% \section{Gestión de evaluaciones}
 
-\subsection{Añadir modelo de evaluación}
-Este proceso es exclusivo del secretario, que lee los datos de la convocatoria 
-del paquete de proyectos para poder generar un modelo de evaluación.
+% \subsection{Añadir modelo de evaluación}
+% Este proceso es exclusivo del secretario, que lee los datos de la convocatoria 
+% del paquete de proyectos para poder generar un modelo de evaluación.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps3.1.1}
 
-\subsection{Modificar modelo de evaluación}
-Se complementa con el proceso ``Añadir Modelo de Evaluación''. Si se encuentra 
-algún error en el modelo o cambian los prerrequisitos sobre algún proyecto,  
-cambiará consecuentemente el modelo de evaluación de dicho proyecto.
+% \subsection{Modificar modelo de evaluación}
+% Se complementa con el proceso ``Añadir Modelo de Evaluación''. Si se encuentra 
+% algún error en el modelo o cambian los prerrequisitos sobre algún proyecto,  
+% cambiará consecuentemente el modelo de evaluación de dicho proyecto.
 
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps3.1.2}
 
+% \subsection{Consulta de Informes}
+% Se devuelve una serie de informes de evaluación restringidos por quién los pide.
+% Todo usuario que haga una petición sobre la lectura de los informes tiene 
+% acceso a los suyos y a los que hayan sido escritos por los usuarios que estén 
+% debajo en la jerarquía de la empresa.
+% \begin{itemize}
+% \item[Experto] sólo puede tener acceso a su propio informe.
+% \item[Adjunto] puede consultar su propio informe y el de todos los expertos que 
+% tengan asignado un proyecto de su subárea.
+% \item[Coordinador] tiene acceso a su propio informe, al de los adjuntos y al de 
+% los expertos.
+% \end{itemize}
 
-\subsection{Consulta de Informes}
-Se devuelve una serie de informes de evaluación restringidos por quién los pide.
-Todo usuario que haga una petición sobre la lectura de los informes tiene 
-acceso a los suyos y a los que hayan sido escritos por los usuarios que estén 
-debajo en la jerarquía de la empresa.
-\begin{itemize}
-\item Experto: sólo puede tener acceso a su propio informe.
-\item Adjunto: puede consultar su propio informe y el de todos los expertos que 
-tengan asignado un proyecto de su subárea.
-\item Coordinador: tiene acceso a su propio informe, al de los adjuntos y al de 
-los expertos.
-\end{itemize}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps3.2.1}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Realizar informe}
+% Proceso mediante el cual todos los usuarios pueden escribir y editar sus propios
+% informes. Se leen datos de los almacenes PROYECTOS y MODELOS DE EVALUACIÓN para 
+% saber qué evaluar y cómo evaluarlos. Casi todas las llamadas a este proceso son 
+% de lectura y escritura. En cuanto al acceso de datos, por lo general, cada 
+% usuario sólo puede editar sus propios informes. Los informes de adjuntos y 
+% coordinadores se pueden basar en informes de evaluación escritos con 
+% anterioridad para realizar el suyo propio.
 
-\subsection{Realizar informe}
-Proceso mediante el cual todos los usuarios pueden escribir y editar sus propios
-informes. Se leen datos de los almacenes PROYECTOS y MODELOS DE EVALUACIÓN para 
-saber qué evaluar y cómo evaluarlos. Casi todas las llamadas a este proceso son 
-de lectura y escritura. En cuanto al acceso de datos, por lo general, cada 
-usuario sólo puede editar sus propios informes. Los informes de adjuntos y 
-coordinadores se pueden basar en informes de evaluación escritos con 
-anterioridad para realizar el suyo propio.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps3.2.2}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Devolver evaluaciones}
+% Este proceso se encarga de recopilar todas las evaluaciones pertenecientes a un 
+% mismo paquete de proyectos y entregarlas al la institución convocante.
 
-\subsection{Devolver evaluaciones}
-Este proceso se encarga de recopilar todas las evaluaciones pertenecientes a un 
-mismo paquete de proyectos y entregarlas al la institución convocante.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps3.2.3}
 
-\subsubsection{Pseudocódigo}
+% \section{Gestión de expertos}
 
-\section{Gestión de expertos}
+% \subsection{Consulta expertos}
+% Consulta sobre los expertos del sistema. Se introducen una serie de parámetros y
+% en función de ellos el proceso busca y devuelve una serie de expertos. La 
+% información de la consulta muestra los proyectos en los cuales están 
+% involucrados en ese momento, y algunas características de dichos proyectos, cómo
+% las fechas de entrega y de finalización.
 
-\subsection{Consulta expertos}
-Consulta sobre los expertos del sistema. Se introducen una serie de parámetros y
-en función de ellos el proceso busca y devuelve una serie de expertos. La 
-información de la consulta muestra los proyectos en los cuales están 
-involucrados en ese momento, y algunas características de dichos proyectos, cómo
-las fechas de entrega y de finalización.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.1}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Búsqueda expertos}
+% Es una búsqueda detallada a petición del adjunto. El adjunto busca los datos de 
+% expertos que estén relacionados con el proyecto a evaluar. Se introducen los 
+% parámetros de búsqueda y el programa devuelve una lista. Ésta lista puede ser 
+% vacía o puede mostrar un conjunto de expertos que tiene relación con los 
+% prerrequisitos establecidos, ordenándolos por la valoración que tengan, que no 
+% pertenezcan a la asociación convocante y que sean de su área.
 
-\subsection{Búsqueda expertos}
-Es una búsqueda detallada a petición del adjunto. El adjunto busca los datos de 
-expertos que estén relacionados con el proyecto a evaluar. Se introducen los 
-parámetros de búsqueda y el programa devuelve una lista. Ésta lista puede ser 
-vacía o puede mostrar un conjunto de expertos que tiene relación con los 
-prerrequisitos establecidos, ordenándolos por la valoración que tengan, que no 
-pertenezcan a la asociación convocante y que sean de su área.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.2}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Invitación expertos}
+% Una vez listados los expertos, el adjunto selecciona a uno o varios 
+% de la lista. El proceso les manda un correo de invitación para participar en la 
+% evaluación de un proyecto. El correo de invitación se escoge de una serie de 
+% plantillas y se rellena con algunos datos del proyecto (el experto no puede 
+% tener toda la información del proyecto hasta que acepte la invitación). El 
+% experto seleccionado tiene una fecha límite para responder a dicho correo. Si el
+% experto no contesta, la invitación se toma como rechazada.
 
-\subsection{Invitación expertos}
-Una vez listados los expertos, el adjunto selecciona a uno o varios 
-de la lista. El proceso les manda un correo de invitación para participar en la 
-evaluación de un proyecto. El correo de invitación se escoge de una serie de 
-plantillas y se rellena con algunos datos del proyecto (el experto no puede 
-tener toda la información del proyecto hasta que acepte la invitación). El 
-experto seleccionado tiene una fecha límite para responder a dicho correo. Si el
-experto no contesta, la invitación se toma como rechazada.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.3}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Aceptar invitación experto}
+% En este punto es donde la respuesta del experto es procesada. Cuando un experto 
+% acepta la invitación se genera automáticamente una relación entre el proyecto y 
+% el experto. De esta forma el experto tiene acceso a todos los datos del 
+% proyecto. En este proceso también se actualiza el estado del proyecto.
 
-\subsection{Aceptar invitación experto}
-En este punto es donde la respuesta del experto es procesada. Cuando un experto 
-acepta la invitación se genera automáticamente una relación entre el proyecto y 
-el experto. De esta forma el experto tiene acceso a todos los datos del 
-proyecto. En este proceso también se actualiza el estado del proyecto.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.4}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Desasignar experto / Rechazar informe}
+% Este proceso se invoca cuando algún experto está consumiendo más tiempo del 
+% fijado a priori y el adjunto decide desasignar al experto del proyecto. Se 
+% elimina la relación expertos-proyectos y su informe de evaluación.
 
-\subsection{Desasignar experto / Rechazar informe}
-Este proceso se invoca cuando algún experto está consumiendo más tiempo del 
-fijado a priori y el adjunto decide desasignar al experto del proyecto. Se 
-elimina la relación expertos-proyectos y su informe de evaluación.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.5}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Aviso de plazos}
+% El adjunto avisa al experto de la fecha límite para realizar la evaluación del 
+% proyecto, la fecha en la que se lo asignaron y los tiempos predefinidos en el 
+% proyecto.
 
-\subsection{Aviso de plazos}
-El adjunto avisa al experto de la fecha límite para realizar la evaluación del 
-proyecto, la fecha en la que se lo asignaron y los tiempos predefinidos en el 
-proyecto.
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.6}
 
-\subsubsection{Pseudocódigo}
+% \subsection{Valorar expertos}
+% Una vez finalizado el informe de evaluación, el adjunto lo lee y examina con la 
+% finalidad de valorar el trabajo realizado por el experto. El adjunto manda al
+% sistema una valoración y este lo incluye en la instancia correspondiente del 
+% experto y el proyecto.
 
-\subsection{Valorar expertos}
-Una vez finalizado el informe de evaluación, el adjunto lo lee y examina con la 
-finalidad de valorar el trabajo realizado por el experto. El adjunto manda al
-sistema una valoración y este lo incluye en la instancia correspondiente del 
-experto y el proyecto.
-
-\subsubsection{Pseudocódigo}
+% \subsubsection{Pseudocódigo}
+% \lstinputlisting{ps/ps4.7}
 
 \chapter{Diagrama Entidad/Interrelación}
-\imagen{diagramas/ER.pdf}{15cm}{Diagrama Entidad/Interrelación}{}{}
+\newpage
+\imagen{diagramas/ER.pdf}{14.5cm}{Diagrama Entidad/Interrelación}{}{}
 
 \part{Diseño del sistema}
 \chapter{Diagrama de diseño estructurado}
-% \imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
-%   de la revisión de Proyectos de Investigación}{}{H} 
+\imagen{diagramas/DE_1.pdf}{15cm}{Gestión distribuida 
+  de la revisión de Proyectos de Investigación}{}{H} 
 
-% \imagen{diagramas/DE_2.pdf}{15cm}{Gestión de Usuarios}{}{H}
+\begin{sidewaystable}
+\imagen{diagramas/DE_2.pdf}{20cm}{Gestión de Usuarios}{}{H}
+\end{sidewaystable}
 
-% \imagen{diagramas/DE_3.pdf}{15cm}{Gestión de Paquetes de Proyectos}{}{H}
+\begin{sidewaystable}
+\imagen{diagramas/DE_3.pdf}{20cm}{Gestión de Paquetes de Proyectos}{}{H}
+\end{sidewaystable}
 
-% \imagen{diagramas/DE_4.pdf}{15cm}{Gestión de Evaluaciones}{}{H}
+\begin{sidewaystable}
+\imagen{diagramas/DE_4.pdf}{20cm}{Gestión de Evaluaciones}{}{H}
+\end{sidewaystable}
 
-% \imagen{diagramas/DE_5.pdf}{15cm}{Gestión de modelos}{}{H}
+\begin{sidewaystable}
+\imagen{diagramas/DE_5.pdf}{20cm}{Gestión de modelos}{}{H}
+\end{sidewaystable}
 
-% \imagen{diagramas/DE_6.pdf}{14cm}{Gestión de Informes de Evaluaciones}{}{H}
+\begin{sidewaystable}
+\imagen{diagramas/DE_6.pdf}{20cm}{Gestión de Informes de Evaluaciones}{}{H}
+\end{sidewaystable}
 
-% \imagen{diagramas/DE_7.pdf}{14cm}{Gestión de Expertos}}{}{H}
+\begin{sidewaystable}
+\imagen{diagramas/DE_7.pdf}{20cm}{Gestión de Expertos}{}{H}
+\end{sidewaystable}
 
 \chapter{Diagrama relacional}
+\newpage
 \imagen{diagramas/MRE.pdf}{15cm}{Diagrama Relacional}{}{}
 
 \part{Implementación}
@@ -1090,23 +1113,6 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 
 \chapter{Implementación}
 \section{Introducción}
-Para llegar a este punto de la práctica, se han seguido una serie de pautas de
-planificación y diseño para conseguir una implementación eficiente y viable.
-Con el objetivo de cumplir las necesidades del cliente se han utilizado los
-siguientes lenguajes:
-\begin{itemize}
-\item PHP\cite{achour}: lenguaje de cuarta generación que genera páginas de cara
-al servidor.
-\item XHTML\cite{wc}: encargado de la información y la estructura de la página.
-\item MySQL: se utiliza en el diseño e implemtación de la base de datos.
-\item CSS\cite{wc}: encargado de la maquetación y el estilo del modelado.
-\item JavaScript\cite{resig}: empleado en el \emph{framework jQuery} da 
-dinamismo al navegador.
-\end{itemize} 
-El objetivo es conocer el ámbito de aplicación de los servicios web, comprender 
-y diseñar arquitecturas orientadas a servicios. Además, conocer los estándares y
-los organismos de estandarización, conocer y aplicar técnicas de modelado y 
-especificación de procesos, y servicios web complejos.
 
 \section{Código fuente}
 % \subsection{index.php}
@@ -1175,19 +1181,19 @@ especificación de procesos, y servicios web complejos.
 % \subsection{theme/css/users.php}
 % \lstinputlisting{implementacion/theme/css/users.php}
 
-\chapter*{Apéndice: Carga de trabajo}
+\chapter*{Apéndice. Carga de trabajo}
 \begin{center}
- \begin{tabular}{|p{10cm}|c|}\hline 
-  Apellidos y Nombre & Porcentaje \\ \hline \hline
-  de la Rubia García-Carpintero, Sergio & 20\% \\ \hline
-  Millán Sánchez-Grande, Miguel & 20\% \\ \hline
-  Muñoz Villarreal, Luis & 20\% \\ \hline
-  Serrano Sánchez, Alicia & 20\% \\ \hline
-  Torres Triviño, Juan Miguel & 20\% \\ \hline 
- \end{tabular}
+  \begin{tabular}{p{10cm}|c}
+    \textbf{Apellidos y Nombre} & \textbf{Porcentaje} \\ \hline \hline
+    de la Rubia García-Carpintero, Sergio & 20\% \\ \hline
+    Millán Sánchez-Grande, Miguel & 20\% \\ \hline
+    Muñoz Villarreal, Luis & 20\% \\ \hline
+    Serrano Sánchez, Alicia & 20\% \\ \hline
+    Torres Triviño, Juan Miguel & 20\%
+  \end{tabular}
 \end{center}
 
-% \bibliographystyle{plain} 
-% \bibliography{iso1}
+\bibliographystyle{plain} 
+\bibliography{iso1}
 
 \end{document}
