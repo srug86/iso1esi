@@ -1,0 +1,17 @@
+PROCESO Consulta_De_Informes()
+  status <= "Finalizado"
+  SI usuario_activo.tipo = "Coordinador" ENTONCES
+    MOSTRAR PROYECTOS[Elección_1].informe_final
+    REPETIR
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][índice][status]
+      índice++
+    HASTA índice > INFORMES_EVALUACIÓN.número_tuplas
+  SINO SI Usuario_activo.tipo = ADJUNTO ENTONCES
+    REPETIR
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][índice][status]
+      índice++
+    HASTA índice > INFORMES_EVALUACIÓN.número_tuplas
+  SINO SI usuario_activo.tipo = "Experto" ENTONCES
+    MOSTRAR INFORMES_EVALUACIÓN[Elección_1][usuario_activo.id]
+  FIN SI
+

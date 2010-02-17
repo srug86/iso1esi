@@ -1,0 +1,8 @@
+PROCESO Modificar_Modelo_Evaluación ()
+  MOSTRAR PAQUETES_PROYECTOS[Elección_1].convocatoria
+  MOSTRAR MODELOS_EVALUACIÓN[Elección_2]
+  criterios_evaluación <= LEER_DATOS_ENTRADA()
+  SI VACIO(criterios_evaluación) = FALSO ENTONCES
+    MODELOS_EVALUACIÓN[Elección_2] = criterios_evaluación
+  FIN SI
+
