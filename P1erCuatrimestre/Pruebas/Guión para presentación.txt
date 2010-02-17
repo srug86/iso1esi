@@ -1,4 +1,4 @@
-PRÓLOGO:
+﻿PRÓLOGO:
 --------
 - En el monitor 1 (Sergio) se colocarán los logos de la ESI y de la UCLM.
 - En el monitor 2 (Juan Miguel) se colocarán los logos de PHP, APACHE, MySQL y jQuery.
@@ -38,6 +38,7 @@ Realizar evaluación por experto (monitor 2)
 8. Vemos el estado de los proyectos que tiene asociado (el coordinador).
 9. Ahora vamos a realizar una evaluación con el otro experto (70582355).
 10. Volvemos al coordinador (5692939) para comprobar que cuando todos los expertos han finalizado su evaluación el estado que aparecerá en el proyecto es "evaluado por el experto".
+
 Gestión del adjunto (monitor 1)
 -------------------
 1. Entramos al sistema como adjunto (5701903)
@@ -56,4 +57,5 @@ Validar por el coordinador (monitor 2)
 2. Seleccionar un proyecto para ver/modificar el informe.
 3. Validar informe.
 4. Entramos en adjunto (5701903).
+
 
