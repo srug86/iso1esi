@@ -1,14 +1,14 @@
-PROCESO Consulta_Expertos(par·metros_consulta)
+PROCESO Consulta_Expertos(par√°metros_consulta)
   REPETIR
-    SI par·metros_consulta = USUARIOS[Ìndice_1] ENTONCES
-      MOSTRAR USUARIOS[Ìndice_1]
+    SI par√°metros_consulta = USUARIOS[√≠ndice_1] ENTONCES
+      MOSTRAR USUARIOS[√≠ndice_1]
       REPETIR
-        SI EXPERTOS-PROYECTOS[Ìndice_2].id_experto = 
-        USUARIOS[Ìndice_1] ENTONCES
-          MOSTRAR EXPERTOS-PROYECTOS[Ìndice_2]
-          proyecto = EXPERTOS-PROYECTOS[Ìndice_2].id_proyecto
+        SI EXPERTOS-PROYECTOS[√≠ndice_2].id_experto = 
+        USUARIOS[√≠ndice_1] ENTONCES
+          MOSTRAR EXPERTOS-PROYECTOS[√≠ndice_2]
+          proyecto = EXPERTOS-PROYECTOS[√≠ndice_2].id_proyecto
           MOSTRAR PROYECTOS[proyecto].tpo_eval
         FIN SI
-      HASTA Ìndice_2 > EXPERTOS-PROYECTOS.n˙mero_tuplas
+      HASTA √≠ndice_2 > EXPERTOS-PROYECTOS.n√∫mero_tuplas
     FIN SI
-  HASTA Ìndice_1 > USUARIOS.n˙mero_tuplas
+  HASTA √≠ndice_1 > USUARIOS.n√∫mero_tuplas

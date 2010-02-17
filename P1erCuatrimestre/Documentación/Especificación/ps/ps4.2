@@ -1,12 +1,12 @@
-PROCESO B˙squeda_Expertos(p·rametros_b˙squeda)
+PROCESO B√∫squeda_Expertos(p√°rametros_b√∫squeda)
   CREAR lista_expertos
   REPETIR
-    SI par·metros_b˙squeda.usuario = USUARIOS[Ìndice] 
-    Y USUARIOS[Ìndice].instituciÛn DISTINTO 
-    PAQUETES_PROYECTOS[p·rametros_b˙squeda.paquete_proyecto].instituciÛn
-    Y PROYECTOS[p·rametros_b˙squeda.proyecto].·rea = 
-    USUARIOS.[Ìndice].·rea ENTONCES 
-      lista_expertos.A—ADIR(USUARIOS[Ìndice])
+    SI par√°metros_b√∫squeda.usuario = USUARIOS[√≠ndice] 
+    Y USUARIOS[√≠ndice].instituci√≥n DISTINTO 
+    PAQUETES_PROYECTOS[p√°rametros_b√∫squeda.paquete_proyecto].instituci√≥n
+    Y PROYECTOS[p√°rametros_b√∫squeda.proyecto].√°rea = 
+    USUARIOS.[√≠ndice].√°rea ENTONCES 
+      lista_expertos.A√ëADIR(USUARIOS[√≠ndice])
     FIN SI
-  HASTA Ìndice > USUARIOS.n˙mero_tuplas
+  HASTA √≠ndice > USUARIOS.n√∫mero_tuplas
   RETORNAR lista_expertos
