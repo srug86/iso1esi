@@ -1,7 +1,7 @@
 2.1
 PROCESO Consulta_Paquetes_de_Proyectos/Proyectos ()
-	SI Usuario_activo.tipo = Secretario ENTONCES
-		SI Elección_1 = Paquete ENTONCES
+	SI usuario_activo.tipo = "Secretario" ENTONCES
+		SI Elección_1 = "Paquete" ENTONCES
 			MOSTRAR PAQUETES_PROYECTOS
 			RETORNO PAQUETES_PROYECTOS[Elección_2].Convocatoria
 		SINO
