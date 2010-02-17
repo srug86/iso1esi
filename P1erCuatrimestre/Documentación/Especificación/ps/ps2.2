@@ -1,0 +1,13 @@
+PROCESO Añadir_Paquete_De_Proyectos/Proyectos (paquetes_proyectos)
+  SI usuario_activo.tipo = "Secretario" ENTONCES
+    SI paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
+      AÑADIR paquetes_proyectos A PAQUETES_PROYECTOS
+    SINO
+      SI paquetes_proyectos ES UN "Proyecto" ENTONCES
+        id_modelo <= MODELOS_EVALUACIÓN[Elección_1].id_modelo_eval
+        paquetes_proyectos.id_modelo_eval <= id_modelo
+        AÑADIR paquetes_proyectos A PROYECTOS
+      FIN SI
+    FIN SI
+  FIN SI
+
