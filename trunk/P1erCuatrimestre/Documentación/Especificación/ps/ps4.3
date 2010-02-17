@@ -1,9 +1,9 @@
-PROCESO Invitaci髇_Expertos(id_experto)
+PROCESO Invitaci贸n_Expertos(id_experto)
   REPETIR
-    SI USUARIOS[韓dice].id = id_experto ENTONCES
-      correo_invitaci髇 <= (PLANTILLAS_CORREOS.asunto = "Invitaci髇") + 
-      (PROYECTOS[Elecci髇_1].nombre) + 
-      (PAQUETES_PROYECTOS[PROYECTOS[Elecci髇_1].id_paquete) + 
-      (USUARIOS[韓dice].correo)
+    SI USUARIOS[铆ndice].id = id_experto ENTONCES
+      correo_invitaci贸n <= (PLANTILLAS_CORREOS.asunto = "Invitaci贸n") + 
+      (PROYECTOS[Elecci贸n_1].nombre) + 
+      (PAQUETES_PROYECTOS[PROYECTOS[Elecci贸n_1].id_paquete) + 
+      (USUARIOS[铆ndice].correo)
     FIN SI
-  HASTA 韓dice > USUARIOS.n鷐ero_tuplas
+  HASTA 铆ndice > USUARIOS.n煤mero_tuplas
