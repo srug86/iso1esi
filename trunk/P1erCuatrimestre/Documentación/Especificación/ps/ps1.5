@@ -1,14 +1,13 @@
-1.5
 PROCESO Autentificar_Usuarios (datos_autentificación)
-  índice <= 0
+  ú‹dice <= 0
   REPETIR
-    SI datos_autentificación.id_usuario = USUARIOS[índice].id_usuario
-    Y datos_autentificación.contraseña = USUARIOS[índice].contraseña ENTONCES
+    SI datos_autentificación.id_usuario = USUARIOS[ú‹dice].id_usuario
+    Y datos_autentificación.contraseña = USUARIOS[ú‹dice].contraseña ENTONCES
       verificar_autentificar <= VERDADERO
       SALIR
     SINO
       verificar_autentificar <= FALSO
     FIN SI
-  HASTA índice > USUARIOS.número_tuplas
+  HASTA ú‹dice > USUARIOS.número_tuplas
   RETORNA verificar_autentificar
 

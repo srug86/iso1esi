@@ -1,0 +1,55 @@
+PROCESO Modificar_Paquete_De_Proyectos(paquetes_proyectos, área_proyectos, 
+proyecto_rechazado, subárea_proyectos)
+  índice <= 0
+  SI usuario_activo.tipo = "Secretario" ENTONCES
+    SI paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
+      REPETIR
+        SI paquetes_proyectos.id_paquete = 
+		PAQUETES_PROYECTOS[índice].id_paquete ENTONCES
+          PAQUETES_PROYECTOS[índice] <= paquetes_proyectos
+          SALIR
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > PAQUETES_PROYECTOS.número_tuplas
+    SINO
+      SI paquetes_proyectos ES UN "Proyecto" ENTONCES
+        REPETIR
+          SI paquetes_proyectos.id_proyecto = PROYECTOS[índice].id_proyecto 
+          Y paquetes_proyectos.id_paquete = PROYECTOS[índice].id_paquete 
+          ENTONCES
+            SI VACÍO(área_proyectos) = FALSO ENTONCES
+              PROYECTOS[índice].id_área = área_proyecto
+            SINO
+              PROYECTOS[índice] <= paquetes_proyectos
+            SALIR
+          SINO
+            índice++
+          FIN SI
+        HASTA índice > PROYECTOS.número_tuplas
+      FIN SI
+    FIN SI
+  SINO
+    SI usuario_activo.tipo = "Coordinador"
+    Y paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
+      REPETIR
+        SI paquetes_proyectos.id_proyecto = PROYECTOS[índice].id_proyecto
+        Y paquetes_proyectos.id_paquete = PROYECTOS[índice].id_paquete ENTONCES
+          SI VACÍO(subárea_proyectos) = FALSO ENTONCES
+            PROYECTOS[índice].id_subárea = subárea_proyectos
+          SINO
+            SI VACÍO(proyecto_rechazado) = FALSO ENTONCES
+              MOSTRAR ÁREAS
+              SI Elección_1 DISTINTO proyecto_rechazado.id_subárea ENTONCES
+                PROYECTOS[índice].Elección_1 <= paquetes_proyectos.id_subárea
+              FIN SI
+            FIN SI
+          FIN SI
+          SALIR
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > PROYECTOS.número_tuplas
+    FIN SI
+  FIN SI
+

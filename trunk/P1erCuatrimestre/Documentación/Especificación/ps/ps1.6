@@ -1,0 +1,11 @@
+PROCESO Modificar_Datos_Personales (datos_personales)
+  ú‹dice <= 0
+  REPETIR
+    SI usuario_activo.id_usuario = USUARIOS[ú‹dice].id_usuario ENTONCES
+      USUARIOS[ú‹dice] <= datos_personales
+      SALIR
+    SINO
+      ú‹dice++
+    FIN SI
+  HASTA ú‹dice > USUARIOS.número_tuplas
+
