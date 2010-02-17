@@ -1,6 +1,5 @@
 PROCESO Modificar_Paquete_De_Proyectos(paquetes_proyectos, área_proyectos, 
 proyecto_rechazado, subárea_proyectos)
-  índice <= 0
   SI usuario_activo.tipo = "Secretario" ENTONCES
     SI paquetes_proyectos ES UN "Paquete_Proyecto" ENTONCES
       REPETIR
@@ -52,4 +51,3 @@ proyecto_rechazado, subárea_proyectos)
       HASTA índice > PROYECTOS.número_tuplas
     FIN SI
   FIN SI
-

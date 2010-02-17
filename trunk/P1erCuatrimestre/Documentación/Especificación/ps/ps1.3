@@ -1,5 +1,4 @@
 PROCESO Modificar_Usuario (usuarios, subárea_adjunto)
-  índice <= 0
   SI usuario_activo.tipo = "Secretario" Y VACIO(usuarios) = FALSO ENTONCES
     REPETIR
       SI usuarios.id_usuario = USUARIOS[índice].id_usuario ENTONCES
@@ -21,4 +20,3 @@ PROCESO Modificar_Usuario (usuarios, subárea_adjunto)
       HASTA índice > SUBÁREAS.número_tuplas
     FIN SI
   FIN SI
-
