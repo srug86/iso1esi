@@ -1,0 +1,25 @@
+1.3
+PROCESO Modificar_Usuario (usuarios, subárea_adjunto)
+  índice <= 0
+  SI usuario_activo.tipo = "Secretario" Y VACIO(usuarios) = FALSO ENTONCES
+    REPETIR
+      SI usuarios.id_usuario = USUARIOS[índice].id_usuario ENTONCES
+        USUARIOS[índice] <= usuarios
+        SALIR
+      SINO
+        índice++
+      FIN SI
+    HASTA índice > USUARIOS.número_tuplas
+  SINO
+    SI usuario_activo.tipo = "Coordinador" Y 
+    VACIO(subárea_adjunto) = FALSO ENTONCES
+      REPETIR
+        SI subárea_adjunto.id_subárea = SUBÁREAS[índice].id_subárea ENTONCES
+          SUBÁREAS[índice].id_usuario <= subárea_adjunto.id_usuaio
+        SINO
+          índice++
+        FIN SI
+      HASTA índice > SUBÁREAS.número_tuplas
+    FIN SI
+  FIN SI
+
