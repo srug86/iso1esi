@@ -1,61 +1,70 @@
 4.1
-PROCESO CONSULTA_EXPERTOS (Parámetros_Consulta)
-	INICIALIZAR(ÍNDICE )
-	MIENTRAS HAYA_SIGUIENTE HACER
-		SI  Parámetros_Consulta = USUARIOS[ÍNDICE] ENTONCES
-			MOSTRAR USUARIOS[ÍNDICE]
-			INICIALIZAR(ÍNDICE_2)
-			MIENTRAS HAYA_SIGUIENTE HACER
-				SI EXPERTOS-PROYECTOS[ÍNDICE_2].EXPERTO = USUARIOS[ÍNDICE] ENTONCES
-					MOSTRAR EXPERTOS-PROYECTOS[ÍNDICE_2]
-					PROYECTO=EXPERTOS-PROYECTOS[ÍNDICE_2].PROYECTO
-					MOSTRAR PROYECTOS[PROYECTO].Tiempos
-				FIN SI
-			FIN MIENTRAS
-		FIN SI
-	FIN MIENTRAS
+PROCESO Consulta_Expertos(parámetros_consulta)
+  REPETIR
+    SI parámetros_consulta = USUARIOS[índice_1] ENTONCES
+      MOSTRAR USUARIOS[índice_1]
+      REPETIR
+        SI EXPERTOS-PROYECTOS[índice_2].id_experto = 
+        USUARIOS[índice_1] ENTONCES
+          MOSTRAR EXPERTOS-PROYECTOS[índice_2]
+          proyecto = EXPERTOS-PROYECTOS[índice_2].id_proyecto
+          MOSTRAR PROYECTOS[proyecto].tpo_eval
+        FIN SI
+      HASTA índice_2 > EXPERTOS-PROYECTOS.número_tuplas
+    FIN SI
+  HASTA índice_1 > USUARIOS.número_tuplas
 
 4.2
-PROCESO BÚSQUEDA_EXPERTOS (Párametros_Búsqueda)
-	INICIALIZAR(ÍNDICE )
-	CREAR LISTA_EXPERTOS
-	MIENTRAS HAYA_SIGUIENTE HACER
-		SI  Parámetros_Búsqueda.Usuario = USUARIOS[ÍNDICE] 
-Y  USUARIOS[ÍNDICE].INSTITUCIÓN NO = PAQUETES_PROYECTOS[Párametros_Búsqueda.PAQUETE_PROYECTO].INSTITUCIÓN_CONVOCANTE 
-Y PROYECTOS[Párametros_Búsqueda.Proyecto].Área = USUARIOS.[ÍNDICE] .ÁREA ENTONCES 
-			LISTA_EXPERTOS. AÑADIR(USUARIOS[ÍNDICE])					FIN SI
-	FIN MIENTRAS
-	DEVOLVER LISTA_EXPERTOS	
+PROCESO Búsqueda_Expertos(párametros_búsqueda)
+  CREAR lista_expertos
+  REPETIR
+    SI parámetros_búsqueda.usuario = USUARIOS[índice] 
+    Y USUARIOS[índice].institución DISTINTO 
+    PAQUETES_PROYECTOS[párametros_búsqueda.paquete_proyecto].institución
+    Y PROYECTOS[párametros_búsqueda.proyecto].área = 
+    USUARIOS.[índice].área ENTONCES 
+      lista_expertos.AÑADIR(USUARIOS[índice])
+    FIN SI
+  HASTA índice > USUARIOS.número_tuplas
+  DEVOLVER lista_expertos  
 
 
-4.3 Invitación Expertos
-PROCESO INVITACIÓN_EXPERTOS (ID_Experto)
-	INICIALIZAR (ÍNDICE)
-	MIENTRAS HAYA_SIGUIENTE HACER
-		SI USUARIOS[ÍNDICE].ID = ID_Experto ENTONCES
-			Correo_Invitación <= (PLANTILLAS_CORREOS.asunto = Invitación) + (PROYECTOS[Elección_1].nombre) + (PAQUETES_PROYECTOS[PROYECTOS[Elección_1].id_paquete) + (USUARIOS[ÍNDICE].correo)
-		FIN SI
-	FIN MIENTRAS
+4.3 
+PROCESO Invitación_Expertos(id_experto)
+  REPETIR
+    SI USUARIOS[índice].id = id_experto ENTONCES
+      correo_invitación <= (PLANTILLAS_CORREOS.asunto = "Invitación") + 
+      (PROYECTOS[Elección_1].nombre) + 
+      (PAQUETES_PROYECTOS[PROYECTOS[Elección_1].id_paquete) + 
+      (USUARIOS[índice].correo)
+    FIN SI
+  HASTA índice > USUARIOS.número_tuplas
 
 
 4.4
-PROCESO ACEPTAR_INVITACIÓN_EXPERTO(Aceptación)
-	PROYECTOS[Elección_1].estado <= En_proceso	
-	EXPERTOS-PROYECTOS.crear_instancia (Aceptación.id_experto, Aceptación.id_proyecto, (INFORMES_EVALUACIÓN.crear_instancia().id_informe))
-
+PROCESO Aceptar_Invitación_Experto(aceptación)
+  PROYECTOS[Elección_1].estado <= "En proceso"
+  EXPERTOS-PROYECTOS.CREAR_INSTANCIA(aceptación.id_experto,
+  aceptación.id_proyecto,(INFORMES_EVALUACIÓN.CREAR_INSTANCIA().id_informe))
 
 4.5
-PROCESO_DESASIGNAR_EXPERTO_/_RECHAZAR_INFORME(Experto_Desasignado)
-	Informe <= EXPERTOS-PROYECTOS[Experto_Desasignado.id_experto][Experto_Desasignado.id_proyecto].id_informe
-	BORRAR PROYECTOS[Experto_Desasignado.id_experto][Experto_Desasignado.id_proyecto]	
-	BORRAR INFORMES_EVALUACIÓN[Informe]
+PROCESO Desasignar_Experto/Rechazar_Informe(experto_desasignado)
+  informe <= EXPERTOS-PROYECTOS[experto_desasignado.id_experto]
+  [experto_desasignado.id_proyecto].id_informe
+  BORRAR PROYECTOS[experto_desasignado.id_experto]
+  [experto_desasignado.id_proyecto]  
+  BORRAR INFORMES_EVALUACIÓN[informe]
 
 4.6 
-PROCESO AVISOS_DE_PLAZOS (ID_Experto)
-	Correo_Plazos <= ((PLANTILLAS_CORREOS.asunto = aviso_plazos) + proyecto[Elección_1].tpo_inv + EXPERTOS-PROYECTOS[ID_Expertos][Elección_1].fecha_asignación + PAQUETES_PROYECTOS[Elección2] + USUARIOS[ID_Experto].correo)
-	DEVOLVER Correo_Plazos
+PROCESO Avisos_De_Plazos(id_experto)
+  correo_plazos <= ((PLANTILLAS_CORREOS.asunto = "Aviso Plazos") + 
+  PROYECTOS[Elección_1].tpo_inv + 
+  EXPERTOS-PROYECTOS[id_expertos][Elección_1].fecha_asignación + 
+  PAQUETES_PROYECTOS[Elección2] + USUARIOS[ID_Experto].correo)
+  RETORNAR correo_plazos
 
 4.7
-PROCESO VALORAR_EXPERTOS(Valoración_Expertos)
-	EXPERTOS-PROYECTOS[Valoración_Expertos.id_Experto][Valoración_Expertos.id_proyecto].valoración = Valoración Expertos
+PROCESO Valorar_Expertos(valoración_expertos)
+  EXPERTOS-PROYECTOS[valoración_expertos.id_experto]
+  [valoración_expertos.id_proyecto].valoración = valoración_expertos
 
