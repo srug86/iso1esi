@@ -52,3 +52,8 @@ Ocurre si no se asocia un modelo a un proyecto
 # hecho nada, el programa casca y dice esto : Warning: Invalid argument
 # supplied for foreach() in /var/www/iso1esi/GDRPI/theme/evaluation_reports.php
 # on line 72
+
+ERROR
+Cuando el proyecto ha sido validado por el coordinador, si entras con el 
+adjunto y se quiere ver como ha quedado el informe final, no funciona el icono
+de consulta.

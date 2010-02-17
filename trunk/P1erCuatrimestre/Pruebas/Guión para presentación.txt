@@ -56,6 +56,6 @@ Validar por el coordinador (monitor 2)
 1. Entramos al sistema como coordinador (5692939).
 2. Seleccionar un proyecto para ver/modificar el informe.
 3. Validar informe.
-4. Entramos en adjunto (5701903).
+4. Entramos en adjunto (5701903) para ver que no puede modificar el informe.
 
 
