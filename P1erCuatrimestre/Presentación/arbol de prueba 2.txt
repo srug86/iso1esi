@@ -1,0 +1,30 @@
+Árbol de pruebas
+
+Área 5 = tecnología
+Subárea 1 = Ingenería eléctrica
+Subárea 2 = Ingeniería mecánica
+Subárea 3 = Metalurgía
+
+Proyecto 1 => rid 1 => emid 3 => uid 5655433
+Proyecto 2 => rid 3 => emid 5 => uid 5720012
+Proyecto 3 => rid 2 => emid 7 => uid 3412367
+
+
+
+|--Secretario (5699591)	
+|	Luis Muñoz Villarreal
+|-------- Coordinador (5700014) (Área 5)
+|	|	José Falas de Caamaño
+|	|--------Adjunto (5712008) (Subárea 1)	
+|	|	|	Enrique Barjuán Montenegro
+|	|	`---------Experto (5720012) (Área 5)
+|	|		`	Antoni Olivé Boix
+|	|--------Adjunto (5623213) (Subárea 2)
+|	|	|	Protestato Pinedo Acevedo
+|	|	`---------Experto (5655433) (Área 5)
+|	|		`	Diego Pompeyo Valdés
+|	|--------Adjunto (70555201) (Subárea 3)
+|	|	|	Jesús Manzano Caso
+`	`	`---------Experto (3412367) (Área 5)
+			`	José Ramón de la Morena 
+
