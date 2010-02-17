@@ -1,66 +1,59 @@
 3.1.1
 PROCESO Añadir_Modelo_Evaluación ()
-	MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].Convocatoria	Criterios_Evaluación <=  LEER_DATOS_ENTRADA()
-	MODELOS_EVALUACIÓN [Elección_2] <= Criterios_Evaluación
+  MOSTRAR PAQUETES_PROYECTOS[Eleccion_1].convocatoria  
+  criterios_evaluación <=  LEER_DATOS_ENTRADA()
+  MODELOS_EVALUACIÓN AÑADIR criterios_evaluación
 
-3.1.2	
+3.1.2  
 PROCESO Modificar_Modelo_Evaluación ()
-	MOSTRAR PAQUETES_PROYECTOS[Elección_1].Convocatoria
-	MOSTRAR MODELOS_EVALUACIÓN[Elección_2]
-	Criterios_Evaluación <= LEER_DATOS_ENTRADA()
-	SI VACIO(Criterios_Evaluación) = FALSO ENTONCES
-		MODELOS_EVALUACIÓN[Elección_2] = Criterios_Evaluación
-	FIN SI
+  MOSTRAR PAQUETES_PROYECTOS[Elección_1].convocatoria
+  MOSTRAR MODELOS_EVALUACIÓN[Elección_2]
+  criterios_evaluación <= LEER_DATOS_ENTRADA()
+  SI VACIO(criterios_evaluación) = FALSO ENTONCES
+    MODELOS_EVALUACIÓN[Elección_2] = criterios_evaluación
+  FIN SI
 
 3.2.1
-PROCESO Cconsulta_de_Informes()
-	STATUS<=FINALIZADO
-	SI Usuario_activo.tipo = COORDINADOR ENTONCES
-		MOSTRAR PROYECTOS[Elección_1].Informe_Final
-		INICIALIZAR(ÍNDICE)
-		MIENTRAS HAYA_SIGUIENTE HACER
-			MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
-			SIGUIENTE(ÍNDICE)
-		FIN MIENTRAS
-	SINO Usuario_activo.tipo = ADJUNTO ENTONCES
-		INICIALIZAR(ÍNDICE)
-		MIENTRAS HAYA_SIGUIENTE HACER
-			MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
-			SIGUIENTE(ÍNDICE)
-		FIN MIENTRAS
-	SINO Usuario_activo.tipo = EXPERTO ENTONCES
-		MOSTRAR INFORMES_EVALUACIÓN[Elección_1][Usuario_activo.id]
-
-	FIN SI
+PROCESO Consulta_De_Informes()
+  status <= "Finalizado"
+  SI usuario_activo.tipo = "Coordinador" ENTONCES
+    MOSTRAR PROYECTOS[Elección_1].informe_final
+    REPETIR
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][índice][status]
+      índice++
+    HASTA índice > INFORMES_EVALUACIÓN.número_tuplas
+  SINO SI Usuario_activo.tipo = ADJUNTO ENTONCES
+    REPETIR
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][índice][status]
+      índice++
+    HASTA índice > INFORMES_EVALUACIÓN.número_tuplas
+  SINO SI usuario_activo.tipo = "Experto" ENTONCES
+    MOSTRAR INFORMES_EVALUACIÓN[Elección_1][usuario_activo.id]
+  FIN SI
 
 
 3.2.2
-PROCESO REALIZAR_INFORME()
-	MOSTRAR MODELOS_EVALUACION[Elección_1]
-	STATUS<=FINALIZADO
-	SI Usuario_activo.tipo = COORDINADOR ENTONCES
-		MOSTRAR PROYECTOS[Elección_1].Informe_Final
-		INICIALIZAR(ÍNDICE)
-		MIENTRAS HAYA_SIGUIENTE HACER
-			MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
-			SIGUIENTE(ÍNDICE)
-		FIN MIENTRAS
-		Informe_Final <= LEER_DATOS_ENTRADA()
-	SINO Usuario_activo.tipo = ADJUNTO ENTONCES
-		INICIALIZAR(ÍNDICE)
-		MIENTRAS HAYA_SIGUIENTE HACER
-			MOSTRAR INFORMES_EVALUACIÓN[Elección_1][INDICE][STATUS]
-			SIGUIENTE(ÍNDICE)
-		FIN MIENTRAS
-		Informe_Evaluación <= LEER_DATOS_ENTRADA()
-
-	SINO Usuario_activo.tipo = EXPERTO ENTONCES
-		MOSTRAR INFORMES_EVALUACIÓN[Elección_1][Usuario_activo.id]
-		Informe_Evaluación <= LEER_DATOS_ENTRADA()
-
-
-	FIN SI
-	
+PROCESO Realizar_Informe()
+  MOSTRAR MODELOS_EVALUACION[Elección_1]
+  status <= "Finalizado"
+  SI usuario_activo.tipo = "Coordinador" ENTONCES
+    MOSTRAR PROYECTOS[Elección_1].informe_final
+    REPETIR
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][índice][status]
+      índice++
+    HASTA índice > INFORMES_EVALUACIÓN.número_tuplas
+    informe_final <= LEER_DATOS_ENTRADA()
+  SINO SI usuario_activo.tipo = "Adjunto" ENTONCES
+    REPETIR
+      MOSTRAR INFORMES_EVALUACIÓN[Elección_1][índice][status]
+      índice++
+    HASTA índice > INFORMES_EVALUACIÓN.número_tuplas
+    ínforme_evaluación <= LEER_DATOS_ENTRADA()
+  SINO SI usuario_activo.tipo = "Experto" ENTONCES
+    MOSTRAR INFORMES_EVALUACIÓN[Elección_1][usuario_activo.id]
+    informe_evaluación <= LEER_DATOS_ENTRADA()
+  FIN SI
+  
 3.2.3
-PROCESO DEVOLVER_EVALUACIONES()
-	DEVOLVER PROYECTOS[Eleccion_1].Informe_Final
+PROCESO Devolver_Evaluaciones()
+  RETORNAR PROYECTOS[Eleccion_1].informe_final
