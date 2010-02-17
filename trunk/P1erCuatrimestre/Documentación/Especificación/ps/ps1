@@ -53,7 +53,8 @@ PROCESO Modificar_Usuario (usuarios, subárea_adjunto)
       FIN SI
     HASTA índice > USUARIOS.número_tuplas
   SINO
-    SI usuario_activo.tipo = "Coordinador" Y VACIO(subárea_adjunto) = FALSO ENTONCES
+    SI usuario_activo.tipo = "Coordinador" Y 
+    VACIO(subárea_adjunto) = FALSO ENTONCES
       REPETIR
         SI subárea_adjunto.id_subárea = SUBÁREAS[índice].id_subárea ENTONCES
           SUBÁREAS[índice].id_usuario <= subárea_adjunto.id_usuaio
