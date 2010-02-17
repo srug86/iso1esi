@@ -1,0 +1,10 @@
+PROCESO Invitación_Expertos(id_experto)
+  REPETIR
+    SI USUARIOS[índice].id = id_experto ENTONCES
+      correo_invitación <= (PLANTILLAS_CORREOS.asunto = "Invitación") + 
+      (PROYECTOS[Elección_1].nombre) + 
+      (PAQUETES_PROYECTOS[PROYECTOS[Elección_1].id_paquete) + 
+      (USUARIOS[índice].correo)
+    FIN SI
+  HASTA índice > USUARIOS.número_tuplas
+

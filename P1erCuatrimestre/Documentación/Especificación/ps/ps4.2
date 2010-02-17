@@ -1,0 +1,13 @@
+PROCESO Búsqueda_Expertos(párametros_búsqueda)
+  CREAR lista_expertos
+  REPETIR
+    SI parámetros_búsqueda.usuario = USUARIOS[índice] 
+    Y USUARIOS[índice].institución DISTINTO 
+    PAQUETES_PROYECTOS[párametros_búsqueda.paquete_proyecto].institución
+    Y PROYECTOS[párametros_búsqueda.proyecto].área = 
+    USUARIOS.[índice].área ENTONCES 
+      lista_expertos.AÑADIR(USUARIOS[índice])
+    FIN SI
+  HASTA índice > USUARIOS.número_tuplas
+  RETORNAR lista_expertos
+
