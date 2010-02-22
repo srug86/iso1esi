@@ -1,3 +1,15 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{wc}
+{The World Wide Web Consortium}.
+\newblock 2010.
+
+\bibitem{resig}
+Brandon Aaron et.~al. John~Resig.
+\newblock 2010.
+
+\bibitem{achour}
+Friedhelm Betz et.~al. Mehdi~Achour.
+\newblock 1997-2010.
 
 \end{thebibliography}
