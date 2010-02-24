@@ -10,7 +10,7 @@
 \begin{document}
 
 % Portada
-\portada{INGENIERÍA DEL SOFTWARE I}{Práctica 1: Desarrollo estructurado}
+\portada{Ingeniería del Software I}{Práctica 1: Desarrollo estructurado}
 {GDRPI: Gestión Distribuída de la Revisión\\de Proyectos de Investigación}
 {Sergio de la Rubia García-Carpintero\\Miguel Millán Sánchez-Grande\\Luis
   Muñoz Villarreal\\Alicia Serrano Sánchez\\Juan Miguel Torres Triviño}
@@ -35,13 +35,16 @@ práctico que incluye análisis de requisitos, diseño e implementación del
 mismo. 
 
 Dado que el enunciado fijado para la práctica no proporcionaba toda la
-información necesaria para poder desarrollarla, se han tenido que realizar
-sucesivas entrevistas con el cliente para poder afianzar los requisitos finales
+información necesaria para poder desarrollarla, se han realizado
+una serie de entrevistas con el cliente para poder afianzar los requisitos
+finales 
 de la aplicación. Éstas reuniones son fundamentales para poder conseguir un
-buen análisis e ir profundizando en las diferencias entre las ideas del
+buen análisis e ir profundizando sobre las diferencias de las ideas del
 cliente y las del equipo de síntesis y desarrollo del software, lo que hace
 un paso imprescindible para un buen diseño y una buena
-implementación. Además, al tratarse de un proyecto en grupo, nos
+implementación.
+
+Además, al tratarse de un proyecto en grupo, nos
 proporcionará habilidades en nuestra formación como ingenieros al tener que
 enfrentarnos a un importante aspecto de la vida real, el trabajo en
 equipo. Esto tiene partes positivas y negativas, ya que al ser varios
@@ -51,46 +54,52 @@ etapas, ya que se pueden repartir las diferentes tareas a realizar del
 trabajo. 
 
 Con la realización de esta práctica se pretende conocer y asimilar los
-objetivos básicos de la ingeniería del software: los procesos del ciclo de
-vida software y sus diferentes formas de organización en distintos modelos
-del ciclo de vida; los conceptos y actividades fundamentales del análisis
-de requisitos y ser conscientes de la importancia que el análisis de
-requisitos tiene en el desarrollo y mantenimiento del software; los conceptos,
-técnicas y diagramas básicos del paradigma de desarrollo estructurado: desde
-el análisis a las pruebas y el despliegue; un modelo de proceso de aplicación
-del paradigma estructurado, que incluya el proceso de análisis y diseño
-estructurado, heurísticas de transición entre ambos, y estrategias de prueba;
-y las posibilidades que ofrece la reutilización del software en todos los
-niveles de desarrollo. 
+objetivos básicos de la ingeniería del software: 
+\begin{itemize}
+\item Los procesos del ciclo de vida software y sus diferentes formas de
+  organización en distintos modelos del ciclo de vida.
+\item Los conceptos y actividades fundamentales del análisis de requisitos,
+  así como su importancia en el desarrollo y mantenimiento del software.
+\item Los conceptos, técnicas y diagramas básicos del paradigma de desarrollo
+  estructurado: desde el análisis a las pruebas y el despliegue
+\item Un modelo de proceso de aplicación del paradigma estructurado, que
+  incluya el proceso de análisis, diseño estructurado y estrategias de prueba.
+\item Las posibilidades que ofrece la reutilización del software en todos los
+  niveles de desarrollo.
+\end{itemize}
 
 \part{Análisis}
 \chapter{Especificación de requisitos}
 \section{Requisitos iniciales de sistema}
 Se trata de desarrollar una aplicación para la gestión distribuída de la
-revisión de proyectos de investigación (y otro tipo de solicitudes, como
+revisión de proyectos de investigación (y otro tipo de solicitudes:
 becas, acciones integradas, etc.). El sistema lo mantiene una agencia de
 evaluación de proyectos, que básicamente se encarga de ofrecer una valoración
 de los proyectos de investigación que le envían distintos organismos
 (ministerios, comunidades autónomas, etc.). Existe un conjunto de áreas
-temáticas, y cada área está descompuesta en un conjunto de subáreas. Cada
-área tiene una persona ``coordinadora'', que se encarga de asignar proyectos
-a cada uno de los ``adjuntos'' de cada subárea. El adjunto se encargará de
+temáticas, y cada área está compuesta en un conjunto de subáreas. Cada
+área tiene un \emph{coordinadora}, que se encarga de asignar proyectos
+a cada uno de los \emph{adjuntos} de cada subárea. El \emph{adjunto} se
+encargará de
 asignar la evaluación de sus proyectos a los expertos más adecuados y de,
 finalmente, realizar los informes finales de evaluación. El sistema es
 utilizado por los siguientes tipos de usuario: 
 
 \begin{itemize}
-\item Los expertos realizan evaluaciones de proyectos. Reciben una 
-  invitación, y ellos pueden aceptar o declinar, y si aceptan tiene un tiempo 
-  específico para enviar sus informes. 
-\item Los adjuntos realizan asignaciones a expertos. También desasignan
-  expertos o insisten si el experto tarda demasiado. Una vez recibidos los 
-  informes de los expertos, realiza un único informe final, que es el que se 
-  devuelve a la entidad solicitante, una vez validado por el coordinador del 
-  área correspondiente. 
-\item Los coordinadores asignan proyectos a los adjuntos, y realizan la
-  supervisión de todos los informes.
-\item Secretario de la agencia de evaluación carga en el sistema todos
+\item Los \emph{expertos} realizan evaluaciones de proyectos. Reciben una 
+  invitación, y ellos pueden aceptar o declinar. Si aceptan tiene un tiempo 
+  determinado para enviar sus informes. 
+\item Los \emph{adjuntos} realizan asignaciones a \emph{expertos}. También
+  desasignan
+  \emph{expertos} o insisten si el experto tarda demasiado. Una vez recibidos
+  los 
+  informes de los \emph{expertos}, realiza un único informe final, que es el
+  que se 
+  devuelve a la entidad solicitante, una vez validado por el
+  \emph{coordinador} del área correspondiente.  
+\item Los \emph{coordinadores} asignan proyectos a los \emph{adjuntos}, y
+  realizan la supervisión de todos los informes. 
+\item El \emph{secretario} de la agencia de evaluación carga en el sistema todos
   los documentos de los proyectos (memoria del proyecto, currículum de los
   investigadores, texto de la convocatoria, etc.). 
 \end{itemize}
@@ -101,7 +110,7 @@ los siguientes:
 
 \subsection{Usuarios}
 \begin{itemize}
-\item Acceden al sistema mediante un nombre de usuario, que será el dni; y una 
+\item Acceden al sistema mediante un identificador, que será el dni; y una 
 contraseña, que se podrá modificar.
 \item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno
   con diferente funcionalidad y rango. 
@@ -114,19 +123,19 @@ contraseña, que se podrá modificar.
 Las instituciones solicitantes mandan los proyectos en paquetes al
 secretario, los cuales contienen: 
 \begin{itemize}
-\item La convocatoria.
+\item La convocatoria, que describe no o varios modelos de informe de
+  evaluación que contienen los puntos a evaluar del correspondiente proyecto.
 \item Las bases del proyecto.
-\item Institución convocante.
+\item La institución convocante.
 \item Los proyectos, que pueden venir, aunque no necesariamente, clasificados
   por área. 
-\item Uno o varios modelos de informe de evaluación que contengan los puntos
-  a evaluar del correspondiente proyecto. 
-\item Cada proyecto tendrá una fecha en la cuál tiene que estar evaluado.
+\item Cada proyecto tendrá una fecha límite de evaluación.
 \end{itemize}
 
 \subsection{Secretario}
+El secretario podrá realizar distintas funciones respecto a:
 \begin{description}
-\item[Usuarios] Es el encargado de añadir, modificar y eliminar a los
+\item[Usuarios] Es el encargado de añadir, modificar y eliminar 
   usuarios del sistema (coordinadores, adjuntos y expertos).
 \item[Coordinadores] Elegirá el coordinador de cada área.
 \item[Paquetes de proyecto] Recibe las solicitudes de evaluación de proyectos
@@ -138,16 +147,15 @@ secretario, los cuales contienen:
   proyecto, elaborará unos modelos de informe de evaluación. 
 \item[Plazos expertos] Decidirá los plazos que tienen los expertos para
   aceptar o declinar la invitación para realizar el informe de evaluación,
-  y una vez aceptada, la fecha para entregar dicho informe. Todo esto
-  se incluirá en el modelo de evaluación.
+  y una vez aceptada, la fecha para entregar dicho informe.
 \end{description}
 
 \subsection{Coordinador}
 \begin{itemize}
 \item Pertenece a una única área.
-\item Establece las subáreas de los proyectos que son asignados a su área.
-\item Asigna al adjunto de cada subárea.
-\item Reasigna proyecto a otra subárea, si el adjunto se lo indica.
+\item Establece las subáreas de los proyectos que se le asignan.
+\item Dentro de su área asigna un adjunto a cada subárea.
+\item Reasigna un proyecto a otra subárea, si el adjunto se lo indica.
 \item Valida los informes pendientes que los adjuntos de su correspondiente 
   área realizan.
 \end{itemize}
@@ -161,7 +169,7 @@ secretario, los cuales contienen:
 \subsection{Adjunto}
 \begin{itemize}
 \item Pertenece únicamente a una subárea.
-\item Tiene una cola de proyectos asignados.
+\item Tiene una serie de proyectos asignados.
 \item Busca a los expertos especificando el área, la institución, palabras
   clave y valoraciones en las que se prioriza la formalidad de plazos y
   calidad de las evaluaciones. 
@@ -175,8 +183,8 @@ secretario, los cuales contienen:
 \item Puede reasignar las evaluaciones si el experto declina la invitación,
   no obtiene contestación dentro del plazo o si el experto no cumple con los
   plazos de entrega del informe de evaluación.
-\item El adjunto puede insistir cuando esté próxima la fecha límite de
-  entrega del informe de evaluación. 
+\item El adjunto puede insistir a los expertos correspondientes cuando esté
+  próxima la fecha límite de entrega del informe de evaluación.
 \item Una vez realizada las evaluaciones de los expertos, el adjunto
   realiza un informe final teniendo en cuenta los informes de los distintos
   expertos que hayan aceptado realizar la evaluación. Este informe final
@@ -209,17 +217,17 @@ secretario, los cuales contienen:
   temática. Éstas palabras clave se utilizan como parámetros en las
   búsquedas. 
 \item Tienen una lista de evaluaciones pendientes, que pueden aceptar o 
-  rechazar.
+  re\-cha\-zar.
 \end{itemize}
 
 \chapter{Diagrama de flujo de datos}
-Con un diagrama de flujo de datos, se pueden visualizar la forma en que el 
-sistema funcione, lo que el sistema va a lograr, y cómo el sistema se puede 
+Con un diagrama de flujo de datos, se puede visualizar la forma en que el 
+sistema funciona, lo que el sistema va a lograr, y cómo el sistema se puede 
 poner en práctica. Los diagramas de flujo de datos pueden ser usados para 
-proporcionar al usuario final una idea física de cómo resultarán los datos a 
-última instancia, y cómo tienen un efecto sobre la estructura de todo el 
-sistema. La manera en que cualquier sistema es desarrollado puede determinarse a
-través de un diagrama de flujo de datos.
+proporcionar al usuario final una idea aproximada de cómo será y actuará la
+estructura de todo el sistema. La manera en que cualquier sistema se
+desarrolla puede determinarse a través de un diagrama de flujo de
+datos. \cite{piat}
 
 \newpage
 \imagen{diagramas/DC.pdf}{14cm}{Diagrama de Contexto}{dc}{H}
@@ -253,14 +261,14 @@ través de un diagrama de flujo de datos.
 \item[MODELOS EVALUACIÓN] = @id\_modelo + cppid + estructura
 
 \item[cppid] = *\emph{Identificador de la convocatoria del paquete de
-    proyectos correspondiente}* 
+    proyectos co\-rres\-pon\-dien\-te}* 
 
 \item[ÁREAS] = @id\_área + nombre
 
 \item[SUBÁREAS] = @id\_subárea + @id\_área + id\_usuario + nombre
 
 \item[SUBÁREAS] = *\emph{El id\_usuario es sólo para los adjuntos. El resto
-    de usuarios no tiene área asignada}* 
+    de u\-sua\-rios no tiene área asignada}* 
 
 \item[PROYECTOS] = @id\_proyecto + @id\_paquete + nombre\_proyecto + memoria
   + id\_área + id\_subárea + estado\_proyecto + tpo\_inv + tpo\_eval +
@@ -289,7 +297,7 @@ través de un diagrama de flujo de datos.
   estado\_informe + datos 
 
 \item[datos] = *\emph{El experto, el adjunto y el coordinador rellenan los
-    campos correspondientes al modelo de evaluación del proyecto}* 
+    campos co\-rres\-pon\-dien\-tes al modelo de evaluación del proyecto}* 
 
 \item[PLANTILLAS CORREOS] = @id\_plantilla + asunto + cuerpo
 \end{description}
@@ -346,7 +354,7 @@ través de un diagrama de flujo de datos.
 
 \item[Área] = id\_área + nombre
 
-\item[Área] = *\emph{Los usuarios añadidos se asignan a una área}*
+\item[Área] = *\emph{Los usuarios añadidos se asignan a un área}*
 
 \item[Área Asignada] = id\_área
 
@@ -388,7 +396,7 @@ través de un diagrama de flujo de datos.
   $\mid$ email] 
 
 \item[Consulta Informes Expertos] = id\_informe + id\_modelo\_eval +
-  estado\_informe + datos 
+  estado\_in\-for\-me + datos 
 
 \item[Consulta Informes Expertos] = *\emph{Ver informes de proyectos de
     expertos}* 
@@ -402,7 +410,7 @@ través de un diagrama de flujo de datos.
 
 \item[Consulta Usuarios] = id\_usuario + tipo + e-mail + contraseña + nombre
   + apellidos, teléfono + id\_área + institución + currículum +
-  palabras\_clave 
+  pa\-la\-bras\_clave 
 
 \item[Convocatoria] = convocatoria
 
@@ -418,15 +426,15 @@ través de un diagrama de flujo de datos.
 \item[Criterios Evaluación] = [id\_modelo + estructura $\mid$ ID Modelo]
 
 \item[Criterios Evaluación] = *\emph{Añadir, modificar o eliminar los modelos
-    de evaluación a utilizar para realizar los informes}* 
+    de e\-va\-lua\-ción a utilizar para realizar los informes}* 
 
 \item[Datos Autentificación] = id\_usuario + contraseña
 
 \item[Datos Paquetes Proyectos] = (id\_paquete) + (institución) + (bases) +
   (convocatoria) + (fecha\_entrada) + (fecha\_salida) + (fecha\_límite) 
 
-\item[Datos Paquetes Proyectos] = *\emph{Se añaden, se modifican y se
-    consultan los datos de los paquetes de proyectos}* 
+\item[Datos Paquetes Proyectos] = *\emph{Se añaden, modifican y consultan los
+    datos de los paquetes de proyectos}* 
 
 \item[Datos Personales] = id\_usuario + tipo + e-mail + contraseña + nombre +
   apellidos + teléfono + área + institución + currículum + palabras\_clave 
@@ -466,14 +474,14 @@ través de un diagrama de flujo de datos.
     asignación y desasignación de expertos para las evaluaciones de
     proyectos}* 
 
-\item[Expertos Búsqueda] = {@id\_usuario + tipo + e-mail + contraseña +
+\item[Expertos Búsqueda] = {id\_usuario + tipo + e-mail + contraseña +
     nombre + apellidos + teléfono + área + institución + currículum +
-    {palabras\_clave}} 
+    {pa\-la\-bras\_clave}} 
 
 \item[Expertos Búsqueda] = *\emph{Lista de expertos resultado de la
     consulta}* 
 
-\item[Expertos Seleccionados] = {@id\_usuario + tipo + e-mail + contraseña +
+\item[Expertos Seleccionados] = {id\_usuario + tipo + e-mail + contraseña +
     nombre + apellidos + teléfono + área + institución + currículum +
     {palabras\_clave}} 
 
@@ -617,7 +625,7 @@ través de un diagrama de flujo de datos.
     los campos con opcionales ya que se pueden realizar búsquedas de usuarios
     de varias maneras}* 
 
-\item[Parámetros Consulta] = Parámetros Búsqueda = (@id\_usuario) + (tipo) +
+\item[Parámetros Consulta] = Parámetros Búsqueda = (id\_usuario) + (tipo) +
   (e-mail) + (contraseña) + (nombre) + (apellidos) + (teléfono) + (área) +
   (institución) + (currículum) + (palabras\_clave) 
 
@@ -650,7 +658,7 @@ través de un diagrama de flujo de datos.
     Expertos y Proyectos. Se devolverá una lista según los parámetros de
     consulta}* 
 
-\item[Resultado Consulta] = Resultado Búsqueda = {@id\_usuario + tipo +
+\item[Resultado Consulta] = Resultado Búsqueda = {id\_usuario + tipo +
     e-mail + contraseña + nombre + apellidos + teléfono + área + institución
     + currículum + {palabras\_clave}} 
 
@@ -672,8 +680,8 @@ través de un diagrama de flujo de datos.
     le queda al experto para realizar el informe}* 
 
 \item[Usuarios] = [id\_usuario + tipo + e-mail + contraseña + (nombre) +
-  (apellidos) + (teléfono) + (área) + (institución) + (currículum) +
-  (palabras\_clave) $\mid$ Parámetros] 
+  (a\-pe\-lli\-dos) + (teléfono) + (área) + (institución) + (currículum) +
+  (pa\-la\-bras\_clave) $\mid$ Parámetros] 
 
 \item[Usuarios] = *\emph{Da el alta a los usuarios, los consulta o modifica
     sus datos. Modifica el coordinador asociado a un área. Incluye los
@@ -681,7 +689,7 @@ través de un diagrama de flujo de datos.
     usuarios}* 
 
 \item[Valoración Expertos] = id\_usuario + id\_proyecto + id\_paquete +
-  tpo\_realización + calidad\_informe 
+  tpo\_re\-a\-li\-za\-ción + ca\-li\-dad\_informe 
 
 \item[Valoración Expertos] = *\emph{Cada informe elaborado por un experto
     para un proyecto, recibe una valoración según el tiempo de realización
@@ -723,7 +731,8 @@ sistema.
 
 \subsection{Añadir usuarios}
 Este proceso es exclusivo para el secretario, ya que es el único con
-privilegios para introducir nuevos usuarios en el sistema. El sistema recibe
+pri\-vi\-le\-gios para introducir nuevos usuarios en el sistema. El sistema
+recibe 
 una nueva instancia de usuario y devuelve un correo de alta siguiendo un
 modelo predefinido.
 
@@ -785,10 +794,11 @@ introducir todos los proyectos en el sistema.
 \subsection{Modificar paquete de proyecto/proyectos}
 Es el encargado de realizar cualquier variación sobre los paquetes de proyecto y
 sobre los proyectos, ya sea cambiar algún error descubierto o cambiar un 
-proyecto de subárea a petición de algún adjunto. Se tienen diferentes opciones 
-dependiendo de qué usuario invoque dicho proceso, ya que el secretario asigna el
-área a los proyectos, el coordinador la subárea y el adjunto puede rechazarlo 
-alegando que ese proyecto no pertenece realmente a su subárea.
+proyecto de subárea a petición de algún adjunto. Se tienen di\-fe\-ren\-tes
+opciones dependiendo de qué usuario invoque dicho proceso, ya que el
+secretario asigna el área a los proyectos, el coordinador la subárea y el
+adjunto puede rechazarlo alegando que ese proyecto no pertenece realmente a
+su subárea.
 
 \subsubsection{Pseudocódigo}
 \lstinputlisting{ps/ps2.3}
@@ -848,7 +858,8 @@ mismo paquete de proyectos y entregarlas al la institución convocante.
 \section{Gestión de expertos}
 
 \subsection{Consulta expertos}
-Consulta sobre los expertos del sistema. Se introducen una serie de parámetros y
+Consulta sobre los expertos del sistema. Se introducen una serie de
+pa\-rá\-me\-tros y
 en función de ellos el proceso busca y devuelve una serie de expertos. La 
 información de la consulta muestra los proyectos en los cuales están 
 involucrados en ese momento, y algunas características de dichos proyectos, cómo
@@ -921,8 +932,9 @@ diseño conceptual de bases de datos.
 Es un modelo de red que describe la distribución de los datos almacenados en un 
 sistema de forma abstracta. La abstracción busca las propiedades comunes de un 
 conjunto de objetos reduciendo la complejidad y ayudando a entender el mundo 
-real. Se pretende \emph{visualizar} los objetos que pertenecen a la Base de 
-Datos como entidades que tienen unos atributos y se vinculan mediante 
+real. Se pretende \emph{visualizar} los objetos que pertenecen a la
+\emph{base de 
+datos} como entidades que tienen unos atributos y se vinculan mediante 
 relaciones.
 
 \newpage
@@ -1002,7 +1014,7 @@ alta (figura \ref{img2}).
 \end{itemize}
 
 La página inicial para cada tipo de usuario muestra la información 
-correspondiente a las funciones que puede realizar con respecto a las 
+co\-rres\-pon\-dien\-te a las funciones que puede realizar con respecto a las 
 evaluaciones de informes.
 
 
@@ -1147,7 +1159,7 @@ siguientes lenguajes:
 \item PHP\cite{achour}: lenguaje de cuarta generación que genera páginas de cara
 al servidor.
 \item XHTML\cite{wc}: encargado de la información y la estructura de la página.
-\item MySQL: se utiliza en el diseño e implemtación de la base de datos.
+\item MySQL: se utiliza en el diseño e implementación de la base de datos.
 \item CSS\cite{wc}: encargado de la maquetación y el estilo del modelado.
 \item JavaScript\cite{resig}: empleado en el \emph{framework jQuery} da 
 dinamismo al navegador.
@@ -1162,64 +1174,65 @@ especificación de procesos, y servicios web complejos.
 \lstinputlisting[language=PHP]{implementacion/index.php}
 
 \subsection{settings.php}
-\lstinputlisting{implementacion/settings.php}
+\lstinputlisting[language=PHP]{implementacion/settings.php}
 
 \subsection{js/evalmodels.js}
-\lstinputlisting{implementacion/js/evalmodels.js}
+\lstinputlisting[language=PHP]{implementacion/js/evalmodels.js}
 
 \subsection{js/evalreports.js}
-\lstinputlisting{implementacion/js/evalreports.js}
+\lstinputlisting[language=PHP]{implementacion/js/evalreports.js}
 
 \subsection{js/main.js}
-\lstinputlisting{implementacion/js/main.js}
+\lstinputlisting[language=PHP]{implementacion/js/main.js}
 
 \subsection{js/projects.js}
-\lstinputlisting{implementacion/js/projects.js}
+\lstinputlisting[language=PHP]{implementacion/js/projects.js}
 
 \subsection{source/evaluation\_models.php}
-\lstinputlisting{implementacion/source/evaluation_models.php}
+\lstinputlisting[language=PHP]{implementacion/source/evaluation_models.php}
 
 \subsection{source/evaluation\_reports.php}
-\lstinputlisting{implementacion/source/evaluation_reports.php}
+\lstinputlisting[language=PHP]{implementacion/source/evaluation_reports.php}
 
 \subsection{source/loginout.php}
-\lstinputlisting{implementacion/source/loginout.php}
+\lstinputlisting[language=PHP]{implementacion/source/loginout.php}
 
 \subsection{source/mysql.php}
-\lstinputlisting{implementacion/source/mysql.php}
+\lstinputlisting[language=PHP]{implementacion/source/mysql.php}
+
 
 \subsection{theme/evaluation\_models.php}
-\lstinputlisting{implementacion/theme/evaluation_models.php}
+\lstinputlisting[language=PHP]{implementacion/theme/evaluation_models.php}
 
 \subsection{theme/evaluation\_reports.php}
-\lstinputlisting{implementacion/theme/evaluation_reports.php}
+\lstinputlisting[language=PHP]{implementacion/theme/evaluation_reports.php}
 
 \subsection{theme/login.php}
-\lstinputlisting{implementacion/theme/login.php}
+\lstinputlisting[language=PHP]{implementacion/theme/login.php}
 
 \subsection{theme/main.php}
-\lstinputlisting{implementacion/theme/main.php}
+\lstinputlisting[language=PHP]{implementacion/theme/main.php}
 
 \subsection{theme/projects.php}
-\lstinputlisting{implementacion/theme/projects.php}
+\lstinputlisting[language=PHP]{implementacion/theme/projects.php}
 
 \subsection{theme/users.php}
-\lstinputlisting{implementacion/theme/users.php}
+\lstinputlisting[language=PHP]{implementacion/theme/users.php}
 
 \subsection{theme/css/evalmodels.css}
-\lstinputlisting{implementacion/theme/css/evalmodels.css}
+\lstinputlisting[language=PHP]{implementacion/theme/css/evalmodels.css}
 
 \subsection{theme/css/evalreports.css}
-\lstinputlisting{implementacion/theme/css/evalreports.css}
+\lstinputlisting[language=PHP]{implementacion/theme/css/evalreports.css}
 
 \subsection{theme/css/login.css}
-\lstinputlisting{implementacion/theme/css/login.css}
+\lstinputlisting[language=PHP]{implementacion/theme/css/login.css}
 
 \subsection{theme/css/main.css}
-\lstinputlisting{implementacion/theme/css/main.css}
+\lstinputlisting[language=PHP]{implementacion/theme/css/main.css}
 
 \subsection{theme/css/users.php}
-\lstinputlisting{implementacion/theme/css/users.php}
+\lstinputlisting[language=PHP]{implementacion/theme/css/users.php}
 
 \appendix
 \chapter{Carga de trabajo}
