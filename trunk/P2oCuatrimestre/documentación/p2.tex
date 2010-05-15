@@ -255,17 +255,17 @@ verticales, y los mensajes pasados entre los objetos como flechas horizontales.
 \subsection{Entrada al sistema}
 La vista inicial del sistema, muestra una pantalla en la que se pide el nombre
 de usuario y la contraseña. Para autentificarse, el usuario debe rellenar
-estos campos y pulsar el botón de ''Entrar´´. El sistema recoge los datos y los
+estos campos y pulsar el botón de ``Entrar''. El sistema recoge los datos y los
 comprueba con los existentes en una tabla de la base de datos que contiene los
 datos de todos los usuarios. En caso de haber correspondencia (caso reflejado
 en el diagrama de la \emph{figura \ref{EntSisCor}}), el usuario podrá
 visualizar la interfaz correspondiente a su rango dentro del sistema. En caso
 de no haberla (como muestra la \emph{figura \ref{EntSisErr}}), el sistema 
-mostrará el mensaje: ''usuario o contraseña incorrectas´´.
+mostrará el mensaje: ``usuario o contraseña incorrectas''.
 
-\image{Entrada al sistema correcta.png}{10}{Entrada al sistema correcta}
+\imagen{Entrada al sistema correcta.png}{10}{Entrada al sistema correcta}
 {EntSisCor}
-\image{Entrada al sistema erronea.png}{10}{Entrada al sistema errónea}
+\imagen{Entrada al sistema erronea.png}{10}{Entrada al sistema errónea}
 {EntSisErr}
 
 \subsection{Secretario introduce paquete de proyectos}
@@ -274,53 +274,54 @@ tiene acceso a la vista general del secretario.
 
 La vista general del secretario accede al sistema para proporcionar una
 lista con los paquetes de proyectos introducidos anteriormente. En este caso
-el secretario le da a ''Introducir nuevo paquete´´ y completa los campos
+el secretario le da a ``Introducir nuevo paquete'' y completa los campos
 pertinentes para identificarlo. Una vez completada la operación, el
 coordinador acepta y el sistema almacena el nuevo paquete vacío y actualiza
 la lista mostrada de paquetes de proyectos. A continuación, el secretario
-marca el paquete creado y selecciona la opción de ''Introducir nuevo 
-proyecto´´. Uno a uno empieza a introducir los proyectos que forman parte del
+marca el paquete creado y selecciona la opción de ``Introducir nuevo 
+proyecto''. Uno a uno empieza a introducir los proyectos que forman parte del
 paquete y el sistema los va almacenando.
 
 Ahora el secretario se dispone a consultar la información de un paquete.
-Para ello selecciona un paquete y le da a la opción de ''Modificar´´. El
+Para ello selecciona un paquete y le da a la opción de ``Modificar''. El
 sistema carga la información almacenada acerca del paquete y la muestra
 incluyendo los proyectos asociados a dicho paquete.
 
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{SecIntPaq}}.
 
-\image{Secretario introduce un paquete de proyectos.png}{9}{Secretario
+\imagen{Secretario introduce un paquete de proyectos.png}{9}{Secretario
 introduce un paquete de proyectos y consulta su contenido}{SecIntPaq}
 
 \subsection{Secretario crea un modelo de evaluación}
 Se parte de la base de que el secretario se ha autentificado en el sistema y
 tiene acceso a la vista general del secretario.
 
-El secretario selecciona la pestaña de ''Modelos de evaluación´´. A
+El secretario selecciona la pestaña de ``Modelos de evaluación''. A
 continuación, el sistema le proporciona una vista con los paquetes de
-proyectos existentes. El secretario pulsa la opción de ''Añadir´´ y el sistema
+proyectos existentes. El secretario pulsa la opción de ``Añadir'' y el sistema
 le muestra una estructura vacía y le da acceso a seleccionar uno de los
 paquetes de proyectos. A continuación, el secretario selecciona el paquete de
 proyectos que contendrá el modelo de evaluación que se dispone a realizar.
 El secretario va añadiendo elemento a elemento a la estructura y el sistema
 va actualizando la vista actual de la estructura. Finalmente, el secretario
-almacena en la base de datos el modelo de evaluación seleccionando la opción ''Guardar´´.
+almacena en la base de datos el modelo de evaluación seleccionando la opción
+``Guardar''.
 
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{SecCreMod}}.
 
-\image{Secretario crea un modelo de evaluacion.png}{10}{Secretario crea un
+\imagen{Secretario crea un modelo de evaluacion.png}{10}{Secretario crea un
 modelo de evaluación}{SecCreMod}
 
 \subsection{Coordinador selecciona experto para ser adjunto}
 Se parte de la base de que el coordinador se ha autentificado en el sistema y
 tiene acceso a la vista general del coordinador.
 
-El coordinador selecciona la pestaña de ''Subáreas´´. A continuación, el
+El coordinador selecciona la pestaña de ``Subáreas''. A continuación, el
 sistema le proporciona una vista con las subáreas existentes en el área a la
 que pertenece. El coordinador marca la subárea que cambiará de adjunto y
-selecciona la opción de ''Búsqueda de expertos´´. Establece una serie de
+selecciona la opción de ``Búsqueda de expertos''. Establece una serie de
 parámetros de búsqueda y confirma la búsqueda. El sistema realiza una búsqueda
 en su base de datos con los parámetros especificados y devuelve una lista
 con los expertos encontrados. Por último, el coordinador marca a uno de los
@@ -331,7 +332,7 @@ elegida.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooExpAdj}}.
 
-\image{Coordinador selecciona a un experto para ser adjunto de una subarea.png}
+\imagen{Coordinador selecciona a un experto para ser adjunto de una subarea.png}
 {9}{Coordinador selecciona a un experto para ser adjunto de una subárea}
 {CooExpAdj}
 
@@ -341,7 +342,7 @@ tiene acceso a la vista general del adjunto.
 
 La vista general del coordinador accede al sistema para proporcionar una
 lista con los proyectos asociados a su área. A continuación, el coordinador
-marca uno de los proyectos y selecciona la opción de ''Asignar subárea´´. El
+marca uno de los proyectos y selecciona la opción de ``Asignar subárea''. El
 sistema realiza una búsqueda de las subáreas que pertenecen al área del
 coordinador y devuelve por pantalla una lista con estas. Finalmente, el
 coordinador marca una de las subáreas de la lista y confirma la asignación
@@ -350,8 +351,8 @@ al sistema. El sistema asigna entonces el proyecto a dicha subárea.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooProSub}}.
 
-\image{Coordinador asigna un proyecto a una subarea.png}
-{10}{Coordinador asigna un proyecto a una subárea} {CooProSub}
+\imagen{Coordinador asigna un proyecto a una subarea.png}
+{10}{Coordinador asigna un proyecto a una subárea}{CooProSub}
 
 \subsection{Coordinador valida informe}
 Se parte de la base de que el coordinador se ha autentificado en el sistema y
@@ -359,16 +360,16 @@ tiene acceso a la vista general del adjunto.
 
 La vista general del coordinador accede al sistema para proporcionar una
 lista con los proyectos asociados a su área. El coordinador marca uno
-de los proyectos y selecciona la opción de ''Ver/Modificar el informe del
+de los proyectos y selecciona la opción de ``Ver/Modificar'' el informe del
 proyecto. El sistema carga el informe del proyecto realizado por el adjunto
 y la documentación asociada a este. Una vez conformado con el informe del
-adjunto, el coordinador le da a ''Validar informe´´, entonces el sistema
-cambia el estado del informe a ''evaluado´´.
+adjunto, el coordinador le da a ``Validar informe'', entonces el sistema
+cambia el estado del informe a ``evaluado''.
 
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooValInf}}.
 
-\image{Coordinador valida informe.png}{9}{Coordinador valida informe de
+\imagen{Coordinador valida informe.png}{9}{Coordinador valida informe de
 evaluación}{CooValInf}
 
 \subsection{Adjunto busca expertos para evaluar proyecto}
@@ -391,7 +392,7 @@ expertos.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{AdjBusExp}}.
 
-\image{Adjunto busca expertos para evaluar proyecto.png}{9}
+\imagen{Adjunto busca expertos para evaluar proyecto.png}{9}
 {Adjunto busca expertos para evaluar proyecto}{AdjBusExp}
 
 \subsection{Adjunto realiza informe}
@@ -399,21 +400,21 @@ Se parte de la base de que el adjunto se ha autentificado en el sistema y
 tiene acceso a la vista general del adjunto.
 
 La vista general del adjunto accede al sistema para proporcionar una lista
-con los proyectos asociados a su subárea. El adjunto marca el símbolo ''+´´
+con los proyectos asociados a su subárea. El adjunto marca el símbolo ``+''
 de uno de los proyectos de la lista y el sistema le muestra una lista de 
 expertos que están evaluando el proyecto. A continuación, marca a uno de los
 expertos y el sistema accede al informe realizado por dicho experto. Después
-de consultar el informe, el adjunto selecciona la opción de ''Realizar
-informe´´. El sistema consulta el modelo de evaluación que tiene asignado el
+de consultar el informe, el adjunto selecciona la opción de ``Realizar
+informe''. El sistema consulta el modelo de evaluación que tiene asignado el
 proyecto y lo muestra por pantalla. El adjunto modificará varias veces
 el contenido del informe y finalmente lo confirmará mediante la opción de
-''Finalizar informe´´. El sistema entonces cambiará el estado del proyecto a
-''evaluado por el adjunto´´.
+``Finalizar informe''. El sistema entonces cambiará el estado del proyecto a
+``evaluado por el adjunto''.
 
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
-\ref{AdjReaIng}}.
+\ref{AdjReaInf}}.
 
-\image{Adjunto realiza informe.png}{9}{Adjunto realiza informe de evaluación}
+\imagen{Adjunto realiza informe.png}{9}{Adjunto realiza informe de evaluación}
 {AdjReaInf}
 
 \subsection{Experto realiza informe}
@@ -428,12 +429,12 @@ y el sistema recupera la información asociada a este, así como de haberlo, el
 informe realizado por el experto sobre el proyecto. Después, el experto
 redacta el informe conforme al modelo que este sigue y guarda y finaliza su
 edición. Finalmente, El sistema almacena dicho informe y cambia su estado a
-''finalizado´´.
+``finalizado''.
 
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{ExpReaInf}}.
 
-\image{Experto realiza informe.png}{9}{Experto realiza informe de evaluación}
+\imagen{Experto realiza informe.png}{9}{Experto realiza informe de evaluación}
 {ExpReaInf}
 
 \section{Diagrama Entidad/Interrelación}
