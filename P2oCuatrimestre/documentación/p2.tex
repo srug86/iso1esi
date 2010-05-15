@@ -220,8 +220,37 @@ secretario, los cuales contienen:
 \chapter{Análisis}
 
 \section{Diagrama de casos de uso}
+Un \emph{caso de uso} es una técnica para la captura de requisitos
+potenciales de un nuevo sistema o una actualización de software. Cada caso de
+uso proporciona uno o más escenarios que indican cómo debería interactuar el
+sistema con el usuario o con otro sistema para conseguir un objetivo
+específico. En ocasiones, se utiliza a usuarios sin experiencia junto a los
+analistas para el desarrollo de casos de uso.
+
+En otras palabras, un caso de uso es una secuencia de interacciones que se
+desarrollan entre un sistema y sus actores en respuesta a un evento que
+inicia un actor principal sobre el propio sistema. Los diagramas de casos de
+uso sirven para especificar la comunicación y el comportamiento de un sistema
+mediante su interacción con los usuarios y/u otros sistemas. Los diagramas de
+casos de uso se utilizan para ilustrar los requerimientos del sistema al
+mostrar cómo reacciona a eventos que se producen en su ámbito o en él mismo.
 
 \section{Diagramas de secuencia}
+Un \emph{diagrama de secuencia} muestra la interacción de un conjunto de
+objetos en una aplicación a través del tiempo y se modela para cada método de
+la clase. Mientras que el \emph{diagrama de casos de uso} permite el modelado
+de una vista \emph{business} del escenario, el diagrama de secuencia contiene
+detalles de implementación del escenario, incluyendo los objetos y clases que
+se usan para implementar el escenario, y mensajes intercambiados entre los
+objetos.
+
+Típicamente uno examina la descripción de un caso de uso para determinar qué
+objetos son necesarios para la implementación del escenario. Si tienes
+modelada la descripción de cada caso de uso como una secuencia de varios
+pasos, entonces puedes caminar sobre esos pasos para descubrir qué objetos
+son necesarios para que se puedan seguir los pasos. Un diagrama de secuencia
+muestra los objetos que intervienen en el escenario con líneas discontinuas
+verticales, y los mensajes pasados entre los objetos como flechas horizontales.
 
 \subsection{Entrada al sistema}
 La vista inicial del sistema muestra una pantalla en la que se pide el nombre
@@ -230,8 +259,8 @@ campos y aceptará. El sistema recogerá los datos y los comprobará con los
 existentes en una tabla de la base de datos que contiene los datos de todos
 los usuarios. En caso de haber correspondencia de datos, el usuario podrá
 visualizar la interfaz correspondiente a su estatus dentro del sistema. En
-caso de no haber correspondencia, el sistema mostrará el mensaje: ''usuario
-o contraseña incorrectas´´.
+caso de no haber correspondencia, el sistema mostrará el mensaje: ``usuario
+o contraseña incorrectas''.
 
 \subsection{Secretario introduce paquete de proyectos}
 Partimos de la base de que el secretario se ha autentificado en el sistema y
@@ -268,7 +297,7 @@ de los proyectos y selecciona la opción de ver o modificar el informe del
 proyecto. El sistema carga el informe del proyecto realizada por el adjunto
 y la documentación asociada a este. Una vez conformado con el informe del
 adjunto, el coordinador le da a validar el informe final, entonces el sistema
-cambia el estado del informe a ''evaluado´´.
+cambia el estado del informe a ``evaluado''.
 
 \subsection{Adjunto busca expertos para evaluar proyecto}
 Partimos de la base de que el adjunto se ha autentificado en el sistema y
@@ -301,7 +330,7 @@ informe realizado por el experto sobre el proyecto.
 
 El experto redactará el informe conforme al modelo que este sigue y guardará
 y finalizará su edición. El sistema almacenará dicho informe y cambiará su
-estado a ''finalizado´´.
+estado a ``finalizado''.
 
 \section{Diagrama Entidad/Interrelación}
 El modelo entidad/interrelación es el modelo conceptual más utilizado para el 
@@ -317,8 +346,23 @@ mediante relaciones.
 \imagen{ER.pdf}{14.5}{Diagrama Entidad/Interrelación}{}{}
 
 \chapter{Diseño}
-
 \section{Diagrama de clases}
+Un \emph{diagrama de clases} es un tipo de diagrama estático que describe la
+estructura de un sistema mostrando sus clases, atributos y las relaciones
+entre ellos. Los diagramas de clases son utilizados durante el proceso de
+diseño de los sistemas, donde se crea el diseño conceptual de la
+información que se manejará en el sistema, y los componentes que se
+encargaran del funcionamiento y la relación entre uno y otro.
+
+Al diseñar una clase se debe pensar en cómo se puede identificar un objeto
+real, como una persona, un transporte, un documento o un paquete. Estos
+ejemplos de clases de objetos reales, es sobre lo que un sistema se
+diseña. Durante el proceso del diseño de las clases se toman las propiedades
+que identifican como único al objeto y otras propiedades adicionales como
+datos que corresponden al objeto. El diagrama de clases incluye mucha más
+información como la relación entre un objeto y otro, la herencia de
+propiedades de otro objeto, conjuntos de operaciones/propiedades que son
+implementadas para una interfaz.
 
 \section{Diagrama relacional}
 Es el modelo más utilizado en la actualidad para modelar problemas reales y 
