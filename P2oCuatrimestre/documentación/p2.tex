@@ -343,7 +343,10 @@ real. Se pretende \emph{visualizar} los objetos que pertenecen a la
 \emph{base de datos} como entidades que tienen unos atributos y se vinculan
 mediante relaciones.
 
-\imagen{ER.pdf}{14.5}{Diagrama Entidad/Interrelación}{}{}
+El diagrama entidad/interrelación del sistema \emph{GDRPI} se muestra en la
+figura \ref{dentrel}.
+
+\imagen{ER.pdf}{14}{Diagrama Entidad/Interrelación}{dentrel}
 
 \chapter{Diseño}
 \section{Diagrama de clases}
@@ -352,17 +355,24 @@ estructura de un sistema mostrando sus clases, atributos y las relaciones
 entre ellos. Los diagramas de clases son utilizados durante el proceso de
 diseño de los sistemas, donde se crea el diseño conceptual de la
 información que se manejará en el sistema, y los componentes que se
-encargaran del funcionamiento y la relación entre uno y otro.
+encargarán del funcionamiento y la relación entre uno y otro.
 
 Al diseñar una clase se debe pensar en cómo se puede identificar un objeto
 real, como una persona, un transporte, un documento o un paquete. Estos
-ejemplos de clases de objetos reales, es sobre lo que un sistema se
+ejemplos de clases de objetos reales son sobre lo que un sistema se
 diseña. Durante el proceso del diseño de las clases se toman las propiedades
 que identifican como único al objeto y otras propiedades adicionales como
 datos que corresponden al objeto. El diagrama de clases incluye mucha más
 información como la relación entre un objeto y otro, la herencia de
-propiedades de otro objeto, conjuntos de operaciones/propiedades que son
+propiedades de otro objeto y conjuntos de operaciones/propiedades que son
 implementadas para una interfaz.
+
+El diagrama de clases de nuestro sistema se puede observar en la figura
+\ref{dclases}.
+
+\begin{sidewaystable}
+\imagen{GDRPI.png}{20}{Diagrama de clases del sistema GDRPI}{dclases}
+\end{sidewaystable}
 
 \section{Diagrama relacional}
 Es el modelo más utilizado en la actualidad para modelar problemas reales y 
@@ -373,7 +383,9 @@ aunque posteriormente éstos puedan ser almacenados de múltiples formas para
 aprovechar características físicas concretas de la máquina sobre la que se
 implante la base de datos realmente.
 
-\imagen{MRE.pdf}{15}{Diagrama Relacional}{}{}
+El diagrama relacional del sistema \emph{GDRPI} se representa en la figura
+\ref{drel}. 
+\imagen{MRE.pdf}{13}{Diagrama Relacional}{drel}
 
 \chapter{Implementación}
 
