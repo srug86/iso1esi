@@ -223,23 +223,85 @@ secretario, los cuales contienen:
 
 \section{Diagramas de secuencia}
 
-\subsection{Entrada al sistema correcta}
-
-\subsection{Entrada al sistema errónea}
+\subsection{Entrada al sistema}
+La vista inicial del sistema muestra una pantalla en la que se pide el nombre
+de usuario y la contraseña. Para autentificarse, el usuario rellenará estos
+campos y aceptará. El sistema recogerá los datos y los comprobará con los
+existentes en una tabla de la base de datos que contiene los datos de todos
+los usuarios. En caso de haber correspondencia de datos, el usuario podrá
+visualizar la interfaz correspondiente a su estatus dentro del sistema. En
+caso de no haber correspondencia, el sistema mostrará el mensaje: ''usuario
+o contraseña incorrectas´´.
 
 \subsection{Secretario introduce paquete de proyectos}
+Partimos de la base de que el secretario se ha autentificado en el sistema y
+tiene acceso a la vista general del secretario.
+
+La vista general del secretario accede al sistema para proporcionarle una
+lista con los paquetes de proyectos introducidos en el sistema. En este caso
+el secretario le da a introducir nuevo paquete y completa los campos
+pertinentes que lo identificarán. Una vez completada la operación, el
+coordinador acepta y el sistema almacena el nuevo paquete vacío y actualiza
+la lista mostrada de paquetes de proyectos. A continuación, el secretario
+selecciona el paquete de proyectos creado y selecciona la opción de
+introducir nuevo proyecto. Uno a uno empieza a introducir los proyectos que
+forman parte del paquete y el sistema los va almacenando.
+
+Ahora el secretario se dispone a consultar la información de un paquete.
+Para ello selecciona un paquete y le da a la opción de ver y modificar. El
+sistema carga la información almacenada acerca del paquete y la muestra,
+incluyendo los proyectos asociados a dicho paquete.
+
+\subsection{Secretario crea un modelo de evaluación}
 
 \subsection{Coordinador selecciona experto para ser adjunto}
 
 \subsection{Coordinador asigna un proyecto a una subárea}
 
 \subsection{Coordinador valida informe}
+Partimos de la base de que el coordinador se ha autentificado en el sistema y
+tiene acceso a la vista general del adjunto.
+
+La vista general del coordinador accede al sistema para proporcionarle una
+lista con los proyectos asociados a su área. El coordinador selecciona uno
+de los proyectos y selecciona la opción de ver o modificar el informe del
+proyecto. El sistema carga el informe del proyecto realizada por el adjunto
+y la documentación asociada a este. Una vez conformado con el informe del
+adjunto, el coordinador le da a validar el informe final, entonces el sistema
+cambia el estado del informe a ''evaluado´´.
 
 \subsection{Adjunto busca expertos para evaluar proyecto}
+Partimos de la base de que el adjunto se ha autentificado en el sistema y
+tiene acceso a la vista general del adjunto.
+
+La vista general del adjunto accede al sistema para proporcionarle una lista
+con los proyectos asociados a su subárea. El adjunto selecciona uno de los
+proyectos de la lista y utiliza la funcionalidad de buscar experto. La 
+interfaz le muestra un campo para que el adjunto introduzca los parámetros de
+búsqueda de expertos. Una vez introducidos, el adjunto envía la señal de
+aceptar la búsqueda. El sistema utilizará los parámetros para iniciar una 
+búsqueda con los expertos que tiene almacenados en la base de datos y
+presentará una lista con los expertos que contienen las palabras clave. Por
+último, el adjunto seleccionará los expertos que desea que evalúen el 
+proyecto y aceptará la selección para que el sistema elabore una invitación
+personalizada de evaluación para cada uno de estos expertos.
 
 \subsection{Adjunto realiza informe}
 
 \subsection{Experto realiza informe}
+Partimos de la base de que el experto se ha autentificado en el sistema y
+tiene acceso a la vista general del experto.
+
+El experto solicita al sistema la lista de proyectos que tiene asignados. El
+sistema accede a una tabla en la base de datos, que relaciona los expertos con
+los proyectos que tiene asignados y le devuelve por pantalla una lista con 
+ellos. A continuación, el experto selecciona uno de los proyectos de la lista
+y el sistema recupera la información asociada a este, así como de haberlo, el
+informe realizado por el experto sobre el proyecto.
+
+El experto redactará el informe conforme al modelo que este sigue y guardará
+y finalizará su edición. El sistema almacenará dicho informe y cambiará su
+estado a ''finalizado´´.
 
 \section{Diagrama Entidad/Interrelación}
 El modelo entidad/interrelación es el modelo conceptual más utilizado para el 
