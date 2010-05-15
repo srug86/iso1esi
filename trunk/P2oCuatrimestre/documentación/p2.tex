@@ -65,26 +65,157 @@ objetivos básicos de la ingeniería del software:
   niveles de desarrollo.
 \end{itemize}
 \chapter{Especificación de requisitos}
-
 \section{Requisitos iniciales del sistema}
-\section{Análisis de requisitos del sistema}
+Se desarrolla una aplicación para la gestión distribuída de la
+revisión de proyectos de investigación, además de prestar soporte para
+distintas solicitudes (becas, acciones integradas, etc.). El sistema lo
+mantiene una agencia de evaluación de proyectos, que es la encargada
+de ofrecer una valoración de los proyectos de investigación que le envían
+distintos organismos (ministerios, comunidades autónomas, etc.). Existe un
+conjunto de áreas temáticas y cada área está compuesta por un conjunto de
+subáreas. Cada área tiene un \emph{coordinador}, que se encarga de asignar
+proyectos a cada uno de los \emph{adjuntos} de cada subárea. El
+\emph{adjunto} se encargará de asignar la evaluación de sus proyectos a los
+expertos más adecuados y de, finalmente, realizar los informes finales de
+evaluación. El sistema es utilizado por los siguientes tipos de usuario: 
 
-\section{Análisis de requisitos}
+\begin{itemize}
+\item Los \emph{expertos} realizan evaluaciones de proyectos. Reciben una 
+  invitación que pueden aceptar o declinar. Una vez que los expertos aceptan
+  la invitación, tendrán un tiempo determinado para enviar sus informes. 
+\item Los \emph{adjuntos} realizan asignaciones de proyectos a
+  \emph{expertos}. También tienen la funcionalidad de desasignar a
+  \emph{expertos} o insistir si el experto tarda demasiado en la realización
+  de un informe. Una vez recibidos los informes de los \emph{expertos}, el
+  adjunto realiza un único informe final, que se devuelve a la entidad
+  solicitante una vez validado por el \emph{coordinador} del área
+  correspondiente.     
+\item Los \emph{coordinadores} asignan proyectos a los \emph{adjuntos} y
+  realizan la supervisión de todos los informes. 
+\item El \emph{secretario} de la agencia de evaluación carga en el sistema todos
+  los documentos de los proyectos (memoria del proyecto, currículum de los
+  investigadores, texto de la convocatoria, etc.). 
+\end{itemize}
+
+\section{Análisis de requisitos del sistema}
+Tras una serie de reuniones, los requisitos finales para nuestro sistema son
+los siguientes: 
+
 \subsection{Usuarios}
+\begin{itemize}
+\item Acceden al sistema mediante un identificador, que será el dni; y una 
+contraseña, que se podrá modificar.
+\item Hay cuatro tipos: secretario, coordinador, adjunto y experto. Cada uno
+  con diferente funcionalidad y rango. 
+\item Cada usuario podrá modificar sus datos personales y tendrá una vista
+  restringida sobre la lista de proyectos dependiendo de su rango en el 
+  sistema.
+\end{itemize}
 
 \subsection{Paquete de proyectos}
+Las instituciones solicitantes mandan los proyectos en paquetes al
+secretario, los cuales contienen: 
+\begin{itemize}
+\item La convocatoria, que describe uno o varios modelos de informe de
+  evaluación que contienen los criterios de evaluación del correspondiente
+  proyecto. 
+\item Las bases del proyecto.
+\item La institución convocante.
+\item Los proyectos, que opcionalmente pueden venir clasificados por área. 
+\item Cada proyecto tendrá un plazo estipulado para que la evaluación esté
+  realizada. 
+\end{itemize}
 
 \subsection{Secretario}
+\begin{description}
+\item[Usuarios] Es el encargado de añadir, modificar y eliminar 
+  usuarios del sistema (coordinadores, adjuntos y expertos).
+\item[Coordinadores] Elegirá el coordinador de cada área.
+\item[Paquetes de proyecto] Recibe las solicitudes de evaluación de proyectos
+  en forma de paquetes de proyectos y los introduce al sistema (las bases, la
+  convocatoria, la institución convocante, los proyectos, el cual asignará al
+  área correspondiente...). También podrá modificar cualquier información
+  referente a estas solicitudes.  
+\item[Modelos de evaluación] Dependiendo de la información que contenga el
+  proyecto, elaborará unos modelos de informe de evaluación. 
+\item[Plazos expertos] Decidirá los plazos que tienen los expertos para
+  aceptar o declinar la invitación para realizar el informe de evaluación,
+  y una vez aceptada, la fecha para entregar dicho informe.
+\end{description}
 
 \subsection{Coordinador}
+\begin{itemize}
+\item Pertenece a una única área.
+\item Establece las subáreas de los proyectos que se le asignan.
+\item Dentro de su área asigna un adjunto a cada subárea.
+\item Reasigna un proyecto a otra subárea, si el adjunto se lo indica.
+\item Valida los informes pendientes que los adjuntos de su correspondiente 
+  área realizan.
+\item Puede asignar a un experto para ser adjunto de una subárea.
+\end{itemize}
 
 \subsection{Área}
+\begin{itemize}
+\item Está asociada a un único coordinador y tiene, a su vez, varias subáreas. 
+\item El número de subáreas podrá ser diferente en cada área.
+\end{itemize}
 
 \subsection{Adjunto}
+\begin{itemize}
+\item Pertenece únicamente a una subárea.
+\item Tiene una serie de proyectos asignados.
+\item Busca a los expertos especificando el área, la institución, palabras
+  clave y valoraciones en las que se prioriza la formalidad de plazos y
+  calidad de las evaluaciones. 
+\item Una vez finalizada la búsqueda, elige a uno o más expertos según
+  considere necesario y les envía un modelo de invitación predeterminada
+  mediante correo electrónico para la evaluación del proyecto.  
+\item Puede reasignar las evaluaciones si el experto declina la invitación,
+  no obtiene contestación dentro del plazo o si el experto no cumple con los
+  plazos de entrega del informe de evaluación.
+\item El adjunto puede insistir a los expertos correspondientes cuando esté
+  próxima la fecha límite de entrega del informe de evaluación.
+\item Una vez realizada las evaluaciones de los expertos, el adjunto
+  realiza un informe final teniendo en cuenta los informes de los distintos
+  expertos que hayan aceptado realizar la evaluación. Este informe final
+  debe ser validado por el coordinador de su área. 
+\item Evalúa el trabajo del experto basándose en la formalidad de los plazos
+  y la calidad de su informe. 
+\item Puede recomendar al secretario añadir expertos.
+\item Dentro de la lista de proyectos a las que los adjuntos tienen acceso,
+  tiene una sublista de los expertos que están realizando la evaluación de
+  ese proyecto.  
+\item Puede avisar al coordinador cuando el proyecto no corresponda a su
+  subárea. 
+\end{itemize}
 
 \subsection{Subárea}
+\begin{itemize}
+\item Sólo puede pertenecer a un área y tiene un único adjunto asociado.
+\end{itemize}
 
 \subsection{Expertos}
+\begin{itemize}
+\item Pueden tener asignados varios proyectos a la vez. 
+\item No pueden pertenecer a la misma institución solicitante de la evaluación.
+\item Pueden aceptar o declinar las invitaciones de evaluación de proyectos.
+\item Cuando acepte la invitación, pueden acceder a la documentación de ese
+  proyecto e ir realizando progresivamente el informe en varias sesiones. 
+\item Una vez que terminen el informe finalizan el proceso de evaluación.
+\item Reciben avisos de finalización de plazos por parte del adjunto para
+  finalizar el informe, vía correo electrónico.
+\item Cada uno tiene una serie de palabras clave asociadas a su
+  temática. Éstas palabras clave se utilizan como parámetros en las
+  búsquedas. 
+\item Tienen una lista de evaluaciones pendientes, que pueden aceptar o 
+  rechazar.
+\item El sistema avisa de los plazos que tiene el experto para aceptar o
+  declinar una invitación según definió el secretario. Además, una vez
+  aceptada dicha invitación, se le comunica los plazos de entrega del informe
+  de evaluación, también definidos por el secretario.   
+
+\end{itemize}
+
 
 \chapter{Análisis}
 
