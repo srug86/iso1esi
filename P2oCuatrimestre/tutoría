@@ -6,8 +6,8 @@
 los diagramas de secuencia.
 DUDAS
 - Requisito de la práctica/guión índice
-- Si la interfaz hay que representarla en el diagrama de clases
+- Si la interfaz hay que representarla en el diagrama de clases --> lo ideal es tener una arquitectura de 3 capas (interfaz, dominio y ...). No es necesario.
 - Se deben poner pruebas
 - Hay un modelo de evaluación por cada paquete de proyectos o para cada 
-proyecto
+proyecto --> Un paquete tiene una convocatoria. Esta convocatoria tiene unos criterios que definen el modelo de evaluación de los proyectos del paquete.
 - Como diferenciar en el diagrama de clases el primer registro de los demas
