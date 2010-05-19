@@ -1,0 +1,124 @@
+#new {
+    display: none;
+}
+
+#new .titsec {
+    font-size: 9pt;
+    text-align: left;
+    text-decoration: underline;
+    clear: both;
+}
+
+#new #menu {
+    float: left;
+    width: 250px;
+}
+
+#new #menu #convs {
+    border-bottom: 1px solid #c0c0c0;
+    margin: 0 10px 15px 0;
+}
+
+#new #menu #convs select {
+    width: 183px;
+    margin: 10px 7px 10px 0;
+}
+
+#new #menu #forms #list {
+    float: left;
+}
+
+#new #menu #forms #list a {
+    margin-left: 70px;
+}
+
+#new #menu #forms #list ul {
+    text-align: left;
+    list-style-type: circle;
+    line-height: 26px;
+    padding: 0;
+    margin: 5px 10px 14px 17px;
+}
+
+#new #menu #forms #list li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#new #menu #forms select {
+    width: 45px;
+}
+
+#new select#rad {
+    margin-left: 32px;
+}
+
+#new select#chk {
+    margin-left: 53px;
+}
+
+#new #menu #forms #adds {
+    float: left;
+}
+
+#new #menu #forms #adds ul {
+    list-style-type: none;
+    line-height: 25.5px;
+    padding: 0;
+    margin: 5px auto;
+}
+
+#new #menu #forms a, #new #menu #convs a {
+    font-size: 8pt;
+    border: 1px solid #c0c0c0;
+    color: black;
+    background-color: #f0f0f0;
+    padding: 3px 5px;
+}
+
+.convs {
+    text-align: left;
+    font-size: 10pt;
+}
+
+#new #modst {
+    overflow: auto;
+    width: 495px;
+    height: 350px;
+    float: right;
+    border-left: 1px solid #c0c0c0;
+    padding-left: 10px;
+}
+
+#new #modst .form {
+    border: 1px solid #c0c0c0;
+    width: 95%;
+    padding: 0 5px 10px 10px;
+    margin-top: 10px;
+}
+
+#new #modst .form a {
+    float: right;
+}
+
+#new #modst .sec {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#new #modst .txt {
+    text-align: left;
+}
+
+#new #modst input {
+    width: 350px;
+}
+
+#new #modst textarea {
+    width: 350px;
+    height: 200px;
+}
+
+#new #modst input.fie {
+    float: left;
+}

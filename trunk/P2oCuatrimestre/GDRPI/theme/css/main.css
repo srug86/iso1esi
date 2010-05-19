@@ -1,0 +1,106 @@
+body {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    margin: 20px auto;
+    text-align: center;
+}
+
+a:link, a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a img {
+    border: 0;
+}
+
+#container {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #C0C0C0;
+}
+
+#top {
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid #C0C0C0;
+    color: #C0C0C0;
+}
+
+#top #title {
+    float: left;
+    margin-left: 5px;
+}
+
+#top #date {
+    float: right;
+    margin-right: 5px;
+}
+
+#footer {
+    height: 117px;
+    border-top: 1px solid #C0C0C0;
+    margin: 37px 121px 0;
+}
+
+#footer #authors {
+    clear: both;
+    font-size: 7.5pt;
+    color: #C0C0C0;
+}
+
+#footer #authors a {
+    color: #C0C0C0;
+}
+
+#footer #authors a:hover {
+    color: red;
+}
+
+#footer #institutions {
+    float: left;
+    width: 425px;
+    margin: 10px auto;
+    padding-right: 15px;
+    border-right: 1px solid #C0C0C0;
+    color: #C0C0C0;
+}
+
+#footer #institutions #esi {
+    float: left;
+}
+
+#footer #institutions #uclm {
+    float: right;
+}
+
+#footer #institutions #txt {
+    font-size: 9pt;
+    margin: 5px 80px;
+    text-align: left;
+}
+
+#footer #powered {
+    float: right;
+    width: 300px;
+    margin: 6px;
+}
+
+#footer #powered img {
+    margin: 3px;
+}
+
+#footer #powered #left {
+    float: left;
+    width: 90px;
+}
+
+#footer #powered #right {
+    float: right;
+    width: 90px;
+}
