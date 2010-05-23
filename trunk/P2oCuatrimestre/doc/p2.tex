@@ -37,18 +37,20 @@ mismo.
 Dado que el enunciado fijado para la práctica no proporcionaba toda la
 información necesaria para poder desarrollarla, se han realizado
 una serie de entrevistas con el cliente para poder afianzar los requisitos
-finales de la aplicación. Éstas reuniones son fundamentales para poder
+finales de la aplicación. Estas reuniones son fundamentales para poder
 conseguir un buen análisis e ir profundizando sobre las diferencias de las
 ideas del cliente y las del equipo de síntesis y desarrollo del software, lo
 que hace un paso imprescindible para un buen diseño y una buena implementación.
 
 Además, al tratarse de un proyecto en grupo, proporciona habilidades en
 nuestra formación como ingenieros al tener que enfrentarse a un importante
-aspecto de la vida real, el trabajo en equipo. Esto tiene partes positivas y
-negativas, ya que al ser varios miembros se han de poner en común distintos
-puntos de vista y llegar a unacuerdo para poder proseguir con el desarrollo;
-pero también agiliza las etapas, ya que se pueden repartir las diferentes
-tareas a realizar del trabajo. 
+aspecto de la vida real, el trabajo en equipo. Una de las principales ventajas
+del trabajo en grupo es la división del trabajo a realizar en
+diferentes tareas, que se reparten entre los diferentes miembros del grupo y de
+esta manera, se agilizan las etapas de desarrollo. Uno de los aspectos negativos
+que conlleva el trabajo en grupo se muestra a la hora de tomar decisiones,
+puesto que cada miembro tiene un punto de vista y en ocasiones es difícil
+llegar a un acuerdo. 
 
 Con la realización de esta práctica se pretende conocer y asimilar los
 objetivos básicos de la ingeniería del software: 
@@ -66,19 +68,20 @@ objetivos básicos de la ingeniería del software:
 \end{itemize}
 \chapter{Especificación de requisitos}
 \section{Requisitos iniciales del sistema}
-Se desarrolla una aplicación para la gestión distribuída de la
+Se desarrolla una aplicación para la gestión distribuida de la
 revisión de proyectos de investigación, además de prestar soporte para
 distintas solicitudes (becas, acciones integradas, etc.). El sistema lo
 mantiene una agencia de evaluación de proyectos, que es la encargada
 de ofrecer una valoración de los proyectos de investigación que le envían
-distintos organismos (ministerios, comunidades autónomas, etc.). Existe un
-conjunto de áreas temáticas y cada área está compuesta por un conjunto de
-subáreas. Cada área tiene un \emph{coordinador}, que se encarga de asignar
-proyectos a cada uno de los \emph{adjuntos} de cada subárea. El
+distintos organismos (ministerios, universidades, empresas de investigación,
+etc.). Existe un conjunto de áreas temáticas y cada área está compuesta por un
+conjunto de subáreas. Cada área tiene un \emph{coordinador}, que se encarga de
+asignar proyectos a cada uno de los \emph{adjuntos} de cada subárea. El
 \emph{adjunto} se encargará de asignar la evaluación de sus proyectos a los
 expertos más adecuados y de, finalmente, realizar los informes finales de
-evaluación. El sistema es utilizado por los siguientes tipos de usuario: 
+evaluación. 
 
+El sistema es utilizado por los siguientes tipos de usuario: 
 \begin{itemize}
 \item Los \emph{expertos} realizan evaluaciones de proyectos. Reciben una 
   invitación que pueden aceptar o declinar. Una vez que los expertos aceptan
@@ -136,8 +139,8 @@ secretario, los cuales contienen:
   convocatoria, la institución convocante, los proyectos, el cual asignará al
   área correspondiente...). También podrá modificar cualquier información
   referente a estas solicitudes.  
-\item[Modelos de evaluación] Dependiendo de la información que contenga el
-  proyecto, elaborará unos modelos de informe de evaluación. 
+\item[Modelos de evaluación] Dependiendo de la información que contenga la
+  convocatoria, elaborará unos modelos de informe de evaluación.  
 \item[Plazos expertos] Decidirá los plazos que tienen los expertos para
   aceptar o declinar la invitación para realizar el informe de evaluación,
   y una vez aceptada, la fecha para entregar dicho informe.
@@ -447,11 +450,6 @@ conjunto de objetos reduciendo la complejidad y ayudando a entender el mundo
 real. Se pretende \emph{visualizar} los objetos que pertenecen a la
 \emph{base de datos} como entidades que tienen unos atributos y se vinculan
 mediante relaciones.
-
-El diagrama entidad/interrelación del sistema \emph{GDRPI} se muestra en la
-figura \ref{dentrel}.
-
-\imagen{ER.pdf}{14}{Diagrama Entidad/Interrelación}{dentrel}
 
 \chapter{Diseño}
 \section{Diagrama de clases}
