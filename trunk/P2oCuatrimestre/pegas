@@ -1,19 +1,24 @@
 DIAGRAMA DE CASOS DE USO
-Búsqueda proyectos --> no requiere subbúsquedas. Se busca utilizando parámetros (convocatoria, id, fecha,etc).
-Realizar/Editar informe --> Ver vista previa es un include no un extends, luego hay que cambiar el sentido de la relación. Debemos realizar una búsqueda a los informes que el supervisor tiene acceso o de los proyectos que está evaluando.
+Búsqueda proyectos --> no requiere subbúsquedas. Se busca utilizando parámetros
+(convocatoria, id, fecha,etc).
+Realizar/Editar informe --> Ver vista previa es un include no un extends, luego
+hay que cambiar el sentido de la relación. Debemos realizar una búsqueda a los
+informes que el supervisor tiene acceso o de los proyectos que está evaluando.
 Rechaza proyecto de subárea --> También necesita una búsqueda de proyectos.
 
 DIAGRAMA DE CLASES
----Poner clases con Coordinador (usuario) -- Area y Adjunto (usuario) -- Subárea. 
+---Poner clases con Coordinador (usuario) -- Area y Adjunto (usuario) --
+   Subárea.
 ---Quitar la relación Usuario -- subárea (no tiene sentido como está).
----La relación Usuario -- Paquetes de proyectos hay que quitarla porque no aporta nada.
+---La relación Usuario -- Paquetes de proyectos hay que quitarla porque no
+   aporta nada. 
 ---La relación hay que quitarla porque no aporta nada.
 ---Reflejar las fechas --> el dice que hechaba de menos las fechas en Informe.
----¿Dónde se refleja la nota que le pone el adjunto al proyecto-experto? --> añadir como campos de Informe.
-
+---¿Dónde se refleja la nota que le pone el adjunto al proyecto-experto? -->
+   añadir como campos de Informe.
 ---Hay que cambiar palabras_clave de string a lista
-
----Sacar la responsabilidad de búsqueda, asignar adjunto, asignar coordinador y añadir usuarios (opcional), que esté conectada a Usuario. Porque si está metida en la misma clase no podremos buscar usuarios dentro de un usuario.
-
----Hay que poner un gestor de búsqueda que puede tener acceso a todas las instancias de la clase usuario --> Gestor de usuarios.
-
+---Sacar la responsabilidad de búsqueda, asignar adjunto, asignar coordinador y
+   añadir usuarios (opcional), que esté conectada a Usuario. Porque si está
+   metida en la misma clase no podremos buscar usuarios dentro de un usuario.
+---Hay que poner un gestor de búsqueda que puede tener acceso a todas las
+   instancias de la clase usuario --> Gestor de usuarios. 
