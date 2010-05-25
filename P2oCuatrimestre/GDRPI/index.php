@@ -8,9 +8,9 @@ define('GDRPI', 1);
 
 /* Includes */
 include 'settings.php';
-include 'source/mysql.php';
-include 'source/loginout.php';
-include 'theme/main.php';
+include 'inc/mysql.php';
+include 'inc/loginout.php';
+include 'inc/html.php';
 
 session_start();
 $_mysql = new MySQL();
