@@ -5,7 +5,7 @@ if (!defined('GDRPI')) die(header("Location: noencontrado"));
  *   MAIN
  *   ~~~~
  */
-
+  
 function theme_view($view = null, $args = null) {
   global $_mysql, $_user;
   
@@ -64,7 +64,79 @@ function theme_view($view = null, $args = null) {
   theme_footer();
 }
 
-function theme_above($csss, $jss = array(), $onload = "") {
+  function header() {
+    global $_user;
+    
+    $type = user_type();
+    $refers = user_refers();
+    $color = user_color();
+    
+    echo '
+        <div id="header">
+          <div id="type">'.$type.'</div>
+          <div id="data">
+            <div id="refers">'.$refers.'</div>
+            <div id="photo">
+              <img src="theme/images/'.$_user['type'].'.png" title="" />
+            </div>
+          </div>
+        </div>
+             ';
+  }
+  
+  function navigator() {
+    global $_user;
+    
+    echo '
+        <div id="body">
+          <div id="left">
+            <ul>';
+    switch($_user['type']) {
+    case "secretary":
+      echo '
+              <li class="loff">Paquetes de proyectos</li>
+              <li id="lon">Modelos de evaluación</li>
+              <li class="loff">Usuarios</li>
+              <li class="loff">Áreas</li>
+              <li class="loff">Datos personales</li>';
+      break;
+      
+    case "coordinator":
+      echo '
+              <li id="lon">Proyectos</li>
+              <li class="loff">Subáreas</li>
+              <li class="loff">Datos personales</li>';
+      break;
+      
+    case "attached":
+      echo '
+              <li id="lon">Proyectos</li>
+              <li class="loff">Datos personales</li>';
+      break;
+      
+    case "expert":
+      echo '
+              <li id="lon">Proyectos</li>
+              <li class="loff">Datos personales</li>';
+      break;
+    }
+    
+    $msg = "";
+    if (isset($_SESSION['msg'])) {
+      $msg = $_SESSION['msg'];
+      unset($_SESSION['msg']);
+    }
+    echo '
+            </ul>
+          </div>
+          <div id="right">
+            <p id="msg">'.$msg.'</p>
+            <a id="logout" href="index.php?act=logout" alt="Salir">
+              <strong>[ Salir ]</strong></a>
+        ';
+  }
+
+function above($csss, $jss = array(), $onload = "") {
   global $_user;
   
   $title = "GDPRI - Gestión Distribuída de la Revisión de "
@@ -117,7 +189,7 @@ function theme_above($csss, $jss = array(), $onload = "") {
   </div>';
 }
 
-function theme_footer() {
+function footer() {
   echo '
     <div id="footer">
       <div id="institutions">
@@ -189,6 +261,77 @@ function theme_footer() {
 </body>
 </html>';
 }
+
+/*
+ *   USER
+ *   ~~~~
+ */
+
+  function user_type() {
+    global $_user;
+
+    if (!isset($_user['typetxt'])) {
+      $txt = "";
+      switch ($_user['type']) {
+      case "secretary": $txt = "Secretario"; break;
+      case "coordinator": $txt = "Coordinador"; break;
+      case "attached": $txt = "Adjunto"; break;
+      case "expert": $txt = "Experto"; break;
+      }
+      $_user['typetxt'] = $txt;
+      $_SESSION['user'] = $_user;
+    }
+
+    return $_user['typetxt'];
+  }
+
+  function user_refers() {
+    global $_uid, $_mysql, $_user;
+    
+    if (!isset($_user['refers'])) {
+      $position = "";
+      if ($_user['type'] != "secretary") {
+        $area = $_mysql->
+          field("SELECT name FROM areas WHERE id={$_user['aid']}");
+        $position = "<strong>Área</strong> $area<br />";
+        
+        if ($_user['type'] == "attached") {
+          $subarea = $_mysql->
+            field("SELECT name FROM subareas "
+                  ."WHERE aid={$_user['aid']} AND uid=$_uid"); 
+          $position .= "<strong>Subárea</strong> $subarea<br />";
+        }
+      }
+      
+      $refers = "{$_user['name']} {$_user['surnames']} "
+        ."<br />$position<strong>Tlf</strong> {$_user['phone']}<br />"
+        ."<strong>E-mail</strong> {$_user['email']}<br />"
+        ."{$_user['institution']}";
+      
+      $_user['refers'] = $refers;
+      $_SESSION['user'] = $_user;
+    }
+    
+    return $_user['refers'];
+  }
+  
+  function user_color() {
+    global $_user;
+    
+    if (!isset($_user['color'])) {
+      $color = "";
+      switch ($_user['type']) {
+      case "secretary": $color = "#db871a"; break; //ff950e
+      case "coordinator": $color = "#6e407b"; break; //
+      case "attached": $color = "green"; break;
+      case "expert": $color = "#004586"; break;
+      }
+      $_user['color'] = $color;
+      $_SESSION['user'] = $_user;
+    }
+    
+    return $_user['color'];
+  }
 
 /*
  *   PROJECTS
@@ -477,3 +620,49 @@ function list_models() {
 </div>
   ';
 }
+
+/*
+ *   LOGIN
+ *   ~~~~~
+ */
+
+function login_header() {
+  echo '
+        <div id="header" style="background-color: red;">
+          <div id="type">Acceso</div>
+        </div>
+        ';
+}
+
+function login_body($error = false) {
+  global $_uid, $_op;
+  
+  $error = $error ? "Usuario o contraseña incorrecta" : "";
+
+  echo '<div id="body">
+          <div id="error">'.$error.'</div>
+          <div id="loginform">
+            <form action="index.php?act=login" method="post" name="acceso">
+	      <table>
+	        <tr>
+                  <td class="tright"><b>ID Usuario</b></td>
+		  <td class="tleft"><input type="text" name="userid" /></td>
+                </tr>
+  	        <tr>
+                  <td class="tright"><b>Contraseña</b></td>
+                  <td class="tleft"><input type="password" name="pass" /></td>
+                </tr>
+	        <tr>
+                  <td colspan="2">
+                    <input type="checkbox" value="1" name="remind" /> 
+                    Recordarme &nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="Entrar" /></td></tr>
+	      </table>
+	    </form>
+	  </div>
+	  <div id="forgot">
+            <a href="" alt="">¿Ha olvidado su contraseña?</a></div>
+        </div>
+        ';
+}
+
