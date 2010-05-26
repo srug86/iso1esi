@@ -61,6 +61,8 @@ function theme_view($view = null, $args = null) {
 
 function theme_above($csss, $jss = array(), $onload = "") {
   global $_user;
+
+  require_once 'users.php';
   
   $title = "GDPRI - Gestión Distribuída de la Revisión de "
     ."Proyectos de Investigación";
