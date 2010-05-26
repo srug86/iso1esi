@@ -235,14 +235,20 @@ mediante su interacción con los usuarios y/u otros sistemas. Los diagramas de
 casos de uso se utilizan para ilustrar los requerimientos del sistema al
 mostrar cómo reacciona a eventos que se producen en su ámbito o en él mismo.
 
+El diagrama de casos de uso de nuestro sistema se puede observar en la figura
+\ref{dcasouso}.
+
+\imagen{Casos.png}{14}{Diagrama de casos de uso del sistema GDRPI}{dcasouso}
+
 \section{Diagramas de secuencia}
 Un \emph{diagrama de secuencia} muestra la interacción de un conjunto de
 objetos en una aplicación a través del tiempo y se modela para cada método de
 la clase. Mientras que el \emph{diagrama de casos de uso} permite el modelado
-de una vista \emph{business} del escenario, el diagrama de secuencia contiene
-detalles de implementación del escenario, incluyendo los objetos y clases que
-se usan para implementar el escenario, y mensajes intercambiados entre los
-objetos.
+de una vista \emph{business}\footnote{Vista génerica de la implementación del
+escenario, no contiene detalles específicos.} del escenario, el diagrama de 
+secuencia contiene detalles de implementación del escenario, incluyendo los 
+objetos y clases que se usan para implementar el escenario, y mensajes 
+intercambiados entre los objetos.
 
 Típicamente uno examina la descripción de un caso de uso para determinar qué
 objetos son necesarios para la implementación del escenario. Si tienes
@@ -290,7 +296,7 @@ incluyendo los proyectos asociados a dicho paquete.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{SecIntPaq}}.
 
-\imagen{SecIntPaq.png}{9}{Secretario
+\imagen{SecIntPaq.png}{10}{Secretario
 introduce un paquete de proyectos y consulta su contenido}{SecIntPaq}
 
 \subsection{Secretario crea un modelo de evaluación}
@@ -333,7 +339,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooExpAdj}}.
 
 \imagen{CooAdjSub.png}
-{9}{Coordinador selecciona a un experto para ser adjunto de una subárea}
+{10}{Coordinador selecciona a un experto para ser adjunto de una subárea}
 {CooExpAdj}
 
 \subsection{Coordinador asigna un proyecto a una subárea}
@@ -369,7 +375,7 @@ cambia el estado del informe a ``evaluado''.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooValInf}}.
 
-\imagen{CooValInf.png}{9}{Coordinador valida informe de
+\imagen{CooValInf.png}{10}{Coordinador valida informe de
 evaluación}{CooValInf}
 
 \subsection{Adjunto busca expertos para evaluar proyecto}
@@ -392,7 +398,7 @@ expertos.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{AdjBusExp}}.
 
-\imagen{AdjBusExp.png}{9}
+\imagen{AdjBusExp.png}{10}
 {Adjunto busca expertos para evaluar proyecto}{AdjBusExp}
 
 \subsection{Adjunto realiza informe}
@@ -414,7 +420,7 @@ el contenido del informe y finalmente lo confirmará mediante la opción de
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{AdjReaInf}}.
 
-\imagen{AdjReaInf.png}{9}{Adjunto realiza informe de evaluación}
+\imagen{AdjReaInf.png}{10}{Adjunto realiza informe de evaluación}
 {AdjReaInf}
 
 \subsection{Experto realiza informe}
@@ -434,7 +440,7 @@ edición. Finalmente, El sistema almacena dicho informe y cambia su estado a
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{ExpReaInf}}.
 
-\imagen{ExpReaInf.png}{9}{Experto realiza informe de evaluación}
+\imagen{ExpReaInf.png}{10}{Experto realiza informe de evaluación}
 {ExpReaInf}
 
 \chapter{Diseño}
@@ -460,7 +466,7 @@ El diagrama de clases de nuestro sistema se puede observar en la figura
 \ref{dclases}.
 
 \begin{sidewaystable}
-\imagen{GDRPI.png}{20}{Diagrama de clases del sistema GDRPI}{dclases}
+\imagen{Clases.png}{20}{Diagrama de clases del sistema GDRPI}{dclases}
 \end{sidewaystable}
 
 \section{Diagrama relacional}
@@ -494,5 +500,8 @@ El diagrama relacional del sistema \emph{GDRPI} se representa en la figura
     Torres Triviño, Juan Miguel           & 20\% \\
   \end{tabular}
 \end{center}
+
+\bibliographystyle{plain} 
+\bibliography{iso2}
 
 \end{document}
