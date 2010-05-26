@@ -75,8 +75,8 @@ function struct_report($st, $data) {
     foreach ($sec['els'] as $j => $el) {
       $type = key($el);
       $el = $el[$type];
-      $datrep = isset($data[$i]['els'][$j][$type]) ?
-        $data[$i]['els'][$j][$type] : "";
+      $datrep = isset($data[$nsec]['els'][$nel][$type]) ?
+        $data[$nsec]['els'][$nel][$type] : "";
 
       switch ($type) {
       case "are":
@@ -134,36 +134,53 @@ function view_report() {
 
   $id = $_POST['id'];
 
-  $r = $_mysql->row("SELECT p.name as pname, u.name, u.surnames, "
-                    ."em.structure, er.data"
-                    ." FROM eval_models em, eval_reports er, users u, "
-                    ."projects p, `experts-projects` ep WHERE er.id=$id AND "
-                    ."er.emid=em.id AND ep.rid=er.id AND ep.ppid=p.pid AND "
-                    ."ep.pid=p.id AND ep.uid=u.id");
+  if (preg_match('/^pp([[:digit:]]+)p([[:digit:]]+)$/', $id, $matches)) {
+    $pp = $matches[1];
+    $p = $matches[2];
+    $r = $_mysql->row("SELECT p.name as pname, u.name, u.surnames, "
+                      ."em.structure, p.final_report as data FROM eval_models "
+                      ."em, users u, projects p WHERE p.pid=$pp AND p.id=$p "
+                      ."AND em.id=p.emid AND u.aid=p.aid AND "
+                      ."u.type='coordinator'");
+  }
+  else
+    $r = $_mysql->row("SELECT p.name as pname, u.name, u.surnames, "
+                      ."em.structure, er.data"
+                      ." FROM eval_models em, eval_reports er, users u, "
+                      ."projects p, `experts-projects` ep WHERE er.id=$id AND "
+                      ."er.emid=em.id AND ep.rid=er.id AND ep.ppid=p.pid AND "
+                      ."ep.pid=p.id AND ep.uid=u.id");
 
   $st = unserialize($r['structure']);
   $data = unserialize($r['data']);
 
   $txt = "";
-  foreach ($st as $i => $sec) {
-    $txt .= '<p class="sec">'.($i+1).'. '.$sec['txt'].'</p>';
-    foreach ($sec['els'] as $j => $el) {
-      $type = key($el);
-      $el = $el[$type];
-      $datrep = isset($data[$i]['els'][$j][$type]) ?
-        $data[$i]['els'][$j][$type] : "";
+  if (!$data) $txt = "El informe de evaluación está vacío";
+  else {
+    $nsec = 0;
+    foreach ($st as $i => $sec) {
+      $txt .= '<p class="sec">'.($i+1).'. '.$sec['txt'].'</p>';
+      $nel = 0;
+      foreach ($sec['els'] as $j => $el) {
+        $type = key($el);
+        $el = $el[$type];
+        $datrep = isset($data[$nsec]['els'][$nel][$type]) ?
+          $data[$nsec]['els'][$nel][$type] : "";
 
-      switch ($type) {
-      case "are": $txt .= '<p>'.$datrep.'</p>'; break;
-      case "fie": $txt .= '<p>'.$el.'</p>'; break;
-      case "lst": $txt .= '<p>'.$datrep == "" ? $el[$datrep] : ""
-        .'</p>'; break;
-      case "rad": $txt .= '<p>'.$el[$datrep].'</p>'; break;
-      case "chk":
-        foreach ($el as $k => $str)
-          if (isset($datrep[$k])) $txt .= '<p>'.$str.'</p>';
-        break;
+        switch ($type) {
+        case "are": $txt .= '<p>'.$datrep.'</p>'; break;
+        case "fie": $txt .= '<p>'.$el.'</p>'; break;
+        case "lst": $txt .= '<p>'.$datrep != "" ? $el[$datrep] : ""
+          .'</p>'; break;
+        case "rad": $txt .= '<p>'.$el[$datrep].'</p>'; break;
+        case "chk":
+          foreach ($el as $k => $str)
+            if (isset($datrep[$k])) $txt .= '<p>'.$str.'</p>';
+          break;
+        }
+        $nel++;
       }
+      $nsec++;
     }
   }
 

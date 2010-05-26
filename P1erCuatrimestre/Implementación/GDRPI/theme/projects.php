@@ -105,7 +105,7 @@ function attached_projects() {
     if (!$locked)
       echo '<input type="checkbox" name="'.$id.'" value="'.$eval.'" />';
     else
-      echo '<a href="javascript:view_report('.$id.')"
+      echo '<a href="javascript:view_report(\''.$id.'\')"
                    alt="Ver informe de evaluación">
                 <img src="theme/images/view.png" alt="" /></a>';
 
