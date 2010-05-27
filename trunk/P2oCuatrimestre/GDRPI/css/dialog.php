@@ -1,9 +1,13 @@
 <?php
 header("Content-Type: text/css; charset=UTF-8");
 
+include '../inc/user.php';
 session_start();
-$type = $_SESSION['user']['type'];
-$color = $_SESSION['user']['color'];
+$type = $color = null;
+if (isset($_SESSION['user'])) {
+  $type = $_SESSION['user']->getType();
+  $color = $_SESSION['user']->getColor();
+}
 ?>
 
 /*
@@ -65,27 +69,27 @@ $color = $_SESSION['user']['color'];
 ----------------------------------*/
 .ui-widget { font-family: Arial,sans-serif; font-size: 1.1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Arial,sans-serif; font-size: 1em; }
-.ui-widget-content { background:#FFFFFF url(images/ui-bg_flat_75_ffffff_40x100.png) repeat-x scroll 50% 50%; border:1px solid #EEEEEE; color:#333333; }
+.ui-widget-content { background:#FFFFFF url(img/ui-bg_flat_75_ffffff_40x100.png) repeat-x scroll 50% 50%; border:1px solid #EEEEEE; color:#333333; }
 .ui-widget-content a { color: #333333; }
-.ui-widget-header { border: 1px solid #c0c0c0; background: <? echo $color; ?> url(images/ui-bg_highlight-soft_15_cc0000_1x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-widget-header { border: 1px solid #c0c0c0; background: <? echo $color; ?> url(img/ui-bg_highlight-soft_15_cc0000_1x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
 .ui-widget-header a { color: #ffffff; }
 
 /* Interaction states
 ----------------------------------*/
-.ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #d8dcdf; background: #eeeeee url(images/ui-bg_highlight-hard_100_eeeeee_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #004276; outline: none; }
+.ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #d8dcdf; background: #eeeeee url(img/ui-bg_highlight-hard_100_eeeeee_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #004276; outline: none; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #004276; text-decoration: none; outline: none; }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 1px solid #cdd5da; background: #f6f6f6 url(images/ui-bg_highlight-hard_100_f6f6f6_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #111111; outline: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 1px solid #cdd5da; background: #f6f6f6 url(img/ui-bg_highlight-hard_100_f6f6f6_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #111111; outline: none; }
 .ui-state-hover a, .ui-state-hover a:hover { color: #111111; text-decoration: none; outline: none; }
-.ui-state-active, .ui-widget-content .ui-state-active { border: 1px solid #eeeeee; background: #ffffff url(images/ui-bg_flat_65_ffffff_40x100.png) 50% 50% repeat-x; font-weight: bold; color: <? echo $color; ?>; outline: none; }
+.ui-state-active, .ui-widget-content .ui-state-active { border: 1px solid #eeeeee; background: #ffffff url(img/ui-bg_flat_65_ffffff_40x100.png) 50% 50% repeat-x; font-weight: bold; color: <? echo $color; ?>; outline: none; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: <? echo $color; ?>; outline: none; text-decoration: none; }
 
 /* Icons
 ----------------------------------*/
 /* states and images */
-.ui-icon { width: 16px; height: 16px; background-image: url(../images/x-<? echo $type; ?>.png); }
-.ui-widget-content .ui-icon { background-image: url(../images/grid-<? echo $type; ?>.png); }
-.ui-widget-header .ui-icon { background-image: url(../images/x-white.png); }
-.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(../images/x-<? echo $type; ?>.png); }
+.ui-icon { width: 16px; height: 16px; background-image: url(../img/x-<? echo $type; ?>.png); }
+.ui-widget-content .ui-icon { background-image: url(../img/grid-<? echo $type; ?>.png); }
+.ui-widget-header .ui-icon { background-image: url(../img/x-white.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(../img/x-<? echo $type; ?>.png); }
 /* positioning */
 .ui-icon-closethick { background-position: 4px 4px; }
 

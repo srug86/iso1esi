@@ -5,7 +5,7 @@ class Project() {
   private $pid, $ppid, $name, $memory, $aid, $sid, $state, $invit_time,
     $eval_time, $mid, $final_report;
   
-  function __contruct__() {
+  function __construct() {
 
   }
 }

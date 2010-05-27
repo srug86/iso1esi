@@ -1,10 +1,19 @@
 <?php
-if (!defined('GDRPI')) die(header("Location: noencontrado"));
+class Area {
+  private $aid, $name;
 
-class Area() {
-  private $aid, $name, $coordinator;
+  public function __construct($id) {
+    global $mysql;
 
-  function __contruct__() {
+    $r = $mysql->row("SELECT * FROM areas WHERE id=$id");
+    $this->aid = $r['id']; $this->name = $r['name'];
+  }
 
+  public function getName() {
+    return $this->name;
+  }
+
+  public function getAid() {
+    return $this->aid;
   }
 }

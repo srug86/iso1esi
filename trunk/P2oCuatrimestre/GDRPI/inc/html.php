@@ -2,163 +2,155 @@
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
 /*
- *   MAIN
+ *   HTML
  *   ~~~~
  */
   
-function theme_view($view = null, $args = null) {
-  global $_mysql, $_user;
+function default_() {
+  global $mysql, $user;
   
-  if ($view) {
-    $csss = array("users.php", "login.css");
-    theme_above($csss);
-    include 'theme/login.php';
-    login_header();
-    login_body($args);
+  switch ($user->getType()) {
+  case "secretary":
+    $css = array("users.php", "models.css", "dialog.php");
+    $js = array("models.js", "dialog.js");
+    above($css, $js);
+    header_();
+    navigator();
+    ModelManager::list_models();
+    break;
+    
+  case "coordinator":
+    $css = array("users.php", "reports.css");
+    $js = array("reports.js");
+    above($css, $js);
+    header_();
+    navigator();
+    ProjectManager::coordinator_projects();
+    break;
+    
+  case "attached":
+    $css = array("users.php", "reports.css", "dialog.php");
+    $js = array("projects.js", "reports.js", "dialog.js");
+    above($css, $js);
+    header_();
+    navigator();
+    ProjectManager::attached_projects();
+    break;
+    
+  case "expert":
+    $css = array("users.php", "reports.css", "dialog.php");
+    $js = array("reports.js", "dialog.js"); 
+    above($css, $js);
+    header_();
+    navigator();
+    ProjectManager::expert_projects();
+    break;
   }
-  else {
-    include 'theme/users.php';
-
-    switch ($_user['type']) {
-    case "secretary":
-      $csss = array("users.php", "evalmodels.css", "dialog.php");
-      $jss = array("evalmodels.js", "dialog.js");
-      theme_above($csss, $jss);
-      users_header();
-      user_nav();
-      include 'theme/evaluation_models.php';
-      evaluation_models();
-      break;
-
-    case "coordinator":
-      $csss = array("users.php", "evalreports.css");
-      $jss = array("evalreports.js");
-      theme_above($csss, $jss);
-      users_header();
-      user_nav();
-      include 'theme/projects.php';
-      coordinator_projects();
-      break;
-
-    case "attached":
-      $csss = array("users.php", "evalreports.css", "dialog.php");
-      $jss = array("projects.js", "evalreports.js", "dialog.js");
-      theme_above($csss, $jss);
-      users_header();
-      user_nav();
-      include 'theme/projects.php';
-      attached_projects();
-      break;
-
-    case "expert":
-      $csss = array("users.php", "evalreports.css", "dialog.php");
-      $jss = array("evalreports.js", "dialog.js");
-      theme_above($csss, $jss);
-      users_header();
-      user_nav();
-      include 'theme/projects.php';
-      expert_projects();
-      break;
-    }                 
-  }
-  theme_footer();
+  footer();
 }
 
-  function header() {
-    global $_user;
-    
-    $type = user_type();
-    $refers = user_refers();
-    $color = user_color();
-    
-    echo '
-        <div id="header">
-          <div id="type">'.$type.'</div>
-          <div id="data">
-            <div id="refers">'.$refers.'</div>
-            <div id="photo">
-              <img src="theme/images/'.$_user['type'].'.png" title="" />
-            </div>
+function header_() {
+  global $user;
+  
+  $type = $user->getType();
+  $typetxt = $user->getTypeTxt();
+  $refers = $user->getRefers();
+  
+  echo '
+      <div id="header">
+        <div id="type">'.$typetxt.'</div>
+        <div id="data">
+          <div id="refers">'.$refers.'</div>
+          <div id="photo">
+            <img src="img/'.$type.'.png" title="" />
           </div>
         </div>
-             ';
+      </div>
+           ';
+}
+
+function navigator() {
+  global $user;
+  
+  echo '
+      <div id="body">
+        <div id="left">
+          <ul>';
+  switch($user->getType()) {
+  case "secretary":
+    echo '
+            <li class="loff">Paquetes de proyectos</li>
+            <li id="lon">Modelos de evaluación</li>
+            <li class="loff">Usuarios</li>
+            <li class="loff">Áreas</li>
+            <li class="loff">Datos personales</li>';
+    break;
+    
+  case "coordinator":
+    echo '
+            <li id="lon">Proyectos</li>
+            <li class="loff">Subáreas</li>
+            <li class="loff">Datos personales</li>';
+    break;
+    
+  case "attached":
+    echo '
+            <li id="lon">Proyectos</li>
+            <li class="loff">Datos personales</li>';
+    break;
+    
+  case "expert":
+    echo '
+            <li id="lon">Proyectos</li>
+            <li class="loff">Datos personales</li>';
+    break;
   }
   
-  function navigator() {
-    global $_user;
-    
-    echo '
-        <div id="body">
-          <div id="left">
-            <ul>';
-    switch($_user['type']) {
-    case "secretary":
-      echo '
-              <li class="loff">Paquetes de proyectos</li>
-              <li id="lon">Modelos de evaluación</li>
-              <li class="loff">Usuarios</li>
-              <li class="loff">Áreas</li>
-              <li class="loff">Datos personales</li>';
-      break;
-      
-    case "coordinator":
-      echo '
-              <li id="lon">Proyectos</li>
-              <li class="loff">Subáreas</li>
-              <li class="loff">Datos personales</li>';
-      break;
-      
-    case "attached":
-      echo '
-              <li id="lon">Proyectos</li>
-              <li class="loff">Datos personales</li>';
-      break;
-      
-    case "expert":
-      echo '
-              <li id="lon">Proyectos</li>
-              <li class="loff">Datos personales</li>';
-      break;
-    }
-    
-    $msg = "";
-    if (isset($_SESSION['msg'])) {
-      $msg = $_SESSION['msg'];
-      unset($_SESSION['msg']);
-    }
-    echo '
-            </ul>
-          </div>
-          <div id="right">
-            <p id="msg">'.$msg.'</p>
-            <a id="logout" href="index.php?act=logout" alt="Salir">
-              <strong>[ Salir ]</strong></a>
-        ';
+  $msg = "";
+  if (isset($_SESSION['msg'])) {
+    $msg = $_SESSION['msg'];
+    unset($_SESSION['msg']);
   }
+  echo '
+          </ul>
+        </div>
+        <div id="right">
+          <p id="msg">'.$msg.'</p>
+          <a id="logout" href="index.php?act=logout" alt="Salir">
+            <strong>[ Salir ]</strong></a>
+      ';
+}
 
-function above($csss, $jss = array(), $onload = "") {
-  global $_user;
+function above($css, $js = array(), $onload = "") {
+  global $user;
+
   
   $title = "GDPRI - Gestión Distribuída de la Revisión de "
     ."Proyectos de Investigación";
-  if ($_user) $title = $_user['name']." ".$_user['surnames']." | "
-                .user_type($_user['type'])." | ".$title;
+  
+  if ($user) {
+    $name = $user->getName();
+    $surnames = $user->getSurNames();
+    $typetxt = $user->getTypeTxt();
+
+    $title = $name." ".$surnames." | ".$typetxt." | ".$title;
+  }
 
   /* Styles */
   $styles = "\n".'<link rel="stylesheet" type="text/css" '
-    .'href="theme/css/main.css">'."\n";
-  foreach ($csss as $style) {
+    .'href="css/main.css">'."\n";
+  foreach ($css as $style) {
     $styles .= '<link rel="stylesheet" type="text/css" '
-      .'href="theme/css/'.$style.'">'."\n";
+      .'href="css/'.$style.'">'."\n";
   }
 
   /* JavaScripts */
   $javascripts = "\n"
     .'<script type="text/javascript" src="js/jquery.js"></script>'."\n"
     .'<script type="text/javascript" src="js/main.js"></script>'."\n";
-  foreach ($jss as $js) {
+  foreach ($js as $j) {
     $javascripts .= '<script type="text/javascript" src="js/'
-      .$js.'"></script>'."\n";
+      .$j.'"></script>'."\n";
   }
 
   $date = time();
@@ -195,12 +187,12 @@ function footer() {
       <div id="institutions">
         <div id="esi">
           <a target="_blank" href="http://www.esi.uclm.es" alt="UCLM">
-            <img src="theme/images/esi-g.png" width="63" height="70"
+            <img src="img/esi-g.png" width="63" height="70"
                  title="Escuela Superior de Informática" /></a>
         </div>
         <div id="uclm">
           <a target="_blank" href="http://www.uclm.es" alt="ESI UCLM">
-            <img src="theme/images/uclm-g.jpg" width="105" height="70"
+            <img src="img/uclm-g.jpg" width="105" height="70"
                  title="Universidad de Castilla-La Mancha" /></a>
         </div>
         <div id="txt">Escuela Superior de Informática<br />
@@ -212,26 +204,26 @@ function footer() {
         <div id="left">
           <a target="_blank" href="http://validator.w3.org/check?uri=referer"
              alt="XHTML 1.0 Estricto Válido">
-            <img src="theme/images/valid-xhtml10-g.gif" width="88" height="31"
+            <img src="img/valid-xhtml10-g.gif" width="88" height="31"
                title="XHTML 1.0 Estricto Válido" /></a>
           <a target="_blank" alt="CSS Válido"
              href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img src="theme/images/valid-css-g.gif" width="88" height="31"
+            <img src="img/valid-css-g.gif" width="88" height="31"
                  title="CSS Válido" /></a>
         </div>
         <div id="right">
           <a target="_blank" href="http://www.mysql.com/" alt="MySQL">
-            <img src="theme/images/mysql-g.gif" width="88" height="31"
+            <img src="img/mysql-g.gif" width="88" height="31"
                title="MySQL" /></a>
           <a target="_blank" href="http://jquery.com/" alt="jQuery">
-          <img src="theme/images/jquery-g.png" width="88" height="31"
+          <img src="img/jquery-g.png" width="88" height="31"
                title="jQuery" /></a>
         </div>
         <a target="_blank" href="http://www.apache.com/" alt="Apache 2.0">
-          <img src="theme/images/apache-g.gif" width="88" height="31"
+          <img src="img/apache-g.gif" width="88" height="31"
                title="Apache 2.0" /></a>
         <a target="_blank" href="http://www.php.net/" alt="PHP">
-          <img src="theme/images/php-g.gif" width="88" height="31"
+          <img src="img/php-g.gif" width="88" height="31"
                title="PHP" /></a>
       </div>
       <div id="authors">
@@ -263,368 +255,17 @@ function footer() {
 }
 
 /*
- *   USER
- *   ~~~~
- */
-
-  function user_type() {
-    global $_user;
-
-    if (!isset($_user['typetxt'])) {
-      $txt = "";
-      switch ($_user['type']) {
-      case "secretary": $txt = "Secretario"; break;
-      case "coordinator": $txt = "Coordinador"; break;
-      case "attached": $txt = "Adjunto"; break;
-      case "expert": $txt = "Experto"; break;
-      }
-      $_user['typetxt'] = $txt;
-      $_SESSION['user'] = $_user;
-    }
-
-    return $_user['typetxt'];
-  }
-
-  function user_refers() {
-    global $_uid, $_mysql, $_user;
-    
-    if (!isset($_user['refers'])) {
-      $position = "";
-      if ($_user['type'] != "secretary") {
-        $area = $_mysql->
-          field("SELECT name FROM areas WHERE id={$_user['aid']}");
-        $position = "<strong>Área</strong> $area<br />";
-        
-        if ($_user['type'] == "attached") {
-          $subarea = $_mysql->
-            field("SELECT name FROM subareas "
-                  ."WHERE aid={$_user['aid']} AND uid=$_uid"); 
-          $position .= "<strong>Subárea</strong> $subarea<br />";
-        }
-      }
-      
-      $refers = "{$_user['name']} {$_user['surnames']} "
-        ."<br />$position<strong>Tlf</strong> {$_user['phone']}<br />"
-        ."<strong>E-mail</strong> {$_user['email']}<br />"
-        ."{$_user['institution']}";
-      
-      $_user['refers'] = $refers;
-      $_SESSION['user'] = $_user;
-    }
-    
-    return $_user['refers'];
-  }
-  
-  function user_color() {
-    global $_user;
-    
-    if (!isset($_user['color'])) {
-      $color = "";
-      switch ($_user['type']) {
-      case "secretary": $color = "#db871a"; break; //ff950e
-      case "coordinator": $color = "#6e407b"; break; //
-      case "attached": $color = "green"; break;
-      case "expert": $color = "#004586"; break;
-      }
-      $_user['color'] = $color;
-      $_SESSION['user'] = $_user;
-    }
-    
-    return $_user['color'];
-  }
-
-/*
- *   PROJECTS
- *   ~~~~~~~~
- */
-
-function coordinator_projects() {
-  global $_mysql, $_uid, $_user;
-
-  $r = $_mysql->rows("SELECT p.id, p.pid, p.name, p.state, p.aid, p.said "
-                     ."FROM projects p, users u WHERE p.aid=u.aid "
-                     ."AND u.id=$_uid ORDER BY p.id, p.pid DESC");
-  echo '
-    <div id="content">
-      <div id="projects">
-        <div id="buttons">
-          <a href="javascript:make_report(\'coordinator\');"
-             alt="">Ver / Modificar informe</a>
-          <a href="javascript:end_report(\'coordinator\');"
-             alt="">Validar informe</a>
-          <a href="javascript:woimp();" alt="">Asignar subárea</a>
-        </div>
-        <div class="title">Proyectos asignados</div>
-        <table>
-          <tr id="trtop">
-            <td></td><td>Nombre</td><td>Subárea</td>
-            <td>Estado de la evaluación</td>
-          </tr>';
-
-  foreach ($r as $row) {
-    $eval = 0;
-    switch ($row['state']) {
-    case "without_eval": $state = "Sin evaluación"; break;
-    case "experts_evaluating": $state = "Expertos evaluando"; break;
-    case "evaluated_experts": $state = "Evaluado por los expertos"; break;
-    case "evaluated_attached": $state = "Evaluado por el adjunto"; break;
-    case "validated_coordinator":
-      $eval = 1; $state = "Validado por el coordinador"; break;
-    }
-
-    if ($row['said']) 
-      $subarea = $_mysql->field("SELECT name FROM subareas WHERE "
-                                ."id={$row['said']} AND aid={$row['aid']}");
-    else $subarea = "Sin asignar";
-    
-    $id = 'pp'.$row['pid'].'p'.$row['id'];
-    echo '
-          <tr>
-            <td>
-              <input type="checkbox" name="'.$id.'" value="'.$eval.'" />
-            </td>
-            <td>'.$row['name'].'</td><td>'.$subarea.'</td><td>'.$state.'</td>
-          </tr>';
-  }
-  echo '
-        </table>
-      </div>
-    </div>
-  </div>
-  <div style="clear: both"></div>
-</div>
-        ';
-}
-
-function attached_projects() {
-  global $_mysql, $_uid, $_user;
-
-  $r = $_mysql->rows("SELECT p.id, p.pid, p.name, s.name AS sub, p.state "
-                     ."FROM projects p, subareas s "
-                     ."WHERE s.uid=$_uid AND p.said = s.id "
-                     ."AND s.aid = p.aid ORDER BY p.id, p.pid DESC");
-  echo '
-    <div id="content">
-      <div id="reports"></div>
-      <div id="projects">
-        <div id="buttons">
-          <a href="javascript:make_report(\'attached\');"
-             alt="">Realizar informe</a>
-          <a href="javascript:end_report(\'attached\');"
-             alt="">Finalizar informe</a>
-          <a href="javascript:woimp();" alt="">Asignar expertos</a>
-          <a href="javascript:woimp();" alt="">Valorar experto</a>
-          <a href="javascript:woimp();" alt="">Subárea errónea</a>
-        </div>
-        <div class="title">Proyectos asignados</div>
-        <table>
-          <tr id="trtop">
-            <td></td><td>Exps.</td><td>Nombre</td><td>Subárea</td>
-            <td>Estado de la evaluación</td>
-          </tr>';
-
-  foreach ($r as $row) {
-    $eval = 0; $locked = false;
-    switch ($row['state']) {
-    case "without_eval": $state = "Sin evaluación"; break;
-    case "experts_evaluating": $state = "Expertos evaluando"; break;
-    case "evaluated_experts": $state = "Evaluado por los expertos"; break;
-    case "evaluated_attached":
-    $eval = 1; $state = "Evaluado por el adjunto"; break;
-    case "validated_coordinator":
-    $locked = true; $state = "Validado por el coordinador"; break;
-    }
-    $id = 'pp'.$row['pid'].'p'.$row['id'];
-    echo '
-          <tr>
-            <td>';
-    
-    if (!$locked)
-      echo '<input type="checkbox" name="'.$id.'" value="'.$eval.'" />';
-    else
-      echo '<a href="javascript:view_report('.$id.')"
-                   alt="Ver informe de evaluación">
-                <img src="theme/images/view.png" alt="" /></a>';
-
-    echo '
-            </td>
-            <td><a id="'.$id.'"
-                  href="javascript:expand(\''.$id.'\')"
-                  alt=""><img src="theme/images/expand.png" /></a></td>
-            <td>'.$row['name'].'</td><td>'.$row['sub'].'</td><td>'.$state.'</td>
-          </tr>';
-  }
-  echo '
-        </table>
-      </div>
-    </div>
-  </div>
-  <div style="clear: both"></div>
-</div>
-        ';
-}
-
-/* Table of the experts assigned to a project */
-function projects_experts() {
-  global $_mysql, $_uid;
-
-  $id = explode("p", substr($_POST['pro'], 2)); 
-
-  $r = $_mysql->rows("SELECT er.id, u2.name, u2.surnames, er.state, "
-                     ."u2.keywords "
-                     ."FROM users u1, users u2, `experts-projects` ep, "
-                     ."eval_reports er, subareas s, projects p "
-                     ."WHERE u1.id=$_uid AND u1.id=s.uid AND s.id=p.said "
-                     ."AND s.aid=p.aid AND p.id=ep.pid AND p.pid=ep.ppid "
-                     ."AND ep.uid=u2.id AND p.pid=$id[0] AND p.id=$id[1] "
-                     ."AND ep.rid=er.id ORDER BY ep.assign_date DESC");
-  echo '
-        <table>
-          <tr id="trtop">
-            <td></td><td>Nombre</td><td>Estado de la evaluación</td>
-            <td>Palabras clave</td>
-          </tr>';
-
-  foreach ($r as $row) {
-    $state = $row['state'] == "in_process" ? "En proceso" : "Terminada";
-    
-    echo '
-          <tr>
-            <td><a href="javascript:view_report('.$row['id'].')"
-                   alt="Ver informe de evaluación">
-                <img src="theme/images/view.png" alt="" /></a></td>
-            <td>'.$row['name'].' '.$row['surnames'].'</td><td>'.$state.'</td>
-            <td>'.$row['keywords'].'</td>
-          </tr>';
-  }
-  echo '
-        </table>';
-}
-
-/* Table of projects assigned to an expert */
-function expert_projects() {
-  global $_mysql, $_uid, $_user;
-
-  $r = $_mysql->rows("SELECT er.id, p.name, s.name AS sub, er.state AS erst, "
-                     ."p.state AS pst, "
-                     ."ep.assign_date, (ep.assign_date+p.eval_time*24*60*60) "
-                     ."AS eval_time FROM `experts-projects` ep, projects p, "
-                     ."eval_reports er, subareas s WHERE ep.uid=$_uid AND "
-                     ."p.said = s.id AND s.aid = p.aid "
-                     ."AND p.pid = ep.ppid AND p.id = ep.pid "
-                     ."AND er.id = ep.rid ORDER BY ep.assign_date DESC");
-  echo '
-    <div id="content">
-      <div id="reports"></div>
-      <div id="projects">
-        <div id="buttons">
-          <a href="javascript:make_report(\'expert\');"
-             alt="">Realizar evaluación</a>
-          <a href="javascript:end_report(\'expert\');"
-             alt="">Finalizar evaluación</a>
-        </div>
-        <div class="title">Proyectos asignados</div>
-        <table>
-          <tr id="trtop">
-            <td></td><td>Nombre</td><td>Subárea</td>
-            <td>Estado de la evaluación</td>
-            <td>Fecha de asignación</td><td>Fecha límite</td>
-          </tr>';
-
-  foreach ($r as $row) {
-    $atime = strftime("%e/%I/%Y", $row['assign_date']);
-    $etime = strftime("%e/%I/%Y", $row['eval_time']);
-
-    $locked = true;
-    if ($row['pst'] == "evaluated_attached") $state = "Evaluado por el adjunto";
-    elseif ($row['pst'] == "validated_coordinator")
-      $state = "Validado por el coordinador";
-    else {
-      $state = $row['erst'] == "in_process" ? "En proceso" : "Terminada";
-      $locked = false;
-      $eval = $state == "Terminada" ? 1 : 0;
-    }
-
-    echo '
-          <tr>
-            <td>';
-
-    if (!$locked)
-      echo '<input type="checkbox" name="'.$row['id'].'" value="'.$eval.'" />';
-    else
-      echo '<a href="javascript:view_report('.$row['id'].')"
-                   alt="Ver informe de evaluación">
-                <img src="theme/images/view.png" alt="" /></a>';
-
-    echo '</td>
-            <td>'.$row['name'].'</td><td>'.$row['sub'].'</td><td>'.$state.'</td>
-            <td>'.$atime.'</td><td>'.$etime.'</td>
-          </tr>';
-  }
-  echo '
-        </table>
-      </div>
-    </div>
-  </div>
-  <div style="clear: both"></div>
-</div>
-        ';
-}
-
-/*
- *   MODELS
- *   ~~~~~~
- */
-
-function list_models() {
-  global $_mysql;
-  
-  echo '
-    <div id="content">
-      <div id="evmods">
-        <div id="buttons">
-          <a href="javascript:new_model();" alt="Añadir modelo">Añadir</a>
-          <a href="javascript:mod_model();"
-             alt="Modificar modelo">Modificar</a>
-          <a href="javascript:del_model();" alt="Eliminar modelo">Eliminar</a>
-        </div>
-        <div id="new"></div>
-        <div class="title">Modelos de evaluación registrados</div>
-        <table>
-          <tr id="trtop">
-            <td></td><td>ID</td><td>Paquete de la convocatoria</td>
-            <td>Nº Proyectos</td><td>Nº Secciones</td><td>Nº Elementos</td>
-          </tr>';
-
-  $rows = $_mysql->
-    rows("SELECT e.id, p.name, e.sections, e.elements "
-         ."FROM eval_models e, projects_packages p "
-         ."WHERE p.id=e.cppid ORDER by e.id DESC");
-    
-  foreach ($rows as $r) {
-    $num = $_mysql->
-      field("SELECT count(id) FROM projects WHERE emid={$r['id']}");
-    echo '<tr><td><input type="checkbox" name="'.$r['id'].'" value="'.$num
-      .'" /></td>'
-      .'<td>'.$r['id'].'</td><td>'.$r['name'].'</td>'
-      .'<td>'.$num.'</td><td>'.$r['sections'].'</td><td>'
-      .$r['elements'].'</td></tr>';
-  }
-  
-   echo '
-        </table>
-      </div>
-    </div>
-  </div>
-  <div style="clear: both"></div>
-</div>
-  ';
-}
-
-/*
  *   LOGIN
  *   ~~~~~
  */
+
+function login_form($error = null) {
+  $css = array("users.php", "login.css");
+  above($css);
+  login_header();
+  login_body($error);
+  footer();
+}
 
 function login_header() {
   echo '

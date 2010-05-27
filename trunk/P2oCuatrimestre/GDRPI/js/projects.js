@@ -7,7 +7,7 @@ function expand(id) {
     Ajax("proexp", "#tdexps"+id, "pro="+id);
     $("#tdexps"+id).slideDown("normal");
     a.attr("href", "javascript:collapse('"+id+"')");
-    $("#"+id+" img").attr("src", "theme/images/collapse.png");
+    $("#"+id+" img").attr("src", "img/collapse.png");
 }
 
 function collapse(id) {
@@ -16,5 +16,20 @@ function collapse(id) {
             div.parent().parent().remove();
         });
     $("#"+id).attr("href", "javascript:expand('"+id+"')");
-    $("#"+id+" img").attr("src", "theme/images/expand.png");
+    $("#"+id+" img").attr("src", "img/expand.png");
+}
+
+function assign_experts() {
+    if (val_projects()) {
+        check = $("#projects table input:checkbox:checked");    
+        var id = check.attr("name");
+        expand(id);
+
+
+
+
+//             Ajax("endrep", "", "id="+id);
+//             history.go(0);
+//         }
+    }
 }

@@ -1,8 +1,9 @@
 <?php
 header("Content-Type: text/css; charset=UTF-8");
 
+include '../inc/user.php';
 session_start();
-$color = $_SESSION['user']['color'];
+$color = isset($_SESSION['user']) ? $_SESSION['user']->getColor() : "";
 ?>
 
 #header {

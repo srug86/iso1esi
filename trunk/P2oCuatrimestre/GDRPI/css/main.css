@@ -3,6 +3,7 @@ body {
     font-size: 10pt;
     margin: 20px auto;
     text-align: center;
+    background: white url(../img/background.gif) repeat scroll 0 0;
 }
 
 a:link, a:visited {
@@ -23,6 +24,7 @@ a img {
     width: 1000px;
     margin: 0 auto;
     border: 1px solid #C0C0C0;
+    background-color: white;
 }
 
 #top {
@@ -30,6 +32,7 @@ a img {
     height: 20px;
     border-bottom: 1px solid #C0C0C0;
     color: #C0C0C0;
+    background-color: white;
 }
 
 #top #title {

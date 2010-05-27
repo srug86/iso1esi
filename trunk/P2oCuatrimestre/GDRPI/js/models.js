@@ -32,7 +32,7 @@ function add_form(type) {
         els = -1;
         str += '<div id="sec'+sec+'" class="form"><a href="'
             +'javascript:del_form(\'sec'+sec+'\')"><img src="'
-            +'theme/images/x-red.png" alt=""></a><p class="sec">'+(sec+1)
+            +'img/x-red.png" alt=""></a><p class="sec">'+(sec+1)
             +'. <input type="text" name="sec['+sec+'][txt]" /></p></div>';
         $("#modst").append(str);
     }
@@ -42,7 +42,7 @@ function add_form(type) {
             els++;
             str += '<div id="sec'+sec+'el'+els+'" class="form"><a href="'
                 +'javascript:del_form(\'sec'+sec+'el'+els+'\')"><img src="'
-                +'theme/images/x-red.png" alt=""></a><br /><input type="hidden"'
+                +'img/x-red.png" alt=""></a><br /><input type="hidden"'
                 +' name="sec['+sec+'][els]['+els+']['+type+']" /><textarea '
                 +'disabled="disabled"></textarea></div>';
         }
@@ -50,7 +50,7 @@ function add_form(type) {
             els++;
             str += '<div id="sec'+sec+'el'+els+'" class="form"><a href="'
                 +'javascript:del_form(\'sec'+sec+'el'+els+'\')"><img src="'
-                +'theme/images/x-red.png" alt=""></a><br /><input type="text"'
+                +'img/x-red.png" alt=""></a><br /><input type="text"'
                 +'class="fie" name="sec['+sec+'][els]['+els+']['
                 +type+']" /><div style="clear:both"></div></div>';
         }
@@ -60,7 +60,7 @@ function add_form(type) {
                 var num = $("#"+type).attr("value");
                 str += '<div id="sec'+sec+'el'+els+'" class="form">'
                     +'<a href="javascript:del_form(\'sec'+sec+'el'+els+'\')">'
-                    +'<img src="theme/images/x-red.png" alt=""></a>';
+                    +'<img src="img/x-red.png" alt=""></a>';
                 switch (type) {
                 case "lst": 
                     str += '<p class="txt">- Lista desplegable:</p>'; break;
