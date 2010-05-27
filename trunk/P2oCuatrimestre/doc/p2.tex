@@ -28,7 +28,7 @@
 %\listoftables
 %\listoffigures
 
-\chapter*{Introducción}
+\chapter*{Prólogo}
 El objetivo de la práctica es conocer y simular el ciclo de vida seguido
 durante el desarrollo del software. Para ello se va a realizar un supuesto
 práctico que incluye análisis de requisitos, diseño e implementación del
@@ -64,6 +64,8 @@ objetivos básicos de la ingeniería del software:
 \item Las posibilidades que ofrece la reutilización del software en todos los
   niveles de desarrollo.
 \end{itemize}
+
+\part{Análisis}
 \chapter{Especificación de requisitos}
 \section{Requisitos iniciales del sistema}
 Se desarrolla una aplicación para la gestión distribuída de la
@@ -216,10 +218,7 @@ secretario, los cuales contienen:
 
 \end{itemize}
 
-
-\chapter{Análisis}
-
-\section{Diagrama de casos de uso}
+\chapter{Diagrama de casos de uso}
 Un \emph{caso de uso} es una técnica para la captura de requisitos
 potenciales de un nuevo sistema o una actualización de software. Cada caso de
 uso proporciona uno o más escenarios que indican cómo debería interactuar el
@@ -240,7 +239,7 @@ El diagrama de casos de uso de nuestro sistema se puede observar en la figura
 
 \imagen{Casos.png}{14}{Diagrama de casos de uso del sistema GDRPI}{dcasouso}
 
-\section{Diagramas de secuencia}
+\chapter{Diagramas de secuencia}
 Un \emph{diagrama de secuencia} muestra la interacción de un conjunto de
 objetos en una aplicación a través del tiempo y se modela para cada método de
 la clase. Mientras que el \emph{diagrama de casos de uso} permite el modelado
@@ -258,7 +257,7 @@ son necesarios para que se puedan seguir los pasos. Un diagrama de secuencia
 muestra los objetos que intervienen en el escenario con líneas discontinuas
 verticales, y los mensajes pasados entre los objetos como flechas horizontales.
 
-\subsection{Entrada al sistema}
+\section{Entrada al sistema}
 La vista inicial del sistema, muestra una pantalla en la que se pide el nombre
 de usuario y la contraseña. Para autentificarse, el usuario debe rellenar
 estos campos y pulsar el botón de ``Entrar''. El sistema recoge los datos y los
@@ -274,7 +273,7 @@ mostrará el mensaje: ``usuario o contraseña incorrectas''.
 \imagen{EntSisErr.png}{10}{Entrada al sistema errónea}
 {EntSisErr}
 
-\subsection{Secretario introduce paquete de proyectos}
+\section{Secretario introduce paquete de proyectos}
 Se parte de la base de que el secretario se ha autentificado en el sistema y
 tiene acceso a la vista general del secretario.
 
@@ -299,7 +298,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{SecIntPaq.png}{10}{Secretario
 introduce un paquete de proyectos y consulta su contenido}{SecIntPaq}
 
-\subsection{Secretario crea un modelo de evaluación}
+\section{Secretario crea un modelo de evaluación}
 Se parte de la base de que el secretario se ha autentificado en el sistema y
 tiene acceso a la vista general del secretario.
 
@@ -320,7 +319,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{SecCreMod.png}{10}{Secretario crea un
 modelo de evaluación}{SecCreMod}
 
-\subsection{Coordinador selecciona experto para ser adjunto}
+\section{Coordinador selecciona experto para ser adjunto}
 Se parte de la base de que el coordinador se ha autentificado en el sistema y
 tiene acceso a la vista general del coordinador.
 
@@ -342,7 +341,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 {10}{Coordinador selecciona a un experto para ser adjunto de una subárea}
 {CooExpAdj}
 
-\subsection{Coordinador asigna un proyecto a una subárea}
+\section{Coordinador asigna un proyecto a una subárea}
 Se parte de la base de que el coordinador se ha autentificado en el sistema y
 tiene acceso a la vista general del adjunto.
 
@@ -360,7 +359,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{CooProSub.png}
 {10}{Coordinador asigna un proyecto a una subárea}{CooProSub}
 
-\subsection{Coordinador valida informe}
+\section{Coordinador valida informe}
 Se parte de la base de que el coordinador se ha autentificado en el sistema y
 tiene acceso a la vista general del adjunto.
 
@@ -378,7 +377,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{CooValInf.png}{10}{Coordinador valida informe de
 evaluación}{CooValInf}
 
-\subsection{Adjunto busca expertos para evaluar proyecto}
+\section{Adjunto busca expertos para evaluar proyecto}
 Se parte de la base de que el adjunto se ha autentificado en el sistema y
 tiene acceso a la vista general del adjunto.
 
@@ -401,7 +400,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{AdjBusExp.png}{10}
 {Adjunto busca expertos para evaluar proyecto}{AdjBusExp}
 
-\subsection{Adjunto realiza informe}
+\section{Adjunto realiza informe}
 Se parte de la base de que el adjunto se ha autentificado en el sistema y
 tiene acceso a la vista general del adjunto.
 
@@ -423,7 +422,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{AdjReaInf.png}{10}{Adjunto realiza informe de evaluación}
 {AdjReaInf}
 
-\subsection{Experto realiza informe}
+\section{Experto realiza informe}
 Se parte de la base de que el experto se ha autentificado en el sistema y
 tiene acceso a la vista general del experto.
 
@@ -443,8 +442,8 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \imagen{ExpReaInf.png}{10}{Experto realiza informe de evaluación}
 {ExpReaInf}
 
-\chapter{Diseño}
-\section{Diagrama de clases}
+\part{Diseño}
+\chapter{Diagrama de clases}
 Un \emph{diagrama de clases} es un tipo de diagrama estático que describe la
 estructura de un sistema mostrando sus clases, atributos y las relaciones
 entre ellos. Los diagramas de clases son utilizados durante el proceso de
@@ -469,7 +468,7 @@ El diagrama de clases de nuestro sistema se puede observar en la figura
 \imagen{Clases.png}{20}{Diagrama de clases del sistema GDRPI}{dclases}
 \end{sidewaystable}
 
-\section{Diagrama relacional}
+\chapter{Diagrama relacional}
 Es el modelo más utilizado en la actualidad para modelar problemas reales y 
 administrar datos dinámicamente.
 
@@ -482,11 +481,271 @@ El diagrama relacional del sistema \emph{GDRPI} se representa en la figura
 \ref{drel}. 
 \imagen{MRE.pdf}{13}{Diagrama Relacional}{drel}
 
+\part{Implementación}
+
+\chapter{Manual de usuario}
+\section{Introducción}
+La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
+aplicación web que incluye todo lo necesario para conseguir una comunicación 
+activa entre el usuario y la información que puede manejar. Cada usuario podrá 
+manejar diferentes acciones según el rango que tenga en la empresa (secretario,
+coordinador, adjunto o experto).
+
+La implementación de la práctica incluye todo lo relacionado con la gestión de
+las e\-va\-lua\-cio\-nes. Entre las diferentes posibilidades de la aplicación se
+encuentran: la realización de modelos de evaluación, la asignación de proyectos
+a expertos, la realización de informes de evaluación, la modificación de
+informes de evaluación, la eliminación de informes de evaluación, la consulta
+de informes de evaluación y el envío de informes de evaluación a la institución
+convocante. 
+
+\section{Inicio de sesión}
+La pantalla de inicio de la aplicación se puede observar en la figura
+\ref{img1}.
+
+\imagen{acceso.pdf}{13cm}{\small{Acceso a la aplicación.}}{img1}
+
+\begin{itemize}
+\item Se introduce el usuario y la contraseña proporcionados en el correo de 
+alta (figura \ref{img2}).
+
+\imagen{introducirdatos.pdf}{4cm}{\small{Datos del usuario.}}{img2}
+
+\item Si los datos son incorrectos, no se puede acceder a la aplicación y se
+  muestra un mensaje de error. 
+\end{itemize}
+
+La página inicial para cada tipo de usuario muestra la información 
+co\-rres\-pon\-dien\-te a las funciones que puede realizar con respecto a las 
+evaluaciones de informes.
+
+
+\section{Secretario}
+\subsection{Crear un modelo de evaluación}
+\begin{enumerate}
+\item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se 
+  puede ver en la figura \ref{sc1}. Se despliegan los datos que se pueden 
+  introducir en un modelo de evaluación.
+  
+  \imagen{anadirmod.pdf}{10cm}{Añadir modelo de evaluación.}{sc1}
+
+\item Ver convocatoria de un paquete de proyectos.
+  \begin{itemize}
+  \item En la sección CONVOCATORIAS se despliega una lista (figura \ref{sc2}) 
+    donde se puede elegir el paquete de proyectos del que se desea ver la 
+    convocatoria.
+
+    \imagen{convmod.pdf}{10cm}{\small{Elección de paquete de
+        proyectos.}}{sc2}
+
+  \item Se elige un paquete de proyectos y se pulsa ``Ver''. A la derecha de la 
+    página se muestra la información de la convocatoria (figura \ref{sc3}).
+
+    \imagen{convmostrada.pdf}{13cm}{\small{Información de
+        convocatoria.}}{sc3}
+  \end{itemize}
+
+\item Agregar los tipos de elementos de la sección FORMULARIOS pulsando 
+  ``Añadir'', como se puede observar en la figura \ref{sc4}. En la sección 
+  \emph{Estructura} se muestra el resultado del modelo de evaluación que se
+  está creando.
+
+  \imagen{formularios.pdf}{4cm}{\small{Opciones de modelos de
+      evaluación.}}{sc4}
+
+\item Guardar el modelo de evaluación realizado. Para ello se pulsa el botón 
+  ``Guardar'' que está situado al final de la sección FORMULARIOS.
+\end{enumerate}
+
+\subsection{Modificar o eliminar un modelo de evaluación}
+Se marca el paquete de la convocatoria que se desea modificar y se pulsa 
+``Modificar'' o ``Eliminar'' según se desee (figura \ref{img7}).
+\imagen{modifmod.pdf}{14cm}{\small{Modificación y eliminación de un modelo.}}
+{img7}
+
+\section{Coordinador}
+La pantalla principal del coordinador muestra las posibles acciones a realizar 
+(figura \ref{c1}).
+\imagen{corprinc.pdf}{13cm}{\small{Ventana Principal del coordinador.}}{c1}
+
+\subsection{Ver/Modificar informe final}
+\begin{enumerate}
+\item Se seleccionar el proyecto deseado de entre los disponibles (figura 
+  \ref{c2}). Los proyectos asignados se muestran en una tabla.
+  
+  \imagen{selcor.pdf}{13cm}{\small{Selección de proyecto.}}{c2}
+
+\item Para consultar o modificar el informe final, pulsar 
+  ``Ver/Modificar informe'' y se expande el correspondiente modelo de 
+  evaluación (figura \ref{c3}).
+
+  \imagen{modinf.pdf}{13cm}{\small{Ver/modificar el informe final.}}{c3}
+
+\item El botón ``Guardar'' permite guardar los cambios y editar en 
+  posteriores sesiones, mientras que el botón ``Finalizar'' dar por finalizado 
+  el informe (figura \ref{c4}).
+  
+  \imagen{opcor.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{c4}
+\end{enumerate}
+
+\subsection{Validar informe final}
+Se selecciona el proyecto deseado y se pulsa ``Validar informe final'', como se 
+puede ver en la figura \ref{c5}.
+\imagen{valinf.pdf}{13cm}{\small{Validación informe final.}}{c5}
+
+\section{Adjunto}
+La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
+\imagen{adjprinc.pdf}{13cm}{\small{Ventana Principal del adjunto.}}{a1}
+
+\subsection{Realizar informe final}
+\begin{enumerate}
+\item Se selecciona el proyecto deseado de entre los disponibles (figura 
+  \ref{a2}). Los proyectos asignados se muestran en una tabla.
+  
+  \imagen{seladj.pdf}{13cm}{\small{Selección de proyecto.}}{a2}
+
+\item Pulsando la opción ``+'', que aparece en la columna Exps, se puede ver que
+  expertos han realizado evaluaciones sobre el proyecto, como se puede ver en
+  la figura \ref{a3}. 
+
+  \imagen{listaexp.pdf}{13cm}{\small{Expertos del proyecto seleccionado.}}{a3}
+
+\item Pulsando el icono de consulta, se puede acceder a la evaluación realizada 
+  por cada uno de los expertos (figura \ref{a4}).
+
+  \imagen{coneval.pdf}{13cm}{\small{Consulta evaluación.}}{a4}
+
+\item Para realizar el informe final, se pulsa ``Realizar informe'' 
+  para que se expanda el correspondiente modelo de evaluación (figura \ref{a5}).
+  
+  \imagen{inffinal.pdf}{13cm}{\small{Realización informe final.}}{a5}
+
+\item El adjunto puede ``Guardar'' o ``Finalizar informe'' 
+  (figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
+  posteriores sesiones, mientras que el segundo finaliza el informe.
+  
+  \imagen{opinf.pdf}{13cm}{\small{Guardar o finalizar informe final.}}{a6}
+\end{enumerate}
+
+\section{Experto}
+\subsection{Realizar evaluación de un proyecto}
+\begin{enumerate}
+\item Los proyectos asignados se muestran en una tabla. Para realizar la 
+  evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación''
+  (figura \ref{img8}). 
+
+  \imagen{realizareval.pdf}{13cm}{\small{Elegir proyecto para
+      evaluación.}}{img8}
+
+\item Se expande el correspondiente modelo de evaluación, mostrando los 
+  diferentes puntos a evaluar. En la parte izquierda de la pantalla se
+  muestra la memoria de dicho proyecto, como se puede ver en la figura
+  \ref{img9}. 
+
+  \imagen{evalexp.pdf}{13cm}{\small{Realización de evaluación.}}{img9}
+
+\item Se guardan los cambios realizados en la evaluación con el botón 
+  ``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura 
+  \ref{img10}).
+  
+  \imagen{saveend.pdf}{4cm}{\small{Guardar o finalizar evaluación.}}{img10}
+\end{enumerate}
+
 \chapter{Implementación}
+\section{Introducción}
+Para llegar a este punto de la práctica, se han seguido una serie de pautas de
+planificación y diseño para conseguir una implementación eficiente y viable.
+Con el objetivo de cumplir las necesidades del cliente se han utilizado los
+siguientes lenguajes:
+\begin{itemize}
+\item PHP\cite{achour}: lenguaje de cuarta generación que genera páginas de cara
+al servidor.
+\item XHTML\cite{wc}: encargado de la información y la estructura de la página.
+\item MySQL: se utiliza en el diseño e implementación de la base de datos.
+\item CSS\cite{wc}: encargado de la maquetación y el estilo del modelado.
+\item JavaScript\cite{resig}: empleado en el \emph{framework jQuery} da 
+dinamismo al navegador.
+\end{itemize} 
+El objetivo es conocer el ámbito de aplicación de los servicios web, comprender 
+y diseñar arquitecturas orientadas a servicios. Además, conocer los estándares y
+los organismos de estandarización, conocer y aplicar técnicas de modelado y 
+especificación de procesos, y servicios web complejos.
 
-\section{Manual de usuario}
+\section{Código fuente}
+\subsection{index.php}
+%\lstinputlisting[language=PHP]{implementacion/index.php}
 
-\section{Implementación}
+\subsection{settings.php}
+%\lstinputlisting[language=PHP]{implementacion/settings.php}
+
+\subsection{js/main.js}
+%\lstinputlisting[language=PHP]{implementacion/js/main.js}
+
+\subsection{js/models.js}
+%\lstinputlisting[language=PHP]{implementacion/js/models.js}
+
+\subsection{js/projects.js}
+%\lstinputlisting[language=PHP]{implementacion/js/projects.js}
+
+\subsection{js/reports.js}
+%\lstinputlisting[language=PHP]{implementacion/js/reports.js}
+
+\subsection{inc/area.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/area.php}
+
+\subsection{inc/html.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/html.php}
+
+\subsection{inc/loginout.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/loginout.php}
+
+\subsection{inc/model.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/model.php}
+
+\subsection{inc/modelmanager.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/modelmanager.php}
+
+\subsection{inc/mysql.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/mysql.php}
+
+\subsection{inc/package.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/package.php}
+
+\subsection{inc/project.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/project.php}
+
+\subsection{inc/projectmanager.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/projectmanager.php}
+
+\subsection{inc/report.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/report.php}
+
+\subsection{inc/reportmanager.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/reportmanager.php}
+
+\subsection{inc/subarea.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/subarea.php}
+
+\subsection{inc/user.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/user.php}
+
+\subsection{inc/usermanager.php}
+%\lstinputlisting[language=PHP]{implementacion/inc/usermanager.php}
+
+\subsection{css/login.css}
+%\lstinputlisting[language=PHP]{implementacion/css/login.css}
+
+\subsection{css/main.css}
+%\lstinputlisting[language=PHP]{implementacion/css/main.css}
+
+\subsection{css/models.css}
+%\lstinputlisting[language=PHP]{implementacion/css/models.css}
+
+\subsection{css/reports.css}
+%\lstinputlisting[language=PHP]{implementacion/css/reports.css}
+
+\subsection{css/users.php}
+%\lstinputlisting[language=PHP]{implementacion/css/users.php}
 
 \appendix
 \chapter{Carga de trabajo}
