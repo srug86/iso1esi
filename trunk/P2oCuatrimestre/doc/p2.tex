@@ -215,9 +215,9 @@ secretario, los cuales contienen:
 \item Tienen una lista de evaluaciones pendientes, que pueden aceptar o 
   rechazar.
 \item El sistema avisa de los plazos que tiene el experto para aceptar o
-  declinar una invitación según definió el secretario. Además, una vez
-  aceptada dicha invitación, se le comunica los plazos de entrega del informe
-  de evaluación, también definidos por el secretario.   
+  declinar una invitación. Además, una vez aceptada dicha invitación, se le
+  comunican los plazos de entrega del informe de evaluación, según definió
+  el secretario.
 
 \end{itemize}
 
@@ -237,7 +237,8 @@ mediante su interacción con los usuarios y/u otros sistemas. Los diagramas de
 casos de uso se utilizan para ilustrar los requerimientos del sistema al
 mostrar cómo reacciona a eventos que se producen en su ámbito o en él mismo.
 
-El diagrama de casos de uso de nuestro sistema se puede observar en la figura
+La \emph{figura \ref{dcasouso}} muestra el diagrama de casos de uso del
+sistema.
 \ref{dcasouso}.
 
 \imagen{Casos.png}{14}{Diagrama de casos de uso del sistema GDRPI}{dcasouso}
@@ -253,17 +254,15 @@ objetos y clases que se usan para implementar el escenario, y mensajes
 intercambiados entre los objetos.
 
 Típicamente uno examina la descripción de un caso de uso para determinar qué
-objetos son necesarios para la implementación del escenario. Si tienes
-modelada la descripción de cada caso de uso como una secuencia de varios
-pasos, entonces puedes caminar sobre esos pasos para descubrir qué objetos
-son necesarios para que se puedan seguir los pasos. Un diagrama de secuencia
-muestra los objetos que intervienen en el escenario con líneas discontinuas
-verticales, y los mensajes pasados entre los objetos como flechas horizontales.
+objetos son necesarios para la implementación del escenario. Un diagrama de 
+secuencia muestra los objetos que intervienen en el escenario con líneas 
+discontinuas verticales, y los mensajes pasados entre los objetos como
+flechas horizontales.
 
 \section{Entrada al sistema}
 La vista inicial del sistema, muestra una pantalla en la que se pide el nombre
 de usuario y la contraseña. Para autentificarse, el usuario debe rellenar
-estos campos y pulsar el botón de ``Entrar''. El sistema recoge los datos y los
+estos campos y pulsar el botón ``Entrar''. El sistema recoge los datos y los
 comprueba con los existentes en una tabla de la base de datos que contiene los
 datos de todos los usuarios. En caso de haber correspondencia (caso reflejado
 en el diagrama de la \emph{figura \ref{EntSisCor}}), el usuario podrá
@@ -271,9 +270,9 @@ visualizar la interfaz correspondiente a su rango dentro del sistema. En caso
 de no haberla (como muestra la \emph{figura \ref{EntSisErr}}), el sistema 
 mostrará el mensaje: ``usuario o contraseña incorrectas''.
 
-\imagen{EntSisCor.png}{10}{Entrada al sistema correcta}
+\imagen{EntSisCor.png}{13}{Entrada al sistema correcta}
 {EntSisCor}
-\imagen{EntSisErr.png}{10}{Entrada al sistema errónea}
+\imagen{EntSisErr.png}{13}{Entrada al sistema errónea}
 {EntSisErr}
 
 \section{Secretario introduce paquete de proyectos}
@@ -298,7 +297,7 @@ incluyendo los proyectos asociados a dicho paquete.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{SecIntPaq}}.
 
-\imagen{SecIntPaq.png}{10}{Secretario
+\imagen{SecIntPaq.png}{13}{Secretario
 introduce un paquete de proyectos y consulta su contenido}{SecIntPaq}
 
 \section{Secretario crea un modelo de evaluación}
@@ -319,7 +318,7 @@ almacena en la base de datos el modelo de evaluación seleccionando la opción
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{SecCreMod}}.
 
-\imagen{SecCreMod.png}{10}{Secretario crea un
+\imagen{SecCreMod.png}{13}{Secretario crea un
 modelo de evaluación}{SecCreMod}
 
 \section{Coordinador selecciona experto para ser adjunto}
@@ -341,7 +340,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooExpAdj}}.
 
 \imagen{CooAdjSub.png}
-{10}{Coordinador selecciona a un experto para ser adjunto de una subárea}
+{13}{Coordinador selecciona a un experto para ser adjunto de una subárea}
 {CooExpAdj}
 
 \section{Coordinador asigna un proyecto a una subárea}
@@ -360,7 +359,7 @@ El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooProSub}}.
 
 \imagen{CooProSub.png}
-{10}{Coordinador asigna un proyecto a una subárea}{CooProSub}
+{13}{Coordinador asigna un proyecto a una subárea}{CooProSub}
 
 \section{Coordinador valida informe}
 Se parte de la base de que el coordinador se ha autentificado en el sistema y
@@ -377,7 +376,7 @@ cambia el estado del informe a ``evaluado''.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{CooValInf}}.
 
-\imagen{CooValInf.png}{10}{Coordinador valida informe de
+\imagen{CooValInf.png}{13}{Coordinador valida informe de
 evaluación}{CooValInf}
 
 \section{Adjunto busca expertos para evaluar proyecto}
@@ -400,7 +399,7 @@ expertos.
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{AdjBusExp}}.
 
-\imagen{AdjBusExp.png}{10}
+\imagen{AdjBusExp.png}{13}
 {Adjunto busca expertos para evaluar proyecto}{AdjBusExp}
 
 \section{Adjunto realiza informe}
@@ -422,7 +421,7 @@ el contenido del informe y finalmente lo confirmará mediante la opción de
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{AdjReaInf}}.
 
-\imagen{AdjReaInf.png}{10}{Adjunto realiza informe de evaluación}
+\imagen{AdjReaInf.png}{13}{Adjunto realiza informe de evaluación}
 {AdjReaInf}
 
 \section{Experto realiza informe}
@@ -442,7 +441,7 @@ edición. Finalmente, El sistema almacena dicho informe y cambia su estado a
 El diagrama de secuencia de este escenario se muestra en la \emph{figura
 \ref{ExpReaInf}}.
 
-\imagen{ExpReaInf.png}{10}{Experto realiza informe de evaluación}
+\imagen{ExpReaInf.png}{13}{Experto realiza informe de evaluación}
 {ExpReaInf}
 
 \part{Diseño}
@@ -464,8 +463,7 @@ información como la relación entre un objeto y otro, la herencia de
 propiedades de otro objeto y conjuntos de operaciones/propiedades que son
 implementadas para una interfaz.
 
-El diagrama de clases de nuestro sistema se puede observar en la figura
-\ref{dclases}.
+La \emph{figura \ref{dclases}} muestra el diagrama de clases del sistema.
 
 \begin{sidewaystable}
 \imagen{Clases.png}{16}{Diagrama de clases del sistema GDRPI}{dclases}
@@ -475,17 +473,17 @@ El diagrama de clases de nuestro sistema se puede observar en la figura
 Es el modelo más utilizado en la actualidad para modelar problemas reales y 
 administrar datos dinámicamente.
 
-Se trata de un modelo lógico, que establece una estructura sobre los datos,
-aunque posteriormente éstos puedan ser almacenados de múltiples formas para
-aprovechar características físicas concretas de la máquina sobre la que se
-implante la base de datos realmente.
+Se trata de un modelo lógico que establece una estructura sobre los datos,
+aunque posteriormente éstos puedan ser almacenados de múltiples formas (con
+el objetivo de aprovechar las características físicas concretas de la máquina
+sobre la que se implante la base de datos realmente).
 
-El diagrama relacional del sistema \emph{GDRPI} se representa en la figura
-\ref{drel}. 
+El diagrama relacional del sistema \emph{GDRPI} se representa en la
+\emph{figura \ref{drel}}.
+
 \imagen{MRE.pdf}{13}{Diagrama Relacional}{drel}
 
 \part{Implementación}
-
 \chapter{Manual de usuario}
 \section{Introducción}
 La Gestión Distribuída de la Revisión de Proyectos de Investigación es una
@@ -504,13 +502,13 @@ convocante.
 
 \section{Inicio de sesión}
 La pantalla de inicio de la aplicación se puede observar en la figura
-\ref{img1}.
+\ref{img1} de la página \pageref{img1}.
 
 \imagen{acceso.pdf}{13}{\small{Acceso a la aplicación.}}{img1}
 
 \begin{itemize}
 \item Se introduce el usuario y la contraseña proporcionados en el correo de 
-alta (figura \ref{img2}).
+alta (figura \ref{img2}, página \pageref{img2}).
 
 \imagen{introducirdatos.pdf}{4}{\small{Datos del usuario.}}{img2}
 
@@ -527,8 +525,8 @@ evaluaciones de informes.
 \subsection{Crear un modelo de evaluación}
 \begin{enumerate}
 \item Pulsar ``Añadir'' para agregar un nuevo modelo de evaluación, como se 
-  puede ver en la figura \ref{sc1}. Se despliegan los datos que se pueden 
-  introducir en un modelo de evaluación.
+  puede ver en la página \pageref{sc1}, en la figura \ref{sc1}. Se despliegan
+  los datos que se pueden introducir en un modelo de evaluación.
   
   \imagen{anadirmod.pdf}{10}{Añadir modelo de evaluación.}{sc1}
 
@@ -542,14 +540,16 @@ evaluaciones de informes.
         proyectos.}}{sc2}
 
   \item Se elige un paquete de proyectos y se pulsa ``Ver''. A la derecha de la 
-    página se muestra la información de la convocatoria (figura \ref{sc3}).
+    página se muestra la información de la convocatoria (figura \ref{sc3},
+    página \pageref{sc3}).
 
     \imagen{convmostrada.pdf}{13}{\small{Información de
         convocatoria.}}{sc3}
   \end{itemize}
 
 \item Agregar los tipos de elementos de la sección FORMULARIOS pulsando 
-  ``Añadir'', como se puede observar en la figura \ref{sc4}. En la sección 
+  ``Añadir'', como se puede observar en la figura \ref{sc4} de la página
+  \pageref{sc4}. En la sección 
   \emph{Estructura} se muestra el resultado del modelo de evaluación que se
   está creando.
 
@@ -568,36 +568,38 @@ Se marca el paquete de la convocatoria que se desea modificar y se pulsa
 
 \section{Coordinador}
 La pantalla principal del coordinador muestra las posibles acciones a realizar 
-(figura \ref{c1}).
+(figura \ref{c1}, página \pageref{c1}}).
 \imagen{corprinc.pdf}{13}{\small{Ventana Principal del coordinador.}}{c1}
 
 \subsection{Ver/Modificar informe final}
 \begin{enumerate}
-\item Se seleccionar el proyecto deseado de entre los disponibles (figura 
-  \ref{c2}). Los proyectos asignados se muestran en una tabla.
+\item Se selecciona el proyecto deseado de entre los disponibles (figura 
+  \ref{c2}, página \pageref{c2}). Los proyectos asignados se muestran en una
+  tabla.
   
   \imagen{selcor.pdf}{13}{\small{Selección de proyecto.}}{c2}
 
 \item Para consultar o modificar el informe final, pulsar 
   ``Ver/Modificar informe'' y se expande el correspondiente modelo de 
-  evaluación (figura \ref{c3}).
+  evaluación (figura \ref{c3}, página \pageref{c3}).
 
   \imagen{modinf.pdf}{13}{\small{Ver/modificar el informe final.}}{c3}
 
 \item El botón ``Guardar'' permite guardar los cambios y editar en 
   posteriores sesiones, mientras que el botón ``Finalizar'' dar por finalizado 
-  el informe (figura \ref{c4}).
+  el informe (figura \ref{c4}, página \pageref{c4}).
   
   \imagen{opcor.pdf}{13}{\small{Guardar o finalizar informe final.}}{c4}
 \end{enumerate}
 
 \subsection{Validar informe final}
 Se selecciona el proyecto deseado y se pulsa ``Validar informe final'', como se 
-puede ver en la figura \ref{c5}.
+puede ver en la figura \ref{c5}, en la página \pageref{c5}.
 \imagen{valinf.pdf}{13}{\small{Validación informe final.}}{c5}
 
 \section{Adjunto}
-La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
+La pantalla de inicio correspondiente se puede ver en la figura \ref{a1} de
+la página \pageref{a1}.
 \imagen{adjprinc.pdf}{13}{\small{Ventana Principal del adjunto.}}{a1}
 
 \subsection{Asignar expertos}
@@ -620,29 +622,32 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 \subsection{Realizar informe final}
 \begin{enumerate}
 \item Se selecciona el proyecto deseado de entre los disponibles (figura 
-  \ref{a2}). Los proyectos asignados se muestran en una tabla.
+  \ref{a2}, página \pageref{a2}). Los proyectos asignados se muestran en
+  una tabla.
   
   \imagen{seladj.pdf}{13}{\small{Selección de proyecto.}}{a2}
 
 \item Pulsando la opción ``+'', que aparece en la columna Exps, se puede ver qué
   expertos han realizado evaluaciones sobre el proyecto, como se puede ver en
-  la figura \ref{a3}. 
+  la figura \ref{a3} de la página \pageref{a3}. 
 
   \imagen{listaexp.pdf}{13}{\small{Expertos del proyecto seleccionado.}}{a3}
 
 \item Pulsando el icono de consulta, se puede acceder a la evaluación realizada 
-  por cada uno de los expertos (figura \ref{a4}).
+  por cada uno de los expertos (figura \ref{a4}, página \pageref{a4}).
 
   \imagen{coneval.pdf}{13}{\small{Consulta evaluación.}}{a4}
 
 \item Para realizar el informe final, se pulsa ``Realizar informe'' 
-  para que se expanda el correspondiente modelo de evaluación (figura \ref{a5}).
+  para que se expanda el correspondiente modelo de evaluación (figura
+  \ref{a5}, página \pageref{a5}).
   
   \imagen{inffinal.pdf}{13}{\small{Realización informe final.}}{a5}
 
 \item El adjunto puede ``Guardar'' o ``Finalizar informe'' 
-  (figura \ref{a6}), el primero nos permite guardar los cambios y editar en 
-  posteriores sesiones, mientras que el segundo finaliza el informe.
+  (figura \ref{a6}, página \pageref{a6}), el primero nos permite guardar
+  los cambios y editar en posteriores sesiones, mientras que el segundo
+  finaliza el informe.
   
   \imagen{opinf.pdf}{13}{\small{Guardar o finalizar informe final.}}{a6}
 \end{enumerate}
@@ -665,7 +670,7 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 \begin{enumerate}
 \item Los proyectos asignados se muestran en una tabla. Para realizar la 
   evaluación de un proyecto, se marca y se pulsa ``Realizar evaluación''
-  (figura \ref{img8}). 
+  (figura \ref{img8}, página \pageref{img8}). 
 
   \imagen{realizareval.pdf}{13}{\small{Elegir proyecto para
       evaluación.}}{img8}
@@ -673,13 +678,13 @@ La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 \item Se expande el correspondiente modelo de evaluación, mostrando los 
   diferentes puntos a evaluar. En la parte izquierda de la pantalla se
   muestra la memoria de dicho proyecto, como se puede ver en la figura
-  \ref{img9}. 
+  \ref{img9} de la página \pageref{img9}. 
 
   \imagen{evalexp.pdf}{13}{\small{Realización de evaluación.}}{img9}
 
 \item Se guardan los cambios realizados en la evaluación con el botón 
   ``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura 
-  \ref{img10}).
+  \ref{img10}, página \pageref{img1}).
   
   \imagen{saveend.pdf}{4}{\small{Guardar o finalizar evaluación.}}{img10}
 \end{enumerate}
@@ -785,11 +790,11 @@ especificación de procesos, y servicios web complejos.
 \begin{center}
   \begin{tabular}{p{10cm}|c}
     \textbf{Apellidos y Nombre} & \textbf{Porcentaje} \\ \hline \hline
-    de la Rubia García-Carpintero, Sergio & 20\% \\
-    Millán Sánchez-Grande, Miguel         & 20\% \\ 
-    Muñoz Villarreal, Luis                & 20\% \\ 
-    Serrano Sánchez, Alicia               & 20\% \\ 
-    Torres Triviño, Juan Miguel           & 20\% \\
+    de la Rubia García-Carpintero, Sergio & 28\% \\
+    Millán Sánchez-Grande, Miguel         & 18\% \\ 
+    Muñoz Villarreal, Luis                & 18\% \\ 
+    Serrano Sánchez, Alicia               & 18\% \\ 
+    Torres Triviño, Juan Miguel           & 18\% \\
   \end{tabular}
 \end{center}
 
