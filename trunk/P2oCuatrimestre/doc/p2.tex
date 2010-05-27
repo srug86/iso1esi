@@ -465,7 +465,7 @@ El diagrama de clases de nuestro sistema se puede observar en la figura
 \ref{dclases}.
 
 \begin{sidewaystable}
-\imagen{Clases.png}{20}{Diagrama de clases del sistema GDRPI}{dclases}
+\imagen{Clases.png}{16}{Diagrama de clases del sistema GDRPI}{dclases}
 \end{sidewaystable}
 
 \chapter{Diagrama relacional}
@@ -597,6 +597,23 @@ puede ver en la figura \ref{c5}.
 La pantalla de inicio correspondiente se puede ver en la figura \ref{a1}.
 \imagen{adjprinc.pdf}{13}{\small{Ventana Principal del adjunto.}}{a1}
 
+\subsection{Asignar expertos}
+\begin{itemize}
+\item Se selecciona un determinado proyecto mostrado en la vista del adjunto y
+  se pulsa ``Asignar expertos''.
+\item A continuación, se despliega la información de los expertos que están
+  asignados en ese proyecto junto con la información del estado del informe de
+  cada experto.
+\item Para buscar expertos, se muestra los determinados campos para realizar una
+  búsqueda avanzada. Los campos de los que consta la búsqueda son
+  \emph{Nombre}, \emph{Apellidos}, \emph{Palabras clave}, \emph{Área},
+  \emph{Institución}, \emph{Nº de proyectos} y \emph{Valoración}.
+%\imagen{}{13}{Vista de búsqueda de expertos del adjunto}{busexp}
+\item Se puede rellenar cualquier campo para realizar la búsqueda y la
+  aplicación da el resultado en forma de lista.
+%\imagen{}{13}{Vista del resultado de la búsqueda de expertos}{resexp}
+\end{itemize}
+
 \subsection{Realizar informe final}
 \begin{enumerate}
 \item Se selecciona el proyecto deseado de entre los disponibles (figura 
@@ -673,79 +690,79 @@ especificación de procesos, y servicios web complejos.
 
 \section{Código fuente}
 \subsection{index.php}
-%\lstinputlisting[language=PHP]{implementacion/index.php}
+%\lstinputlisting[language=PHP]{../GDRPI/index.php}
 
 \subsection{settings.php}
-%\lstinputlisting[language=PHP]{implementacion/settings.php}
+%\lstinputlisting[language=PHP]{../GDRPI/settings.php}
 
 \subsection{js/main.js}
-%\lstinputlisting[language=PHP]{implementacion/js/main.js}
+%\lstinputlisting[language=PHP]{../GDRPI/js/main.js}
 
 \subsection{js/models.js}
-%\lstinputlisting[language=PHP]{implementacion/js/models.js}
+%\lstinputlisting[language=PHP]{../GDRPI/js/models.js}
 
 \subsection{js/projects.js}
-%\lstinputlisting[language=PHP]{implementacion/js/projects.js}
+%\lstinputlisting[language=PHP]{../GDRPI/js/projects.js}
 
 \subsection{js/reports.js}
-%\lstinputlisting[language=PHP]{implementacion/js/reports.js}
+%\lstinputlisting[language=PHP]{../GDRPI/js/reports.js}
 
 \subsection{inc/area.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/area.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/area.php}
 
 \subsection{inc/html.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/html.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/html.php}
 
 \subsection{inc/loginout.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/loginout.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/loginout.php}
 
 \subsection{inc/model.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/model.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/model.php}
 
 \subsection{inc/modelmanager.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/modelmanager.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/modelmanager.php}
 
 \subsection{inc/mysql.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/mysql.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/mysql.php}
 
 \subsection{inc/package.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/package.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/package.php}
 
 \subsection{inc/project.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/project.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/project.php}
 
 \subsection{inc/projectmanager.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/projectmanager.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/projectmanager.php}
 
 \subsection{inc/report.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/report.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/report.php}
 
 \subsection{inc/reportmanager.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/reportmanager.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/reportmanager.php}
 
 \subsection{inc/subarea.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/subarea.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/subarea.php}
 
 \subsection{inc/user.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/user.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/user.php}
 
 \subsection{inc/usermanager.php}
-%\lstinputlisting[language=PHP]{implementacion/inc/usermanager.php}
+%\lstinputlisting[language=PHP]{../GDRPI/inc/usermanager.php}
 
 \subsection{css/login.css}
-%\lstinputlisting[language=PHP]{implementacion/css/login.css}
+%\lstinputlisting[language=PHP]{../GDRPI/css/login.css}
 
 \subsection{css/main.css}
-%\lstinputlisting[language=PHP]{implementacion/css/main.css}
+%\lstinputlisting[language=PHP]{../GDRPI/css/main.css}
 
 \subsection{css/models.css}
-%\lstinputlisting[language=PHP]{implementacion/css/models.css}
+%\lstinputlisting[language=PHP]{../GDRPI/css/models.css}
 
 \subsection{css/reports.css}
-%\lstinputlisting[language=PHP]{implementacion/css/reports.css}
+%\lstinputlisting[language=PHP]{../GDRPI/css/reports.css}
 
 \subsection{css/users.php}
-%\lstinputlisting[language=PHP]{implementacion/css/users.php}
+%\lstinputlisting[language=PHP]{../GDRPI/css/users.php}
 
 \appendix
 \chapter{Carga de trabajo}
