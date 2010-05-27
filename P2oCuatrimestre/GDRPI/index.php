@@ -11,51 +11,58 @@ include 'settings.php';
 include 'inc/mysql.php';
 include 'inc/loginout.php';
 include 'inc/html.php';
+include 'inc/user.php';
 
 session_start();
-$_mysql = new MySQL();
-
-/* Global variables */
-$_uid = isset($_SESSION['uid']) ? $_SESSION['uid'] : null;
-$_user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+$mysql = new MySQL();
 
 /* Global request */
 $_act = isset($_GET['act']) ? $_GET['act'] : null;
 $_rng = isset($_GET['rng']) ? $_GET['rng'] : null;
 
+/* Global variables */
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+$_uid = $user != null ? $user->getUid() : null;
+
 /* User datas */
-is_cookied();
-load_user();
+LoginOut::is_cookied();
 
-/* Functions action array */
-$actionArray =
-  array(
-        /* Login */
-        'login' => array('s', 'loginout.php', 'login'),
-        'logout' => array('s', 'loginout.php', 'logout'),
+if ($user) {  
+  if ($user->getType() == "secretaru") include 'inc/modelmanager.php';
+  else {
+    include 'inc/projectmanager.php';
+    include 'inc/reportmanager.php'; 
+  }
+}
 
-        /* Models */
-        'newmod' => array('t', 'evaluation_models.php', 'new_model'),
-        'modmod' => array('t', 'evaluation_models.php', 'modify_model'),
-        'savemod' => array('s', 'evaluation_models.php', 'save_model'),
-        'delmod' => array('s', 'evaluation_models.php', 'delete_model'),
-        'viewconv' => array('t', 'evaluation_models.php', 'view_convocatory'),
+/* Action Switch */
+switch ($_act) {
 
-        /* Reports */
-        'makerep' => array('t', 'evaluation_reports.php', 'make_report'),
-        'saverep' => array('s', 'evaluation_reports.php', 'save_report'),
-        'endrep' => array('s', 'evaluation_reports.php', 'end_report'),
-        'viewrep' => array('t', 'evaluation_reports.php', 'view_report'),
+  /* Loginout */
+case 'login': LoginOut::login(); break;
+case 'logout': LoginOut::logout(); break;
 
-        /* Projects */
-        'proexp' => array('t', 'projects.php', 'projects_experts'),
+  /* Models */
+case 'newmod': ModelManager::new_model(); break;
+case 'modmod': ModelManager::modify_model(); break;
+case 'savemod': ModelManager::save_model(); break;
+case 'delmod': ModelManager::delete_model(); break;
+case 'viewconv': ModelManager::view_convocatory(); break;
 
-        /* Default */
-        null => array('t', 'main.php', 'theme_view')
-        );
+  /* Reports */
+case 'makerep': ReportManager::make_report(); break;
+case 'saverep': ReportManager::save_report(); break;
+case 'endrep': ReportManager::end_report(); break;
+case 'viewrep': ReportManager::view_report(); break;
 
-$path = array('s' => 'source/', 't' => 'theme/');
-require_once $path[$actionArray[$_act][0]].$actionArray[$_act][1];
-call_user_func($actionArray[$_act][2]);
+  /* Projects */
+case 'proexp': ProjectManager::projects_experts(); break;
+
+  /* Default */
+default: default_();
+}
+
+/* $path = array('s' => 'source/', 't' => 'theme/'); */
+/* require_once $path[$actionArray[$_act][0]].$actionArray[$_act][1]; */
+/* call_user_func($actionArray[$_act][2]); */
 ?>
-

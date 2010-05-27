@@ -1,6 +1,6 @@
 var down = false;
 function make_report(type) {
-    if (val_projects("realizar")) {
+    if (val_projects()) {
         if (!down && confirm_rep(check)) {
             tr = check.parent().parent();
             tr.after('<tr><td style="border: 0;"></td>'
@@ -24,7 +24,7 @@ function set_end_report() {
 }
 
 function end_report() {
-    if (val_projects("finalizar")) {
+    if (val_projects()) {
         check = $("#projects table input:checkbox:checked");    
         if (confirm_rep(check)) {
             var id = check.attr("name");

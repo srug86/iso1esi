@@ -1,10 +1,10 @@
 <?php
 if (!defined('GDRPI')) die(header("Location: noencontrado"));
 
-class Subarea() {
+class Subarea {
   private $sid, $aid, $name, $attached;
 
-  function __contruct__() {
+  function __construct() {
 
   }
 }
