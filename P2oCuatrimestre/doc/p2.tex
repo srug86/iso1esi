@@ -239,9 +239,8 @@ mostrar cómo reacciona a eventos que se producen en su ámbito o en él mismo.
 
 La \emph{figura \ref{dcasouso}} muestra el diagrama de casos de uso del
 sistema.
-\ref{dcasouso}.
+\imagen{Casos.png}{15.5}{Diagrama de casos de uso del sistema GDRPI}{dcasouso}
 
-\imagen{Casos.png}{14}{Diagrama de casos de uso del sistema GDRPI}{dcasouso}
 
 \chapter{Diagramas de secuencia}
 Un \emph{diagrama de secuencia} muestra la interacción de un conjunto de
@@ -466,9 +465,14 @@ implementadas para una interfaz.
 La \emph{figura \ref{dclases}} muestra el diagrama de clases del sistema.
 
 \begin{sidewaystable}
-\imagen{Clases.png}{16}{Diagrama de clases del sistema GDRPI}{dclases}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.6]{Clases.png}
+    \caption{Diagrama de clases}
+    \label{dclases}
+  \end{center}
+\end{figure}
 \end{sidewaystable}
-
 \chapter{Diagrama relacional}
 Es el modelo más utilizado en la actualidad para modelar problemas reales y 
 administrar datos dinámicamente.
@@ -568,7 +572,7 @@ Se marca el paquete de la convocatoria que se desea modificar y se pulsa
 
 \section{Coordinador}
 La pantalla principal del coordinador muestra las posibles acciones a realizar 
-(figura \ref{c1}, página \pageref{c1}}).
+(figura \ref{c1}, página \pageref{c1}).
 \imagen{corprinc.pdf}{13}{\small{Ventana Principal del coordinador.}}{c1}
 
 \subsection{Ver/Modificar informe final}
@@ -610,13 +614,16 @@ la página \pageref{a1}.
   asignados en ese proyecto junto con la información del estado del informe de
   cada experto.
 \item Para buscar expertos, se muestra los determinados campos para realizar una
-  búsqueda avanzada. Los campos de los que consta la búsqueda son
-  \emph{Nombre}, \emph{Apellidos}, \emph{Palabras clave}, \emph{Área},
-  \emph{Institución}, \emph{Nº de proyectos} y \emph{Valoración}.
-%\imagen{}{13}{Vista de búsqueda de expertos del adjunto}{busexp}
+  búsqueda avanzada (figura \ref{busexp}, pág.\ref{busexp}). Los campos de los
+  que consta la búsqueda son \emph{Nombre}, \emph{Apellidos}, \emph{Palabras
+    clave}, \emph{Institución}, \emph{Nº de proyectos} y \emph{Valoración}. 
+\imagen{busexp.png}{13}{Vista de búsqueda de expertos del adjunto}{busexp}
 \item Se puede rellenar cualquier campo para realizar la búsqueda y la
-  aplicación da el resultado en forma de lista.
-%\imagen{}{13}{Vista del resultado de la búsqueda de expertos}{resexp}
+  aplicación da el resultado en forma de lista, como se puede observar en la
+  figura \ref{resexp} de la página \pageref{resexp}.
+\imagen{resexp.png}{13}{Vista del resultado de la búsqueda de
+expertos}{resexp}
+\item Seleccionar un experto y pulsar ``Asignar''.
 \end{itemize}
 
 \subsection{Realizar informe final}
@@ -649,7 +656,7 @@ la página \pageref{a1}.
   los cambios y editar en posteriores sesiones, mientras que el segundo
   finaliza el informe.
   
-  \imagen{opinf.pdf}{13}{\small{Guardar o finalizar informe final.}}{a6}
+  \imagen{opinf.pdf}{11}{\small{Guardar o finalizar informe final.}}{a6}
 \end{enumerate}
 
 \subsection{Valorar Experto}
@@ -661,8 +668,9 @@ la página \pageref{a1}.
 \item Se selecciona un determinado experto y se pulsa ``Valorar experto''. Se
   expande un área de texto donde se introduce un comentario sobre el trabajo
   realizado; y también un campo donde se introduce la valoración numérica del
-  experto. 
-%\imagen{}{13}{Vista de valoración de los expertos}{valexp}
+  experto. Para más detalle ver figura \ref{valexp} de la página
+  \pageref{valexp}. 
+\imagen{valexp.png}{11}{Vista de valoración de los expertos}{valexp}
 \end{itemize}
 
 \section{Experto}
@@ -683,10 +691,7 @@ la página \pageref{a1}.
   \imagen{evalexp.pdf}{13}{\small{Realización de evaluación.}}{img9}
 
 \item Se guardan los cambios realizados en la evaluación con el botón 
-  ``Guardar'' o se finaliza la evaluación pulsando ``Finalizar'' (figura 
-  \ref{img10}, página \pageref{img1}).
-  
-  \imagen{saveend.pdf}{4}{\small{Guardar o finalizar evaluación.}}{img10}
+  ``Guardar'' o se finaliza la evaluación pulsando ``Finalizar''.
 \end{enumerate}
 
 \chapter{Implementación}
@@ -728,17 +733,11 @@ especificación de procesos, y servicios web complejos.
 \subsection{js/reports.js}
 %\lstinputlisting[language=PHP]{../GDRPI/js/reports.js}
 
-\subsection{inc/area.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/area.php}
-
 \subsection{inc/html.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/html.php}
 
 \subsection{inc/loginout.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/loginout.php}
-
-\subsection{inc/model.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/model.php}
 
 \subsection{inc/modelmanager.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/modelmanager.php}
@@ -746,29 +745,14 @@ especificación de procesos, y servicios web complejos.
 \subsection{inc/mysql.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/mysql.php}
 
-\subsection{inc/package.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/package.php}
-
-\subsection{inc/project.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/project.php}
-
 \subsection{inc/projectmanager.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/projectmanager.php}
-
-\subsection{inc/report.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/report.php}
 
 \subsection{inc/reportmanager.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/reportmanager.php}
 
-\subsection{inc/subarea.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/subarea.php}
-
 \subsection{inc/user.php}
 %\lstinputlisting[language=PHP]{../GDRPI/inc/user.php}
-
-\subsection{inc/usermanager.php}
-%\lstinputlisting[language=PHP]{../GDRPI/inc/usermanager.php}
 
 \subsection{css/login.css}
 %\lstinputlisting[language=PHP]{../GDRPI/css/login.css}
