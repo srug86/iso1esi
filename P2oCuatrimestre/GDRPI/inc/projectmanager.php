@@ -77,7 +77,7 @@ class ProjectManager {
                alt="">Realizar informe</a>
             <a href="javascript:end_report(\'attached\');"
                alt="">Finalizar informe</a>
-            <a href="javascript:assign_experts();" alt="">Asignar expertos</a>
+         <a href="javascript:assign_experts(false);" alt="">Asignar expertos</a>
             <a href="javascript:valuate_expert();" alt="">Valorar experto</a>
             <a href="javascript:woimp();" alt="">Subárea errónea</a>
           </div>
@@ -145,9 +145,9 @@ class ProjectManager {
            ."AND ep.uid=u2.id AND p.pid=$id[0] AND p.id=$id[1] "
            ."AND ep.rid=er.id ORDER BY ep.assign_date DESC");
     echo '
-          <table>
+          <table id="experts">
             <tr id="trtop">
-              <td></td><td>Nombre</td><td>Estado de la evaluación</td>
+              <td></td><td></td><td>Nombre</td><td>Estado de la evaluación</td>
               <td>Palabras clave</td>
             </tr>';
   
@@ -159,6 +159,7 @@ class ProjectManager {
               <td><a href="javascript:view_report('.$row['id'].')"
                      alt="Ver informe de evaluación">
                   <img src="img/view.png" alt="" /></a></td>
+              <td><input type="checkbox" name="'.$row['id'].'" />
               <td>'.$row['name'].' '.$row['surnames'].'</td><td>'.$state.'</td>
               <td>'.$row['keywords'].'</td>
             </tr>';
@@ -238,5 +239,23 @@ class ProjectManager {
     <div style="clear: both"></div>
   </div>
           ';
+  }
+
+  public function assign_experts() {
+    global $mysql;
+
+    $p = explode("p", substr($_POST['pro'], 2));
+    $ppid = $p[0];
+    $pid = $p[1];
+    $date = time();
+    $ids = split(",", $_POST['ids']);
+    foreach ($ids as $uid) {
+      $mod = $mysql->field("SELECT emid FROM projects "
+                           ."WHERE id=$pid AND pid=$ppid");
+      $mysql->query("INSERT INTO eval_reports SET emid=$mod");
+      $rid = $mysql->field("SELECT id FROM eval_reports ORDER BY id DESC");
+      $mysql->query("INSERT INTO `experts-projects` SET uid=$uid, ppid=$ppid, "
+                    ."pid=$pid, rid=$rid, assign_date=$date");
+    }
   }
 }
