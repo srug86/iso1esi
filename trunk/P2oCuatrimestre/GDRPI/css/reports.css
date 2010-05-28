@@ -47,7 +47,7 @@
 
 /* Projects */
 #projects {
-
+    
 }
 
 #projects .exps {
@@ -56,4 +56,37 @@
 
 #projects table table {
     width: 713px;
+}
+
+#projects .asig {
+    margin: 3px 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+#projects #srch {
+    border: 1px solid green;
+    font-size: 9pt; 
+    padding: 10px;
+    text-align: left;
+}
+
+#projects #srch input, #projects #srch select { 
+    border: 1px solid #009933;
+    font-size: 7.5pt; 
+    margin-bottom: 3px; 
+    background-color: #bbffbb; 
+}
+
+#projects #srch input[type=submit], #projects #srch input[type=button] {
+    margin-left: 300px;
+    font-size: 10pt;
+    height: 25px;
+    width: 70px;
+    background-color: #44dd44; 
+    border: 1px solid #445544;
+}
+
+#projects #trtop {
+    text-align: center;
 }

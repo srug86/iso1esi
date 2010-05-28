@@ -1,7 +1,7 @@
 <?php
 /* ---------------------------------------------------------------- *
  * Gestión Distribuída de la Revisión de Proyectos de Investigación *
- * ---------------------------------------------------------------- */         
+ * ---------------------------------------------------------------- */
 
 /* Define */
 define('GDRPI', 1);
@@ -28,8 +28,9 @@ $_uid = $user != null ? $user->getUid() : null;
 LoginOut::is_cookied();
 
 if ($user) {  
-  if ($user->getType() == "secretaru") include 'inc/modelmanager.php';
+  if ($user->getType() == "secretary") include 'inc/modelmanager.php';
   else {
+    if ($user->getType() == "attached") include 'inc/usermanager.php';
     include 'inc/projectmanager.php';
     include 'inc/reportmanager.php'; 
   }
@@ -54,15 +55,17 @@ case 'makerep': ReportManager::make_report(); break;
 case 'saverep': ReportManager::save_report(); break;
 case 'endrep': ReportManager::end_report(); break;
 case 'viewrep': ReportManager::view_report(); break;
+case 'valurep': ReportManager::valuate_expert(); break;
+case 'savval': ReportManager::save_valuate(); break;
 
   /* Projects */
 case 'proexp': ProjectManager::projects_experts(); break;
+  
+case 'srchfrm': UserManager::search_form(); break;
+case 'srchexp': UserManager::search_experts(); break;
+case 'asgexp': ProjectManager::assign_experts(); break;
 
   /* Default */
 default: default_();
 }
-
-/* $path = array('s' => 'source/', 't' => 'theme/'); */
-/* require_once $path[$actionArray[$_act][0]].$actionArray[$_act][1]; */
-/* call_user_func($actionArray[$_act][2]); */
 ?>

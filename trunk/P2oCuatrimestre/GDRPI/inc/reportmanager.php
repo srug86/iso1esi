@@ -271,4 +271,33 @@ class ReportManager {
       $mysql->query("UPDATE projects SET state='evaluated_experts' "
                    ."WHERE pid={$r['ppid']} AND id={$r['pid']}");    
   }
+
+  public function valuate_expert() {
+    $id = $_POST['id'];
+    echo '<form action="#" method="post"
+        onsubmit="save_valuated(this, '.$id.'); return false">
+        <br><div style="text-align:left;width:400px;margin:auto">
+        <b>Evaluación</b></div>
+        <textarea name="eval" style="width:400px;height:200px"></textarea><br>
+        <br><span><b>Valoración:</b></span>
+        <input type="text" name="valu" size="1" />
+        <input type="submit" value="Valorar" /><br><br>
+        </form>';
+  }
+
+  public function save_valuate() {
+    global $mysql;
+
+    $pro = $_POST['pro'];
+    $p = explode("p", substr($pro, 2));
+    $ppid = $p[0];
+    $pid = $p[1];
+    $uid = $_POST['id'];
+    $eval = $_POST['eval'];
+    $val = $_POST['valu'];
+
+    $mysql->
+      query("UPDATE `experts-projects` SET evaluation='$eval', ".
+            "valuation='$val' WHERE uid=$uid AND ppid=$ppid AND pid=$pid");
+  }
 }

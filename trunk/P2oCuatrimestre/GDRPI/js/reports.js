@@ -51,3 +51,31 @@ function confirm_rep(check) {
                      +"finalizado por usted. ¿Desea continuar de todos modos?");
     return res;
 }
+
+var valul = false;
+function valuate_expert() {
+    check = $("table#experts input:checkbox:checked");
+    if (check.length == 0) alert("Debe seleccionar un experto primero");
+    else if (check.length > 1) alert("Sólo puede valorar un experto a la vez");
+    else {
+        if (!valul) {
+            var id = check.attr("name");
+            tr = check.parent().parent();
+            tr.after('<tr><td style="border: 0; padding: 0;"></td>'
+                     +'<td style="padding: 0;" colspan="4">'
+                     +'<div id="tdexps'+id+'" class="exps"></div></td></tr>');
+            valul = true;
+        }
+        else alert("Valoración en progreso");
+        Ajax("valurep", "#tdexps"+id, "id="+id);
+    }
+}
+
+function save_valuated(f, id) {
+    check = $("table#experts input:checkbox:checked");
+    pro = $("#projects table input:checkbox:checked").attr("name");
+    check.attr("checked", "");
+    valul = false;
+    Ajax("savval", "", "pro="+pro+"&id="+id+"&"+values(f));
+    check.parent().parent().next().remove();
+}
