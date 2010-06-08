@@ -44,6 +44,7 @@ class UserManager {
       "COUNT(u.id) AS projs, AVG(ep.valuation) AS avg ".
       "FROM users u, `experts-projects` ep, projects_packages pp ".
       "WHERE u.institution!=pp.institution ".
+      "AND u.id=ep.uid ".
       "AND pp.id=$ppid AND u.type='expert' ".
       "AND u.id NOT IN (SELECT uid FROM `experts-projects` WHERE ppid=$ppid ".
       "AND pid=$pid)";

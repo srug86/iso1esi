@@ -132,7 +132,8 @@ class ProjectManager {
   /* Table of the experts assigned to a project */
   public function projects_experts() {
     global $mysql, $_uid;
-  
+
+    $pro = $_POST['pro'];
     $id = explode("p", substr($_POST['pro'], 2)); 
   
     $r = $mysql->
@@ -159,7 +160,7 @@ class ProjectManager {
               <td><a href="javascript:view_report('.$row['id'].')"
                      alt="Ver informe de evaluación">
                   <img src="img/view.png" alt="" /></a></td>
-              <td><input type="checkbox" name="'.$row['id'].'" />
+              <td><input type="checkbox" name="'.$row['id'].$pro.'" />
               <td>'.$row['name'].' '.$row['surnames'].'</td><td>'.$state.'</td>
               <td>'.$row['keywords'].'</td>
             </tr>';

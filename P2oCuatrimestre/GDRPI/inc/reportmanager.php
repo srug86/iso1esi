@@ -273,9 +273,10 @@ class ReportManager {
   }
 
   public function valuate_expert() {
-    $id = $_POST['id'];
+    $id = substr($_POST['id'], 0, strpos($_POST['id'], "pp"));
+    $pro = substr($_POST['id'], strpos($_POST['id'], "pp"));
     echo '<form action="#" method="post"
-        onsubmit="save_valuated(this, '.$id.'); return false">
+        onsubmit="save_valuated(this, '.$id.', \''.$pro.'\'); return false">
         <br><div style="text-align:left;width:400px;margin:auto">
         <b>Evaluación</b></div>
         <textarea name="eval" style="width:400px;height:200px"></textarea><br>
@@ -298,6 +299,6 @@ class ReportManager {
 
     $mysql->
       query("UPDATE `experts-projects` SET evaluation='$eval', ".
-            "valuation='$val' WHERE uid=$uid AND ppid=$ppid AND pid=$pid");
+            "valuation='$val' WHERE rid=$uid AND ppid=$ppid AND pid=$pid");
   }
 }
