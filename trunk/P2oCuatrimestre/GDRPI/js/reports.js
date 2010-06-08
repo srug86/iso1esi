@@ -65,15 +65,14 @@ function valuate_expert() {
                      +'<td style="padding: 0;" colspan="4">'
                      +'<div id="tdexps'+id+'" class="exps"></div></td></tr>');
             valul = true;
+            Ajax("valurep", "#tdexps"+id, "id="+id);
         }
         else alert("Valoración en progreso");
-        Ajax("valurep", "#tdexps"+id, "id="+id);
     }
 }
 
-function save_valuated(f, id) {
+function save_valuated(f, id, pro) {
     check = $("table#experts input:checkbox:checked");
-    pro = $("#projects table input:checkbox:checked").attr("name");
     check.attr("checked", "");
     valul = false;
     Ajax("savval", "", "pro="+pro+"&id="+id+"&"+values(f));
